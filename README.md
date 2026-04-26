@@ -46,13 +46,35 @@ required, but recording quality is variable).
 
 ## Deploy
 
-This repo includes a `netlify.toml` with the right build command and SPA
-rewrite. Connect it on Netlify and the rest is automatic. Or:
+The repo is wired for Netlify two ways:
+
+**1. Continuous deploy (recommended).** In the Netlify dashboard, "Add new
+site → Import from Git → pick this repo." Netlify reads `netlify.toml` for
+the build command, publish directory (`dist/`), and SPA rewrite. Every
+push to `main` deploys automatically; every PR gets a deploy preview. No
+secrets to configure.
+
+**2. Manual one-shot deploy.**
 
 ```sh
-npm run build
-npx netlify deploy --prod --dir dist
+npm run deploy           # production
+npm run deploy:preview   # draft URL
 ```
+
+Both run `npm run build` then call `npx netlify-cli@latest`. The first run
+will prompt you to log in and link the local directory to a Netlify site.
+
+A GitHub Actions workflow at `.github/workflows/build.yml` runs `tsc` and
+`vite build` on every push and PR — useful for catching breakage before it
+hits Netlify.
+
+## Adding a new unit
+
+1. Drop a new file in `scripts/units/<slug>.mjs` exporting `UNIT`,
+   `SPECIES`, and `LESSONS` (see `coastal-scrub.mjs` as a template).
+2. Run `npm run fetch:recordings` to generate `src/data/<slug>.json`.
+3. The home page picks it up automatically (`src/lib/manifest.ts` uses
+   `import.meta.glob` over the `src/data/` directory).
 
 ## Attribution
 

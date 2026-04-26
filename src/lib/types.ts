@@ -25,11 +25,14 @@ export interface LessonRef {
   length: number;
 }
 
+export type UnitAccent = "moss" | "amber" | "sky" | "indigo" | "rose" | "sand";
+
 export interface Unit {
   id: string;
   title: string;
   habitat: string;
   description: string;
+  accent: UnitAccent;
 }
 
 export interface Manifest {

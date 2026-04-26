@@ -1,5 +1,5 @@
 import type { Exercise, ExerciseKind, LessonRef, Recording, Species, SpeciesStat } from "@/lib/types";
-import { getSpecies, manifest } from "@/lib/manifest";
+import { allSpeciesWithRecordings, getSpecies } from "@/lib/manifest";
 
 function rand<T>(arr: T[]): T {
   return arr[Math.floor(Math.random() * arr.length)];
@@ -115,7 +115,7 @@ export function generateLesson(
 ): Exercise[] {
   const pool = lesson.speciesIds.map(getSpecies).filter((s) => s.recordings.length > 0);
   // Fall back to broader pool for distractors so small lessons still get 4 choices.
-  const allPool = manifest.species.filter((s) => s.recordings.length > 0);
+  const allPool = allSpeciesWithRecordings();
   const exercises: Exercise[] = [];
   const lastKinds: ExerciseKind[] = [];
 

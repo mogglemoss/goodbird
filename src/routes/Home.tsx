@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { manifest, getSpecies } from "@/lib/manifest";
+import { units, getLessonsForUnit, getSpecies } from "@/lib/manifest";
 import { useGame } from "@/game/store";
+import { ACCENTS } from "@/lib/theme";
+import type { Unit } from "@/lib/types";
 import { cn } from "@/lib/cn";
 
 export function HomeRoute() {
@@ -12,32 +14,57 @@ export function HomeRoute() {
   return (
     <div className="mx-auto w-full max-w-md px-5 pb-24 pt-6">
       <Header xp={xp} streakDays={streak.days} />
-      <div className="mt-8 text-center">
-        <p className="text-sm font-medium uppercase tracking-wider text-(--color-moss-700)">{manifest.unit.habitat}</p>
-        <h1 className="font-display text-3xl">{manifest.unit.title}</h1>
-        <p className="mx-auto mt-2 max-w-xs text-sm text-(--color-ink-soft)">{manifest.unit.description}</p>
+      <div className="mt-6 space-y-10">
+        {units.map((unit) => (
+          <UnitSection key={unit.id} unit={unit} completed={completed} />
+        ))}
       </div>
-      <div className="mt-10 flex flex-col items-center gap-2">
-        {manifest.lessons.map((lesson, i) => {
-          const prev = manifest.lessons[i - 1];
-          const unlocked = i === 0 || (prev && !!completed[prev.id]);
+    </div>
+  );
+}
+
+interface UnitSectionProps {
+  unit: Unit;
+  completed: Record<string, { bestAccuracy: number }>;
+}
+
+function UnitSection({ unit, completed }: UnitSectionProps) {
+  const lessons = getLessonsForUnit(unit.id);
+  const accent = ACCENTS[unit.accent];
+
+  return (
+    <section>
+      <div className="text-center">
+        <p className={cn("text-sm font-medium uppercase tracking-wider", accent.label)}>
+          {unit.habitat}
+        </p>
+        <h2 className="mt-1 font-display text-2xl">{unit.title}</h2>
+        <p className="mx-auto mt-2 max-w-xs text-sm text-(--color-ink-soft)">
+          {unit.description}
+        </p>
+      </div>
+      <div className="mt-6 flex flex-col items-center gap-2">
+        {lessons.map((lesson, i) => {
+          const prevLesson = lessons[i - 1];
+          // First lesson of every unit is always unlocked; the rest gate on the previous lesson within the same unit.
+          const lessonUnlocked = i === 0 || !!(prevLesson && completed[prevLesson.id]);
           const done = !!completed[lesson.id];
           return (
             <LessonNode
               key={lesson.id}
               title={lesson.title}
-              unlocked={unlocked}
+              unlocked={lessonUnlocked}
               done={done}
               accuracy={completed[lesson.id]?.bestAccuracy}
               to={`/lesson/${lesson.id}`}
-              offset={i % 2 === 0 ? "left" : "right"}
               birdCount={lesson.speciesIds.length}
               speciesPreview={lesson.speciesIds.slice(0, 3).map((id) => getSpecies(id))}
+              accent={accent}
             />
           );
         })}
       </div>
-    </div>
+    </section>
   );
 }
 
@@ -77,25 +104,25 @@ interface NodeProps {
   done: boolean;
   accuracy?: number;
   to: string;
-  offset: "left" | "right";
   birdCount: number;
   speciesPreview: ReturnType<typeof getSpecies>[];
+  accent: typeof ACCENTS[keyof typeof ACCENTS];
 }
 
-function LessonNode({ title, unlocked, done, accuracy, to, offset, birdCount, speciesPreview }: NodeProps) {
+function LessonNode({ title, unlocked, done, accuracy, to, birdCount, speciesPreview, accent }: NodeProps) {
   const inner = (
     <motion.div
       whileHover={unlocked ? { y: -2 } : undefined}
       whileTap={unlocked ? { scale: 0.97 } : undefined}
       className={cn(
-        "relative flex w-full max-w-sm items-center gap-4 rounded-(--radius-card) border-2 px-5 py-4 shadow-(--shadow-soft) transition-colors",
+        "relative flex w-full items-center gap-4 rounded-(--radius-card) border-2 px-5 py-4 shadow-(--shadow-soft) transition-colors",
         unlocked
-          ? "cursor-pointer border-(--color-moss-300) bg-(--color-surface) hover:border-(--color-moss-500)"
+          ? cn("cursor-pointer bg-(--color-surface)", accent.unlockedBorder, accent.unlockedHover)
           : "cursor-not-allowed border-dashed border-(--color-line) bg-(--color-bg) opacity-70",
-        done && "border-(--color-moss-500) bg-(--color-moss-50)",
+        done && cn(accent.doneBorder, accent.doneBg),
       )}
     >
-      <NodeBadge done={done} unlocked={unlocked} />
+      <NodeBadge done={done} unlocked={unlocked} accent={accent} />
       <div className="min-w-0 flex-1">
         <div className="font-display text-lg leading-tight">{title}</div>
         <div className="mt-0.5 text-xs text-(--color-ink-soft)">
@@ -120,21 +147,21 @@ function LessonNode({ title, unlocked, done, accuracy, to, offset, birdCount, sp
     </motion.div>
   );
   return (
-    <div className={cn("flex w-full", offset === "left" ? "justify-start" : "justify-end")}>
-      {unlocked ? <Link to={to}>{inner}</Link> : inner}
+    <div className="flex w-full">
+      {unlocked ? <Link to={to} className="w-full">{inner}</Link> : inner}
     </div>
   );
 }
 
-function NodeBadge({ done, unlocked }: { done: boolean; unlocked: boolean }) {
+function NodeBadge({ done, unlocked, accent }: { done: boolean; unlocked: boolean; accent: typeof ACCENTS[keyof typeof ACCENTS] }) {
   return (
     <div
       className={cn(
         "grid h-12 w-12 shrink-0 place-items-center rounded-full text-xl",
         done
-          ? "bg-(--color-moss-500) text-white"
+          ? cn("text-white", accent.doneBadgeBg)
           : unlocked
-            ? "bg-(--color-moss-100) text-(--color-moss-700)"
+            ? cn(accent.badgeBg, accent.badgeText)
             : "bg-(--color-line) text-(--color-ink-soft)",
       )}
       aria-hidden

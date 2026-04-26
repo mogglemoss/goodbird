@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import confetti from "canvas-confetti";
 import { useGame } from "@/game/store";
 import { lessonComplete } from "@/lib/feedback";
-import { manifest } from "@/lib/manifest";
+import { getLesson, nextLesson as findNextLesson } from "@/lib/manifest";
 
 export function ResultsRoute() {
   const { id = "" } = useParams();
@@ -42,11 +42,10 @@ export function ResultsRoute() {
     }
   }, [active, snap, finalize, nav]);
 
-  const lessonTitle = useMemo(() => manifest.lessons.find((l) => l.id === id)?.title ?? "Lesson", [id]);
-  const nextLesson = useMemo(() => {
-    const idx = manifest.lessons.findIndex((l) => l.id === id);
-    return manifest.lessons[idx + 1] ?? null;
+  const lessonTitle = useMemo(() => {
+    try { return getLesson(id).title; } catch { return "Lesson"; }
   }, [id]);
+  const nextLesson = useMemo(() => findNextLesson(id), [id]);
 
   if (!snap) return null;
   const accuracy = Math.round((snap.correct / snap.total) * 100);
