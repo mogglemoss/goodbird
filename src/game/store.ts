@@ -27,6 +27,9 @@ interface GameState {
   favorites: Record<string, true>;
   freeplay: boolean; // when true, hearts don't deplete and lessons don't fail
   hasOnboarded: boolean;
+  dailyGoal: number; // XP target per day
+  xpToday: number;
+  xpTodayDay: string | null; // the day xpToday is for
   // Transient
   active: ActiveLesson | null;
 
@@ -34,11 +37,12 @@ interface GameState {
   answer: (correct: boolean, speciesId: string | null) => void;
   nextExercise: () => void;
   abandonLesson: () => void;
-  finalizeLesson: () => { xpGained: number; passed: boolean } | null;
+  finalizeLesson: () => { xpGained: number; passed: boolean; xpToday: number; dailyGoal: number; goalReached: boolean } | null;
   resetProgress: () => void;
   toggleFavorite: (speciesId: string) => void;
   setFreeplay: (on: boolean) => void;
   setOnboarded: () => void;
+  setDailyGoal: (n: number) => void;
 }
 
 const today = () => {
@@ -60,6 +64,9 @@ export const useGame = create<GameState>()(
       favorites: {},
       freeplay: false,
       hasOnboarded: false,
+      dailyGoal: 30,
+      xpToday: 0,
+      xpTodayDay: null,
       active: null,
 
       startLesson: (lessonId) => {
@@ -155,6 +162,7 @@ export const useGame = create<GameState>()(
 
       setFreeplay: (on) => set({ freeplay: on }),
       setOnboarded: () => set({ hasOnboarded: true }),
+      setDailyGoal: (n) => set({ dailyGoal: Math.max(5, Math.floor(n)) }),
 
       finalizeLesson: () => {
         const a = get().active;
@@ -172,24 +180,37 @@ export const useGame = create<GameState>()(
             lastPlayedAt: Date.now(),
           };
         }
-        // Streak
         const t = today();
-        const s = get().streak;
+
+        // Daily XP bookkeeping — reset xpToday at midnight.
+        const cur = get();
+        const xpTodayPrev = cur.xpTodayDay === t ? cur.xpToday : 0;
+        const xpTodayNext = xpTodayPrev + xpGained;
+        const dailyGoal = cur.dailyGoal;
+        const goalReached = xpTodayPrev < dailyGoal && xpTodayNext >= dailyGoal;
+
+        // Streak — only increments when the daily goal is reached today,
+        // not just on any played lesson. Lifts the streak from "you tapped
+        // anything" to "you actually trained today."
+        const s = cur.streak;
         let nextStreak = s;
-        if (s.lastPlayedDay !== t) {
+        if (s.lastPlayedDay !== t && xpTodayNext >= dailyGoal) {
           if (s.lastPlayedDay && isYesterday(s.lastPlayedDay)) {
             nextStreak = { lastPlayedDay: t, days: s.days + 1 };
           } else {
             nextStreak = { lastPlayedDay: t, days: 1 };
           }
         }
+
         set({
-          xp: get().xp + xpGained,
+          xp: cur.xp + xpGained,
           completedLessons: completed,
           streak: nextStreak,
+          xpToday: xpTodayNext,
+          xpTodayDay: t,
           active: null,
         });
-        return { xpGained, passed };
+        return { xpGained, passed, xpToday: xpTodayNext, dailyGoal, goalReached };
       },
     }),
     {
@@ -202,6 +223,9 @@ export const useGame = create<GameState>()(
         favorites: s.favorites,
         freeplay: s.freeplay,
         hasOnboarded: s.hasOnboarded,
+        dailyGoal: s.dailyGoal,
+        xpToday: s.xpToday,
+        xpTodayDay: s.xpTodayDay,
       }),
     },
   ),

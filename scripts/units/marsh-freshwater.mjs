@@ -9,10 +9,10 @@ export const UNIT = {
 };
 
 export const SPECIES = [
-  { id: "marsh-wren",              commonName: "Marsh Wren",             scientificName: "Cistothorus palustris",   mnemonic: "Buzzy, sewing-machine chatter" },
-  { id: "red-winged-blackbird",    commonName: "Red-winged Blackbird",   scientificName: "Agelaius phoeniceus",     mnemonic: "Konk-a-reee!" },
+  { id: "marsh-wren",              commonName: "Marsh Wren",             scientificName: "Cistothorus palustris",   mnemonic: "Buzzy, sewing-machine chatter", field: "Year-round in cattail marshes; chatters constantly from low in the reeds." },
+  { id: "red-winged-blackbird",    commonName: "Red-winged Blackbird",   scientificName: "Agelaius phoeniceus",     mnemonic: "Konk-a-reee!", field: "Year-round in marshes; males display from cattail tops in spring." },
   { id: "common-yellowthroat",     commonName: "Common Yellowthroat",    scientificName: "Geothlypis trichas",      mnemonic: "Wichity-wichity-wichity" },
-  { id: "sora",                    commonName: "Sora",                   scientificName: "Porzana carolina",        mnemonic: "Descending whinny, plaintive 'ker-WEE'", wikipediaTitle: "Sora (bird)" },
+  { id: "sora",                    commonName: "Sora",                   scientificName: "Porzana carolina",        mnemonic: "Descending whinny, plaintive 'ker-WEE'", wikipediaTitle: "Sora (bird)", field: "Year-round in dense marsh; calls mostly at dawn and dusk from cover." },
   { id: "virginia-rail",           commonName: "Virginia Rail",          scientificName: "Rallus limicola",         mnemonic: "Grunting 'kid-ick kid-ick'" },
   { id: "pied-billed-grebe",       commonName: "Pied-billed Grebe",      scientificName: "Podilymbus podiceps",     mnemonic: "Hooting 'wuk-wuk-wuk-cow-cow'" },
   { id: "american-bittern",        commonName: "American Bittern",       scientificName: "Botaurus lentiginosus",   mnemonic: "Pump-er-lunk pump-er-lunk" },

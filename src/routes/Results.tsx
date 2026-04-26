@@ -14,6 +14,9 @@ interface Snapshot {
   total: number;
   hearts: number;
   missedSpeciesIds: string[];
+  xpToday: number;
+  dailyGoal: number;
+  goalReached: boolean;
 }
 
 export function ResultsRoute() {
@@ -45,6 +48,12 @@ export function ResultsRoute() {
         if (result.passed) {
           lessonComplete();
           confetti({ particleCount: 80, spread: 70, origin: { y: 0.6 } });
+        }
+        // Bonus celebration when the daily goal was crossed this lesson.
+        if (result.goalReached) {
+          setTimeout(() => {
+            confetti({ particleCount: 140, spread: 120, startVelocity: 45, origin: { y: 0.5 } });
+          }, 350);
         }
       }
     }
@@ -79,6 +88,12 @@ export function ResultsRoute() {
         <Stat label="Accuracy" value={`${accuracy}%`} />
         <Stat label="Hearts" value={`${snap.hearts}/3`} />
       </div>
+
+      <DailyGoalBar
+        xpToday={snap.xpToday}
+        dailyGoal={snap.dailyGoal}
+        justReached={snap.goalReached}
+      />
 
       {snap.missedSpeciesIds.length > 0 && (
         <section className="w-full">
@@ -145,6 +160,35 @@ function MissedSpeciesRow({ speciesId }: { speciesId: string }) {
         {url && <PlaySoundButton url={url} size="sm" ariaLabel={`Play ${sp.commonName}`} />}
       </Link>
     </li>
+  );
+}
+
+function DailyGoalBar({ xpToday, dailyGoal, justReached }: { xpToday: number; dailyGoal: number; justReached: boolean }) {
+  const pct = Math.min(100, Math.round((xpToday / dailyGoal) * 100));
+  const reached = xpToday >= dailyGoal;
+  return (
+    <div className="w-full rounded-2xl border-2 border-(--color-line) bg-(--color-surface) px-4 py-3 text-left">
+      <div className="flex items-baseline justify-between text-sm">
+        <span className="font-semibold">
+          {reached ? (
+            <>Daily goal {justReached ? "reached today 🔥" : "complete"}</>
+          ) : (
+            <>Daily goal</>
+          )}
+        </span>
+        <span className="text-(--color-ink-soft)">
+          {Math.min(xpToday, dailyGoal)}/{dailyGoal} XP
+        </span>
+      </div>
+      <div className="mt-2 h-2 overflow-hidden rounded-full bg-(--color-line)">
+        <motion.div
+          className="h-full rounded-full bg-(--color-moss-500)"
+          initial={{ width: `${Math.max(0, pct - 30)}%` }}
+          animate={{ width: `${pct}%` }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+        />
+      </div>
+    </div>
   );
 }
 

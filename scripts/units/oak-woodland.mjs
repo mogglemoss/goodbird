@@ -10,12 +10,12 @@ export const UNIT = {
 };
 
 export const SPECIES = [
-  { id: "acorn-woodpecker",        commonName: "Acorn Woodpecker",        scientificName: "Melanerpes formicivorus", mnemonic: "Wheka-wheka-wheka — clown laughter" },
-  { id: "oak-titmouse",            commonName: "Oak Titmouse",            scientificName: "Baeolophus inornatus",    mnemonic: "Peter-peter-peter, scratchy" },
+  { id: "acorn-woodpecker",        commonName: "Acorn Woodpecker",        scientificName: "Melanerpes formicivorus", mnemonic: "Wheka-wheka-wheka — clown laughter", field: "Year-round in oak groves; their granary trees give them away." },
+  { id: "oak-titmouse",            commonName: "Oak Titmouse",            scientificName: "Baeolophus inornatus",    mnemonic: "Peter-peter-peter, scratchy", field: "Year-round; sings 'peter-peter' from oak canopies in spring." },
   { id: "pacific-slope-flycatcher",commonName: "Pacific-slope Flycatcher",scientificName: "Empidonax difficilis",    mnemonic: "Rising 'pee-WEET'" },
   { id: "stellers-jay",            commonName: "Steller's Jay",           scientificName: "Cyanocitta stelleri",     mnemonic: "Harsh 'shaak-shaak-shaak'" },
   { id: "huttons-vireo",           commonName: "Hutton's Vireo",          scientificName: "Vireo huttoni",           mnemonic: "Endlessly repeated 'zu-wee'" },
-  { id: "western-tanager",         commonName: "Western Tanager",         scientificName: "Piranga ludoviciana",     mnemonic: "Robin with a sore throat" },
+  { id: "western-tanager",         commonName: "Western Tanager",         scientificName: "Piranga ludoviciana",     mnemonic: "Robin with a sore throat", field: "April–September in mixed oak/conifer; bright yellow flash in the canopy." },
   { id: "dark-eyed-junco",         commonName: "Dark-eyed Junco",         scientificName: "Junco hyemalis",          mnemonic: "Even, ringing trill on one pitch" },
   { id: "purple-finch",            commonName: "Purple Finch",            scientificName: "Haemorhous purpureus",    mnemonic: "Long rich warble that tumbles downward" },
   { id: "lesser-goldfinch",        commonName: "Lesser Goldfinch",        scientificName: "Spinus psaltria",         mnemonic: "Plaintive 'tee-yeer', mimics" },

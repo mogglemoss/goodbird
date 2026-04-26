@@ -9,7 +9,7 @@ export const UNIT = {
 };
 
 export const SPECIES = [
-  { id: "western-meadowlark",      commonName: "Western Meadowlark",     scientificName: "Sturnella neglecta",      mnemonic: "Liquid bubbling whistle from a fence post" },
+  { id: "western-meadowlark",      commonName: "Western Meadowlark",     scientificName: "Sturnella neglecta",      mnemonic: "Liquid bubbling whistle from a fence post", field: "Year-round in pastures; sings from fence posts and isolated shrubs." },
   { id: "savannah-sparrow",        commonName: "Savannah Sparrow",       scientificName: "Passerculus sandwichensis", mnemonic: "Insect-like 'tsi-tsi-tsi-zheee'" },
   { id: "western-bluebird",        commonName: "Western Bluebird",       scientificName: "Sialia mexicana",         mnemonic: "Soft 'few' contact notes" },
   { id: "white-tailed-kite",       commonName: "White-tailed Kite",      scientificName: "Elanus leucurus",         mnemonic: "Whistled 'keep keep keep'" },

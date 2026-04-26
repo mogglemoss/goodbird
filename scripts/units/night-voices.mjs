@@ -11,8 +11,8 @@ export const UNIT = {
 };
 
 export const SPECIES = [
-  { id: "great-horned-owl",        commonName: "Great Horned Owl",       scientificName: "Bubo virginianus",        mnemonic: "Deep stuttered 'whoo-whoo, whoo-whoo'" },
-  { id: "western-screech-owl",     commonName: "Western Screech-Owl",    scientificName: "Megascops kennicottii",   mnemonic: "Bouncing-ball, accelerating 'whowhowhowhow'" },
+  { id: "great-horned-owl",        commonName: "Great Horned Owl",       scientificName: "Bubo virginianus",        mnemonic: "Deep stuttered 'whoo-whoo, whoo-whoo'", field: "Year-round; deep hooting peaks December–March during courtship." },
+  { id: "western-screech-owl",     commonName: "Western Screech-Owl",    scientificName: "Megascops kennicottii",   mnemonic: "Bouncing-ball, accelerating 'whowhowhowhow'", field: "Year-round in oak woodland edges; bouncy trill at dusk." },
   { id: "northern-saw-whet-owl",   commonName: "Northern Saw-whet Owl",  scientificName: "Aegolius acadicus",       mnemonic: "Steady single-note 'too-too-too'" },
   { id: "northern-pygmy-owl",      commonName: "Northern Pygmy-Owl",     scientificName: "Glaucidium gnoma",        mnemonic: "Single high 'too' every 1-2 seconds" },
   { id: "common-poorwill",         commonName: "Common Poorwill",        scientificName: "Phalaenoptilus nuttallii",mnemonic: "Whistled 'poor-will' all night" },

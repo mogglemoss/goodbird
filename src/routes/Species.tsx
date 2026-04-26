@@ -72,6 +72,11 @@ export function SpeciesRoute() {
         <p className="mx-auto mt-3 max-w-sm font-display text-lg leading-snug">
           "{species.mnemonic}"
         </p>
+        {species.field && (
+          <p className="mx-auto mt-3 max-w-sm text-sm leading-snug text-(--color-ink-soft)">
+            {species.field}
+          </p>
+        )}
       </div>
 
       {memberUnits.length > 0 && (

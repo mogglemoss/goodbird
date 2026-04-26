@@ -9,9 +9,9 @@ export const UNIT = {
 };
 
 export const SPECIES = [
-  { id: "pacific-wren",            commonName: "Pacific Wren",           scientificName: "Troglodytes pacificus",   mnemonic: "Endless tinkling, fast and loud" },
-  { id: "wilsons-warbler",         commonName: "Wilson's Warbler",       scientificName: "Cardellina pusilla",      mnemonic: "Staccato 'chi-chi-chi-chi-chi'" },
-  { id: "swainsons-thrush",        commonName: "Swainson's Thrush",      scientificName: "Catharus ustulatus",      mnemonic: "Spiraling, ethereal flute" },
+  { id: "pacific-wren",            commonName: "Pacific Wren",           scientificName: "Troglodytes pacificus",   mnemonic: "Endless tinkling, fast and loud", field: "Year-round in mossy creek bottoms; loud song from low cover." },
+  { id: "wilsons-warbler",         commonName: "Wilson's Warbler",       scientificName: "Cardellina pusilla",      mnemonic: "Staccato 'chi-chi-chi-chi-chi'", field: "April–September in willow-lined creeks; sings from low branches." },
+  { id: "swainsons-thrush",        commonName: "Swainson's Thrush",      scientificName: "Catharus ustulatus",      mnemonic: "Spiraling, ethereal flute", field: "May–August in alder/willow; sings at dawn and dusk from deep cover." },
   { id: "black-headed-grosbeak",   commonName: "Black-headed Grosbeak",  scientificName: "Pheucticus melanocephalus", mnemonic: "A robin on caffeine" },
   { id: "warbling-vireo",          commonName: "Warbling Vireo",         scientificName: "Vireo gilvus",            mnemonic: "Long run-on warble ending up" },
   { id: "belted-kingfisher",       commonName: "Belted Kingfisher",      scientificName: "Megaceryle alcyon",       mnemonic: "Loud dry rattle, like a fishing reel" },

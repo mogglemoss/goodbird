@@ -12,7 +12,7 @@ export const SPECIES = [
   { id: "pygmy-nuthatch",          commonName: "Pygmy Nuthatch",         scientificName: "Sitta pygmaea",           mnemonic: "High squeaky 'pi-pi-pi'" },
   { id: "chestnut-backed-chickadee",commonName:"Chestnut-backed Chickadee",scientificName:"Poecile rufescens",      mnemonic: "Hurried 'chick-a-dee-dee'" },
   { id: "brown-creeper",           commonName: "Brown Creeper",          scientificName: "Certhia americana",       mnemonic: "Thin tinkling 'tsee-tsee-tsee-titi-tsee'" },
-  { id: "varied-thrush",           commonName: "Varied Thrush",          scientificName: "Ixoreus naevius",         mnemonic: "Single haunting whistle, varying pitch" },
+  { id: "varied-thrush",           commonName: "Varied Thrush",          scientificName: "Ixoreus naevius",         mnemonic: "Single haunting whistle, varying pitch", field: "October–April in dense Bishop pine; haunting whistle at dawn." },
   { id: "townsends-warbler",       commonName: "Townsend's Warbler",     scientificName: "Setophaga townsendi",     mnemonic: "Buzzy 'wheezy wheezy WHEE-zee'" },
   { id: "pacific-slope-flycatcher",commonName: "Pacific-slope Flycatcher",scientificName: "Empidonax difficilis",   mnemonic: "Rising 'pee-WEET'" },
   { id: "hairy-woodpecker",        commonName: "Hairy Woodpecker",       scientificName: "Dryobates villosus",      mnemonic: "Sharp 'peek!' calls + drumming" },

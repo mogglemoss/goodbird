@@ -16,6 +16,8 @@ export interface Species {
   mnemonic: string;
   imageUrl: string | null;
   recordings: Recording[];
+  /** Optional one-line "where + when" hint for naturalists. */
+  field?: string;
 }
 
 export interface LessonRef {

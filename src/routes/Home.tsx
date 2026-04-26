@@ -16,7 +16,17 @@ export function HomeRoute() {
   const streak = useGame((s) => s.streak);
   const completed = useGame((s) => s.completedLessons);
   const favorites = useGame((s) => s.favorites);
+  const dailyGoal = useGame((s) => s.dailyGoal);
+  const xpToday = useGame((s) => s.xpToday);
+  const xpTodayDay = useGame((s) => s.xpTodayDay);
   const [settingsOpen, setSettingsOpen] = useState(false);
+
+  // Reset displayed xpToday at midnight (without writing to the store —
+  // finalizeLesson handles the write next time the user plays).
+  const todayXp = useMemo(() => {
+    const t = (() => { const d = new Date(); return `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`; })();
+    return xpTodayDay === t ? xpToday : 0;
+  }, [xpToday, xpTodayDay]);
 
   const favoriteSpecies = useMemo<Species[]>(() => {
     const ids = Object.keys(favorites);
@@ -41,7 +51,13 @@ export function HomeRoute() {
 
   return (
     <div className="mx-auto w-full max-w-md px-5 pb-24 pt-6 sm:max-w-2xl lg:max-w-4xl">
-      <Header xp={xp} streakDays={streak.days} onSettings={() => setSettingsOpen(true)} />
+      <Header
+        xp={xp}
+        streakDays={streak.days}
+        xpToday={todayXp}
+        dailyGoal={dailyGoal}
+        onSettings={() => setSettingsOpen(true)}
+      />
       <SettingsSheet open={settingsOpen} onClose={() => setSettingsOpen(false)} />
 
       <OnboardingCard />
@@ -115,12 +131,26 @@ export function HomeRoute() {
   );
 }
 
-function Header({ xp, streakDays, onSettings }: { xp: number; streakDays: number; onSettings: () => void }) {
+function Header({
+  xp,
+  streakDays,
+  xpToday,
+  dailyGoal,
+  onSettings,
+}: {
+  xp: number;
+  streakDays: number;
+  xpToday: number;
+  dailyGoal: number;
+  onSettings: () => void;
+}) {
+  const goalReached = xpToday >= dailyGoal;
   return (
     <div className="flex items-center justify-between">
       <Wordmark size="sm" />
       <div className="flex items-center gap-2">
-        <Pill icon="🔥" value={streakDays} label="day streak" muted={streakDays === 0} />
+        <DailyGoalRing xpToday={xpToday} dailyGoal={dailyGoal} />
+        <Pill icon="🔥" value={streakDays} label="day streak" muted={streakDays === 0 && !goalReached} />
         <Pill icon="✦" value={xp} label="xp" />
         <button
           onClick={onSettings}
@@ -134,6 +164,33 @@ function Header({ xp, streakDays, onSettings }: { xp: number; streakDays: number
           </svg>
         </button>
       </div>
+    </div>
+  );
+}
+
+function DailyGoalRing({ xpToday, dailyGoal }: { xpToday: number; dailyGoal: number }) {
+  const pct = Math.min(1, xpToday / dailyGoal);
+  const r = 14;
+  const circ = 2 * Math.PI * r;
+  const reached = xpToday >= dailyGoal;
+  return (
+    <div
+      className="relative grid h-9 w-9 place-items-center"
+      title={`Today: ${Math.min(xpToday, dailyGoal)}/${dailyGoal} XP`}
+    >
+      <svg viewBox="0 0 36 36" className="absolute inset-0 -rotate-90">
+        <circle cx="18" cy="18" r={r} fill="none" stroke="var(--color-line)" strokeWidth="3" />
+        <circle
+          cx="18" cy="18" r={r} fill="none"
+          stroke={reached ? "var(--color-moss-500)" : "var(--color-moss-300)"}
+          strokeWidth="3"
+          strokeLinecap="round"
+          strokeDasharray={circ}
+          strokeDashoffset={circ * (1 - pct)}
+          style={{ transition: "stroke-dashoffset 600ms ease" }}
+        />
+      </svg>
+      <span className="text-xs">{reached ? "✓" : "🎯"}</span>
     </div>
   );
 }

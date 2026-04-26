@@ -9,14 +9,14 @@ export const UNIT = {
 };
 
 export const SPECIES = [
-  { id: "wrentit",                 commonName: "Wrentit",                scientificName: "Chamaea fasciata",       mnemonic: "Bouncing ping-pong ball" },
-  { id: "spotted-towhee",          commonName: "Spotted Towhee",         scientificName: "Pipilo maculatus",       mnemonic: "Drink your teeeea" },
+  { id: "wrentit",                 commonName: "Wrentit",                scientificName: "Chamaea fasciata",       mnemonic: "Bouncing ping-pong ball", field: "Year-round in coastal chaparral; sings all day, especially in spring." },
+  { id: "spotted-towhee",          commonName: "Spotted Towhee",         scientificName: "Pipilo maculatus",       mnemonic: "Drink your teeeea", field: "Year-round in dense brush; sings from an exposed perch in spring." },
   { id: "california-towhee",       commonName: "California Towhee",      scientificName: "Melozone crissalis",     mnemonic: "Sharp 'chink!' from the brushpile, like dropping a coin" },
   { id: "white-crowned-sparrow",   commonName: "White-crowned Sparrow",  scientificName: "Zonotrichia leucophrys", mnemonic: "Oh-sweet-pretty-little-Canada" },
   { id: "song-sparrow",            commonName: "Song Sparrow",           scientificName: "Melospiza melodia",      mnemonic: "Madge-madge-madge put-on-your-tea-kettle" },
   { id: "bewicks-wren",            commonName: "Bewick's Wren",          scientificName: "Thryomanes bewickii",    mnemonic: "Bubbly song ending in a buzzy 'see-saw' trill" },
   { id: "house-wren",              commonName: "House Wren",             scientificName: "Troglodytes aedon",      mnemonic: "Manic bubbling explosion of trills", wikipediaTitle: "Northern house wren" },
-  { id: "california-quail",        commonName: "California Quail",       scientificName: "Callipepla californica", mnemonic: "Chi-CA-go!" },
+  { id: "california-quail",        commonName: "California Quail",       scientificName: "Callipepla californica", mnemonic: "Chi-CA-go!", field: "Year-round in coastal scrub; calls 'Chi-CA-go' from open ground, often near brush." },
   { id: "california-scrub-jay",    commonName: "California Scrub-Jay",   scientificName: "Aphelocoma californica", mnemonic: "Loud rising 'shreeenk!' — clearly annoyed" },
   { id: "annas-hummingbird",       commonName: "Anna's Hummingbird",     scientificName: "Calypte anna",           mnemonic: "Scratchy squeaky-gate song" },
   { id: "northern-mockingbird",    commonName: "Northern Mockingbird",   scientificName: "Mimus polyglottos",      mnemonic: "Anything, repeated three times" },
