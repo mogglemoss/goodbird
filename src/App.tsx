@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { HomeRoute } from "./routes/Home";
+import { UnitRoute } from "./routes/Unit";
 import { LessonRoute } from "./routes/Lesson";
 import { ResultsRoute } from "./routes/Results";
 
@@ -8,6 +9,7 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomeRoute />} />
+        <Route path="/unit/:slug" element={<UnitRoute />} />
         <Route path="/lesson/:id" element={<LessonRoute />} />
         <Route path="/results/:id" element={<ResultsRoute />} />
       </Routes>

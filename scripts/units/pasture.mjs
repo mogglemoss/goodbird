@@ -3,7 +3,7 @@
 export const UNIT = {
   id: "pasture",
   title: "Pasture & Open Country",
-  habitat: "Grassland & Pasture",
+  habitat: "Open Country",
   description: "The dairy pastures of the Pt. Reyes pastoral zone and the rolling grassland of Chileno Valley.",
   accent: "rose",
 };

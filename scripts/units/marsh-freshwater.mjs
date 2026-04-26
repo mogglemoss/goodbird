@@ -3,7 +3,7 @@
 export const UNIT = {
   id: "marsh-freshwater",
   title: "Marsh & Wetland",
-  habitat: "Marsh & Freshwater",
+  habitat: "Cattails & Ponds",
   description: "Cattails, sedges, and quiet ponds — Olema Marsh, Five Brooks, the freshwater edges of Abbott's Lagoon.",
   accent: "emerald",
 };

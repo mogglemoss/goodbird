@@ -3,7 +3,7 @@
 export const UNIT = {
   id: "coastal-scrub",
   title: "Coastal Scrub",
-  habitat: "Coastal Scrub",
+  habitat: "Chaparral & Brush",
   description: "The chaparral, scrub, and brushy edges along the Point Reyes, Bolinas, and Tomales coastline.",
   accent: "moss", // tints lesson nodes; see src/lib/theme.ts
 };
