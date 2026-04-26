@@ -4,7 +4,17 @@ import { motion } from "framer-motion";
 import confetti from "canvas-confetti";
 import { useGame } from "@/game/store";
 import { lessonComplete } from "@/lib/feedback";
-import { getLesson, nextLesson as findNextLesson } from "@/lib/manifest";
+import { getLesson, getSpecies, nextLesson as findNextLesson } from "@/lib/manifest";
+import { getHowl, stopAll } from "@/lib/audio";
+
+interface Snapshot {
+  xpGained: number;
+  passed: boolean;
+  correct: number;
+  total: number;
+  hearts: number;
+  missedSpeciesIds: string[];
+}
 
 export function ResultsRoute() {
   const { id = "" } = useParams();
@@ -12,18 +22,10 @@ export function ResultsRoute() {
   const active = useGame((s) => s.active);
   const finalize = useGame((s) => s.finalizeLesson);
   const completed = useGame((s) => s.completedLessons);
-  // We finalize once on mount (active is still set when arriving here).
-  const [snap, setSnap] = useState<{
-    xpGained: number;
-    passed: boolean;
-    correct: number;
-    total: number;
-    hearts: number;
-  } | null>(null);
+  const [snap, setSnap] = useState<Snapshot | null>(null);
 
   useEffect(() => {
     if (!active && !snap) {
-      // No active lesson and no snapshot — user landed cold; bounce home.
       nav("/", { replace: true });
       return;
     }
@@ -31,9 +33,15 @@ export function ResultsRoute() {
       const correct = active.correctCount;
       const total = active.exercises.length;
       const hearts = active.hearts;
+      // Unique species the user got wrong on at least once.
+      const missed = new Set<string>();
+      for (const r of active.results) {
+        if (!r.correct && r.speciesId) missed.add(r.speciesId);
+      }
+      const missedSpeciesIds = [...missed];
       const result = finalize();
       if (result) {
-        setSnap({ ...result, correct, total, hearts });
+        setSnap({ ...result, correct, total, hearts, missedSpeciesIds });
         if (result.passed) {
           lessonComplete();
           confetti({ particleCount: 80, spread: 70, origin: { y: 0.6 } });
@@ -51,7 +59,7 @@ export function ResultsRoute() {
   const accuracy = Math.round((snap.correct / snap.total) * 100);
 
   return (
-    <div className="mx-auto flex min-h-[100dvh] w-full max-w-md flex-col items-center justify-center gap-6 px-6 py-10 text-center">
+    <div className="mx-auto flex min-h-[100dvh] w-full max-w-md flex-col items-center gap-6 px-6 py-10 text-center">
       <motion.div
         initial={{ scale: 0.6, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
@@ -71,7 +79,21 @@ export function ResultsRoute() {
         <Stat label="Accuracy" value={`${accuracy}%`} />
         <Stat label="Hearts" value={`${snap.hearts}/3`} />
       </div>
-      <div className="flex w-full flex-col gap-3">
+
+      {snap.missedSpeciesIds.length > 0 && (
+        <section className="w-full">
+          <h2 className="text-left text-xs font-semibold uppercase tracking-wider text-(--color-ink-soft)">
+            Listen again
+          </h2>
+          <ul className="mt-2 flex flex-col gap-2">
+            {snap.missedSpeciesIds.map((sid) => (
+              <MissedSpeciesRow key={sid} speciesId={sid} />
+            ))}
+          </ul>
+        </section>
+      )}
+
+      <div className="mt-2 flex w-full flex-col gap-3">
         {snap.passed && nextLesson && completed[id] && (
           <Link
             to={`/lesson/${nextLesson.id}`}
@@ -92,10 +114,49 @@ export function ResultsRoute() {
           to="/"
           className="tap-target rounded-full border-2 border-(--color-line) bg-(--color-surface) px-6 py-3 text-center font-semibold text-(--color-ink) transition-colors hover:border-(--color-moss-300)"
         >
-          Back to map
+          Back to habitats
         </Link>
       </div>
     </div>
+  );
+}
+
+function MissedSpeciesRow({ speciesId }: { speciesId: string }) {
+  const sp = (() => { try { return getSpecies(speciesId); } catch { return null; } })();
+  if (!sp) return null;
+  const url = sp.recordings[0]?.url;
+  const play = () => {
+    if (!url) return;
+    stopAll();
+    const h = getHowl(url);
+    h.seek(0);
+    h.play();
+  };
+  return (
+    <li className="flex items-center gap-3 rounded-(--radius-card) border-2 border-(--color-line) bg-(--color-surface) p-2 text-left shadow-(--shadow-soft)">
+      <div className="h-12 w-12 shrink-0 overflow-hidden rounded-xl bg-(--color-sand-50)">
+        {sp.imageUrl ? (
+          <img src={sp.imageUrl} alt="" className="h-full w-full object-cover" loading="lazy" />
+        ) : (
+          <div className="grid h-full w-full place-items-center text-xl">🪶</div>
+        )}
+      </div>
+      <div className="min-w-0 flex-1">
+        <div className="truncate font-medium">{sp.commonName}</div>
+        <div className="truncate text-xs text-(--color-ink-soft)">"{sp.mnemonic}"</div>
+      </div>
+      <button
+        type="button"
+        onClick={play}
+        aria-label={`Replay ${sp.commonName}`}
+        disabled={!url}
+        className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-(--color-moss-500) text-white shadow-(--shadow-soft) hover:bg-(--color-moss-600) active:scale-95 disabled:opacity-40 cursor-pointer"
+      >
+        <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor">
+          <path d="M8 5.5v13a.5.5 0 0 0 .76.43l11-6.5a.5.5 0 0 0 0-.86l-11-6.5A.5.5 0 0 0 8 5.5z" />
+        </svg>
+      </button>
+    </li>
   );
 }
 

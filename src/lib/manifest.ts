@@ -57,6 +57,24 @@ export const getUnit = (id: string): Unit => {
 export const allSpeciesWithRecordings = (): Species[] =>
   Array.from(speciesById.values()).filter((s) => s.recordings.length > 0);
 
+const speciesByUnit = new Map<string, Species[]>();
+for (const u of units) {
+  const ids = new Set<string>();
+  for (const l of allLessons) if (l.unitId === u.id) for (const id of l.speciesIds) ids.add(id);
+  speciesByUnit.set(u.id, [...ids].map((id) => speciesById.get(id)).filter((s): s is Species => !!s && s.recordings.length > 0));
+}
+export const getSpeciesForUnit = (unitId: string): Species[] => speciesByUnit.get(unitId) ?? [];
+
+/** Every audio + image URL across all units — for offline pre-caching. */
+export function allMediaUrls(): string[] {
+  const urls = new Set<string>();
+  for (const s of speciesById.values()) {
+    if (s.imageUrl) urls.add(s.imageUrl);
+    for (const r of s.recordings) if (r.url) urls.add(r.url);
+  }
+  return [...urls];
+}
+
 export const nextLesson = (lessonId: string) => {
   const l = lessonsById.get(lessonId);
   if (!l) return null;

@@ -23,6 +23,8 @@ export interface LessonRef {
   title: string;
   speciesIds: string[];
   length: number;
+  /** Annotated by the manifest loader; not present in the JSON files. */
+  unitId?: string;
 }
 
 export type UnitAccent = "moss" | "amber" | "sky" | "indigo" | "rose" | "sand" | "emerald" | "violet";

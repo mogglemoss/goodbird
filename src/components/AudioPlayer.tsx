@@ -16,25 +16,38 @@ interface Props {
 export function AudioPlayer({ url, label = "Play call", size = "lg", autoPlay = false, onEnded, className }: Props) {
   const [playing, setPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
+  const [nudge, setNudge] = useState(false); // pulses the play button if autoplay was blocked
   const howlRef = useRef<Howl | null>(null);
   const rafRef = useRef<number | null>(null);
 
   useEffect(() => {
     const h = getHowl(url);
     howlRef.current = h;
-    const onPlay = () => setPlaying(true);
+    const onPlay = () => { setPlaying(true); setNudge(false); };
     const onStop = () => setPlaying(false);
     const onEnd = () => { setPlaying(false); setProgress(0); onEnded?.(); };
+    const onPlayError = () => {
+      // iOS Safari blocks autoplay without a user gesture in scope.
+      // Pulse the play button so the user knows to tap.
+      setPlaying(false);
+      setNudge(true);
+    };
     h.on("play", onPlay);
     h.on("pause", onStop);
     h.on("stop", onStop);
     h.on("end", onEnd);
-    if (autoPlay && !h.playing()) h.play();
+    h.on("playerror", onPlayError);
+    if (autoPlay && !h.playing()) {
+      // h.play() returns a sound id; if the underlying audio.play() rejects,
+      // Howler emits "playerror" (handled above).
+      h.play();
+    }
     return () => {
       h.off("play", onPlay);
       h.off("pause", onStop);
       h.off("stop", onStop);
       h.off("end", onEnd);
+      h.off("playerror", onPlayError);
       h.stop();
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
     };
@@ -81,8 +94,8 @@ export function AudioPlayer({ url, label = "Play call", size = "lg", autoPlay = 
           dim,
         )}
       >
-        {playing && (
-          <span className="absolute inset-0 rounded-full bg-(--color-moss-500) opacity-40 pulse-ring pointer-events-none" />
+        {(playing || nudge) && (
+          <span className={cn("absolute inset-0 rounded-full bg-(--color-moss-500) pointer-events-none", nudge ? "opacity-60 pulse-ring" : "opacity-40 pulse-ring")} />
         )}
         <PlayPauseIcon playing={playing} />
         {/* Progress ring */}

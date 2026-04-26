@@ -1,5 +1,5 @@
 import type { Exercise, ExerciseKind, LessonRef, Recording, Species, SpeciesStat } from "@/lib/types";
-import { allSpeciesWithRecordings, getSpecies } from "@/lib/manifest";
+import { allSpeciesWithRecordings, getSpecies, getSpeciesForUnit } from "@/lib/manifest";
 
 function rand<T>(arr: T[]): T {
   return arr[Math.floor(Math.random() * arr.length)];
@@ -30,14 +30,19 @@ function speciesWeight(stat: SpeciesStat | undefined): number {
   return 1 + (1 - acc) * 2 + Math.min(recencyDays * 0.3, 2);
 }
 
-function distractors(pool: Species[], correct: Species, n: number): Species[] {
-  const others = pool.filter((s) => s.id !== correct.id);
-  return shuffle(others).slice(0, n);
+function distractors(unitPool: Species[], allPool: Species[], correct: Species, n: number): Species[] {
+  // Prefer same-unit distractors so an "owl" exercise gets owls, not random songbirds.
+  // Backfill from the global pool only when the unit doesn't have enough other species.
+  const sameUnit = shuffle(unitPool.filter((s) => s.id !== correct.id));
+  if (sameUnit.length >= n) return sameUnit.slice(0, n);
+  const haveIds = new Set([correct.id, ...sameUnit.map((s) => s.id)]);
+  const fromGlobal = shuffle(allPool.filter((s) => !haveIds.has(s.id)));
+  return [...sameUnit, ...fromGlobal].slice(0, n);
 }
 
-function makeIdentify(target: Species, pool: Species[]): Exercise | null {
+function makeIdentify(target: Species, unitPool: Species[], allPool: Species[]): Exercise | null {
   if (!target.recordings.length) return null;
-  const choices = shuffle([target, ...distractors(pool, target, 3)]);
+  const choices = shuffle([target, ...distractors(unitPool, allPool, target, 3)]);
   return {
     kind: "identify",
     recording: rand(target.recordings),
@@ -46,9 +51,9 @@ function makeIdentify(target: Species, pool: Species[]): Exercise | null {
   };
 }
 
-function makeMnemonic(target: Species, pool: Species[]): Exercise | null {
+function makeMnemonic(target: Species, unitPool: Species[], allPool: Species[]): Exercise | null {
   if (!target.recordings.length) return null;
-  const choices = shuffle([target, ...distractors(pool, target, 3)]);
+  const choices = shuffle([target, ...distractors(unitPool, allPool, target, 3)]);
   return {
     kind: "mnemonic",
     recording: rand(target.recordings),
@@ -57,7 +62,7 @@ function makeMnemonic(target: Species, pool: Species[]): Exercise | null {
   };
 }
 
-function makeDiscriminate(target: Species, pool: Species[]): Exercise | null {
+function makeDiscriminate(target: Species, unitPool: Species[], allPool: Species[]): Exercise | null {
   if (!target.recordings.length) return null;
   const same = Math.random() < 0.5;
   const a = rand(target.recordings);
@@ -68,7 +73,7 @@ function makeDiscriminate(target: Species, pool: Species[]): Exercise | null {
     b = others.length ? rand(others) : a;
     speciesIdB = target.id;
   } else {
-    const other = rand(distractors(pool, target, 1));
+    const other = rand(distractors(unitPool, allPool, target, 1));
     if (!other.recordings.length) return null;
     b = rand(other.recordings);
     speciesIdB = other.id;
@@ -83,10 +88,11 @@ function makeDiscriminate(target: Species, pool: Species[]): Exercise | null {
   };
 }
 
-function makeFindBird(target: Species, pool: Species[]): Exercise | null {
+function makeFindBird(target: Species, unitPool: Species[], allPool: Species[]): Exercise | null {
   if (!target.recordings.length) return null;
-  const decoyA = rand(distractors(pool, target, 1));
-  const decoyB = rand(distractors(pool.filter((s) => s.id !== decoyA.id), target, 1));
+  const decoyA = rand(distractors(unitPool, allPool, target, 1));
+  const remainingUnit = unitPool.filter((s) => s.id !== decoyA.id);
+  const decoyB = rand(distractors(remainingUnit, allPool, target, 1));
   if (!decoyA?.recordings.length || !decoyB?.recordings.length) return null;
   const targetClip = rand(target.recordings);
   const clips = shuffle([
@@ -102,7 +108,8 @@ function makeFindBird(target: Species, pool: Species[]): Exercise | null {
   };
 }
 
-const BUILDERS: Record<ExerciseKind, (t: Species, p: Species[]) => Exercise | null> = {
+type Builder = (t: Species, unitPool: Species[], allPool: Species[]) => Exercise | null;
+const BUILDERS: Record<ExerciseKind, Builder> = {
   identify: makeIdentify,
   mnemonic: makeMnemonic,
   discriminate: makeDiscriminate,
@@ -114,7 +121,9 @@ export function generateLesson(
   stats: Record<string, SpeciesStat>,
 ): Exercise[] {
   const pool = lesson.speciesIds.map(getSpecies).filter((s) => s.recordings.length > 0);
-  // Fall back to broader pool for distractors so small lessons still get 4 choices.
+  // Distractors prefer same-unit species; backfill from the global pool when
+  // the unit is too small (e.g. Night Voices has only ~7 species).
+  const unitPool = lesson.unitId ? getSpeciesForUnit(lesson.unitId) : pool;
   const allPool = allSpeciesWithRecordings();
   const exercises: Exercise[] = [];
   const lastKinds: ExerciseKind[] = [];
@@ -134,7 +143,7 @@ export function generateLesson(
     }
     const weights = pool.map((s) => speciesWeight(stats[s.id]));
     const target = pickWeighted(pool, weights);
-    const ex = BUILDERS[kind](target, allPool) ?? makeIdentify(target, allPool);
+    const ex = BUILDERS[kind](target, unitPool, allPool) ?? makeIdentify(target, unitPool, allPool);
     if (ex) {
       exercises.push(ex);
       lastKinds.push(kind);
