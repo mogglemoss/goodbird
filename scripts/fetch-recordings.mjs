@@ -38,19 +38,27 @@ async function fetchXC(species) {
     const d2 = await r2.json();
     recs = d2.recordings || recs;
   }
-  recs.sort((a, b) => {
-    const qa = a.q === "A" ? 0 : 1;
-    const qb = b.q === "A" ? 0 : 1;
-    if (qa !== qb) return qa - qb;
-    return Math.abs(parseLen(a.length) - 8) - Math.abs(parseLen(b.length) - 8);
-  });
+  // Drop playback-used (recorded by playing another recording) and pure alarm calls.
   const filtered = recs.filter((r) => {
     const t = (r.type || "").toLowerCase();
     if (t.includes("alarm") && !t.includes("song") && !t.includes("call")) return false;
     if ((r["playback-used"] || "").toLowerCase() === "yes") return false;
     return true;
   });
-  const picks = (filtered.length >= 3 ? filtered : recs).slice(0, 3);
+  // Score recordings: prefer "song" (matches our mnemonics, which describe songs),
+  // then "call", then anything else. Some species have no real song
+  // (woodpeckers, owls, kingfishers) — for those we accept calls.
+  const scored = (filtered.length ? filtered : recs).map((r) => ({ rec: r, score: typeScore(r.type) }));
+  scored.sort((a, b) => {
+    if (b.score !== a.score) return b.score - a.score;
+    // Quality A > others
+    const qa = a.rec.q === "A" ? 0 : 1;
+    const qb = b.rec.q === "A" ? 0 : 1;
+    if (qa !== qb) return qa - qb;
+    // Length: prefer ~8s
+    return Math.abs(parseLen(a.rec.length) - 8) - Math.abs(parseLen(b.rec.length) - 8);
+  });
+  const picks = scored.slice(0, 3).map((s) => s.rec);
   return picks.map((r) => ({
     id: `XC${r.id}`,
     url: r.file?.startsWith("//") ? `https:${r.file}` : r.file,
@@ -61,6 +69,27 @@ async function fetchXC(species) {
     license: r.lic,
     sourceUrl: r.url?.startsWith("//") ? `https:${r.url}` : r.url,
   }));
+}
+
+/**
+ * Rank a xeno-canto recording type for our use case (mnemonic-style ID training).
+ * "song" is the long, repeating, learnable vocalization — what mnemonics describe.
+ * Pure calls and especially alarm calls are less useful for ID by ear.
+ */
+function typeScore(typeStr) {
+  const t = (typeStr || "").toLowerCase();
+  let score = 0;
+  if (t.includes("song")) score += 100;
+  if (t.includes("call") && !t.includes("alarm")) score += 30;
+  if (t.includes("flight call")) score += 10;
+  if (t.includes("contact call")) score += 20;
+  if (t.includes("alarm")) score -= 40;
+  if (t.includes("begging")) score -= 30;
+  if (t.includes("juvenile")) score -= 20;
+  if (t.includes("nestling")) score -= 30;
+  if (t.includes("chick")) score -= 30;
+  if (t.includes("imitation")) score -= 50; // mimicry recordings are confusing
+  return score;
 }
 
 function parseLen(str) {

@@ -10,19 +10,19 @@ export const UNIT = {
 };
 
 export const SPECIES = [
-  { id: "acorn-woodpecker",        commonName: "Acorn Woodpecker",        scientificName: "Melanerpes formicivorus", mnemonic: "Wheka-wheka-wheka — clown laughter", field: "Year-round in oak groves; their granary trees give them away." },
-  { id: "oak-titmouse",            commonName: "Oak Titmouse",            scientificName: "Baeolophus inornatus",    mnemonic: "Peter-peter-peter, scratchy", field: "Year-round; sings 'peter-peter' from oak canopies in spring." },
-  { id: "pacific-slope-flycatcher",commonName: "Pacific-slope Flycatcher",scientificName: "Empidonax difficilis",    mnemonic: "Rising 'pee-WEET'" },
-  { id: "stellers-jay",            commonName: "Steller's Jay",           scientificName: "Cyanocitta stelleri",     mnemonic: "Harsh 'shaak-shaak-shaak'" },
-  { id: "huttons-vireo",           commonName: "Hutton's Vireo",          scientificName: "Vireo huttoni",           mnemonic: "Endlessly repeated 'zu-wee'" },
-  { id: "western-tanager",         commonName: "Western Tanager",         scientificName: "Piranga ludoviciana",     mnemonic: "Robin with a sore throat", field: "April–September in mixed oak/conifer; bright yellow flash in the canopy." },
-  { id: "dark-eyed-junco",         commonName: "Dark-eyed Junco",         scientificName: "Junco hyemalis",          mnemonic: "Even, ringing trill on one pitch" },
-  { id: "purple-finch",            commonName: "Purple Finch",            scientificName: "Haemorhous purpureus",    mnemonic: "Long rich warble that tumbles downward" },
-  { id: "lesser-goldfinch",        commonName: "Lesser Goldfinch",        scientificName: "Spinus psaltria",         mnemonic: "Plaintive 'tee-yeer', mimics" },
-  { id: "western-bluebird",        commonName: "Western Bluebird",        scientificName: "Sialia mexicana",         mnemonic: "Soft 'few' contact notes" },
-  { id: "chestnut-backed-chickadee",commonName:"Chestnut-backed Chickadee",scientificName: "Poecile rufescens",       mnemonic: "Buzzy, hurried 'chick-a-dee-dee'" },
-  { id: "spotted-towhee",          commonName: "Spotted Towhee",          scientificName: "Pipilo maculatus",        mnemonic: "Drink your teeeea" },
-  { id: "warbling-vireo",          commonName: "Warbling Vireo",          scientificName: "Vireo gilvus",            mnemonic: "Long, run-on warble ending up" },
+  { id: "acorn-woodpecker",        commonName: "Acorn Woodpecker",        scientificName: "Melanerpes formicivorus", mnemonic: "Wheka-wheka-wheka — clown laughter", field: "Year-round in oak woodland. Lives in cooperative groups of up to a dozen, anchored to a single granary tree pierced with thousands of acorn-storage holes."  },
+  { id: "oak-titmouse",            commonName: "Oak Titmouse",            scientificName: "Baeolophus inornatus",    mnemonic: "Peter-peter-peter, scratchy", field: "Year-round resident of oak woodland. Pairs occupy a single territory year after year and defend it duet-style in late winter."  },
+  { id: "pacific-slope-flycatcher",commonName: "Pacific-slope Flycatcher",scientificName: "Empidonax difficilis",    mnemonic: "Rising 'pee-WEET'", field: "April through September in shaded oak and conifer canyons. Nests on rock ledges and within house eaves throughout coastal California." },
+  { id: "stellers-jay",            commonName: "Steller's Jay",           scientificName: "Cyanocitta stelleri",     mnemonic: "Harsh 'shaak-shaak-shaak'", field: "Year-round in coniferous and oak forest. Mimics Red-tailed Hawk calls — possibly to clear feeders of competitors." },
+  { id: "huttons-vireo",           commonName: "Hutton's Vireo",          scientificName: "Vireo huttoni",           mnemonic: "Endlessly repeated 'zu-wee'", field: "Year-round in evergreen oak. Often confused with Ruby-crowned Kinglet by sight; the repetitive 'zu-wee' song is diagnostic." },
+  { id: "western-tanager",         commonName: "Western Tanager",         scientificName: "Piranga ludoviciana",     mnemonic: "Robin with a sore throat", field: "April through September in mixed oak and conifer. Adult males' red crowns develop only after molt on the breeding grounds and fade again before fall migration."  },
+  { id: "dark-eyed-junco",         commonName: "Dark-eyed Junco",         scientificName: "Junco hyemalis",          mnemonic: "Even, ringing trill on one pitch", field: "Year-round in oak and conifer edges; numbers swell in winter. The flashing white outer tail feathers are flicked open in alarm." },
+  { id: "purple-finch",            commonName: "Purple Finch",            scientificName: "Haemorhous purpureus",    mnemonic: "Long rich warble that tumbles downward", field: "Year-round in mixed oak-fir; more numerous in winter. Adult males develop their raspberry plumage gradually over their second year." },
+  { id: "lesser-goldfinch",        commonName: "Lesser Goldfinch",        scientificName: "Spinus psaltria",         mnemonic: "Plaintive 'tee-yeer', mimics", field: "Year-round in open oak country and weedy edges. Often nests in loose colonies; juveniles begin to sing within two months of fledging." },
+  { id: "western-bluebird",        commonName: "Western Bluebird",        scientificName: "Sialia mexicana",         mnemonic: "Soft 'few' contact notes", field: "Year-round in oak savanna and pasture edges. Cavity nester; competes with starlings, swallows, and other bluebirds for nest holes." },
+  { id: "chestnut-backed-chickadee",commonName:"Chestnut-backed Chickadee",scientificName: "Poecile rufescens",       mnemonic: "Buzzy, hurried 'chick-a-dee-dee'", field: "Year-round in mixed evergreen forest. Often the lead species in mixed-flock foraging movements through the winter canopy." },
+  { id: "spotted-towhee",          commonName: "Spotted Towhee",          scientificName: "Pipilo maculatus",        mnemonic: "Drink your teeeea", field: "Year-round in dense scrub. Forages by 'double-scratching' both feet backward in leaf litter — the rustle is often the first sign of the bird." },
+  { id: "warbling-vireo",          commonName: "Warbling Vireo",          scientificName: "Vireo gilvus",            mnemonic: "Long, run-on warble ending up", field: "April through September in tall riparian and oak gallery. The slow-building warble is delivered from a single mid-canopy perch." },
 ];
 
 export const LESSONS = [

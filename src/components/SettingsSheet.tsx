@@ -24,6 +24,8 @@ export function SettingsSheet({ open, onClose }: Props) {
   const resetProgress = useGame((s) => s.resetProgress);
   const freeplay = useGame((s) => s.freeplay);
   const setFreeplay = useGame((s) => s.setFreeplay);
+  const dailyGoal = useGame((s) => s.dailyGoal);
+  const setDailyGoal = useGame((s) => s.setDailyGoal);
 
   const [confirming, setConfirming] = useState(false);
   const [offline, setOffline] = useState<OfflineState>({ kind: "idle" });
@@ -102,6 +104,27 @@ export function SettingsSheet({ open, onClose }: Props) {
                   className="h-5 w-5 accent-(--color-moss-500)"
                 />
               </label>
+
+              <div className="mt-3 rounded-2xl border-2 border-(--color-line) bg-(--color-bg) px-4 py-3">
+                <div className="flex items-baseline justify-between">
+                  <div className="font-medium">Daily goal</div>
+                  <div className="font-display text-lg text-(--color-moss-700)">{dailyGoal} XP</div>
+                </div>
+                <input
+                  type="range"
+                  min={10}
+                  max={100}
+                  step={5}
+                  value={dailyGoal}
+                  onChange={(e) => setDailyGoal(Number(e.target.value))}
+                  className="mt-2 w-full accent-(--color-moss-500)"
+                  aria-label="Daily XP goal"
+                />
+                <div className="mt-1 flex justify-between text-[10px] uppercase tracking-wider text-(--color-ink-soft)">
+                  <span>casual · 10</span>
+                  <span>committed · 100</span>
+                </div>
+              </div>
             </Section>
 
             <Section title="Stats">
@@ -122,7 +145,8 @@ export function SettingsSheet({ open, onClose }: Props) {
                 <>
                   <p className="text-sm text-(--color-ink-soft)">
                     Lessons you've already played are cached automatically. Tap below
-                    to pre-download every clip and image so the app works on the trail.
+                    to pre-download every clip and image so the app works without
+                    an internet connection.
                   </p>
                   {(cachedCount !== null || storageBytes !== null) && (
                     <p className="mt-2 text-xs text-(--color-ink-soft)">

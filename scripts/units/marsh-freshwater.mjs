@@ -9,19 +9,19 @@ export const UNIT = {
 };
 
 export const SPECIES = [
-  { id: "marsh-wren",              commonName: "Marsh Wren",             scientificName: "Cistothorus palustris",   mnemonic: "Buzzy, sewing-machine chatter", field: "Year-round in cattail marshes; chatters constantly from low in the reeds." },
-  { id: "red-winged-blackbird",    commonName: "Red-winged Blackbird",   scientificName: "Agelaius phoeniceus",     mnemonic: "Konk-a-reee!", field: "Year-round in marshes; males display from cattail tops in spring." },
-  { id: "common-yellowthroat",     commonName: "Common Yellowthroat",    scientificName: "Geothlypis trichas",      mnemonic: "Wichity-wichity-wichity" },
-  { id: "sora",                    commonName: "Sora",                   scientificName: "Porzana carolina",        mnemonic: "Descending whinny, plaintive 'ker-WEE'", wikipediaTitle: "Sora (bird)", field: "Year-round in dense marsh; calls mostly at dawn and dusk from cover." },
-  { id: "virginia-rail",           commonName: "Virginia Rail",          scientificName: "Rallus limicola",         mnemonic: "Grunting 'kid-ick kid-ick'" },
-  { id: "pied-billed-grebe",       commonName: "Pied-billed Grebe",      scientificName: "Podilymbus podiceps",     mnemonic: "Hooting 'wuk-wuk-wuk-cow-cow'" },
-  { id: "american-bittern",        commonName: "American Bittern",       scientificName: "Botaurus lentiginosus",   mnemonic: "Pump-er-lunk pump-er-lunk" },
-  { id: "mallard",                 commonName: "Mallard",                scientificName: "Anas platyrhynchos",      mnemonic: "The duck quack — descending, in twos and threes" },
-  { id: "tree-swallow",            commonName: "Tree Swallow",           scientificName: "Tachycineta bicolor",     mnemonic: "Liquid chittering, in flight" },
-  { id: "great-blue-heron",        commonName: "Great Blue Heron",       scientificName: "Ardea herodias",          mnemonic: "Harsh prehistoric croak" },
-  { id: "black-crowned-night-heron",commonName:"Black-crowned Night-Heron",scientificName:"Nycticorax nycticorax",  mnemonic: "Hollow, abrupt 'quok!'" },
-  { id: "killdeer",                commonName: "Killdeer",               scientificName: "Charadrius vociferus",    mnemonic: "KILL-deer KILL-deer" },
-  { id: "song-sparrow",            commonName: "Song Sparrow",           scientificName: "Melospiza melodia",       mnemonic: "Madge-madge-madge put-on-your-tea-kettle" },
+  { id: "marsh-wren",              commonName: "Marsh Wren",             scientificName: "Cistothorus palustris",   mnemonic: "Buzzy, sewing-machine chatter", field: "Year-round in cattail marsh. Males build several 'dummy' nests in addition to the breeding nest, possibly to confuse predators."  },
+  { id: "red-winged-blackbird",    commonName: "Red-winged Blackbird",   scientificName: "Agelaius phoeniceus",     mnemonic: "Konk-a-reee!", field: "Year-round in cattail marsh. Polygynous males defend territories from cattail tops; the red epaulets are exposed only when asserting territory."  },
+  { id: "common-yellowthroat",     commonName: "Common Yellowthroat",    scientificName: "Geothlypis trichas",      mnemonic: "Wichity-wichity-wichity", field: "Year-round in damp brush, often along marsh edges. Males sing from cattail tops and willow thickets; the black mask is unmistakable." },
+  { id: "sora",                    commonName: "Sora",                   scientificName: "Porzana carolina",        mnemonic: "Descending whinny, plaintive 'ker-WEE'", wikipediaTitle: "Sora (bird)", field: "Year-round in dense marsh. Calls more often heard than the bird is seen; the descending whinny carries across still water at dawn."  },
+  { id: "virginia-rail",           commonName: "Virginia Rail",          scientificName: "Rallus limicola",         mnemonic: "Grunting 'kid-ick kid-ick'", field: "Year-round in dense cattail and tule. The body is laterally compressed for moving through reeds." },
+  { id: "pied-billed-grebe",       commonName: "Pied-billed Grebe",      scientificName: "Podilymbus podiceps",     mnemonic: "Hooting 'wuk-wuk-wuk-cow-cow'", field: "Year-round on freshwater ponds. Submerges by expelling air rather than diving; the head sometimes vanishes alone, leaving the body at the surface." },
+  { id: "american-bittern",        commonName: "American Bittern",       scientificName: "Botaurus lentiginosus",   mnemonic: "Pump-er-lunk pump-er-lunk", field: "April through October in dense marsh. The 'pump-er-lunk' call, low and resonant, is produced by a specialized esophageal sac." },
+  { id: "mallard",                 commonName: "Mallard",                scientificName: "Anas platyrhynchos",      mnemonic: "The duck quack — descending, in twos and threes", field: "Year-round on any open water. The vocal 'quack' is the female's; males give a softer, raspier 'reb-reb'." },
+  { id: "tree-swallow",            commonName: "Tree Swallow",           scientificName: "Tachycineta bicolor",     mnemonic: "Liquid chittering, in flight", field: "Year-round on the coast; widespread breeder. Cavity nester; lines the nest cup with white feathers, often gathered in mid-air from other birds." },
+  { id: "great-blue-heron",        commonName: "Great Blue Heron",       scientificName: "Ardea herodias",          mnemonic: "Harsh prehistoric croak", field: "Year-round at all wetland edges. Wing strokes are slow, about two per second; rookery nests are stick platforms in tall trees, often near water." },
+  { id: "black-crowned-night-heron",commonName:"Black-crowned Night-Heron",scientificName:"Nycticorax nycticorax",  mnemonic: "Hollow, abrupt 'quok!'", field: "Year-round at wetland edges. Forages by night; daytime roosts are communal in dense waterside trees." },
+  { id: "killdeer",                commonName: "Killdeer",               scientificName: "Charadrius vociferus",    mnemonic: "KILL-deer KILL-deer", field: "Year-round in open ground near water — pastures, gravel parking lots, golf-course edges. Feigns a broken wing to lure intruders from the nest." },
+  { id: "song-sparrow",            commonName: "Song Sparrow",           scientificName: "Melospiza melodia",       mnemonic: "Madge-madge-madge put-on-your-tea-kettle", field: "Year-round in any low brush near water. Each male sings 8 to 10 distinct songs, learned from neighbors as a juvenile." },
 ];
 
 export const LESSONS = [

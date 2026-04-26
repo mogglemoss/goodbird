@@ -48,6 +48,7 @@ export function LessonRoute() {
         <ExerciseRunner
           exercise={ex}
           exerciseIndex={active.index}
+          previouslyAnswered={active.results[active.index] ?? null}
           onAnswered={(correct, speciesId) => answer(correct, speciesId)}
           onContinue={next}
         />

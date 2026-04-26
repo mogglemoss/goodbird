@@ -15,14 +15,14 @@
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/PygmyNuthatch.jpg/330px-PygmyNuthatch.jpg",
       "recordings": [
         {
-          "id": "XC712266",
-          "url": "https://xeno-canto.org/712266/download",
-          "duration": 8,
-          "type": "",
-          "recordist": "Gary Mele",
-          "location": "Foresthill, Placer County, California, United States",
+          "id": "XC600983",
+          "url": "https://xeno-canto.org/600983/download",
+          "duration": 6,
+          "type": "call, subsong",
+          "recordist": "Thomas G. Graves",
+          "location": "Cambria, San Luis Obispo County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/712266"
+          "sourceUrl": "https://xeno-canto.org/600983"
         },
         {
           "id": "XC443267",
@@ -44,7 +44,8 @@
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
           "sourceUrl": "https://xeno-canto.org/306468"
         }
-      ]
+      ],
+      "field": "Year-round in Bishop pine and Monterey pine. Roosts communally in cavities — up to a hundred birds in one trunk on cold nights."
     },
     {
       "id": "chestnut-backed-chickadee",
@@ -53,6 +54,16 @@
       "mnemonic": "Hurried 'chick-a-dee-dee'",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Chestnut-backed_Chickadee_2154ab_%28cropped%29.jpg/330px-Chestnut-backed_Chickadee_2154ab_%28cropped%29.jpg",
       "recordings": [
+        {
+          "id": "XC420593",
+          "url": "https://xeno-canto.org/420593/download",
+          "duration": 14,
+          "type": "song",
+          "recordist": "Meena Haribal",
+          "location": "Brinnon, Jefferson County, Washington, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/420593"
+        },
         {
           "id": "XC1056043",
           "url": "https://xeno-canto.org/1056043/download",
@@ -64,16 +75,6 @@
           "sourceUrl": "https://xeno-canto.org/1056043"
         },
         {
-          "id": "XC877495",
-          "url": "https://xeno-canto.org/877495/download",
-          "duration": 7,
-          "type": "alarm call, call",
-          "recordist": "Skyler Bol",
-          "location": "Big Creek Trail, Ravalli County, Montana, United States",
-          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/877495"
-        },
-        {
           "id": "XC363150",
           "url": "https://xeno-canto.org/363150/download",
           "duration": 10,
@@ -83,7 +84,8 @@
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
           "sourceUrl": "https://xeno-canto.org/363150"
         }
-      ]
+      ],
+      "field": "Year-round in mixed evergreen forest. Often the lead species in mixed-flock foraging movements through the winter canopy."
     },
     {
       "id": "brown-creeper",
@@ -122,13 +124,15 @@
           "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
           "sourceUrl": "https://xeno-canto.org/76463"
         }
-      ]
+      ],
+      "field": "Year-round in coniferous forest. Forages by spiraling up a trunk, then dropping to the base of the next tree to start over."
     },
     {
       "id": "varied-thrush",
       "commonName": "Varied Thrush",
       "scientificName": "Ixoreus naevius",
       "mnemonic": "Single haunting whistle, varying pitch",
+      "field": "October through April in dense conifer; breeds further north. Each whistled note is a single sustained pitch; consecutive notes shift by intervals familiar from minor scales.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Varied_thrush_%2873976%29.jpg/330px-Varied_thrush_%2873976%29.jpg",
       "recordings": [
         {
@@ -161,8 +165,7 @@
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
           "sourceUrl": "https://xeno-canto.org/1048892"
         }
-      ],
-      "field": "October–April in dense Bishop pine; haunting whistle at dawn."
+      ]
     },
     {
       "id": "townsends-warbler",
@@ -181,7 +184,8 @@
           "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
           "sourceUrl": "https://xeno-canto.org/597954"
         }
-      ]
+      ],
+      "field": "October through April on the coast; breeds further north. Often joins mixed-species flocks with kinglets and chickadees."
     },
     {
       "id": "pacific-slope-flycatcher",
@@ -201,6 +205,16 @@
           "sourceUrl": "https://xeno-canto.org/473431"
         },
         {
+          "id": "XC602827",
+          "url": "https://xeno-canto.org/602827/download",
+          "duration": 14,
+          "type": "song",
+          "recordist": "Steve Hampton",
+          "location": "Raccoon Pt Rd, Orcas Island, San Juan County, Washington, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/602827"
+        },
+        {
           "id": "XC178530",
           "url": "https://xeno-canto.org/178530/download",
           "duration": 5,
@@ -209,18 +223,9 @@
           "location": "Pinnacles National Park (near  PAICINES), San Benito, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
           "sourceUrl": "https://xeno-canto.org/178530"
-        },
-        {
-          "id": "XC725486",
-          "url": "https://xeno-canto.org/725486/download",
-          "duration": 4,
-          "type": "call",
-          "recordist": "Bobby Wilcox",
-          "location": "Lincoln Ranch, Bill Williams River, Arizona, United States",
-          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/725486"
         }
-      ]
+      ],
+      "field": "April through September in shaded oak and conifer canyons. Nests on rock ledges and within house eaves throughout coastal California."
     },
     {
       "id": "hairy-woodpecker",
@@ -228,7 +233,8 @@
       "scientificName": "Dryobates villosus",
       "mnemonic": "Sharp 'peek!' calls + drumming",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Picoides_villosus_monticola_male1.jpg/330px-Picoides_villosus_monticola_male1.jpg",
-      "recordings": []
+      "recordings": [],
+      "field": "Year-round in mature conifer and oak. Drumming is a steady roll of about 25 beats per second, lasting just under a second."
     },
     {
       "id": "huttons-vireo",
@@ -248,16 +254,6 @@
           "sourceUrl": "https://xeno-canto.org/282857"
         },
         {
-          "id": "XC372121",
-          "url": "https://xeno-canto.org/372121/download",
-          "duration": 7,
-          "type": "call",
-          "recordist": "markbird",
-          "location": "Proctor Rd, Pima County, Arizona, United States",
-          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/372121"
-        },
-        {
           "id": "XC595861",
           "url": "https://xeno-canto.org/595861/download",
           "duration": 11,
@@ -266,8 +262,19 @@
           "location": "Babel Slough, Yolo County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
           "sourceUrl": "https://xeno-canto.org/595861"
+        },
+        {
+          "id": "XC639924",
+          "url": "https://xeno-canto.org/639924/download",
+          "duration": 12,
+          "type": "song",
+          "recordist": "Conor McMahon",
+          "location": "Goleta, Santa Barbara County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/639924"
         }
-      ]
+      ],
+      "field": "Year-round in evergreen oak. Often confused with Ruby-crowned Kinglet by sight; the repetitive 'zu-wee' song is diagnostic."
     },
     {
       "id": "red-breasted-nuthatch",
@@ -297,16 +304,17 @@
           "sourceUrl": "https://xeno-canto.org/110380"
         },
         {
-          "id": "XC341581",
-          "url": "https://xeno-canto.org/341581/download",
-          "duration": 13,
-          "type": "alarm call",
-          "recordist": "Bates Estabrooks",
-          "location": "Heiskell, Anderson County, Tennessee, United States",
+          "id": "XC1056022",
+          "url": "https://xeno-canto.org/1056022/download",
+          "duration": 2,
+          "type": "call",
+          "recordist": "Denis Dujardin",
+          "location": "Sequim, Clallam County, Washington, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/341581"
+          "sourceUrl": "https://xeno-canto.org/1056022"
         }
-      ]
+      ],
+      "field": "Year-round in conifers; numbers irrupt south in winters of poor cone crops. Smears pitch around nest cavity entrances, perhaps to deter predators."
     },
     {
       "id": "golden-crowned-kinglet",
@@ -316,36 +324,37 @@
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Golden-Crowned_Kinglet_EBFNWR.jpg/330px-Golden-Crowned_Kinglet_EBFNWR.jpg",
       "recordings": [
         {
-          "id": "XC307824",
-          "url": "https://xeno-canto.org/307824/download",
-          "duration": 8,
-          "type": "call",
-          "recordist": "J.R. Rigby",
-          "location": "Oxford, Lafayette County, Mississippi, United States",
+          "id": "XC419366",
+          "url": "https://xeno-canto.org/419366/download",
+          "duration": 10,
+          "type": "song",
+          "recordist": "Sue Riffe",
+          "location": "Peaceful Valley - Camp Dick, Colorado, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/307824"
+          "sourceUrl": "https://xeno-canto.org/419366"
         },
         {
-          "id": "XC113191",
-          "url": "https://xeno-canto.org/113191/download",
-          "duration": 8,
-          "type": "call",
-          "recordist": "Micah Riegner",
-          "location": "Prescott National Forest (near  Prescott), Yavapai, Arizona, United States",
+          "id": "XC550956",
+          "url": "https://xeno-canto.org/550956/download",
+          "duration": 4,
+          "type": "song",
+          "recordist": "Bruce Lagerquist",
+          "location": "Thornton Creek Ravine, Seattle, King County, Washington, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/550956"
+        },
+        {
+          "id": "XC135599",
+          "url": "https://xeno-canto.org/135599/download",
+          "duration": 3,
+          "type": "song",
+          "recordist": "Mike Nelson",
+          "location": "Carver's Gap Parking area, Roan Mountain State Park, North Carolina, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
-          "sourceUrl": "https://xeno-canto.org/113191"
-        },
-        {
-          "id": "XC942529",
-          "url": "https://xeno-canto.org/942529/download",
-          "duration": 6,
-          "type": "call",
-          "recordist": "Thomas Magarian",
-          "location": "Oyster, Northampton County, Virginia, United States",
-          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/942529"
+          "sourceUrl": "https://xeno-canto.org/135599"
         }
-      ]
+      ],
+      "field": "October through April on the coast. Frequencies of the song approach the upper limit of human hearing; many adults can no longer hear them."
     },
     {
       "id": "stellers-jay",
@@ -354,16 +363,6 @@
       "mnemonic": "Harsh 'shaak-shaak-shaak'",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Steller%27s_Jay_flagstaff_arizona.jpg/330px-Steller%27s_Jay_flagstaff_arizona.jpg",
       "recordings": [
-        {
-          "id": "XC662638",
-          "url": "https://xeno-canto.org/662638/download",
-          "duration": 8,
-          "type": "call, imitation, mimicry/imitation",
-          "recordist": "Denise Wight",
-          "location": "Orinda, Contra Costa County, California, United States",
-          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/662638"
-        },
         {
           "id": "XC636598",
           "url": "https://xeno-canto.org/636598/download",
@@ -383,8 +382,19 @@
           "location": "Port Townsend, Jefferson County, Washington, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
           "sourceUrl": "https://xeno-canto.org/634792"
+        },
+        {
+          "id": "XC605631",
+          "url": "https://xeno-canto.org/605631/download",
+          "duration": 10,
+          "type": "call",
+          "recordist": "Richard E. Webster",
+          "location": "Hannagan Meadow region, Greenlee County, Arizona, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/605631"
         }
-      ]
+      ],
+      "field": "Year-round in coniferous and oak forest. Mimics Red-tailed Hawk calls — possibly to clear feeders of competitors."
     },
     {
       "id": "wilsons-warbler",
@@ -393,16 +403,6 @@
       "mnemonic": "Staccato 'chi-chi-chi-chi-chi'",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Wilsonia_pusilla.jpg/330px-Wilsonia_pusilla.jpg",
       "recordings": [
-        {
-          "id": "XC172407",
-          "url": "https://xeno-canto.org/172407/download",
-          "duration": 8,
-          "type": "song",
-          "recordist": "Eric DeFonso",
-          "location": "Haskell Peak Road, Tahoe National Forest (near  Calpine), Sierra, California, United States",
-          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/172407"
-        },
         {
           "id": "XC898686",
           "url": "https://xeno-canto.org/898686/download",
@@ -414,6 +414,16 @@
           "sourceUrl": "https://xeno-canto.org/898686"
         },
         {
+          "id": "XC172407",
+          "url": "https://xeno-canto.org/172407/download",
+          "duration": 8,
+          "type": "song",
+          "recordist": "Eric DeFonso",
+          "location": "Haskell Peak Road, Tahoe National Forest (near  Calpine), Sierra, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/172407"
+        },
+        {
           "id": "XC480058",
           "url": "https://xeno-canto.org/480058/download",
           "duration": 6,
@@ -423,7 +433,8 @@
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
           "sourceUrl": "https://xeno-canto.org/480058"
         }
-      ]
+      ],
+      "field": "April through September in willow and alder thickets. The black cap is the male's only striking field mark; females and immatures lack it."
     },
     {
       "id": "olive-sided-flycatcher",
@@ -443,16 +454,6 @@
           "sourceUrl": "https://xeno-canto.org/489324"
         },
         {
-          "id": "XC98053",
-          "url": "https://xeno-canto.org/98053/download",
-          "duration": 9,
-          "type": "call",
-          "recordist": "Tayler Brooks",
-          "location": "Wildsumaco, 5km NW Guagua Sumaco, Napo, Ecuador",
-          "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
-          "sourceUrl": "https://xeno-canto.org/98053"
-        },
-        {
           "id": "XC71862",
           "url": "https://xeno-canto.org/71862/download",
           "duration": 9,
@@ -461,8 +462,19 @@
           "location": "La Corona Arriba, Sierra San Pedro Martir, Baja California, Mexico",
           "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
           "sourceUrl": "https://xeno-canto.org/71862"
+        },
+        {
+          "id": "XC489326",
+          "url": "https://xeno-canto.org/489326/download",
+          "duration": 12,
+          "type": "song",
+          "recordist": "Sunny",
+          "location": "Cypress Mountain, Canada",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/489326"
         }
-      ]
+      ],
+      "field": "May through September in conifer forest. Sings 'quick-three-beers' from a high snag; long-distance migrant to the Andes."
     }
   ],
   "lessons": [

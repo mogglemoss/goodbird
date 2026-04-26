@@ -12,8 +12,19 @@
       "commonName": "Acorn Woodpecker",
       "scientificName": "Melanerpes formicivorus",
       "mnemonic": "Wheka-wheka-wheka — clown laughter",
+      "field": "Year-round in oak woodland. Lives in cooperative groups of up to a dozen, anchored to a single granary tree pierced with thousands of acorn-storage holes.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Acorn_woodpecker_holding_a_nut_in_its_beak-0225.jpg/330px-Acorn_woodpecker_holding_a_nut_in_its_beak-0225.jpg",
       "recordings": [
+        {
+          "id": "XC494256",
+          "url": "https://xeno-canto.org/494256/download",
+          "duration": 9,
+          "type": "song",
+          "recordist": "Phoenix Birder",
+          "location": "Coconino National Forest (near  Payson), Coconino County, Arizona, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/494256"
+        },
         {
           "id": "XC710738",
           "url": "https://xeno-canto.org/710738/download",
@@ -33,25 +44,15 @@
           "location": "Middle Bear Canyon, Pima County, Arizona, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
           "sourceUrl": "https://xeno-canto.org/1003757"
-        },
-        {
-          "id": "XC961969",
-          "url": "https://xeno-canto.org/961969/download",
-          "duration": 9,
-          "type": "call",
-          "recordist": "A Richardson",
-          "location": "Point Reyes Station, Marin County, California, United States",
-          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/961969"
         }
-      ],
-      "field": "Year-round in oak groves; their granary trees give them away."
+      ]
     },
     {
       "id": "oak-titmouse",
       "commonName": "Oak Titmouse",
       "scientificName": "Baeolophus inornatus",
       "mnemonic": "Peter-peter-peter, scratchy",
+      "field": "Year-round resident of oak woodland. Pairs occupy a single territory year after year and defend it duet-style in late winter.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Baeolophus_inornatus_-San_Luis_Obispo%2C_California%2C_USA-8_%283%29.jpg/330px-Baeolophus_inornatus_-San_Luis_Obispo%2C_California%2C_USA-8_%283%29.jpg",
       "recordings": [
         {
@@ -64,8 +65,7 @@
           "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
           "sourceUrl": "https://xeno-canto.org/72232"
         }
-      ],
-      "field": "Year-round; sings 'peter-peter' from oak canopies in spring."
+      ]
     },
     {
       "id": "pacific-slope-flycatcher",
@@ -85,6 +85,16 @@
           "sourceUrl": "https://xeno-canto.org/473431"
         },
         {
+          "id": "XC602827",
+          "url": "https://xeno-canto.org/602827/download",
+          "duration": 14,
+          "type": "song",
+          "recordist": "Steve Hampton",
+          "location": "Raccoon Pt Rd, Orcas Island, San Juan County, Washington, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/602827"
+        },
+        {
           "id": "XC178530",
           "url": "https://xeno-canto.org/178530/download",
           "duration": 5,
@@ -93,18 +103,9 @@
           "location": "Pinnacles National Park (near  PAICINES), San Benito, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
           "sourceUrl": "https://xeno-canto.org/178530"
-        },
-        {
-          "id": "XC725486",
-          "url": "https://xeno-canto.org/725486/download",
-          "duration": 4,
-          "type": "call",
-          "recordist": "Bobby Wilcox",
-          "location": "Lincoln Ranch, Bill Williams River, Arizona, United States",
-          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/725486"
         }
-      ]
+      ],
+      "field": "April through September in shaded oak and conifer canyons. Nests on rock ledges and within house eaves throughout coastal California."
     },
     {
       "id": "stellers-jay",
@@ -113,16 +114,6 @@
       "mnemonic": "Harsh 'shaak-shaak-shaak'",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Steller%27s_Jay_flagstaff_arizona.jpg/330px-Steller%27s_Jay_flagstaff_arizona.jpg",
       "recordings": [
-        {
-          "id": "XC662638",
-          "url": "https://xeno-canto.org/662638/download",
-          "duration": 8,
-          "type": "call, imitation, mimicry/imitation",
-          "recordist": "Denise Wight",
-          "location": "Orinda, Contra Costa County, California, United States",
-          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/662638"
-        },
         {
           "id": "XC636598",
           "url": "https://xeno-canto.org/636598/download",
@@ -142,8 +133,19 @@
           "location": "Port Townsend, Jefferson County, Washington, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
           "sourceUrl": "https://xeno-canto.org/634792"
+        },
+        {
+          "id": "XC605631",
+          "url": "https://xeno-canto.org/605631/download",
+          "duration": 10,
+          "type": "call",
+          "recordist": "Richard E. Webster",
+          "location": "Hannagan Meadow region, Greenlee County, Arizona, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/605631"
         }
-      ]
+      ],
+      "field": "Year-round in coniferous and oak forest. Mimics Red-tailed Hawk calls — possibly to clear feeders of competitors."
     },
     {
       "id": "huttons-vireo",
@@ -163,16 +165,6 @@
           "sourceUrl": "https://xeno-canto.org/282857"
         },
         {
-          "id": "XC372121",
-          "url": "https://xeno-canto.org/372121/download",
-          "duration": 7,
-          "type": "call",
-          "recordist": "markbird",
-          "location": "Proctor Rd, Pima County, Arizona, United States",
-          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/372121"
-        },
-        {
           "id": "XC595861",
           "url": "https://xeno-canto.org/595861/download",
           "duration": 11,
@@ -181,26 +173,28 @@
           "location": "Babel Slough, Yolo County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
           "sourceUrl": "https://xeno-canto.org/595861"
+        },
+        {
+          "id": "XC639924",
+          "url": "https://xeno-canto.org/639924/download",
+          "duration": 12,
+          "type": "song",
+          "recordist": "Conor McMahon",
+          "location": "Goleta, Santa Barbara County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/639924"
         }
-      ]
+      ],
+      "field": "Year-round in evergreen oak. Often confused with Ruby-crowned Kinglet by sight; the repetitive 'zu-wee' song is diagnostic."
     },
     {
       "id": "western-tanager",
       "commonName": "Western Tanager",
       "scientificName": "Piranga ludoviciana",
       "mnemonic": "Robin with a sore throat",
+      "field": "April through September in mixed oak and conifer. Adult males' red crowns develop only after molt on the breeding grounds and fade again before fall migration.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Western_Tanager_%28male%29.jpg/330px-Western_Tanager_%28male%29.jpg",
       "recordings": [
-        {
-          "id": "XC372042",
-          "url": "https://xeno-canto.org/372042/download",
-          "duration": 6,
-          "type": "",
-          "recordist": "Burton Palmer",
-          "location": "Washington (near  Cle Elum), Kittitas County, Washington, United States",
-          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/372042"
-        },
         {
           "id": "XC14403",
           "url": "https://xeno-canto.org/14403/download",
@@ -220,9 +214,18 @@
           "location": "Stonewall, Las Animas Cty, Colorado, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
           "sourceUrl": "https://xeno-canto.org/494384"
+        },
+        {
+          "id": "XC37997",
+          "url": "https://xeno-canto.org/37997/download",
+          "duration": 2,
+          "type": "call",
+          "recordist": "Tayler Brooks",
+          "location": "Lake McDaniel, Yakima Co., WA, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
+          "sourceUrl": "https://xeno-canto.org/37997"
         }
-      ],
-      "field": "April–September in mixed oak/conifer; bright yellow flash in the canopy."
+      ]
     },
     {
       "id": "dark-eyed-junco",
@@ -232,26 +235,6 @@
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Junco_hyemalis_hyemalis_CT1_%28cropped%29.jpg/330px-Junco_hyemalis_hyemalis_CT1_%28cropped%29.jpg",
       "recordings": [
         {
-          "id": "XC449492",
-          "url": "https://xeno-canto.org/449492/download",
-          "duration": 8,
-          "type": "call",
-          "recordist": "Paul Marvin",
-          "location": "Fort Rosecrans National Cemetery, San Diego, California, United States",
-          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/449492"
-        },
-        {
-          "id": "XC34287",
-          "url": "https://xeno-canto.org/34287/download",
-          "duration": 9,
-          "type": "call",
-          "recordist": "Tayler Brooks",
-          "location": "Cougar Mountain, King Co., WA, United States",
-          "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
-          "sourceUrl": "https://xeno-canto.org/34287"
-        },
-        {
           "id": "XC353583",
           "url": "https://xeno-canto.org/353583/download",
           "duration": 10,
@@ -260,8 +243,29 @@
           "location": "Denali Wilderness Within Denali National Park, Denali, Alaska (approx location), United States",
           "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
           "sourceUrl": "https://xeno-canto.org/353583"
+        },
+        {
+          "id": "XC254480",
+          "url": "https://xeno-canto.org/254480/download",
+          "duration": 5,
+          "type": "song",
+          "recordist": "Jonathon Jongsma",
+          "location": "Blue Bell Campground, Custer State Park, South Dakota, United States",
+          "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/254480"
+        },
+        {
+          "id": "XC381586",
+          "url": "https://xeno-canto.org/381586/download",
+          "duration": 3,
+          "type": "song",
+          "recordist": "Jeremy Minns",
+          "location": "Carman Valley, Sierra County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/381586"
         }
-      ]
+      ],
+      "field": "Year-round in oak and conifer edges; numbers swell in winter. The flashing white outer tail feathers are flicked open in alarm."
     },
     {
       "id": "purple-finch",
@@ -270,16 +274,6 @@
       "mnemonic": "Long rich warble that tumbles downward",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Carpodacus_purpureus_CT3.jpg/330px-Carpodacus_purpureus_CT3.jpg",
       "recordings": [
-        {
-          "id": "XC193423",
-          "url": "https://xeno-canto.org/193423/download",
-          "duration": 7,
-          "type": "call",
-          "recordist": "Martin St-Michel",
-          "location": "Sainte-Apolline-de-Patton, Montmagny, Québec, Canada",
-          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/193423"
-        },
         {
           "id": "XC731968",
           "url": "https://xeno-canto.org/731968/download",
@@ -299,8 +293,19 @@
           "location": "Stoneham-et-Tewkesbury, La Jacques-Cartier, Québec, Canada",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
           "sourceUrl": "https://xeno-canto.org/175355"
+        },
+        {
+          "id": "XC160261",
+          "url": "https://xeno-canto.org/160261/download",
+          "duration": 12,
+          "type": "song",
+          "recordist": "Ian Cruickshank",
+          "location": "Swan Lake, Victoria, Vancouver Island, BC, Canada",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/3.0/",
+          "sourceUrl": "https://xeno-canto.org/160261"
         }
-      ]
+      ],
+      "field": "Year-round in mixed oak-fir; more numerous in winter. Adult males develop their raspberry plumage gradually over their second year."
     },
     {
       "id": "lesser-goldfinch",
@@ -310,36 +315,37 @@
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Lesser_Goldfinch_%28_Eastern_race%29_Kerr_WMA_Kerrville_TX_2018-05-06_12-11-15-2_%2842881554344%29.jpg/330px-Lesser_Goldfinch_%28_Eastern_race%29_Kerr_WMA_Kerrville_TX_2018-05-06_12-11-15-2_%2842881554344%29.jpg",
       "recordings": [
         {
-          "id": "XC598115",
-          "url": "https://xeno-canto.org/598115/download",
-          "duration": 5,
-          "type": "begging call",
-          "recordist": "Richard E. Webster",
-          "location": "Portal, Arizona, United States",
+          "id": "XC1056078",
+          "url": "https://xeno-canto.org/1056078/download",
+          "duration": 14,
+          "type": "song",
+          "recordist": "Denis Dujardin",
+          "location": "SW Harrison Street (near  Portland), Multnomah County, Oregon, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/598115"
+          "sourceUrl": "https://xeno-canto.org/1056078"
         },
         {
-          "id": "XC288464",
-          "url": "https://xeno-canto.org/288464/download",
+          "id": "XC331817",
+          "url": "https://xeno-canto.org/331817/download",
+          "duration": 1,
+          "type": "song",
+          "recordist": "Sue Riffe",
+          "location": "Sylvan Dale Guest Ranch, Larimer County, Colorado, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/331817"
+        },
+        {
+          "id": "XC72940",
+          "url": "https://xeno-canto.org/72940/download",
           "duration": 3,
-          "type": "call",
-          "recordist": "David Vander Pluym",
-          "location": "Cherry Creek, Gila County, Arizona, United States",
-          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/288464"
-        },
-        {
-          "id": "XC279566",
-          "url": "https://xeno-canto.org/279566/download",
-          "duration": 13,
-          "type": "begging call",
-          "recordist": "Nick Komar",
-          "location": "Reef Townsite Campground, Carr Canyon, Cochise Co., Arizona, United States",
-          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/279566"
+          "type": "flight call",
+          "recordist": "Ryan P. O&#039;Donnell",
+          "location": "Logan, Cache County, Utah, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
+          "sourceUrl": "https://xeno-canto.org/72940"
         }
-      ]
+      ],
+      "field": "Year-round in open oak country and weedy edges. Often nests in loose colonies; juveniles begin to sing within two months of fledging."
     },
     {
       "id": "western-bluebird",
@@ -349,16 +355,6 @@
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Western_bluebird_%28male%29.jpg/330px-Western_bluebird_%28male%29.jpg",
       "recordings": [
         {
-          "id": "XC961965",
-          "url": "https://xeno-canto.org/961965/download",
-          "duration": 6,
-          "type": "call",
-          "recordist": "A Richardson",
-          "location": "Carlsbad, Eddy County, New Mexico, United States",
-          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/961965"
-        },
-        {
           "id": "XC457218",
           "url": "https://xeno-canto.org/457218/download",
           "duration": 14,
@@ -367,8 +363,19 @@
           "location": "Percha Dam, Caballo Lake State Park, Sierra Co., New Mexico, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
           "sourceUrl": "https://xeno-canto.org/457218"
+        },
+        {
+          "id": "XC961965",
+          "url": "https://xeno-canto.org/961965/download",
+          "duration": 6,
+          "type": "call",
+          "recordist": "A Richardson",
+          "location": "Carlsbad, Eddy County, New Mexico, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/961965"
         }
-      ]
+      ],
+      "field": "Year-round in oak savanna and pasture edges. Cavity nester; competes with starlings, swallows, and other bluebirds for nest holes."
     },
     {
       "id": "chestnut-backed-chickadee",
@@ -377,6 +384,16 @@
       "mnemonic": "Buzzy, hurried 'chick-a-dee-dee'",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Chestnut-backed_Chickadee_2154ab_%28cropped%29.jpg/330px-Chestnut-backed_Chickadee_2154ab_%28cropped%29.jpg",
       "recordings": [
+        {
+          "id": "XC420593",
+          "url": "https://xeno-canto.org/420593/download",
+          "duration": 14,
+          "type": "song",
+          "recordist": "Meena Haribal",
+          "location": "Brinnon, Jefferson County, Washington, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/420593"
+        },
         {
           "id": "XC1056043",
           "url": "https://xeno-canto.org/1056043/download",
@@ -388,16 +405,6 @@
           "sourceUrl": "https://xeno-canto.org/1056043"
         },
         {
-          "id": "XC877495",
-          "url": "https://xeno-canto.org/877495/download",
-          "duration": 7,
-          "type": "alarm call, call",
-          "recordist": "Skyler Bol",
-          "location": "Big Creek Trail, Ravalli County, Montana, United States",
-          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/877495"
-        },
-        {
           "id": "XC363150",
           "url": "https://xeno-canto.org/363150/download",
           "duration": 10,
@@ -407,7 +414,8 @@
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
           "sourceUrl": "https://xeno-canto.org/363150"
         }
-      ]
+      ],
+      "field": "Year-round in mixed evergreen forest. Often the lead species in mixed-flock foraging movements through the winter canopy."
     },
     {
       "id": "spotted-towhee",
@@ -417,36 +425,37 @@
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Spotted_Towhee_%2832684403303%29.jpg/330px-Spotted_Towhee_%2832684403303%29.jpg",
       "recordings": [
         {
-          "id": "XC1056013",
-          "url": "https://xeno-canto.org/1056013/download",
-          "duration": 6,
-          "type": "call",
-          "recordist": "Denis Dujardin",
-          "location": "Tualatin River NWR, Washington County, Oregon, United States",
-          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/1056013"
+          "id": "XC408474",
+          "url": "https://xeno-canto.org/408474/download",
+          "duration": 10,
+          "type": "song",
+          "recordist": "Frank Lambert",
+          "location": "Big Santa Anita Canyon, San Gabriel Mountains, Los Angeles County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+          "sourceUrl": "https://xeno-canto.org/408474"
         },
         {
-          "id": "XC1047676",
-          "url": "https://xeno-canto.org/1047676/download",
+          "id": "XC195846",
+          "url": "https://xeno-canto.org/195846/download",
           "duration": 10,
-          "type": "call",
-          "recordist": "Greg Irving",
-          "location": "Dungeness Recreation Area, Clallam County, Washington, United States",
+          "type": "song, odd variant song",
+          "recordist": "Elias Aristides Elias",
+          "location": "Shaver Lake, Fresno County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/1047676"
+          "sourceUrl": "https://xeno-canto.org/195846"
         },
         {
-          "id": "XC469011",
-          "url": "https://xeno-canto.org/469011/download",
-          "duration": 10,
-          "type": "call",
-          "recordist": "bowtyler",
-          "location": "Olympia, Thurston County, Washington, United States",
+          "id": "XC728366",
+          "url": "https://xeno-canto.org/728366/download",
+          "duration": 5,
+          "type": "song",
+          "recordist": "Thomas G. Graves",
+          "location": "Coon Creek Trail, Montana de Oro State Park, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/469011"
+          "sourceUrl": "https://xeno-canto.org/728366"
         }
-      ]
+      ],
+      "field": "Year-round in dense scrub. Forages by 'double-scratching' both feet backward in leaf litter — the rustle is often the first sign of the bird."
     },
     {
       "id": "warbling-vireo",
@@ -456,14 +465,14 @@
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Warbling_vireo_%2882141%29.jpg/330px-Warbling_vireo_%2882141%29.jpg",
       "recordings": [
         {
-          "id": "XC827584",
-          "url": "https://xeno-canto.org/827584/download",
-          "duration": 8,
-          "type": "call",
-          "recordist": "Richard E. Webster",
-          "location": "Tawas Point State Park (near  East Tawas), Iosco County, Michigan, United States",
-          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/827584"
+          "id": "XC73038",
+          "url": "https://xeno-canto.org/73038/download",
+          "duration": 13,
+          "type": "call, song",
+          "recordist": "Ryan P. O&#039;Donnell",
+          "location": "Sherwood Hills Resort, Cache County, Utah, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
+          "sourceUrl": "https://xeno-canto.org/73038"
         },
         {
           "id": "XC378147",
@@ -485,7 +494,8 @@
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
           "sourceUrl": "https://xeno-canto.org/477609"
         }
-      ]
+      ],
+      "field": "April through September in tall riparian and oak gallery. The slow-building warble is delivered from a single mid-canopy perch."
     }
   ],
   "lessons": [

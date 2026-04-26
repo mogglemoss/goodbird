@@ -12,6 +12,7 @@
       "commonName": "Great Horned Owl",
       "scientificName": "Bubo virginianus",
       "mnemonic": "Deep stuttered 'whoo-whoo, whoo-whoo'",
+      "field": "Year-round in nearly every habitat. Pairs duet in midwinter; the male's hoot is deeper than the female's despite his smaller body.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Bubo_virginianus_06.jpg/330px-Bubo_virginianus_06.jpg",
       "recordings": [
         {
@@ -25,45 +26,35 @@
           "sourceUrl": "https://xeno-canto.org/767284"
         },
         {
-          "id": "XC624440",
-          "url": "https://xeno-canto.org/624440/download",
-          "duration": 9,
-          "type": "begging call, hatchling or nestling",
-          "recordist": "Bill Grantham",
-          "location": "Ramer, Montgomery County, Alabama, United States",
+          "id": "XC959367",
+          "url": "https://xeno-canto.org/959367/download",
+          "duration": 10,
+          "type": "song",
+          "recordist": "Peter Mundale",
+          "location": "Blaine, Anoka County, Minnesota, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/624440"
+          "sourceUrl": "https://xeno-canto.org/959367"
         },
         {
-          "id": "XC7728",
-          "url": "https://xeno-canto.org/7728/download",
-          "duration": 9,
-          "type": "call",
-          "recordist": "Robin Carter",
-          "location": "Bentsen-Rio Grande SP, Texas, United States",
-          "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
-          "sourceUrl": "https://xeno-canto.org/7728"
+          "id": "XC520429",
+          "url": "https://xeno-canto.org/520429/download",
+          "duration": 6,
+          "type": "song",
+          "recordist": "Jarrod Swackhamer",
+          "location": "Hereford, Cochise County, Arizona, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/520429"
         }
-      ],
-      "field": "Year-round; deep hooting peaks December–March during courtship."
+      ]
     },
     {
       "id": "western-screech-owl",
       "commonName": "Western Screech-Owl",
       "scientificName": "Megascops kennicottii",
       "mnemonic": "Bouncing-ball, accelerating 'whowhowhowhow'",
+      "field": "Year-round in oak woodland. The bouncing-ball trill begins slowly and accelerates; commonly delivered as a duet from inside the cavity tree.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Western_Screech_Owl.jpg/330px-Western_Screech_Owl.jpg",
       "recordings": [
-        {
-          "id": "XC736233",
-          "url": "https://xeno-canto.org/736233/download",
-          "duration": 6,
-          "type": "call",
-          "recordist": "Kayla Brown",
-          "location": "Fawn Creek, Marion County, Oregon, United States",
-          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/736233"
-        },
         {
           "id": "XC1000440",
           "url": "https://xeno-canto.org/1000440/download",
@@ -75,6 +66,16 @@
           "sourceUrl": "https://xeno-canto.org/1000440"
         },
         {
+          "id": "XC736233",
+          "url": "https://xeno-canto.org/736233/download",
+          "duration": 6,
+          "type": "call",
+          "recordist": "Kayla Brown",
+          "location": "Fawn Creek, Marion County, Oregon, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/736233"
+        },
+        {
           "id": "XC962398",
           "url": "https://xeno-canto.org/962398/download",
           "duration": 4,
@@ -84,8 +85,7 @@
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
           "sourceUrl": "https://xeno-canto.org/962398"
         }
-      ],
-      "field": "Year-round in oak woodland edges; bouncy trill at dusk."
+      ]
     },
     {
       "id": "northern-saw-whet-owl",
@@ -124,7 +124,8 @@
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
           "sourceUrl": "https://xeno-canto.org/833003"
         }
-      ]
+      ],
+      "field": "Year-round in dense coastal forest; difficult to detect outside late winter. Calling peaks January through March from inside conifer cover."
     },
     {
       "id": "northern-pygmy-owl",
@@ -143,7 +144,8 @@
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
           "sourceUrl": "https://xeno-canto.org/646754"
         }
-      ]
+      ],
+      "field": "Year-round in mixed conifer-oak. Diurnal; hunts small birds at midday and may be located by the angry mob of songbirds harassing it."
     },
     {
       "id": "common-poorwill",
@@ -182,46 +184,49 @@
           "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
           "sourceUrl": "https://xeno-canto.org/109851"
         }
-      ]
+      ],
+      "field": "April through September on rocky brushy hillsides. The only North American bird known to enter true torpor, lowering its body temperature for days at a time during cold spells."
     },
     {
       "id": "barn-owl",
       "commonName": "Barn Owl",
       "scientificName": "Tyto alba",
       "mnemonic": "Eerie raspy scream",
+      "wikipediaTitle": "Western barn owl",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Barn_Owl%2C_Lancashire.jpg/330px-Barn_Owl%2C_Lancashire.jpg",
       "recordings": [
         {
-          "id": "XC1089078",
-          "url": "https://xeno-canto.org/1089078/download",
-          "duration": 8,
-          "type": "",
-          "recordist": "Mark James Pearson",
-          "location": "Wigginton, York, England, United Kingdom",
+          "id": "XC1083634",
+          "url": "https://xeno-canto.org/1083634/download",
+          "duration": 7,
+          "type": "song",
+          "recordist": "Maurice Riekert",
+          "location": "Nijmegen, Nijmegen, Gelderland, Netherlands",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/1089078"
+          "sourceUrl": "https://xeno-canto.org/1083634"
         },
         {
-          "id": "XC1052574",
-          "url": "https://xeno-canto.org/1052574/download",
-          "duration": 8,
-          "type": "call",
-          "recordist": "Denis Dujardin",
-          "location": "Arrondissement d'Ajaccio (near  Cargèse), Corse-du-Sud, Corse, France",
+          "id": "XC1070934",
+          "url": "https://xeno-canto.org/1070934/download",
+          "duration": 9,
+          "type": "duet, song",
+          "recordist": "Erik Eckstein",
+          "location": "Nordsachsen (near  Jesewitz), Sachsen, Germany",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/1052574"
+          "sourceUrl": "https://xeno-canto.org/1070934"
         },
         {
-          "id": "XC1045968",
-          "url": "https://xeno-canto.org/1045968/download",
-          "duration": 8,
-          "type": "nocturnal flight call, anthropogenic noise band",
-          "recordist": "John Sirrett",
-          "location": "Great Britain (near  Shirley), West Midlands, England, United Kingdom",
+          "id": "XC1089444",
+          "url": "https://xeno-canto.org/1089444/download",
+          "duration": 5,
+          "type": "song",
+          "recordist": "Damien Sevrin",
+          "location": "BARONVILLE Ma campagne (near  Beauraing), Namur, Wallonie, Belgium",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/1045968"
+          "sourceUrl": "https://xeno-canto.org/1089444"
         }
-      ]
+      ],
+      "field": "Year-round in open country with old buildings. Nests in barns, hollow trees, and tower cavities; relies on hearing alone to capture prey in total darkness."
     },
     {
       "id": "long-eared-owl",
@@ -230,6 +235,16 @@
       "mnemonic": "Soft, even 'hoo' every few seconds",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Long-eared_Owl_-_Kisjuszallas_-_Hungary_S4E0920_%2815671750198%29.jpg/330px-Long-eared_Owl_-_Kisjuszallas_-_Hungary_S4E0920_%2815671750198%29.jpg",
       "recordings": [
+        {
+          "id": "XC701400",
+          "url": "https://xeno-canto.org/701400/download",
+          "duration": 12,
+          "type": "female song, male flapping of wings",
+          "recordist": "Dominique Guillerme",
+          "location": "Chassey, Côte-d'Or, Bourgogne-Franche-Comté, France",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/701400"
+        },
         {
           "id": "XC392079",
           "url": "https://xeno-canto.org/392079/download",
@@ -241,16 +256,6 @@
           "sourceUrl": "https://xeno-canto.org/392079"
         },
         {
-          "id": "XC730361",
-          "url": "https://xeno-canto.org/730361/download",
-          "duration": 7,
-          "type": "alarm call",
-          "recordist": "Stanislas Wroza",
-          "location": "Monegros (near  Valfarta), Huesca, Aragón, Spain",
-          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/730361"
-        },
-        {
           "id": "XC573978",
           "url": "https://xeno-canto.org/573978/download",
           "duration": 10,
@@ -260,7 +265,8 @@
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
           "sourceUrl": "https://xeno-canto.org/573978"
         }
-      ]
+      ],
+      "field": "Year-round but uncommon; numbers higher in winter. The 'ear' tufts are skin and feather, not actual ears."
     },
     {
       "id": "common-nighthawk",
@@ -269,16 +275,6 @@
       "mnemonic": "Nasal 'peent' overhead at dusk",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Common_Nighthawk_%2814428313550%29.jpg/330px-Common_Nighthawk_%2814428313550%29.jpg",
       "recordings": [
-        {
-          "id": "XC1035202",
-          "url": "https://xeno-canto.org/1035202/download",
-          "duration": 9,
-          "type": "call",
-          "recordist": "Richard E. Webster",
-          "location": "Rucker Canyon grasslands, Cochise County, Arizona, United States",
-          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/1035202"
-        },
         {
           "id": "XC684354",
           "url": "https://xeno-canto.org/684354/download",
@@ -298,8 +294,19 @@
           "location": "Sierra Nevada (near  Bridgeport), Mono County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
           "sourceUrl": "https://xeno-canto.org/660470"
+        },
+        {
+          "id": "XC1035202",
+          "url": "https://xeno-canto.org/1035202/download",
+          "duration": 9,
+          "type": "call",
+          "recordist": "Richard E. Webster",
+          "location": "Rucker Canyon grasslands, Cochise County, Arizona, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/1035202"
         }
-      ]
+      ],
+      "field": "May through September; declining in California. Forages on the wing at dusk, with the male's booming display dive audible across pastures."
     }
   ],
   "lessons": [

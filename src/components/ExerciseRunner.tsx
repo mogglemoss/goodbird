@@ -14,19 +14,26 @@ import { cn } from "@/lib/cn";
 interface Props {
   exercise: Exercise;
   exerciseIndex: number; // for re-mount key
+  /** Result already recorded in the store for this exercise, if the user
+   * navigated away and came back. Lets us re-show the locked feedback
+   * state instead of allowing them to re-answer. */
+  previouslyAnswered?: { correct: boolean } | null;
   onAnswered: (correct: boolean, speciesId: string | null) => void;
   onContinue: () => void;
 }
 
-export function ExerciseRunner({ exercise, exerciseIndex, onAnswered, onContinue }: Props) {
+export function ExerciseRunner({ exercise, exerciseIndex, previouslyAnswered, onAnswered, onContinue }: Props) {
   // Locked answer state lives here so the child can stay simple.
-  const [locked, setLocked] = useState<{ value: any; correct: boolean } | null>(null);
+  // If the store already has a result for this exercise (user navigated to a
+  // species page and back), seed locked so they can't re-answer.
+  const seed = previouslyAnswered ? { value: null, correct: previouslyAnswered.correct } : null;
+  const [locked, setLocked] = useState<{ value: any; correct: boolean } | null>(seed);
   const [hintShown, setHintShown] = useState(false);
 
   useEffect(() => {
-    setLocked(null);
+    setLocked(previouslyAnswered ? { value: null, correct: previouslyAnswered.correct } : null);
     setHintShown(false);
-  }, [exerciseIndex]);
+  }, [exerciseIndex, previouslyAnswered]);
 
   const handleAnswered = (correct: boolean, locker: any, speciesId: string | null) => {
     setLocked({ value: locker, correct });

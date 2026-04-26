@@ -12,17 +12,18 @@
       "commonName": "Marsh Wren",
       "scientificName": "Cistothorus palustris",
       "mnemonic": "Buzzy, sewing-machine chatter",
+      "field": "Year-round in cattail marsh. Males build several 'dummy' nests in addition to the breeding nest, possibly to confuse predators.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Marshwrenusfws.jpg/330px-Marshwrenusfws.jpg",
       "recordings": [
         {
-          "id": "XC459167",
-          "url": "https://xeno-canto.org/459167/download",
-          "duration": 6,
-          "type": "call",
+          "id": "XC143795",
+          "url": "https://xeno-canto.org/143795/download",
+          "duration": 14,
+          "type": "call, song",
           "recordist": "Paul Marvin",
-          "location": "IID (Imperial Irrigation District) Marsh, Niland, Imperial County, California, United States",
-          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/459167"
+          "location": "Vendel Road, Salton Sea NWR, Brawley, Imperial County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/143795"
         },
         {
           "id": "XC57378",
@@ -44,36 +45,16 @@
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
           "sourceUrl": "https://xeno-canto.org/417865"
         }
-      ],
-      "field": "Year-round in cattail marshes; chatters constantly from low in the reeds."
+      ]
     },
     {
       "id": "red-winged-blackbird",
       "commonName": "Red-winged Blackbird",
       "scientificName": "Agelaius phoeniceus",
       "mnemonic": "Konk-a-reee!",
+      "field": "Year-round in cattail marsh. Polygynous males defend territories from cattail tops; the red epaulets are exposed only when asserting territory.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Red-Winged_Blackbird.png/330px-Red-Winged_Blackbird.png",
       "recordings": [
-        {
-          "id": "XC713846",
-          "url": "https://xeno-canto.org/713846/download",
-          "duration": 9,
-          "type": "song",
-          "recordist": "Ron Overholtz",
-          "location": "Lone Pine, Inyo County, California, United States",
-          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/713846"
-        },
-        {
-          "id": "XC713844",
-          "url": "https://xeno-canto.org/713844/download",
-          "duration": 9,
-          "type": "song",
-          "recordist": "Ron Overholtz",
-          "location": "Diaz Lake, Inyo County, California, United States",
-          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/713844"
-        },
         {
           "id": "XC368448",
           "url": "https://xeno-canto.org/368448/download",
@@ -83,9 +64,28 @@
           "location": "Crow Valley, Weld County, Colorado, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
           "sourceUrl": "https://xeno-canto.org/368448"
+        },
+        {
+          "id": "XC651824",
+          "url": "https://xeno-canto.org/651824/download",
+          "duration": 12,
+          "type": "call, song",
+          "recordist": "Ed Pandolfino",
+          "location": "Pine Flat Rd, Sonoma County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/651824"
+        },
+        {
+          "id": "XC989810",
+          "url": "https://xeno-canto.org/989810/download",
+          "duration": 13,
+          "type": "call, song",
+          "recordist": "Ed Pandolfino",
+          "location": "Deer Creek Hills Preserve, Sacramento County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/989810"
         }
-      ],
-      "field": "Year-round in marshes; males display from cattail tops in spring."
+      ]
     },
     {
       "id": "common-yellowthroat",
@@ -95,44 +95,57 @@
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Common_yellowthroat_in_PP_%2814155%29.jpg/330px-Common_yellowthroat_in_PP_%2814155%29.jpg",
       "recordings": [
         {
-          "id": "XC483964",
-          "url": "https://xeno-canto.org/483964/download",
-          "duration": 8,
-          "type": "call",
-          "recordist": "Paul Marvin",
-          "location": "Monument Rd and nearby trails, Tijuana River Valley, San Diego, California, United States",
-          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/483964"
-        },
-        {
-          "id": "XC342553",
-          "url": "https://xeno-canto.org/342553/download",
-          "duration": 8,
-          "type": "call",
-          "recordist": "Ted Floyd",
-          "location": "Boulder, Boulder County, Colorado, United States",
-          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/342553"
-        },
-        {
-          "id": "XC388604",
-          "url": "https://xeno-canto.org/388604/download",
+          "id": "XC381578",
+          "url": "https://xeno-canto.org/381578/download",
           "duration": 9,
-          "type": "call",
-          "recordist": "Antonio Xeira",
-          "location": "Stony Creek Metropark, Macomb County, Michigan, United States",
+          "type": "song",
+          "recordist": "Sue Riffe",
+          "location": "Biddeford Beach (East Point Sanctuary), York County, Maine, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/388604"
+          "sourceUrl": "https://xeno-canto.org/381578"
+        },
+        {
+          "id": "XC375507",
+          "url": "https://xeno-canto.org/375507/download",
+          "duration": 9,
+          "type": "song",
+          "recordist": "Greg Irving",
+          "location": "Nelson Lake Marsh Reserve, Kane County, Illinois, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/375507"
+        },
+        {
+          "id": "XC78732",
+          "url": "https://xeno-canto.org/78732/download",
+          "duration": 9,
+          "type": "flight song",
+          "recordist": "Andrew Spencer",
+          "location": "Pondicherry Wildlife Refuge, Coos Co., New Hampshire, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
+          "sourceUrl": "https://xeno-canto.org/78732"
         }
-      ]
+      ],
+      "field": "Year-round in damp brush, often along marsh edges. Males sing from cattail tops and willow thickets; the black mask is unmistakable."
     },
     {
       "id": "sora",
       "commonName": "Sora",
       "scientificName": "Porzana carolina",
       "mnemonic": "Descending whinny, plaintive 'ker-WEE'",
+      "wikipediaTitle": "Sora (bird)",
+      "field": "Year-round in dense marsh. Calls more often heard than the bird is seen; the descending whinny carries across still water at dawn.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Sora_%28Porzana_carolina%29.jpg/330px-Sora_%28Porzana_carolina%29.jpg",
       "recordings": [
+        {
+          "id": "XC228580",
+          "url": "https://xeno-canto.org/228580/download",
+          "duration": 7,
+          "type": "song",
+          "recordist": "Peter Boesman",
+          "location": "Salton Sea, CA, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+          "sourceUrl": "https://xeno-canto.org/228580"
+        },
         {
           "id": "XC357951",
           "url": "https://xeno-canto.org/357951/download",
@@ -152,19 +165,8 @@
           "location": "Peña Blanca Lake, Arizona, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
           "sourceUrl": "https://xeno-canto.org/452184"
-        },
-        {
-          "id": "XC228580",
-          "url": "https://xeno-canto.org/228580/download",
-          "duration": 7,
-          "type": "song",
-          "recordist": "Peter Boesman",
-          "location": "Salton Sea, CA, United States",
-          "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
-          "sourceUrl": "https://xeno-canto.org/228580"
         }
-      ],
-      "field": "Year-round in dense marsh; calls mostly at dawn and dusk from cover."
+      ]
     },
     {
       "id": "virginia-rail",
@@ -174,36 +176,37 @@
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Virginia_rail_%2841109%29.jpg/330px-Virginia_rail_%2841109%29.jpg",
       "recordings": [
         {
-          "id": "XC602823",
-          "url": "https://xeno-canto.org/602823/download",
-          "duration": 8,
-          "type": "call",
-          "recordist": "Steve Hampton",
-          "location": "Kai Tai Lagoon, Port Townsend, Jefferson County, Washington, United States",
+          "id": "XC580997",
+          "url": "https://xeno-canto.org/580997/download",
+          "duration": 7,
+          "type": "song",
+          "recordist": "Eric DeFonso",
+          "location": "Lower Latham Reservoir, Weld Co., Colorado, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/602823"
+          "sourceUrl": "https://xeno-canto.org/580997"
         },
         {
-          "id": "XC28270",
-          "url": "https://xeno-canto.org/28270/download",
-          "duration": 8,
-          "type": "call",
-          "recordist": "Daniel Lane",
-          "location": "Talon Landing Rd, Cameron Parish, Louisiana, United States",
-          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
-          "sourceUrl": "https://xeno-canto.org/28270"
+          "id": "XC621187",
+          "url": "https://xeno-canto.org/621187/download",
+          "duration": 13,
+          "type": "song",
+          "recordist": "Scott Crabtree",
+          "location": "Santa Cruz River Park,Tucson, Pima County, Arizona, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/621187"
         },
         {
-          "id": "XC28269",
-          "url": "https://xeno-canto.org/28269/download",
-          "duration": 8,
-          "type": "call",
-          "recordist": "Daniel Lane",
-          "location": "Talon Landing Rd, Cameron Parish, Louisiana, United States",
-          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
-          "sourceUrl": "https://xeno-canto.org/28269"
+          "id": "XC636885",
+          "url": "https://xeno-canto.org/636885/download",
+          "duration": 3,
+          "type": "nocturnal flight call",
+          "recordist": "Sam Corbo",
+          "location": "Wilson & Kenmore (near  Shorewood), Milwaukee County, Wisconsin, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/636885"
         }
-      ]
+      ],
+      "field": "Year-round in dense cattail and tule. The body is laterally compressed for moving through reeds."
     },
     {
       "id": "pied-billed-grebe",
@@ -213,36 +216,37 @@
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Pied-billed_Grebe_0561.jpg/330px-Pied-billed_Grebe_0561.jpg",
       "recordings": [
         {
-          "id": "XC451362",
-          "url": "https://xeno-canto.org/451362/download",
-          "duration": 8,
-          "type": "call",
+          "id": "XC459166",
+          "url": "https://xeno-canto.org/459166/download",
+          "duration": 12,
+          "type": "call, song",
           "recordist": "Paul Marvin",
-          "location": "Peña Blanca Lake, Arizona, United States",
+          "location": "IID (Imperial Irrigation District) Marsh, Niland, Imperial County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/451362"
+          "sourceUrl": "https://xeno-canto.org/459166"
         },
         {
-          "id": "XC971486",
-          "url": "https://xeno-canto.org/971486/download",
-          "duration": 7,
-          "type": "call",
-          "recordist": "Richard E. Webster",
-          "location": "San Bernardino National Wildlife Refuge, Cochise County, Arizona, United States",
+          "id": "XC629177",
+          "url": "https://xeno-canto.org/629177/download",
+          "duration": 13,
+          "type": "song",
+          "recordist": "Paul Marvin",
+          "location": "Otay Lakes, San Diego Co., California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/971486"
+          "sourceUrl": "https://xeno-canto.org/629177"
         },
         {
-          "id": "XC600726",
-          "url": "https://xeno-canto.org/600726/download",
-          "duration": 9,
-          "type": "alarm call",
-          "recordist": "Richard E. Webster",
-          "location": "San Bernardino National Wildlife Refuge, Cochise County, Arizona, United States",
+          "id": "XC563118",
+          "url": "https://xeno-canto.org/563118/download",
+          "duration": 14,
+          "type": "song",
+          "recordist": "Daniel Hinckley",
+          "location": "Salt Lake Valley (near  South Jordan), Salt Lake County, Utah, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/600726"
+          "sourceUrl": "https://xeno-canto.org/563118"
         }
-      ]
+      ],
+      "field": "Year-round on freshwater ponds. Submerges by expelling air rather than diving; the head sometimes vanishes alone, leaving the body at the surface."
     },
     {
       "id": "american-bittern",
@@ -262,16 +266,6 @@
           "sourceUrl": "https://xeno-canto.org/417864"
         },
         {
-          "id": "XC172859",
-          "url": "https://xeno-canto.org/172859/download",
-          "duration": 10,
-          "type": "flight call",
-          "recordist": "Paul Marvin",
-          "location": "Orlando Wetlands, Christmas, Orange County, Florida, United States",
-          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/172859"
-        },
-        {
           "id": "XC408481",
           "url": "https://xeno-canto.org/408481/download",
           "duration": 12,
@@ -280,8 +274,19 @@
           "location": "Pinto Lake, Watsonville, Santa Cruz County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
           "sourceUrl": "https://xeno-canto.org/408481"
+        },
+        {
+          "id": "XC408483",
+          "url": "https://xeno-canto.org/408483/download",
+          "duration": 13,
+          "type": "song",
+          "recordist": "Frank Lambert",
+          "location": "Pinto Lake, Watsonville, Santa Cruz County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+          "sourceUrl": "https://xeno-canto.org/408483"
         }
-      ]
+      ],
+      "field": "April through October in dense marsh. The 'pump-er-lunk' call, low and resonant, is produced by a specialized esophageal sac."
     },
     {
       "id": "mallard",
@@ -291,36 +296,37 @@
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Anas_platyrhynchos_male_female_quadrat.jpg/330px-Anas_platyrhynchos_male_female_quadrat.jpg",
       "recordings": [
         {
-          "id": "XC984930",
-          "url": "https://xeno-canto.org/984930/download",
-          "duration": 8,
-          "type": "displaying",
-          "recordist": "David Darrell-Lambert",
-          "location": "East Tilbury, Thurrock, England, United Kingdom",
+          "id": "XC512909",
+          "url": "https://xeno-canto.org/512909/download",
+          "duration": 12,
+          "type": "call, song",
+          "recordist": "Jarek Matusiak",
+          "location": "Stokrotki 02 (near  Nieporęt), Powiat legionowski, mazowieckie, Poland",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/984930"
+          "sourceUrl": "https://xeno-canto.org/512909"
         },
         {
-          "id": "XC884217",
-          "url": "https://xeno-canto.org/884217/download",
-          "duration": 8,
-          "type": "call",
-          "recordist": "João Ferreira Tomás",
-          "location": "León (near  Banuncias), León, Castilla y León, Spain",
+          "id": "XC303987",
+          "url": "https://xeno-canto.org/303987/download",
+          "duration": 6,
+          "type": "song",
+          "recordist": "Jarek Matusiak",
+          "location": "Gmina Piecki (near  Krutyń), mrągowski, warmińsko-mazurskie, Poland",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/884217"
+          "sourceUrl": "https://xeno-canto.org/303987"
         },
         {
-          "id": "XC635430",
-          "url": "https://xeno-canto.org/635430/download",
-          "duration": 8,
-          "type": "call, nocturnal flight call",
-          "recordist": "Susanne Kuijpers",
-          "location": "Berkel en Rodenrijs, Lansingerland, Zuid-Holland, Netherlands",
+          "id": "XC303989",
+          "url": "https://xeno-canto.org/303989/download",
+          "duration": 12,
+          "type": "song",
+          "recordist": "Jarek Matusiak",
+          "location": "Gmina Piecki (near  Krutyń), mrągowski, warmińsko-mazurskie, Poland",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/635430"
+          "sourceUrl": "https://xeno-canto.org/303989"
         }
-      ]
+      ],
+      "field": "Year-round on any open water. The vocal 'quack' is the female's; males give a softer, raspier 'reb-reb'."
     },
     {
       "id": "tree-swallow",
@@ -329,16 +335,6 @@
       "mnemonic": "Liquid chittering, in flight",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Tree_swallow_in_JBWR_%2825579%29.jpg/330px-Tree_swallow_in_JBWR_%2825579%29.jpg",
       "recordings": [
-        {
-          "id": "XC259259",
-          "url": "https://xeno-canto.org/259259/download",
-          "duration": 9,
-          "type": "flight call, flight calls",
-          "recordist": "John V. Moore",
-          "location": "California: near Lake Tahoe, United States",
-          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/259259"
-        },
         {
           "id": "XC490200",
           "url": "https://xeno-canto.org/490200/download",
@@ -350,16 +346,27 @@
           "sourceUrl": "https://xeno-canto.org/490200"
         },
         {
-          "id": "XC781096",
-          "url": "https://xeno-canto.org/781096/download",
-          "duration": 11,
-          "type": "alarm call",
-          "recordist": "Paul Driver",
-          "location": "Upper Moreland Township (near  Bryn Athyn), Montgomery County, Pennsylvania, United States",
+          "id": "XC259259",
+          "url": "https://xeno-canto.org/259259/download",
+          "duration": 9,
+          "type": "flight call, flight calls",
+          "recordist": "John V. Moore",
+          "location": "California: near Lake Tahoe, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/781096"
+          "sourceUrl": "https://xeno-canto.org/259259"
+        },
+        {
+          "id": "XC612860",
+          "url": "https://xeno-canto.org/612860/download",
+          "duration": 12,
+          "type": "call, flight call",
+          "recordist": "Sue Riffe",
+          "location": "Walden Reservoir, Jackson Cty, Colorado, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/612860"
         }
-      ]
+      ],
+      "field": "Year-round on the coast; widespread breeder. Cavity nester; lines the nest cup with white feathers, often gathered in mid-air from other birds."
     },
     {
       "id": "great-blue-heron",
@@ -368,16 +375,6 @@
       "mnemonic": "Harsh prehistoric croak",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/GreatBlueHeronInARiver.jpg/330px-GreatBlueHeronInARiver.jpg",
       "recordings": [
-        {
-          "id": "XC927403",
-          "url": "https://xeno-canto.org/927403/download",
-          "duration": 8,
-          "type": "call, Squawk",
-          "recordist": "Valerie Heemstra",
-          "location": "Escanaba, Delta County, Michigan, United States",
-          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/927403"
-        },
         {
           "id": "XC565135",
           "url": "https://xeno-canto.org/565135/download",
@@ -397,8 +394,19 @@
           "location": "Salt Lake WMA, Mims, Brevard County, Florida, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
           "sourceUrl": "https://xeno-canto.org/395485"
+        },
+        {
+          "id": "XC196154",
+          "url": "https://xeno-canto.org/196154/download",
+          "duration": 8,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "Flamingo Campground, Everglades National Park, Florida, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/196154"
         }
-      ]
+      ],
+      "field": "Year-round at all wetland edges. Wing strokes are slow, about two per second; rookery nests are stick platforms in tall trees, often near water."
     },
     {
       "id": "black-crowned-night-heron",
@@ -437,7 +445,8 @@
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
           "sourceUrl": "https://xeno-canto.org/172927"
         }
-      ]
+      ],
+      "field": "Year-round at wetland edges. Forages by night; daytime roosts are communal in dense waterside trees."
     },
     {
       "id": "killdeer",
@@ -467,16 +476,17 @@
           "sourceUrl": "https://xeno-canto.org/169196"
         },
         {
-          "id": "XC42584",
-          "url": "https://xeno-canto.org/42584/download",
-          "duration": 6,
-          "type": "call",
-          "recordist": "Todd Wilson",
-          "location": "Horicon Marsh, Dodge Co, Wisconsin, United States",
-          "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
-          "sourceUrl": "https://xeno-canto.org/42584"
+          "id": "XC1004462",
+          "url": "https://xeno-canto.org/1004462/download",
+          "duration": 5,
+          "type": "flight call",
+          "recordist": "Rory Nefdt",
+          "location": "Edith G. Reed Sanctuary, Rye, New York, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/1004462"
         }
-      ]
+      ],
+      "field": "Year-round in open ground near water — pastures, gravel parking lots, golf-course edges. Feigns a broken wing to lure intruders from the nest."
     },
     {
       "id": "song-sparrow",
@@ -486,14 +496,24 @@
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Song_sparrow_in_Prospect_Park_%2893031%29.jpg/330px-Song_sparrow_in_Prospect_Park_%2893031%29.jpg",
       "recordings": [
         {
-          "id": "XC301851",
-          "url": "https://xeno-canto.org/301851/download",
-          "duration": 8,
-          "type": "call",
-          "recordist": "Ted Floyd",
-          "location": "Lafayette, Boulder, Colorado, United States",
+          "id": "XC153555",
+          "url": "https://xeno-canto.org/153555/download",
+          "duration": 12,
+          "type": "call, song",
+          "recordist": "Mike Schanbacher",
+          "location": "Falmouth, Barnstable, Massachusetts, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/153555"
+        },
+        {
+          "id": "XC559479",
+          "url": "https://xeno-canto.org/559479/download",
+          "duration": 14,
+          "type": "call, song",
+          "recordist": "Jim Berry",
+          "location": "Busti (near  Jamestown), Chautauqua County, New York, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/301851"
+          "sourceUrl": "https://xeno-canto.org/559479"
         },
         {
           "id": "XC803814",
@@ -504,18 +524,9 @@
           "location": "DeWitt (near  East Syracuse), Onondaga County, New York, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
           "sourceUrl": "https://xeno-canto.org/803814"
-        },
-        {
-          "id": "XC697998",
-          "url": "https://xeno-canto.org/697998/download",
-          "duration": 7,
-          "type": "call",
-          "recordist": "Paul Marvin",
-          "location": "Bird and Butterfly Garden, Tijuana River Valley Regional Park, San Diego Co, California, United States",
-          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/697998"
         }
-      ]
+      ],
+      "field": "Year-round in any low brush near water. Each male sings 8 to 10 distinct songs, learned from neighbors as a juvenile."
     }
   ],
   "lessons": [

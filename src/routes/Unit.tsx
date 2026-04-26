@@ -110,10 +110,10 @@ export function UnitRoute() {
         })}
       </div>
 
-      {/* Browse all species in this unit — entry point to species detail without playing. */}
+      {/* Browse all species in this habitat — entry point to species detail without playing. */}
       <section className="mt-12">
         <h3 className="text-xs font-semibold uppercase tracking-wider text-(--color-ink-soft)">
-          Birds in this unit
+          Birds in this habitat
         </h3>
         <div className="mt-3 grid grid-cols-3 gap-3 sm:grid-cols-4">
           {getSpeciesForUnit(unit.id).map((sp) => (
