@@ -5,7 +5,7 @@ import confetti from "canvas-confetti";
 import { useGame } from "@/game/store";
 import { lessonComplete } from "@/lib/feedback";
 import { getLesson, getSpecies, nextLesson as findNextLesson } from "@/lib/manifest";
-import { getHowl, stopAll } from "@/lib/audio";
+import { PlaySoundButton } from "@/components/PlaySoundButton";
 
 interface Snapshot {
   xpGained: number;
@@ -125,15 +125,6 @@ function MissedSpeciesRow({ speciesId }: { speciesId: string }) {
   const sp = (() => { try { return getSpecies(speciesId); } catch { return null; } })();
   if (!sp) return null;
   const url = sp.recordings[0]?.url;
-  const play = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    if (!url) return;
-    stopAll();
-    const h = getHowl(url);
-    h.seek(0);
-    h.play();
-  };
   return (
     <li>
       <Link
@@ -151,17 +142,7 @@ function MissedSpeciesRow({ speciesId }: { speciesId: string }) {
           <div className="truncate font-medium">{sp.commonName}</div>
           <div className="truncate text-xs text-(--color-ink-soft)">"{sp.mnemonic}"</div>
         </div>
-        <button
-          type="button"
-          onClick={play}
-          aria-label={`Replay ${sp.commonName}`}
-          disabled={!url}
-          className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-(--color-moss-500) text-white shadow-(--shadow-soft) hover:bg-(--color-moss-600) active:scale-95 disabled:opacity-40 cursor-pointer"
-        >
-          <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor">
-            <path d="M8 5.5v13a.5.5 0 0 0 .76.43l11-6.5a.5.5 0 0 0 0-.86l-11-6.5A.5.5 0 0 0 8 5.5z" />
-          </svg>
-        </button>
+        {url && <PlaySoundButton url={url} size="sm" ariaLabel={`Play ${sp.commonName}`} />}
       </Link>
     </li>
   );

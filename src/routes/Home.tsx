@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { units, getLessonsForUnit, getSpecies, allLessons } from "@/lib/manifest";
+import type { Species } from "@/lib/types";
 import { useGame } from "@/game/store";
 import { ACCENTS } from "@/lib/theme";
 import type { Unit } from "@/lib/types";
@@ -14,7 +15,13 @@ export function HomeRoute() {
   const xp = useGame((s) => s.xp);
   const streak = useGame((s) => s.streak);
   const completed = useGame((s) => s.completedLessons);
+  const favorites = useGame((s) => s.favorites);
   const [settingsOpen, setSettingsOpen] = useState(false);
+
+  const favoriteSpecies = useMemo<Species[]>(() => {
+    const ids = Object.keys(favorites);
+    return ids.map((id) => { try { return getSpecies(id); } catch { return null; } }).filter((s): s is Species => !!s);
+  }, [favorites]);
 
   // Most-recently-completed lesson → which unit it belongs to → "Continue" hint.
   const continueTarget = (() => {
@@ -73,6 +80,37 @@ export function HomeRoute() {
           <HabitatCard key={unit.id} unit={unit} completed={completed} />
         ))}
       </div>
+
+      {favoriteSpecies.length > 0 && (
+        <section className="mt-10">
+          <h2 className="text-xs font-semibold uppercase tracking-wider text-(--color-ink-soft)">
+            Favorites
+          </h2>
+          <div className="mt-3 -mx-5 overflow-x-auto px-5">
+            <ul className="flex gap-3 pb-2">
+              {favoriteSpecies.map((sp) => (
+                <li key={sp.id} className="shrink-0">
+                  <Link
+                    to={`/species/${sp.id}`}
+                    className="flex w-24 flex-col items-center gap-1.5"
+                  >
+                    <div className="aspect-square w-full overflow-hidden rounded-2xl border-2 border-(--color-line) bg-(--color-sand-50) transition-colors hover:border-(--color-moss-300)">
+                      {sp.imageUrl ? (
+                        <img src={sp.imageUrl} alt="" loading="lazy" className="h-full w-full object-cover" />
+                      ) : (
+                        <div className="grid h-full w-full place-items-center text-2xl">🪶</div>
+                      )}
+                    </div>
+                    <div className="line-clamp-2 w-full text-center text-xs font-medium leading-tight">
+                      {sp.commonName}
+                    </div>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
     </div>
   );
 }

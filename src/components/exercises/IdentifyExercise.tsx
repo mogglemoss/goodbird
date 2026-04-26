@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { AudioPlayer } from "@/components/AudioPlayer";
 import { SpeciesCard } from "@/components/SpeciesCard";
 import { getSpecies } from "@/lib/manifest";
@@ -12,6 +13,7 @@ interface Props {
 
 export function IdentifyExerciseView({ exercise, onAnswered, locked }: Props) {
   const [picked, setPicked] = useState<string | null>(null);
+  const nav = useNavigate();
 
   const choose = (id: string) => {
     if (locked || picked) return;
@@ -37,13 +39,15 @@ export function IdentifyExerciseView({ exercise, onAnswered, locked }: Props) {
           } else if (decided && id === exercise.correctSpeciesId) {
             state = "reveal";
           }
+          // After answering, tapping any card opens its species detail page.
+          // Before answering, taps go to choose().
+          const handleClick = decided ? () => nav(`/species/${id}`) : () => choose(id);
           return (
             <SpeciesCard
               key={id}
               species={sp}
-              onClick={() => choose(id)}
+              onClick={handleClick}
               state={state}
-              disabled={!!decided}
             />
           );
         })}

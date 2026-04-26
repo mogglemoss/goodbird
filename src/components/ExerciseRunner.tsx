@@ -6,8 +6,9 @@ import { MnemonicExerciseView } from "./exercises/MnemonicExercise";
 import { DiscriminateExerciseView } from "./exercises/DiscriminateExercise";
 import { FindBirdExerciseView } from "./exercises/FindBirdExercise";
 import { correctChime, wrongBuzz } from "@/lib/feedback";
-import { getHowl, stopAll } from "@/lib/audio";
+import { stopAll } from "@/lib/audio";
 import { getSpecies } from "@/lib/manifest";
+import { PlaySoundButton } from "./PlaySoundButton";
 import { cn } from "@/lib/cn";
 
 interface Props {
@@ -167,8 +168,11 @@ function FeedbackBar({
           animate={{ y: 0 }}
           exit={{ y: 80 }}
           transition={{ type: "spring", stiffness: 320, damping: 32 }}
+          // Full-bleed across the viewport so the tinted accent doesn't end
+          // abruptly at the lesson container's max-width on desktop.
+          // ml/mr negatives = half-viewport-minus-half-container.
           className={cn(
-            "border-t-2 px-5 py-4 sm:py-5",
+            "ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] border-t-2 px-5 py-4 sm:py-5",
             correct
               ? "border-(--color-correct) bg-(--color-correct-bg)"
               : "border-(--color-wrong) bg-(--color-wrong-bg)",
@@ -176,17 +180,19 @@ function FeedbackBar({
         >
           <div className="mx-auto flex w-full max-w-md items-center justify-between gap-3">
             <div className="min-w-0 flex items-center gap-3">
-              {!correct && replayUrl && (
-                <ReplayButton url={replayUrl} />
+              {replayUrl && (
+                <PlaySoundButton
+                  url={replayUrl}
+                  tone={correct ? "moss" : "wrong"}
+                  ariaLabel={correct ? "Replay this call" : "Replay correct call"}
+                />
               )}
               <div className="min-w-0">
                 <div className={cn("font-display text-lg font-medium",
                   correct ? "text-(--color-moss-700)" : "text-(--color-wrong)")}>
-                  {correct ? "Nice ear." : `It was the ${correctName}.`}
+                  {correct ? `${correctName} ✓` : `It was the ${correctName}.`}
                 </div>
-                {!correct && (
-                  <div className="text-sm text-(--color-ink-soft) truncate">"{correctMnemonic(exercise)}"</div>
-                )}
+                <div className="text-sm text-(--color-ink-soft) truncate">"{correctMnemonic(exercise)}"</div>
               </div>
             </div>
             <button
@@ -204,26 +210,6 @@ function FeedbackBar({
         </motion.div>
       )}
     </AnimatePresence>
-  );
-}
-
-function ReplayButton({ url }: { url: string }) {
-  return (
-    <button
-      type="button"
-      aria-label="Replay correct call"
-      onClick={() => {
-        stopAll();
-        const sound = getHowl(url);
-        sound.seek(0);
-        sound.play();
-      }}
-      className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-(--color-wrong) text-white shadow-(--shadow-pop) hover:brightness-110 active:scale-95 cursor-pointer"
-    >
-      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor">
-        <path d="M8 5.5v13a.5.5 0 0 0 .76.43l11-6.5a.5.5 0 0 0 0-.86l-11-6.5A.5.5 0 0 0 8 5.5z" />
-      </svg>
-    </button>
   );
 }
 

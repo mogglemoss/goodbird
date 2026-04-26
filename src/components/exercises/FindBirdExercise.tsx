@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { AudioPlayer } from "@/components/AudioPlayer";
 import { SpeciesCard } from "@/components/SpeciesCard";
@@ -32,9 +33,9 @@ export function FindBirdExerciseView({ exercise, onAnswered, locked }: Props) {
           <p className="mt-2 text-xs text-(--color-ink-soft)">Tap ▶ to listen, then tap <strong className="text-(--color-ink)">Pick</strong>.</p>
         )}
       </div>
-      <div className="w-40">
-        <SpeciesCard species={target} disabled state="idle" />
-      </div>
+      <Link to={`/species/${target.id}`} className="w-40" aria-label={`More about ${target.commonName}`}>
+        <SpeciesCard species={target} state="idle" />
+      </Link>
       <div className="grid w-full grid-cols-3 gap-3">
         {exercise.recordings.map((rec, i) => {
           const isCorrect = i === exercise.correctIndex;

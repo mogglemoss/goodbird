@@ -1,6 +1,6 @@
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { getUnit, getLessonsForUnit, getSpecies } from "@/lib/manifest";
+import { getUnit, getLessonsForUnit, getSpecies, getSpeciesForUnit } from "@/lib/manifest";
 import { useGame } from "@/game/store";
 import { ACCENTS } from "@/lib/theme";
 import { cn } from "@/lib/cn";
@@ -109,6 +109,36 @@ export function UnitRoute() {
           );
         })}
       </div>
+
+      {/* Browse all species in this unit — entry point to species detail without playing. */}
+      <section className="mt-12">
+        <h3 className="text-xs font-semibold uppercase tracking-wider text-(--color-ink-soft)">
+          Birds in this unit
+        </h3>
+        <div className="mt-3 grid grid-cols-3 gap-3 sm:grid-cols-4">
+          {getSpeciesForUnit(unit.id).map((sp) => (
+            <Link
+              key={sp.id}
+              to={`/species/${sp.id}`}
+              className={cn(
+                "group flex flex-col items-center gap-1.5 rounded-(--radius-card) border-2 border-(--color-line) bg-(--color-surface) p-2 shadow-(--shadow-soft) transition-colors",
+                accent.unlockedHover,
+              )}
+            >
+              <div className="aspect-square w-full overflow-hidden rounded-xl bg-(--color-sand-50)">
+                {sp.imageUrl ? (
+                  <img src={sp.imageUrl} alt="" loading="lazy" className="h-full w-full object-cover transition-transform group-hover:scale-105" />
+                ) : (
+                  <div className="grid h-full w-full place-items-center text-2xl">🪶</div>
+                )}
+              </div>
+              <div className="line-clamp-2 w-full text-center text-xs font-medium leading-tight">
+                {sp.commonName}
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }

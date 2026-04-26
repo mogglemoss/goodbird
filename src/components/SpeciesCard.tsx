@@ -9,7 +9,6 @@ interface Props {
   onClick?: () => void;
   state?: State;
   showName?: boolean;
-  disabled?: boolean;
   small?: boolean;
 }
 
@@ -21,16 +20,17 @@ const stateStyles: Record<State, string> = {
   reveal: "border-(--color-correct) bg-(--color-correct-bg) ring-2 ring-(--color-correct)/40",
 };
 
-export function SpeciesCard({ species, onClick, state = "idle", showName = true, disabled, small }: Props) {
+export function SpeciesCard({ species, onClick, state = "idle", showName = true, small }: Props) {
   return (
-    <motion.button
-      type="button"
-      whileTap={disabled ? undefined : { scale: 0.97 }}
-      disabled={disabled}
+    <motion.div
+      whileTap={onClick ? { scale: 0.97 } : undefined}
       onClick={onClick}
+      role={onClick ? "button" : undefined}
+      tabIndex={onClick ? 0 : undefined}
+      onKeyDown={onClick ? (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onClick(); } } : undefined}
       className={cn(
         "tap-target group flex w-full flex-col items-center overflow-hidden rounded-(--radius-card) border-2 border-(--color-line) text-left shadow-(--shadow-soft) transition-all duration-150",
-        "disabled:cursor-default",
+        onClick ? "cursor-pointer" : "cursor-default",
         stateStyles[state],
         small ? "p-2" : "p-3",
       )}
@@ -52,6 +52,6 @@ export function SpeciesCard({ species, onClick, state = "idle", showName = true,
           {species.commonName}
         </div>
       )}
-    </motion.button>
+    </motion.div>
   );
 }
