@@ -34,7 +34,12 @@ export function HeartsBar({ hearts, max, progress, freeplay, onExit }: Props) {
           Freeplay
         </span>
       ) : (
-        <div className="flex items-center gap-1">
+        <div
+          role="status"
+          aria-live="polite"
+          aria-label={`${hearts} ${hearts === 1 ? "heart" : "hearts"} remaining`}
+          className="flex items-center gap-1"
+        >
           {Array.from({ length: max }).map((_, i) => (
             <Heart key={i} filled={i < hearts} />
           ))}

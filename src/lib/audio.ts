@@ -6,6 +6,15 @@ export function getHowl(url: string): Howl {
   let h = cache.get(url);
   if (h) return h;
   h = new Howl({ src: [url], html5: true, preload: true });
+  // Tell the underlying <audio> element to preserve pitch when playbackRate
+  // changes. Without this, our ½× slow-down toggle drops the pitch a full
+  // octave — the opposite of what an ear-training app wants. Howler uses one
+  // HTMLAudioElement per Howl in html5 mode; reach into _sounds to set it.
+  h.once("load", () => {
+    for (const s of (h as any)._sounds ?? []) {
+      if (s?._node) s._node.preservesPitch = true;
+    }
+  });
   cache.set(url, h);
   return h;
 }

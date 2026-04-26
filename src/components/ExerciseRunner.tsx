@@ -70,6 +70,8 @@ export function ExerciseRunner({ exercise, exerciseIndex, previouslyAnswered, on
             <AnimatePresence>
               {hintShown && (
                 <motion.div
+                  role="status"
+                  aria-live="polite"
                   initial={{ opacity: 0, y: 8 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 8 }}
@@ -169,6 +171,16 @@ function FeedbackBar({
 
   return (
     <AnimatePresence>
+      {/* Screen-reader announcement of the answer outcome — outside
+          AnimatePresence so the message stays in the DOM long enough for
+          screen readers to read it. */}
+      <div role="status" aria-live="polite" className="sr-only">
+        {locked
+          ? (locked.correct
+              ? `Correct. ${correctName}.`
+              : `Wrong. It was the ${correctName}.`)
+          : ""}
+      </div>
       {locked && (
         <motion.div
           initial={{ y: 80 }}
