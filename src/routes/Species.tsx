@@ -105,9 +105,15 @@ export function SpeciesRoute() {
       )}
 
       <section className="mt-8">
-        <h2 className="text-xs font-semibold uppercase tracking-wider text-(--color-ink-soft)">
-          Recordings ({species.recordings.length})
-        </h2>
+        <div className="flex items-baseline justify-between">
+          <h2 className="text-xs font-semibold uppercase tracking-wider text-(--color-ink-soft)">
+            Recordings ({species.recordings.length})
+          </h2>
+        </div>
+        <p className="mt-2 text-xs leading-snug text-(--color-ink-soft)">
+          <strong className="text-(--color-ink)">Listen at home, not on the trail.</strong>{" "}
+          Playing recordings to attract birds can stress them, especially while nesting.
+        </p>
         <ul className="mt-3 flex flex-col gap-3">
           {species.recordings.map((rec) => (
             <li

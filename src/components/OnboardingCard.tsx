@@ -31,6 +31,11 @@ export function OnboardingCard() {
         <Step n="2" text="Tap a lesson, listen to the bird, pick its name." />
         <Step n="3" text="Three hearts per lesson. Tap ⋯ for offline mode + freeplay." />
       </ol>
+      <p className="mt-4 rounded-xl border border-(--color-moss-300)/60 bg-(--color-surface)/60 px-3 py-2 text-xs leading-snug text-(--color-ink-soft)">
+        <strong className="text-(--color-ink)">In the field:</strong> please don't play
+        these recordings to attract birds. Even brief playback can stress nesting birds
+        and disturb territories. Use them at home, not on the trail.
+      </p>
       <button
         onClick={setOnboarded}
         className="mt-4 w-full rounded-full bg-(--color-moss-500) py-2.5 text-sm font-semibold text-white shadow-(--shadow-soft) hover:bg-(--color-moss-600) cursor-pointer"
