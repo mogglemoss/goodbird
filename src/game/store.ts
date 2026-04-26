@@ -84,11 +84,18 @@ export const useGame = create<GameState>()(
         if (!a) return;
         const stats = { ...get().speciesStats };
         if (speciesId) {
-          const cur = stats[speciesId] ?? { timesSeen: 0, timesCorrect: 0, lastSeenAt: 0 };
+          const cur = stats[speciesId] ?? { timesSeen: 0, timesCorrect: 0, lastSeenAt: 0, interval: 1 };
+          // Lightweight SRS: correct doubles the interval (capped at 30d);
+          // wrong resets it to 1 day.
+          const prevInterval = cur.interval ?? 1;
+          const nextInterval = correct ? Math.min(prevInterval * 2, 30) : 1;
+          const now = Date.now();
           stats[speciesId] = {
             timesSeen: cur.timesSeen + 1,
             timesCorrect: cur.timesCorrect + (correct ? 1 : 0),
-            lastSeenAt: Date.now(),
+            lastSeenAt: now,
+            interval: nextInterval,
+            dueAt: now + nextInterval * 86_400_000,
           };
         }
         const freeplay = get().freeplay;

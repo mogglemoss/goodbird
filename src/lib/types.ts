@@ -85,4 +85,8 @@ export interface SpeciesStat {
   timesSeen: number;
   timesCorrect: number;
   lastSeenAt: number;
+  /** Spaced-repetition interval in days; doubles on correct, resets to 1 on wrong. */
+  interval?: number;
+  /** Timestamp at which this species is "due" for review; lesson generator boosts due species. */
+  dueAt?: number;
 }

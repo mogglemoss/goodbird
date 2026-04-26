@@ -27,7 +27,9 @@ function speciesWeight(stat: SpeciesStat | undefined): number {
   if (!stat || stat.timesSeen === 0) return 3; // brand new — heaviest
   const acc = stat.timesCorrect / stat.timesSeen;
   const recencyDays = (Date.now() - stat.lastSeenAt) / 86_400_000;
-  return 1 + (1 - acc) * 2 + Math.min(recencyDays * 0.3, 2);
+  // Lightweight SRS: extra weight when this species' review is due.
+  const dueBoost = stat.dueAt && stat.dueAt <= Date.now() ? 2 : 0;
+  return 1 + (1 - acc) * 2 + Math.min(recencyDays * 0.3, 2) + dueBoost;
 }
 
 function distractors(unitPool: Species[], allPool: Species[], correct: Species, n: number): Species[] {

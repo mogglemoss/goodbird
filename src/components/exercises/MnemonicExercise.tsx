@@ -27,7 +27,7 @@ export function MnemonicExerciseView({ exercise, onAnswered, locked }: Props) {
         <p className="text-sm font-medium uppercase tracking-wider text-(--color-ink-soft)">Match the phrase</p>
         <h2 className="mt-1 text-xl font-medium">Which mnemonic fits this call?</h2>
       </div>
-      <AudioPlayer url={exercise.recording.url} autoPlay />
+      <AudioPlayer url={exercise.recording.url} autoPlay showControls />
       <div className="flex w-full flex-col gap-3">
         {exercise.choices.map((id) => {
           const sp = getSpecies(id);

@@ -11,12 +11,24 @@ interface Props {
   autoPlay?: boolean;
   onEnded?: () => void;
   className?: string;
+  /** Show loop + slow-down toggle controls under the player. */
+  showControls?: boolean;
 }
 
-export function AudioPlayer({ url, label = "Play call", size = "lg", autoPlay = false, onEnded, className }: Props) {
+export function AudioPlayer({
+  url,
+  label = "Play call",
+  size = "lg",
+  autoPlay = false,
+  onEnded,
+  className,
+  showControls = false,
+}: Props) {
   const [playing, setPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
-  const [nudge, setNudge] = useState(false); // pulses the play button if autoplay was blocked
+  const [nudge, setNudge] = useState(false);
+  const [loop, setLoop] = useState(false);
+  const [slow, setSlow] = useState(false);
   const howlRef = useRef<Howl | null>(null);
   const rafRef = useRef<number | null>(null);
 
@@ -25,10 +37,16 @@ export function AudioPlayer({ url, label = "Play call", size = "lg", autoPlay = 
     howlRef.current = h;
     const onPlay = () => { setPlaying(true); setNudge(false); };
     const onStop = () => setPlaying(false);
-    const onEnd = () => { setPlaying(false); setProgress(0); onEnded?.(); };
+    const onEnd = () => {
+      // Howler keeps firing "end" each loop iteration when loop is true; only
+      // surface a true "ended" event to the caller when we're not looping.
+      if (!h.loop()) {
+        setPlaying(false);
+        setProgress(0);
+        onEnded?.();
+      }
+    };
     const onPlayError = () => {
-      // iOS Safari blocks autoplay without a user gesture in scope.
-      // Pulse the play button so the user knows to tap.
       setPlaying(false);
       setNudge(true);
     };
@@ -37,11 +55,7 @@ export function AudioPlayer({ url, label = "Play call", size = "lg", autoPlay = 
     h.on("stop", onStop);
     h.on("end", onEnd);
     h.on("playerror", onPlayError);
-    if (autoPlay && !h.playing()) {
-      // h.play() returns a sound id; if the underlying audio.play() rejects,
-      // Howler emits "playerror" (handled above).
-      h.play();
-    }
+    if (autoPlay && !h.playing()) h.play();
     return () => {
       h.off("play", onPlay);
       h.off("pause", onStop);
@@ -52,6 +66,14 @@ export function AudioPlayer({ url, label = "Play call", size = "lg", autoPlay = 
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
     };
   }, [url, autoPlay, onEnded]);
+
+  // Apply loop + rate state to the Howl instance whenever they change.
+  useEffect(() => {
+    const h = howlRef.current;
+    if (!h) return;
+    h.loop(loop);
+    h.rate(slow ? 0.5 : 1.0);
+  }, [loop, slow]);
 
   useEffect(() => {
     if (!playing) {
@@ -98,7 +120,6 @@ export function AudioPlayer({ url, label = "Play call", size = "lg", autoPlay = 
           <span className={cn("absolute inset-0 rounded-full bg-(--color-moss-500) pointer-events-none", nudge ? "opacity-60 pulse-ring" : "opacity-40 pulse-ring")} />
         )}
         <PlayPauseIcon playing={playing} />
-        {/* Progress ring */}
         <svg className="absolute inset-0 h-full w-full -rotate-90 pointer-events-none" viewBox="0 0 100 100">
           <circle cx="50" cy="50" r="46" fill="none" stroke="rgba(255,255,255,0.25)" strokeWidth="3" />
           <circle
@@ -112,7 +133,62 @@ export function AudioPlayer({ url, label = "Play call", size = "lg", autoPlay = 
         </svg>
       </button>
       <Bars active={playing} />
+      {showControls && (
+        <div className="flex gap-2">
+          <ControlPill
+            on={loop}
+            onToggle={() => setLoop((v) => !v)}
+            ariaLabel={loop ? "Stop looping" : "Loop"}
+            label="Loop"
+          >
+            <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M17 2l4 4-4 4" />
+              <path d="M3 11v-1a4 4 0 0 1 4-4h14" />
+              <path d="M7 22l-4-4 4-4" />
+              <path d="M21 13v1a4 4 0 0 1-4 4H3" />
+            </svg>
+          </ControlPill>
+          <ControlPill
+            on={slow}
+            onToggle={() => setSlow((v) => !v)}
+            ariaLabel={slow ? "Normal speed" : "Half speed"}
+            label="½×"
+          />
+        </div>
+      )}
     </div>
+  );
+}
+
+function ControlPill({
+  on,
+  onToggle,
+  ariaLabel,
+  label,
+  children,
+}: {
+  on: boolean;
+  onToggle: () => void;
+  ariaLabel: string;
+  label: string;
+  children?: React.ReactNode;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onToggle}
+      aria-label={ariaLabel}
+      aria-pressed={on}
+      className={cn(
+        "flex items-center gap-1.5 rounded-full border-2 px-3 py-1 text-xs font-semibold shadow-(--shadow-soft) transition-colors cursor-pointer",
+        on
+          ? "border-(--color-moss-500) bg-(--color-moss-50) text-(--color-moss-700)"
+          : "border-(--color-line) bg-(--color-surface) text-(--color-ink-soft) hover:border-(--color-moss-300)",
+      )}
+    >
+      {children}
+      <span>{label}</span>
+    </button>
   );
 }
 
