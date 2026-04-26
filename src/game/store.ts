@@ -24,6 +24,9 @@ interface GameState {
   streak: { lastPlayedDay: string | null; days: number };
   speciesStats: Record<string, SpeciesStat>;
   completedLessons: Record<string, { bestAccuracy: number; lastPlayedAt: number }>;
+  favorites: Record<string, true>;
+  freeplay: boolean; // when true, hearts don't deplete and lessons don't fail
+  hasOnboarded: boolean;
   // Transient
   active: ActiveLesson | null;
 
@@ -33,6 +36,9 @@ interface GameState {
   abandonLesson: () => void;
   finalizeLesson: () => { xpGained: number; passed: boolean } | null;
   resetProgress: () => void;
+  toggleFavorite: (speciesId: string) => void;
+  setFreeplay: (on: boolean) => void;
+  setOnboarded: () => void;
 }
 
 const today = () => {
@@ -51,6 +57,9 @@ export const useGame = create<GameState>()(
       streak: { lastPlayedDay: null, days: 0 },
       speciesStats: {},
       completedLessons: {},
+      favorites: {},
+      freeplay: false,
+      hasOnboarded: false,
       active: null,
 
       startLesson: (lessonId) => {
@@ -82,28 +91,35 @@ export const useGame = create<GameState>()(
             lastSeenAt: Date.now(),
           };
         }
-        const hearts = correct ? a.hearts : Math.max(0, a.hearts - 1);
+        const freeplay = get().freeplay;
+        const hearts = freeplay
+          ? a.hearts
+          : (correct ? a.hearts : Math.max(0, a.hearts - 1));
         const correctCount = a.correctCount + (correct ? 1 : 0);
         const results = [...a.results, { correct, speciesId }];
-        const failed = hearts === 0;
+        // We deliberately DO NOT set outcome=failed here, even when hearts hit 0.
+        // The user must see the feedback bar for their losing answer first; the
+        // navigation to /results is triggered by nextExercise() below when they
+        // tap Continue.
         set({
           speciesStats: stats,
-          active: {
-            ...a,
-            hearts,
-            correctCount,
-            results,
-            outcome: failed ? "failed" : a.outcome,
-          },
+          active: { ...a, hearts, correctCount, results },
         });
       },
 
       nextExercise: () => {
         const a = get().active;
         if (!a) return;
+        const freeplay = get().freeplay;
+        // Promote a heart-zero answer to "failed" only now (after the user has
+        // acknowledged the feedback bar by tapping Continue).
+        if (!freeplay && a.hearts === 0) {
+          set({ active: { ...a, outcome: "failed" } });
+          return;
+        }
         const next = a.index + 1;
         if (next >= a.exercises.length) {
-          set({ active: { ...a, outcome: a.outcome === "failed" ? "failed" : "passed" } });
+          set({ active: { ...a, outcome: "passed" } });
         } else {
           set({ active: { ...a, index: next } });
         }
@@ -117,9 +133,21 @@ export const useGame = create<GameState>()(
           streak: { lastPlayedDay: null, days: 0 },
           speciesStats: {},
           completedLessons: {},
+          favorites: {},
           active: null,
+          // Don't wipe freeplay or hasOnboarded — those are user preferences, not progress.
         });
       },
+
+      toggleFavorite: (speciesId) => {
+        const favorites = { ...get().favorites };
+        if (favorites[speciesId]) delete favorites[speciesId];
+        else favorites[speciesId] = true;
+        set({ favorites });
+      },
+
+      setFreeplay: (on) => set({ freeplay: on }),
+      setOnboarded: () => set({ hasOnboarded: true }),
 
       finalizeLesson: () => {
         const a = get().active;
@@ -164,6 +192,9 @@ export const useGame = create<GameState>()(
         streak: s.streak,
         speciesStats: s.speciesStats,
         completedLessons: s.completedLessons,
+        favorites: s.favorites,
+        freeplay: s.freeplay,
+        hasOnboarded: s.hasOnboarded,
       }),
     },
   ),

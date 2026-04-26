@@ -20,9 +20,11 @@ interface Props {
 export function ExerciseRunner({ exercise, exerciseIndex, onAnswered, onContinue }: Props) {
   // Locked answer state lives here so the child can stay simple.
   const [locked, setLocked] = useState<{ value: any; correct: boolean } | null>(null);
+  const [hintShown, setHintShown] = useState(false);
 
   useEffect(() => {
     setLocked(null);
+    setHintShown(false);
   }, [exerciseIndex]);
 
   const handleAnswered = (correct: boolean, locker: any, speciesId: string | null) => {
@@ -52,6 +54,40 @@ export function ExerciseRunner({ exercise, exerciseIndex, onAnswered, onContinue
           </motion.div>
         </AnimatePresence>
       </div>
+
+      {/* Hint pill — visible while you haven't answered yet. */}
+      {!locked && hintFor(exercise) && (
+        <div className="pointer-events-none absolute inset-x-0 bottom-4 flex justify-center px-5">
+          <div className="pointer-events-auto flex flex-col items-center gap-2">
+            <AnimatePresence>
+              {hintShown && (
+                <motion.div
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 8 }}
+                  transition={{ duration: 0.18 }}
+                  className="max-w-xs rounded-2xl border-2 border-(--color-moss-300) bg-(--color-moss-50) px-4 py-2 text-center text-sm font-medium text-(--color-moss-700) shadow-(--shadow-soft)"
+                >
+                  "{hintFor(exercise)}"
+                </motion.div>
+              )}
+            </AnimatePresence>
+            <button
+              type="button"
+              onClick={() => setHintShown((s) => !s)}
+              className={cn(
+                "rounded-full border-2 bg-(--color-surface) px-3 py-1 text-xs font-semibold shadow-(--shadow-soft) transition-colors cursor-pointer",
+                hintShown
+                  ? "border-(--color-moss-500) text-(--color-moss-700)"
+                  : "border-(--color-line) text-(--color-ink-soft) hover:border-(--color-moss-300)",
+              )}
+            >
+              {hintShown ? "Hide hint" : "💡 Hint"}
+            </button>
+          </div>
+        </div>
+      )}
+
       <FeedbackBar locked={locked} exercise={exercise} onContinue={handleContinue} />
     </div>
   );
@@ -208,6 +244,19 @@ function correctMnemonic(ex: Exercise): string {
       return getSpecies(ex.targetSpeciesId).mnemonic;
     case "discriminate":
       return "";
+  }
+}
+
+/** Hint text shown by the in-exercise hint button. */
+function hintFor(ex: Exercise): string | null {
+  switch (ex.kind) {
+    case "identify":
+    case "mnemonic":
+      return getSpecies(ex.correctSpeciesId).mnemonic;
+    case "find-bird":
+      return getSpecies(ex.targetSpeciesId).mnemonic;
+    case "discriminate":
+      return ex.same ? "Same species — listen for matching pacing and pitch." : "Different species.";
   }
 }
 

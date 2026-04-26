@@ -16,7 +16,7 @@ export const SPECIES = [
   { id: "northern-saw-whet-owl",   commonName: "Northern Saw-whet Owl",  scientificName: "Aegolius acadicus",       mnemonic: "Steady single-note 'too-too-too'" },
   { id: "northern-pygmy-owl",      commonName: "Northern Pygmy-Owl",     scientificName: "Glaucidium gnoma",        mnemonic: "Single high 'too' every 1-2 seconds" },
   { id: "common-poorwill",         commonName: "Common Poorwill",        scientificName: "Phalaenoptilus nuttallii",mnemonic: "Whistled 'poor-will' all night" },
-  { id: "barn-owl",                commonName: "Barn Owl",               scientificName: "Tyto alba",               mnemonic: "Eerie raspy scream" },
+  { id: "barn-owl",                commonName: "Barn Owl",               scientificName: "Tyto alba",               mnemonic: "Eerie raspy scream", wikipediaTitle: "Western barn owl" },
   { id: "long-eared-owl", commonName: "Long-eared Owl",         scientificName: "Asio otus",               mnemonic: "Soft, even 'hoo' every few seconds" },
   { id: "common-nighthawk",        commonName: "Common Nighthawk",       scientificName: "Chordeiles minor",        mnemonic: "Nasal 'peent' overhead at dusk" },
 ];

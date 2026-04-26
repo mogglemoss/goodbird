@@ -13,15 +13,15 @@ export const SPECIES = [
   { id: "savannah-sparrow",        commonName: "Savannah Sparrow",       scientificName: "Passerculus sandwichensis", mnemonic: "Insect-like 'tsi-tsi-tsi-zheee'" },
   { id: "western-bluebird",        commonName: "Western Bluebird",       scientificName: "Sialia mexicana",         mnemonic: "Soft 'few' contact notes" },
   { id: "white-tailed-kite",       commonName: "White-tailed Kite",      scientificName: "Elanus leucurus",         mnemonic: "Whistled 'keep keep keep'" },
-  { id: "loggerhead-shrike",       commonName: "Loggerhead Shrike",      scientificName: "Lanius ludovicianus",     mnemonic: "Harsh squeaks plus mimicry" },
+  { id: "loggerhead-shrike",       commonName: "Loggerhead Shrike",      scientificName: "Lanius ludovicianus",     mnemonic: "Squeaky 'gri-grew gri-grew' — the butcher bird" },
   { id: "american-kestrel",        commonName: "American Kestrel",       scientificName: "Falco sparverius",        mnemonic: "Sharp 'klee-klee-klee'" },
   { id: "red-tailed-hawk",         commonName: "Red-tailed Hawk",        scientificName: "Buteo jamaicensis",       mnemonic: "Iconic raspy descending scream" },
   { id: "horned-lark",             commonName: "Horned Lark",            scientificName: "Eremophila alpestris",    mnemonic: "Tinkling 'tsee-tinkly-tinkly'" },
   { id: "brewers-blackbird",       commonName: "Brewer's Blackbird",     scientificName: "Euphagus cyanocephalus",  mnemonic: "Squeaky-hinge 'k-shee'" },
   { id: "western-kingbird",        commonName: "Western Kingbird",       scientificName: "Tyrannus verticalis",     mnemonic: "Sharp twittering 'kit-kit-kit'" },
   { id: "mourning-dove",           commonName: "Mourning Dove",          scientificName: "Zenaida macroura",        mnemonic: "Soft mournful 'oo-AHH-ooo-oo'" },
-  { id: "american-crow",           commonName: "American Crow",          scientificName: "Corvus brachyrhynchos",   mnemonic: "Plain 'caw caw caw'" },
-  { id: "lark-sparrow",            commonName: "Lark Sparrow",           scientificName: "Chondestes grammacus",    mnemonic: "Bubbly varied warble" },
+  { id: "american-crow",           commonName: "American Crow",          scientificName: "Corvus brachyrhynchos",   mnemonic: "The crow caw — flat, three or four in a row" },
+  { id: "lark-sparrow",            commonName: "Lark Sparrow",           scientificName: "Chondestes grammacus",    mnemonic: "Bright varied warble with buzzes and trills mixed in" },
   { id: "bullocks-oriole",         commonName: "Bullock's Oriole",       scientificName: "Icterus bullockii",       mnemonic: "Whistled, chattery, conversational" },
 ];
 

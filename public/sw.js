@@ -4,7 +4,7 @@
 // Bump APP_VERSION when shipping changes that should invalidate cached app shell.
 // MEDIA_CACHE is intentionally unversioned so already-downloaded clips persist.
 
-const APP_VERSION = "v1";
+const APP_VERSION = "v2";
 const APP_CACHE = `goodbird-app-${APP_VERSION}`;
 const MEDIA_CACHE = "goodbird-media";
 
@@ -91,7 +91,12 @@ async function cacheFirst(cacheName, req) {
 }
 
 // "Download for offline" — pre-cache a batch of URLs sent from the page.
+// Replies go on event.ports[0] (the MessageChannel port the page transferred),
+// not event.source — those are two different communication channels.
 self.addEventListener("message", async (event) => {
+  const port = event.ports[0] ?? null;
+  const reply = (msg) => { port?.postMessage(msg); };
+
   if (event.data?.type === "PRECACHE_URLS") {
     const urls = Array.isArray(event.data.urls) ? event.data.urls : [];
     const cache = await caches.open(MEDIA_CACHE);
@@ -102,20 +107,34 @@ self.addEventListener("message", async (event) => {
         // Skip if already cached
         const existing = await cache.match(url);
         if (!existing) {
-          const res = await fetch(url, { mode: "no-cors" });
+          // Try CORS first so the cached response isn't opaque (which inflates
+          // navigator.storage.estimate() to ~7 MB per entry as a side-channel
+          // defense). Fall back to no-cors for origins that don't allow CORS.
+          let res;
+          try {
+            res = await fetch(url, { mode: "cors", credentials: "omit" });
+          } catch {
+            res = await fetch(url, { mode: "no-cors" });
+          }
           await cache.put(url, res);
         }
-      } catch (e) {
+      } catch {
         failed++;
       }
       done++;
-      event.source?.postMessage({ type: "PRECACHE_PROGRESS", done, total: urls.length, failed });
+      reply({ type: "PRECACHE_PROGRESS", done, total: urls.length, failed });
     }
-    event.source?.postMessage({ type: "PRECACHE_DONE", failed });
+    reply({ type: "PRECACHE_DONE", failed });
   }
 
   if (event.data?.type === "CLEAR_MEDIA_CACHE") {
     await caches.delete(MEDIA_CACHE);
-    event.source?.postMessage({ type: "MEDIA_CACHE_CLEARED" });
+    reply({ type: "MEDIA_CACHE_CLEARED" });
+  }
+
+  if (event.data?.type === "COUNT_CACHED") {
+    const cache = await caches.open(MEDIA_CACHE);
+    const keys = await cache.keys();
+    reply({ type: "CACHED_COUNT", count: keys.length });
   }
 });

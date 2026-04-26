@@ -59,7 +59,7 @@ export function ResultsRoute() {
   const accuracy = Math.round((snap.correct / snap.total) * 100);
 
   return (
-    <div className="mx-auto flex min-h-[100dvh] w-full max-w-md flex-col items-center gap-6 px-6 py-10 text-center">
+    <div className="mx-auto flex min-h-[100dvh] w-full max-w-md flex-col items-center gap-6 px-6 py-10 text-center sm:max-w-lg">
       <motion.div
         initial={{ scale: 0.6, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
@@ -125,7 +125,9 @@ function MissedSpeciesRow({ speciesId }: { speciesId: string }) {
   const sp = (() => { try { return getSpecies(speciesId); } catch { return null; } })();
   if (!sp) return null;
   const url = sp.recordings[0]?.url;
-  const play = () => {
+  const play = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
     if (!url) return;
     stopAll();
     const h = getHowl(url);
@@ -133,29 +135,34 @@ function MissedSpeciesRow({ speciesId }: { speciesId: string }) {
     h.play();
   };
   return (
-    <li className="flex items-center gap-3 rounded-(--radius-card) border-2 border-(--color-line) bg-(--color-surface) p-2 text-left shadow-(--shadow-soft)">
-      <div className="h-12 w-12 shrink-0 overflow-hidden rounded-xl bg-(--color-sand-50)">
-        {sp.imageUrl ? (
-          <img src={sp.imageUrl} alt="" className="h-full w-full object-cover" loading="lazy" />
-        ) : (
-          <div className="grid h-full w-full place-items-center text-xl">🪶</div>
-        )}
-      </div>
-      <div className="min-w-0 flex-1">
-        <div className="truncate font-medium">{sp.commonName}</div>
-        <div className="truncate text-xs text-(--color-ink-soft)">"{sp.mnemonic}"</div>
-      </div>
-      <button
-        type="button"
-        onClick={play}
-        aria-label={`Replay ${sp.commonName}`}
-        disabled={!url}
-        className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-(--color-moss-500) text-white shadow-(--shadow-soft) hover:bg-(--color-moss-600) active:scale-95 disabled:opacity-40 cursor-pointer"
+    <li>
+      <Link
+        to={`/species/${sp.id}`}
+        className="flex items-center gap-3 rounded-(--radius-card) border-2 border-(--color-line) bg-(--color-surface) p-2 text-left shadow-(--shadow-soft) transition-colors hover:border-(--color-moss-300)"
       >
-        <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor">
-          <path d="M8 5.5v13a.5.5 0 0 0 .76.43l11-6.5a.5.5 0 0 0 0-.86l-11-6.5A.5.5 0 0 0 8 5.5z" />
-        </svg>
-      </button>
+        <div className="h-12 w-12 shrink-0 overflow-hidden rounded-xl bg-(--color-sand-50)">
+          {sp.imageUrl ? (
+            <img src={sp.imageUrl} alt="" className="h-full w-full object-cover" loading="lazy" />
+          ) : (
+            <div className="grid h-full w-full place-items-center text-xl">🪶</div>
+          )}
+        </div>
+        <div className="min-w-0 flex-1">
+          <div className="truncate font-medium">{sp.commonName}</div>
+          <div className="truncate text-xs text-(--color-ink-soft)">"{sp.mnemonic}"</div>
+        </div>
+        <button
+          type="button"
+          onClick={play}
+          aria-label={`Replay ${sp.commonName}`}
+          disabled={!url}
+          className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-(--color-moss-500) text-white shadow-(--shadow-soft) hover:bg-(--color-moss-600) active:scale-95 disabled:opacity-40 cursor-pointer"
+        >
+          <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor">
+            <path d="M8 5.5v13a.5.5 0 0 0 .76.43l11-6.5a.5.5 0 0 0 0-.86l-11-6.5A.5.5 0 0 0 8 5.5z" />
+          </svg>
+        </button>
+      </Link>
     </li>
   );
 }

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useGame } from "@/game/store";
 import { allMediaUrls } from "@/lib/manifest";
-import { clearMediaCache, estimateCacheBytes, precacheUrls } from "@/lib/sw";
+import { clearMediaCache, countCachedMedia, estimateCacheBytes, precacheUrls } from "@/lib/sw";
 import { cn } from "@/lib/cn";
 
 interface Props {
@@ -22,15 +22,23 @@ export function SettingsSheet({ open, onClose }: Props) {
   const completedCount = useGame((s) => Object.keys(s.completedLessons).length);
   const speciesSeen = useGame((s) => Object.keys(s.speciesStats).length);
   const resetProgress = useGame((s) => s.resetProgress);
+  const freeplay = useGame((s) => s.freeplay);
+  const setFreeplay = useGame((s) => s.setFreeplay);
 
   const [confirming, setConfirming] = useState(false);
   const [offline, setOffline] = useState<OfflineState>({ kind: "idle" });
   const [storageBytes, setStorageBytes] = useState<number | null>(null);
+  const [cachedCount, setCachedCount] = useState<number | null>(null);
+
+  const refreshStorage = () => {
+    estimateCacheBytes().then(setStorageBytes);
+    countCachedMedia().then(setCachedCount);
+  };
 
   useEffect(() => { if (!open) setConfirming(false); }, [open]);
   useEffect(() => {
     if (!open) return;
-    estimateCacheBytes().then(setStorageBytes);
+    refreshStorage();
     const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
@@ -44,7 +52,7 @@ export function SettingsSheet({ open, onClose }: Props) {
         setOffline({ kind: "downloading", done: p.done, total: p.total }),
       );
       setOffline({ kind: "done", failed: result.failed });
-      estimateCacheBytes().then(setStorageBytes);
+      refreshStorage();
     } catch (e) {
       setOffline({ kind: "error", message: (e as Error).message });
     }
@@ -53,7 +61,7 @@ export function SettingsSheet({ open, onClose }: Props) {
   const wipeMedia = async () => {
     await clearMediaCache();
     setOffline({ kind: "idle" });
-    estimateCacheBytes().then(setStorageBytes);
+    refreshStorage();
   };
 
   return (
@@ -81,6 +89,21 @@ export function SettingsSheet({ open, onClose }: Props) {
             <div className="mx-auto h-1 w-12 rounded-full bg-(--color-line)" aria-hidden />
             <h2 className="mt-4 font-display text-2xl">Settings</h2>
 
+            <Section title="Mode">
+              <label className="flex cursor-pointer items-center justify-between gap-3 rounded-2xl border-2 border-(--color-line) bg-(--color-bg) px-4 py-3">
+                <div className="min-w-0">
+                  <div className="font-medium">Freeplay mode</div>
+                  <div className="text-xs text-(--color-ink-soft)">Hearts don't deplete; lessons can't fail.</div>
+                </div>
+                <input
+                  type="checkbox"
+                  checked={freeplay}
+                  onChange={(e) => setFreeplay(e.target.checked)}
+                  className="h-5 w-5 accent-(--color-moss-500)"
+                />
+              </label>
+            </Section>
+
             <Section title="Stats">
               <dl className="grid grid-cols-2 gap-3">
                 <Stat label="XP" value={xp} />
@@ -101,9 +124,18 @@ export function SettingsSheet({ open, onClose }: Props) {
                     Lessons you've already played are cached automatically. Tap below
                     to pre-download every clip and image so the app works on the trail.
                   </p>
-                  {storageBytes !== null && (
+                  {(cachedCount !== null || storageBytes !== null) && (
                     <p className="mt-2 text-xs text-(--color-ink-soft)">
-                      Currently using {formatBytes(storageBytes)}.
+                      {cachedCount !== null && <>{cachedCount} clips/images cached</>}
+                      {cachedCount !== null && storageBytes !== null && " · "}
+                      {storageBytes !== null && (
+                        <>
+                          ~{formatBytes(storageBytes)}{" "}
+                          <span title="Browsers pad cross-origin (no-cors) cache entries to ~7 MB each as a side-channel defense, so this number can be much larger than actual disk use.">
+                            (padded)
+                          </span>
+                        </>
+                      )}
                     </p>
                   )}
                   {offline.kind === "idle" && (

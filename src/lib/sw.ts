@@ -47,7 +47,29 @@ export async function precacheUrls(
 export async function clearMediaCache(): Promise<void> {
   if (!("serviceWorker" in navigator)) return;
   const reg = await navigator.serviceWorker.ready;
-  reg.active?.postMessage({ type: "CLEAR_MEDIA_CACHE" });
+  return new Promise((resolve) => {
+    if (!reg.active) return resolve();
+    const channel = new MessageChannel();
+    channel.port1.onmessage = (e) => {
+      if (e.data?.type === "MEDIA_CACHE_CLEARED") resolve();
+    };
+    reg.active.postMessage({ type: "CLEAR_MEDIA_CACHE" }, [channel.port2]);
+    setTimeout(resolve, 5000); // safety fallback
+  });
+}
+
+export async function countCachedMedia(): Promise<number | null> {
+  if (!("serviceWorker" in navigator)) return null;
+  const reg = await navigator.serviceWorker.ready;
+  if (!reg.active) return null;
+  return new Promise((resolve) => {
+    const channel = new MessageChannel();
+    channel.port1.onmessage = (e) => {
+      if (e.data?.type === "CACHED_COUNT") resolve(e.data.count ?? 0);
+    };
+    reg.active!.postMessage({ type: "COUNT_CACHED" }, [channel.port2]);
+    setTimeout(() => resolve(null), 3000);
+  });
 }
 
 export async function estimateCacheBytes(): Promise<number | null> {

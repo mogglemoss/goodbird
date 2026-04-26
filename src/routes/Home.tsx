@@ -8,6 +8,7 @@ import type { Unit } from "@/lib/types";
 import { cn } from "@/lib/cn";
 import { Wordmark } from "@/components/brand/Wordmark";
 import { SettingsSheet } from "@/components/SettingsSheet";
+import { OnboardingCard } from "@/components/OnboardingCard";
 
 export function HomeRoute() {
   const xp = useGame((s) => s.xp);
@@ -32,9 +33,11 @@ export function HomeRoute() {
   })();
 
   return (
-    <div className="mx-auto w-full max-w-md px-5 pb-24 pt-6">
+    <div className="mx-auto w-full max-w-md px-5 pb-24 pt-6 sm:max-w-2xl lg:max-w-4xl">
       <Header xp={xp} streakDays={streak.days} onSettings={() => setSettingsOpen(true)} />
       <SettingsSheet open={settingsOpen} onClose={() => setSettingsOpen(false)} />
+
+      <OnboardingCard />
 
       <div className="mt-8 text-center">
         <p className="text-sm font-medium uppercase tracking-wider text-(--color-ink-soft)">
@@ -65,7 +68,7 @@ export function HomeRoute() {
         </Link>
       )}
 
-      <div className="mt-6 grid grid-cols-2 gap-3">
+      <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
         {units.map((unit) => (
           <HabitatCard key={unit.id} unit={unit} completed={completed} />
         ))}

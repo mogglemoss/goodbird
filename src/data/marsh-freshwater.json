@@ -129,7 +129,7 @@
       "commonName": "Sora",
       "scientificName": "Porzana carolina",
       "mnemonic": "Descending whinny, plaintive 'ker-WEE'",
-      "imageUrl": null,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Sora_%28Porzana_carolina%29.jpg/330px-Sora_%28Porzana_carolina%29.jpg",
       "recordings": [
         {
           "id": "XC357951",
@@ -284,7 +284,7 @@
       "id": "mallard",
       "commonName": "Mallard",
       "scientificName": "Anas platyrhynchos",
-      "mnemonic": "Classic descending quack",
+      "mnemonic": "The duck quack — descending, in twos and threes",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Anas_platyrhynchos_male_female_quadrat.jpg/330px-Anas_platyrhynchos_male_female_quadrat.jpg",
       "recordings": [
         {

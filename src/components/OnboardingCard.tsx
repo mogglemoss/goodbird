@@ -1,0 +1,53 @@
+import { motion } from "framer-motion";
+import { useGame } from "@/game/store";
+
+export function OnboardingCard() {
+  const hasOnboarded = useGame((s) => s.hasOnboarded);
+  const setOnboarded = useGame((s) => s.setOnboarded);
+
+  if (hasOnboarded) return null;
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 8 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3, ease: "easeOut" }}
+      className="mx-auto mt-6 max-w-md overflow-hidden rounded-(--radius-card) border-2 border-(--color-moss-300) bg-(--color-moss-50) p-5 shadow-(--shadow-soft)"
+    >
+      <div className="flex items-start justify-between gap-3">
+        <h2 className="font-display text-lg leading-snug">How it works</h2>
+        <button
+          onClick={setOnboarded}
+          aria-label="Dismiss"
+          className="grid h-8 w-8 shrink-0 place-items-center rounded-full text-(--color-ink-soft) hover:bg-(--color-surface)/60 cursor-pointer"
+        >
+          <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round">
+            <path d="M6 6l12 12M18 6L6 18" />
+          </svg>
+        </button>
+      </div>
+      <ol className="mt-3 space-y-2 text-sm">
+        <Step n="1" text="Pick a habitat below — each is a small course." />
+        <Step n="2" text="Tap a lesson, listen to the bird, pick its name." />
+        <Step n="3" text="Three hearts per lesson. Tap ⋯ for offline mode + freeplay." />
+      </ol>
+      <button
+        onClick={setOnboarded}
+        className="mt-4 w-full rounded-full bg-(--color-moss-500) py-2.5 text-sm font-semibold text-white shadow-(--shadow-soft) hover:bg-(--color-moss-600) cursor-pointer"
+      >
+        Got it
+      </button>
+    </motion.div>
+  );
+}
+
+function Step({ n, text }: { n: string; text: string }) {
+  return (
+    <li className="flex items-start gap-3">
+      <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-(--color-moss-500) text-xs font-bold text-white">
+        {n}
+      </span>
+      <span className="text-(--color-ink)">{text}</span>
+    </li>
+  );
+}

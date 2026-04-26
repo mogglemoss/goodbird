@@ -17,7 +17,7 @@ export const SPECIES = [
   { id: "huttons-vireo",           commonName: "Hutton's Vireo",          scientificName: "Vireo huttoni",           mnemonic: "Endlessly repeated 'zu-wee'" },
   { id: "western-tanager",         commonName: "Western Tanager",         scientificName: "Piranga ludoviciana",     mnemonic: "Robin with a sore throat" },
   { id: "dark-eyed-junco",         commonName: "Dark-eyed Junco",         scientificName: "Junco hyemalis",          mnemonic: "Even, ringing trill on one pitch" },
-  { id: "purple-finch",            commonName: "Purple Finch",            scientificName: "Haemorhous purpureus",    mnemonic: "Liquid, cascading warble" },
+  { id: "purple-finch",            commonName: "Purple Finch",            scientificName: "Haemorhous purpureus",    mnemonic: "Long rich warble that tumbles downward" },
   { id: "lesser-goldfinch",        commonName: "Lesser Goldfinch",        scientificName: "Spinus psaltria",         mnemonic: "Plaintive 'tee-yeer', mimics" },
   { id: "western-bluebird",        commonName: "Western Bluebird",        scientificName: "Sialia mexicana",         mnemonic: "Soft 'few' contact notes" },
   { id: "chestnut-backed-chickadee",commonName:"Chestnut-backed Chickadee",scientificName: "Poecile rufescens",       mnemonic: "Buzzy, hurried 'chick-a-dee-dee'" },

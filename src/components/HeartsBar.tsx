@@ -5,10 +5,11 @@ interface Props {
   hearts: number;
   max: number;
   progress: number; // 0..1
+  freeplay?: boolean;
   onExit?: () => void;
 }
 
-export function HeartsBar({ hearts, max, progress, onExit }: Props) {
+export function HeartsBar({ hearts, max, progress, freeplay, onExit }: Props) {
   return (
     <div className="flex items-center gap-3 px-4 py-3">
       <button
@@ -28,11 +29,17 @@ export function HeartsBar({ hearts, max, progress, onExit }: Props) {
           transition={{ type: "spring", stiffness: 200, damping: 25 }}
         />
       </div>
-      <div className="flex items-center gap-1">
-        {Array.from({ length: max }).map((_, i) => (
-          <Heart key={i} filled={i < hearts} />
-        ))}
-      </div>
+      {freeplay ? (
+        <span className="rounded-full border-2 border-(--color-moss-300) bg-(--color-moss-50) px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wider text-(--color-moss-700)">
+          Freeplay
+        </span>
+      ) : (
+        <div className="flex items-center gap-1">
+          {Array.from({ length: max }).map((_, i) => (
+            <Heart key={i} filled={i < hearts} />
+          ))}
+        </div>
+      )}
     </div>
   );
 }

@@ -13,6 +13,7 @@ export function LessonRoute() {
   const answer = useGame((s) => s.answer);
   const next = useGame((s) => s.nextExercise);
   const abandon = useGame((s) => s.abandonLesson);
+  const freeplay = useGame((s) => s.freeplay);
 
   // Start lesson if not already in this one
   useEffect(() => {
@@ -40,6 +41,7 @@ export function LessonRoute() {
         hearts={active.hearts}
         max={STARTING_HEARTS}
         progress={progress}
+        freeplay={freeplay}
         onExit={() => { abandon(); nav("/"); }}
       />
       <div className="flex-1 min-h-0">
