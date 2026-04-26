@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { units, getLessonsForUnit, getSpecies, allLessons } from "@/lib/manifest";
@@ -5,11 +6,14 @@ import { useGame } from "@/game/store";
 import { ACCENTS } from "@/lib/theme";
 import type { Unit } from "@/lib/types";
 import { cn } from "@/lib/cn";
+import { Wordmark } from "@/components/brand/Wordmark";
+import { SettingsSheet } from "@/components/SettingsSheet";
 
 export function HomeRoute() {
   const xp = useGame((s) => s.xp);
   const streak = useGame((s) => s.streak);
   const completed = useGame((s) => s.completedLessons);
+  const [settingsOpen, setSettingsOpen] = useState(false);
 
   // Most-recently-completed lesson → which unit it belongs to → "Continue" hint.
   const continueTarget = (() => {
@@ -29,7 +33,8 @@ export function HomeRoute() {
 
   return (
     <div className="mx-auto w-full max-w-md px-5 pb-24 pt-6">
-      <Header xp={xp} streakDays={streak.days} />
+      <Header xp={xp} streakDays={streak.days} onSettings={() => setSettingsOpen(true)} />
+      <SettingsSheet open={settingsOpen} onClose={() => setSettingsOpen(false)} />
 
       <div className="mt-8 text-center">
         <p className="text-sm font-medium uppercase tracking-wider text-(--color-ink-soft)">
@@ -69,16 +74,24 @@ export function HomeRoute() {
   );
 }
 
-function Header({ xp, streakDays }: { xp: number; streakDays: number }) {
+function Header({ xp, streakDays, onSettings }: { xp: number; streakDays: number; onSettings: () => void }) {
   return (
     <div className="flex items-center justify-between">
-      <div className="flex items-center gap-2 font-display text-xl">
-        <span aria-hidden>🪶</span>
-        <span>goodbird</span>
-      </div>
-      <div className="flex items-center gap-3">
+      <Wordmark size="sm" />
+      <div className="flex items-center gap-2">
         <Pill icon="🔥" value={streakDays} label="day streak" muted={streakDays === 0} />
         <Pill icon="✦" value={xp} label="xp" />
+        <button
+          onClick={onSettings}
+          aria-label="Settings"
+          className="grid h-9 w-9 place-items-center rounded-full border-2 border-(--color-line) bg-(--color-surface) text-(--color-ink-soft) hover:border-(--color-moss-300) cursor-pointer"
+        >
+          <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden>
+            <circle cx="5" cy="12" r="1.6" />
+            <circle cx="12" cy="12" r="1.6" />
+            <circle cx="19" cy="12" r="1.6" />
+          </svg>
+        </button>
       </div>
     </div>
   );

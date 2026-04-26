@@ -32,6 +32,7 @@ interface GameState {
   nextExercise: () => void;
   abandonLesson: () => void;
   finalizeLesson: () => { xpGained: number; passed: boolean } | null;
+  resetProgress: () => void;
 }
 
 const today = () => {
@@ -109,6 +110,16 @@ export const useGame = create<GameState>()(
       },
 
       abandonLesson: () => set({ active: null }),
+
+      resetProgress: () => {
+        set({
+          xp: 0,
+          streak: { lastPlayedDay: null, days: 0 },
+          speciesStats: {},
+          completedLessons: {},
+          active: null,
+        });
+      },
 
       finalizeLesson: () => {
         const a = get().active;
