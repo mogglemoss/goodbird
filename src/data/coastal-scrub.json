@@ -1,0 +1,652 @@
+{
+  "unit": {
+    "id": "coastal-scrub",
+    "title": "Coastal Scrub",
+    "habitat": "Coastal Scrub",
+    "description": "The chaparral, scrub, and brushy edges along the Point Reyes, Bolinas, and Tomales coastline."
+  },
+  "species": [
+    {
+      "id": "wrentit",
+      "commonName": "Wrentit",
+      "scientificName": "Chamaea fasciata",
+      "mnemonic": "Bouncing ping-pong ball",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Wrentit_-_Sobrante_Ridge_Regional_Preserve%2C_California.jpg/330px-Wrentit_-_Sobrante_Ridge_Regional_Preserve%2C_California.jpg",
+      "recordings": [
+        {
+          "id": "XC390103",
+          "url": "https://xeno-canto.org/390103/download",
+          "duration": 8,
+          "type": "song",
+          "recordist": "Guy Kirwan",
+          "location": "Montana de Oro State Park, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/390103"
+        },
+        {
+          "id": "XC448815",
+          "url": "https://xeno-canto.org/448815/download",
+          "duration": 9,
+          "type": "song",
+          "recordist": "Paul Marvin",
+          "location": "Rice Canyon, Chula Vista, San Diego County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/448815"
+        },
+        {
+          "id": "XC149647",
+          "url": "https://xeno-canto.org/149647/download",
+          "duration": 9,
+          "type": "song",
+          "recordist": "Paul Marvin",
+          "location": "Sheephead Mt Rd by I-8 rest area, N of Buckman Springs Rd, Cleveland National Forest, San Diego Co, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/149647"
+        }
+      ]
+    },
+    {
+      "id": "spotted-towhee",
+      "commonName": "Spotted Towhee",
+      "scientificName": "Pipilo maculatus",
+      "mnemonic": "Drink your teeeea",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Spotted_Towhee_%2832684403303%29.jpg/330px-Spotted_Towhee_%2832684403303%29.jpg",
+      "recordings": [
+        {
+          "id": "XC1056013",
+          "url": "https://xeno-canto.org/1056013/download",
+          "duration": 6,
+          "type": "call",
+          "recordist": "Denis Dujardin",
+          "location": "Tualatin River NWR, Washington County, Oregon, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/1056013"
+        },
+        {
+          "id": "XC1047676",
+          "url": "https://xeno-canto.org/1047676/download",
+          "duration": 10,
+          "type": "call",
+          "recordist": "Greg Irving",
+          "location": "Dungeness Recreation Area, Clallam County, Washington, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/1047676"
+        },
+        {
+          "id": "XC469011",
+          "url": "https://xeno-canto.org/469011/download",
+          "duration": 10,
+          "type": "call",
+          "recordist": "bowtyler",
+          "location": "Olympia, Thurston County, Washington, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/469011"
+        }
+      ]
+    },
+    {
+      "id": "california-towhee",
+      "commonName": "California Towhee",
+      "scientificName": "Melozone crissalis",
+      "mnemonic": "Metallic chink-chink",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Melozone_crissalis_103257560.jpg/330px-Melozone_crissalis_103257560.jpg",
+      "recordings": [
+        {
+          "id": "XC716024",
+          "url": "https://xeno-canto.org/716024/download",
+          "duration": 9,
+          "type": "song",
+          "recordist": "Ed Pandolfino",
+          "location": "East Portal Park Sacramento, Sacramento County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/716024"
+        },
+        {
+          "id": "XC629158",
+          "url": "https://xeno-canto.org/629158/download",
+          "duration": 9,
+          "type": "song",
+          "recordist": "Thomas G. Graves",
+          "location": "Los Osos, Montana de Oro Campground, San Luis Obispo County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/629158"
+        },
+        {
+          "id": "XC297451",
+          "url": "https://xeno-canto.org/297451/download",
+          "duration": 10,
+          "type": "call",
+          "recordist": "Ross Gallardy",
+          "location": "Solvang, Santa Barbara County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/297451"
+        }
+      ]
+    },
+    {
+      "id": "white-crowned-sparrow",
+      "commonName": "White-crowned Sparrow",
+      "scientificName": "Zonotrichia leucophrys",
+      "mnemonic": "Oh-sweet-pretty-little-Canada",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/White-crowned-Sparrow.jpg/330px-White-crowned-Sparrow.jpg",
+      "recordings": [
+        {
+          "id": "XC1048812",
+          "url": "https://xeno-canto.org/1048812/download",
+          "duration": 9,
+          "type": "call",
+          "recordist": "AUDEVARD Aurélien",
+          "location": "Anchorage, Anchorage Municipality, Alaska, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/1048812"
+        },
+        {
+          "id": "XC1045664",
+          "url": "https://xeno-canto.org/1045664/download",
+          "duration": 7,
+          "type": "song",
+          "recordist": "AUDEVARD Aurélien",
+          "location": "Nome Airport (near  Nome), Nome Census Area, Alaska, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/1045664"
+        },
+        {
+          "id": "XC621441",
+          "url": "https://xeno-canto.org/621441/download",
+          "duration": 7,
+          "type": "call",
+          "recordist": "Nick Komar",
+          "location": "Riverbend Ponds Natural Area (near  Fort Collins), Larimer County, Colorado, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/621441"
+        }
+      ]
+    },
+    {
+      "id": "song-sparrow",
+      "commonName": "Song Sparrow",
+      "scientificName": "Melospiza melodia",
+      "mnemonic": "Madge-madge-madge put-on-your-tea-kettle",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Song_sparrow_in_Prospect_Park_%2893031%29.jpg/330px-Song_sparrow_in_Prospect_Park_%2893031%29.jpg",
+      "recordings": [
+        {
+          "id": "XC301851",
+          "url": "https://xeno-canto.org/301851/download",
+          "duration": 8,
+          "type": "call",
+          "recordist": "Ted Floyd",
+          "location": "Lafayette, Boulder, Colorado, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/301851"
+        },
+        {
+          "id": "XC803814",
+          "url": "https://xeno-canto.org/803814/download",
+          "duration": 9,
+          "type": "song",
+          "recordist": "Bobby Wilcox",
+          "location": "DeWitt (near  East Syracuse), Onondaga County, New York, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/803814"
+        },
+        {
+          "id": "XC697998",
+          "url": "https://xeno-canto.org/697998/download",
+          "duration": 7,
+          "type": "call",
+          "recordist": "Paul Marvin",
+          "location": "Bird and Butterfly Garden, Tijuana River Valley Regional Park, San Diego Co, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/697998"
+        }
+      ]
+    },
+    {
+      "id": "bewicks-wren",
+      "commonName": "Bewick's Wren",
+      "scientificName": "Thryomanes bewickii",
+      "mnemonic": "Buzzy trill with a flourish",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Bewicks_Wren.jpg/330px-Bewicks_Wren.jpg",
+      "recordings": [
+        {
+          "id": "XC999598",
+          "url": "https://xeno-canto.org/999598/download",
+          "duration": 8,
+          "type": "song",
+          "recordist": "David Tattersley",
+          "location": "Sierra Vista Southeast, Cochise County, Arizona, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/999598"
+        },
+        {
+          "id": "XC296660",
+          "url": "https://xeno-canto.org/296660/download",
+          "duration": 7,
+          "type": "song",
+          "recordist": "Laura Gooch",
+          "location": "Big Bend National Park, Chisos Mountains, Boot Springs, Brewster County, Texas, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/296660"
+        },
+        {
+          "id": "XC217823",
+          "url": "https://xeno-canto.org/217823/download",
+          "duration": 9,
+          "type": "call",
+          "recordist": "Paul Marvin",
+          "location": "Yaqui Wells. California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/217823"
+        }
+      ]
+    },
+    {
+      "id": "house-wren",
+      "commonName": "House Wren",
+      "scientificName": "Troglodytes aedon",
+      "mnemonic": "Bubbly cascading chatter",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/House_wren_in_Prospect_Park_%2823218%29.jpg/330px-House_wren_in_Prospect_Park_%2823218%29.jpg",
+      "recordings": [
+        {
+          "id": "XC736443",
+          "url": "https://xeno-canto.org/736443/download",
+          "duration": 8,
+          "type": "song",
+          "recordist": "Sue Riffe",
+          "location": "Upper Beaver Meadows-RMNP, Larimer Cty, Colorado, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/736443"
+        },
+        {
+          "id": "XC390112",
+          "url": "https://xeno-canto.org/390112/download",
+          "duration": 8,
+          "type": "call",
+          "recordist": "Guy Kirwan",
+          "location": "Los Padres National Forest, Santa Barbara, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/390112"
+        },
+        {
+          "id": "XC385117",
+          "url": "https://xeno-canto.org/385117/download",
+          "duration": 8,
+          "type": "call, cheer call",
+          "recordist": "Nick Komar",
+          "location": "Lory State Park, Larimer County, Colorado, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/385117"
+        }
+      ]
+    },
+    {
+      "id": "california-quail",
+      "commonName": "California Quail",
+      "scientificName": "Callipepla californica",
+      "mnemonic": "Chi-CA-go!",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/California_quail_%28Callipepla_californica%29_male_Tricao.jpg/330px-California_quail_%28Callipepla_californica%29_male_Tricao.jpg",
+      "recordings": [
+        {
+          "id": "XC299260",
+          "url": "https://xeno-canto.org/299260/download",
+          "duration": 8,
+          "type": "alarm call",
+          "recordist": "Paul Marvin",
+          "location": "Palm Canyon, Borrego Springs, San Diego County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/299260"
+        },
+        {
+          "id": "XC153453",
+          "url": "https://xeno-canto.org/153453/download",
+          "duration": 8,
+          "type": "song",
+          "recordist": "Paul Marvin",
+          "location": "Hollenbeck Canyon Trail, Jamul, San Diego County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/153453"
+        },
+        {
+          "id": "XC636976",
+          "url": "https://xeno-canto.org/636976/download",
+          "duration": 7,
+          "type": "aberrant, alarm call",
+          "recordist": "Bruce Lagerquist",
+          "location": "Caribou Road, Kittitas County, Washington, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/636976"
+        }
+      ]
+    },
+    {
+      "id": "california-scrub-jay",
+      "commonName": "California Scrub-Jay",
+      "scientificName": "Aphelocoma californica",
+      "mnemonic": "Harsh shreeenk!",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/California_Scrub_Jay%2C_Richmond%2C_Contra_Costa%2C_California_%2830644196597%29.jpg/330px-California_Scrub_Jay%2C_Richmond%2C_Contra_Costa%2C_California_%2830644196597%29.jpg",
+      "recordings": [
+        {
+          "id": "XC743808",
+          "url": "https://xeno-canto.org/743808/download",
+          "duration": 7,
+          "type": "call, screech series and rattle",
+          "recordist": "Thomas G. Graves",
+          "location": "Templeton, San Luis Obispo County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/743808"
+        },
+        {
+          "id": "XC218861",
+          "url": "https://xeno-canto.org/218861/download",
+          "duration": 9,
+          "type": "call",
+          "recordist": "Peter Boesman",
+          "location": "Mount Laguna, CA, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+          "sourceUrl": "https://xeno-canto.org/218861"
+        },
+        {
+          "id": "XC163707",
+          "url": "https://xeno-canto.org/163707/download",
+          "duration": 7,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "Pine Creek Rd off Sunrise Hwy, Cleveland National Forest. San Diego Co, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/163707"
+        }
+      ]
+    },
+    {
+      "id": "annas-hummingbird",
+      "commonName": "Anna's Hummingbird",
+      "scientificName": "Calypte anna",
+      "mnemonic": "Scratchy squeaky-gate song",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Anna%27s_hummingbird.jpg/330px-Anna%27s_hummingbird.jpg",
+      "recordings": [
+        {
+          "id": "XC1041020",
+          "url": "https://xeno-canto.org/1041020/download",
+          "duration": 8,
+          "type": "song",
+          "recordist": "Ayala N. Berger",
+          "location": "Golden Gate Park, SF, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/1041020"
+        },
+        {
+          "id": "XC1041014",
+          "url": "https://xeno-canto.org/1041014/download",
+          "duration": 7,
+          "type": "song",
+          "recordist": "Ayala N. Berger",
+          "location": "Golden Gate Park, SF, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/1041014"
+        },
+        {
+          "id": "XC493268",
+          "url": "https://xeno-canto.org/493268/download",
+          "duration": 7,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "Monument Rd and nearby trails, Tijuana River Valley, San Diego, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/493268"
+        }
+      ]
+    },
+    {
+      "id": "northern-mockingbird",
+      "commonName": "Northern Mockingbird",
+      "scientificName": "Mimus polyglottos",
+      "mnemonic": "Anything, repeated three times",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Mockingbird_in_Bay_Ridge_%2885082%29.jpg/330px-Mockingbird_in_Bay_Ridge_%2885082%29.jpg",
+      "recordings": [
+        {
+          "id": "XC629332",
+          "url": "https://xeno-canto.org/629332/download",
+          "duration": 8,
+          "type": "call, attack call",
+          "recordist": "Richard E. Webster",
+          "location": "Papago Well, Cabeza Prieta NWR, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/629332"
+        },
+        {
+          "id": "XC374601",
+          "url": "https://xeno-canto.org/374601/download",
+          "duration": 8,
+          "type": "call",
+          "recordist": "Matt Wistrand",
+          "location": "Rocky Ford SWA, Otero Co., Colorado, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/374601"
+        },
+        {
+          "id": "XC321938",
+          "url": "https://xeno-canto.org/321938/download",
+          "duration": 10,
+          "type": "call, call while strafing predator",
+          "recordist": "Richard E. Webster",
+          "location": "State Line Road, Hidalgo County, New Mexico, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/321938"
+        }
+      ]
+    },
+    {
+      "id": "california-thrasher",
+      "commonName": "California Thrasher",
+      "scientificName": "Toxostoma redivivum",
+      "mnemonic": "Long musical medley, each phrase twice",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Toxostoma_redivivum_-Morro_Bay%2C_California%2C_USA-8.jpg/330px-Toxostoma_redivivum_-Morro_Bay%2C_California%2C_USA-8.jpg",
+      "recordings": [
+        {
+          "id": "XC625528",
+          "url": "https://xeno-canto.org/625528/download",
+          "duration": 8,
+          "type": "song",
+          "recordist": "Jonas Katona",
+          "location": "Whitney Canyon Park, Santa Clarita, Los Angeles County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/625528"
+        },
+        {
+          "id": "XC198733",
+          "url": "https://xeno-canto.org/198733/download",
+          "duration": 12,
+          "type": "call",
+          "recordist": "Thomas G. Graves",
+          "location": "Baywood-Los Osos, San Luis Obispo County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/198733"
+        }
+      ]
+    },
+    {
+      "id": "bushtit",
+      "commonName": "Bushtit",
+      "scientificName": "Psaltriparus minimus",
+      "mnemonic": "High tinkling 'pit-pit' contact calls",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Aegithalos_caudatus_side-on.jpg/330px-Aegithalos_caudatus_side-on.jpg",
+      "recordings": [
+        {
+          "id": "XC215758",
+          "url": "https://xeno-canto.org/215758/download",
+          "duration": 8,
+          "type": "song",
+          "recordist": "Ted Floyd",
+          "location": "Lafayette, Boulder, Colorado, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/215758"
+        },
+        {
+          "id": "XC215757",
+          "url": "https://xeno-canto.org/215757/download",
+          "duration": 7,
+          "type": "song",
+          "recordist": "Ted Floyd",
+          "location": "Lafayette, Boulder, Colorado, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/215757"
+        },
+        {
+          "id": "XC149392",
+          "url": "https://xeno-canto.org/149392/download",
+          "duration": 6,
+          "type": "alarm call",
+          "recordist": "Paul Marvin",
+          "location": "Otay Lakes, San Diego Co., California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/149392"
+        }
+      ]
+    },
+    {
+      "id": "common-yellowthroat",
+      "commonName": "Common Yellowthroat",
+      "scientificName": "Geothlypis trichas",
+      "mnemonic": "Wichity-wichity-wichity",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Common_yellowthroat_in_PP_%2814155%29.jpg/330px-Common_yellowthroat_in_PP_%2814155%29.jpg",
+      "recordings": [
+        {
+          "id": "XC483964",
+          "url": "https://xeno-canto.org/483964/download",
+          "duration": 8,
+          "type": "call",
+          "recordist": "Paul Marvin",
+          "location": "Monument Rd and nearby trails, Tijuana River Valley, San Diego, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/483964"
+        },
+        {
+          "id": "XC342553",
+          "url": "https://xeno-canto.org/342553/download",
+          "duration": 8,
+          "type": "call",
+          "recordist": "Ted Floyd",
+          "location": "Boulder, Boulder County, Colorado, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/342553"
+        },
+        {
+          "id": "XC388604",
+          "url": "https://xeno-canto.org/388604/download",
+          "duration": 9,
+          "type": "call",
+          "recordist": "Antonio Xeira",
+          "location": "Stony Creek Metropark, Macomb County, Michigan, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/388604"
+        }
+      ]
+    },
+    {
+      "id": "bullocks-oriole",
+      "commonName": "Bullock's Oriole",
+      "scientificName": "Icterus bullockii",
+      "mnemonic": "Whistled, chattery, conversational",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Bullock%27s_Oriole.jpg/330px-Bullock%27s_Oriole.jpg",
+      "recordings": [
+        {
+          "id": "XC645472",
+          "url": "https://xeno-canto.org/645472/download",
+          "duration": 8,
+          "type": "call, song",
+          "recordist": "Bobby Wilcox",
+          "location": "Cibola Valley Conservation Area, La Paz County, Arizona, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/645472"
+        },
+        {
+          "id": "XC256758",
+          "url": "https://xeno-canto.org/256758/download",
+          "duration": 8,
+          "type": "call, clear call",
+          "recordist": "Richard E. Webster",
+          "location": "Portal, Arizona, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/256758"
+        },
+        {
+          "id": "XC13595",
+          "url": "https://xeno-canto.org/13595/download",
+          "duration": 9,
+          "type": "call, song",
+          "recordist": "Andrew Spencer",
+          "location": "Tamarack Ranch SWA, Logan Co., Colorado, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
+          "sourceUrl": "https://xeno-canto.org/13595"
+        }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "cs-1",
+      "title": "Backyard Regulars",
+      "speciesIds": [
+        "california-towhee",
+        "annas-hummingbird",
+        "california-scrub-jay",
+        "white-crowned-sparrow"
+      ],
+      "length": 8
+    },
+    {
+      "id": "cs-2",
+      "title": "Brushy Edges",
+      "speciesIds": [
+        "wrentit",
+        "spotted-towhee",
+        "bewicks-wren",
+        "song-sparrow"
+      ],
+      "length": 8
+    },
+    {
+      "id": "cs-3",
+      "title": "Voices in the Thicket",
+      "speciesIds": [
+        "california-thrasher",
+        "house-wren",
+        "common-yellowthroat",
+        "northern-mockingbird"
+      ],
+      "length": 8
+    },
+    {
+      "id": "cs-4",
+      "title": "Flock & Field",
+      "speciesIds": [
+        "california-quail",
+        "bushtit",
+        "bullocks-oriole"
+      ],
+      "length": 8
+    },
+    {
+      "id": "cs-review",
+      "title": "Review: All 15",
+      "speciesIds": [
+        "wrentit",
+        "spotted-towhee",
+        "california-towhee",
+        "white-crowned-sparrow",
+        "song-sparrow",
+        "bewicks-wren",
+        "house-wren",
+        "california-quail",
+        "california-scrub-jay",
+        "annas-hummingbird",
+        "northern-mockingbird",
+        "california-thrasher",
+        "bushtit",
+        "common-yellowthroat",
+        "bullocks-oriole"
+      ],
+      "length": 12
+    }
+  ]
+}
