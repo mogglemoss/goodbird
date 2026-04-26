@@ -1,0 +1,350 @@
+{
+  "unit": {
+    "id": "night-voices",
+    "title": "Night Voices",
+    "habitat": "After Dark",
+    "description": "The owls and nightjars heard from your driveway after dark — Inverness, Olema, anywhere the streetlights end.",
+    "accent": "violet"
+  },
+  "species": [
+    {
+      "id": "great-horned-owl",
+      "commonName": "Great Horned Owl",
+      "scientificName": "Bubo virginianus",
+      "mnemonic": "Deep stuttered 'whoo-whoo, whoo-whoo'",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Bubo_virginianus_06.jpg/330px-Bubo_virginianus_06.jpg",
+      "recordings": [
+        {
+          "id": "XC767284",
+          "url": "https://xeno-canto.org/767284/download",
+          "duration": 8,
+          "type": "song",
+          "recordist": "Scott Olmstead",
+          "location": "Treat Ave near Waverly, Tucson, Pima County, Arizona, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/767284"
+        },
+        {
+          "id": "XC624440",
+          "url": "https://xeno-canto.org/624440/download",
+          "duration": 9,
+          "type": "begging call, hatchling or nestling",
+          "recordist": "Bill Grantham",
+          "location": "Ramer, Montgomery County, Alabama, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/624440"
+        },
+        {
+          "id": "XC7728",
+          "url": "https://xeno-canto.org/7728/download",
+          "duration": 9,
+          "type": "call",
+          "recordist": "Robin Carter",
+          "location": "Bentsen-Rio Grande SP, Texas, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
+          "sourceUrl": "https://xeno-canto.org/7728"
+        }
+      ]
+    },
+    {
+      "id": "western-screech-owl",
+      "commonName": "Western Screech-Owl",
+      "scientificName": "Megascops kennicottii",
+      "mnemonic": "Bouncing-ball, accelerating 'whowhowhowhow'",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Western_Screech_Owl.jpg/330px-Western_Screech_Owl.jpg",
+      "recordings": [
+        {
+          "id": "XC736233",
+          "url": "https://xeno-canto.org/736233/download",
+          "duration": 6,
+          "type": "call",
+          "recordist": "Kayla Brown",
+          "location": "Fawn Creek, Marion County, Oregon, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/736233"
+        },
+        {
+          "id": "XC1000440",
+          "url": "https://xeno-canto.org/1000440/download",
+          "duration": 5,
+          "type": "song",
+          "recordist": "David Tattersley",
+          "location": "Silver City, Grant County, New Mexico, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/1000440"
+        },
+        {
+          "id": "XC962398",
+          "url": "https://xeno-canto.org/962398/download",
+          "duration": 4,
+          "type": "call",
+          "recordist": "A Richardson",
+          "location": "Carson City, Douglas County, Nevada, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/962398"
+        }
+      ]
+    },
+    {
+      "id": "northern-saw-whet-owl",
+      "commonName": "Northern Saw-whet Owl",
+      "scientificName": "Aegolius acadicus",
+      "mnemonic": "Steady single-note 'too-too-too'",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Male_Northern_Saw-whet_Owl_%287364047820%29.jpg/330px-Male_Northern_Saw-whet_Owl_%287364047820%29.jpg",
+      "recordings": [
+        {
+          "id": "XC225310",
+          "url": "https://xeno-canto.org/225310/download",
+          "duration": 7,
+          "type": "song",
+          "recordist": "Ted Floyd",
+          "location": "Medano-Zapata Ranch, Colorado, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/225310"
+        },
+        {
+          "id": "XC891591",
+          "url": "https://xeno-canto.org/891591/download",
+          "duration": 4,
+          "type": "song",
+          "recordist": "Don Profota",
+          "location": "South Bozeman, Gallatin County, Montana, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/891591"
+        },
+        {
+          "id": "XC833003",
+          "url": "https://xeno-canto.org/833003/download",
+          "duration": 13,
+          "type": "song",
+          "recordist": "Dr. Dominique Roche",
+          "location": "Paradise, Cache County, Utah, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/833003"
+        }
+      ]
+    },
+    {
+      "id": "northern-pygmy-owl",
+      "commonName": "Northern Pygmy-Owl",
+      "scientificName": "Glaucidium gnoma",
+      "mnemonic": "Single high 'too' every 1-2 seconds",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/NorthernPygmyOwl.jpg/330px-NorthernPygmyOwl.jpg",
+      "recordings": [
+        {
+          "id": "XC646754",
+          "url": "https://xeno-canto.org/646754/download",
+          "duration": 7,
+          "type": "song",
+          "recordist": "Alberto Lobato",
+          "location": "Camino a Los Humeros, Mexico",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/646754"
+        }
+      ]
+    },
+    {
+      "id": "common-poorwill",
+      "commonName": "Common Poorwill",
+      "scientificName": "Phalaenoptilus nuttallii",
+      "mnemonic": "Whistled 'poor-will' all night",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Common_Poorwill.jpg/330px-Common_Poorwill.jpg",
+      "recordings": [
+        {
+          "id": "XC662031",
+          "url": "https://xeno-canto.org/662031/download",
+          "duration": 9,
+          "type": "song",
+          "recordist": "Richard E. Webster",
+          "location": "Vekol Wash, Sonoran Desert N.M., Arizona, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/662031"
+        },
+        {
+          "id": "XC150237",
+          "url": "https://xeno-canto.org/150237/download",
+          "duration": 11,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "Mission Trails Regional Park, Tierrasanta area, San Diego, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/150237"
+        },
+        {
+          "id": "XC109851",
+          "url": "https://xeno-canto.org/109851/download",
+          "duration": 12,
+          "type": "call",
+          "recordist": "Lance A. M. Benner",
+          "location": "Santa Susana Field Laboratory, Ventura County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
+          "sourceUrl": "https://xeno-canto.org/109851"
+        }
+      ]
+    },
+    {
+      "id": "barn-owl",
+      "commonName": "Barn Owl",
+      "scientificName": "Tyto alba",
+      "mnemonic": "Eerie raspy scream",
+      "imageUrl": null,
+      "recordings": [
+        {
+          "id": "XC1089078",
+          "url": "https://xeno-canto.org/1089078/download",
+          "duration": 8,
+          "type": "",
+          "recordist": "Mark James Pearson",
+          "location": "Wigginton, York, England, United Kingdom",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/1089078"
+        },
+        {
+          "id": "XC1052574",
+          "url": "https://xeno-canto.org/1052574/download",
+          "duration": 8,
+          "type": "call",
+          "recordist": "Denis Dujardin",
+          "location": "Arrondissement d'Ajaccio (near  Cargèse), Corse-du-Sud, Corse, France",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/1052574"
+        },
+        {
+          "id": "XC1045968",
+          "url": "https://xeno-canto.org/1045968/download",
+          "duration": 8,
+          "type": "nocturnal flight call, anthropogenic noise band",
+          "recordist": "John Sirrett",
+          "location": "Great Britain (near  Shirley), West Midlands, England, United Kingdom",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/1045968"
+        }
+      ]
+    },
+    {
+      "id": "long-eared-owl",
+      "commonName": "Long-eared Owl",
+      "scientificName": "Asio otus",
+      "mnemonic": "Soft, even 'hoo' every few seconds",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Long-eared_Owl_-_Kisjuszallas_-_Hungary_S4E0920_%2815671750198%29.jpg/330px-Long-eared_Owl_-_Kisjuszallas_-_Hungary_S4E0920_%2815671750198%29.jpg",
+      "recordings": [
+        {
+          "id": "XC392079",
+          "url": "https://xeno-canto.org/392079/download",
+          "duration": 8,
+          "type": "bill snapping, hissing",
+          "recordist": "Vincent van der Spek",
+          "location": "Boerderij Meijendel eo, Meijendel, Wassenaar, ZH, Netherlands",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/392079"
+        },
+        {
+          "id": "XC730361",
+          "url": "https://xeno-canto.org/730361/download",
+          "duration": 7,
+          "type": "alarm call",
+          "recordist": "Stanislas Wroza",
+          "location": "Monegros (near  Valfarta), Huesca, Aragón, Spain",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/730361"
+        },
+        {
+          "id": "XC573978",
+          "url": "https://xeno-canto.org/573978/download",
+          "duration": 10,
+          "type": "begging call",
+          "recordist": "Giuseppe Speranza",
+          "location": "Ravenna, Provincia di Ravenna, Emilia-Romagna, Italy",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/573978"
+        }
+      ]
+    },
+    {
+      "id": "common-nighthawk",
+      "commonName": "Common Nighthawk",
+      "scientificName": "Chordeiles minor",
+      "mnemonic": "Nasal 'peent' overhead at dusk",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Common_Nighthawk_%2814428313550%29.jpg/330px-Common_Nighthawk_%2814428313550%29.jpg",
+      "recordings": [
+        {
+          "id": "XC1035202",
+          "url": "https://xeno-canto.org/1035202/download",
+          "duration": 9,
+          "type": "call",
+          "recordist": "Richard E. Webster",
+          "location": "Rucker Canyon grasslands, Cochise County, Arizona, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/1035202"
+        },
+        {
+          "id": "XC684354",
+          "url": "https://xeno-canto.org/684354/download",
+          "duration": 11,
+          "type": "flight call, boom over feathers when diving",
+          "recordist": "Brad Banner",
+          "location": "Merkel, Jones County, Texas, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/684354"
+        },
+        {
+          "id": "XC660470",
+          "url": "https://xeno-canto.org/660470/download",
+          "duration": 13,
+          "type": "call, flight call",
+          "recordist": "Bobby Wilcox",
+          "location": "Sierra Nevada (near  Bridgeport), Mono County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/660470"
+        }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "nv-1",
+      "title": "The Big Owls",
+      "speciesIds": [
+        "great-horned-owl",
+        "barn-owl",
+        "western-screech-owl"
+      ],
+      "length": 8
+    },
+    {
+      "id": "nv-2",
+      "title": "Small Owls",
+      "speciesIds": [
+        "northern-saw-whet-owl",
+        "northern-pygmy-owl",
+        "long-eared-owl"
+      ],
+      "length": 8
+    },
+    {
+      "id": "nv-3",
+      "title": "After the Owls",
+      "speciesIds": [
+        "common-poorwill",
+        "common-nighthawk",
+        "barn-owl"
+      ],
+      "length": 8
+    },
+    {
+      "id": "nv-review",
+      "title": "Review: All 8",
+      "speciesIds": [
+        "great-horned-owl",
+        "western-screech-owl",
+        "northern-saw-whet-owl",
+        "northern-pygmy-owl",
+        "common-poorwill",
+        "barn-owl",
+        "long-eared-owl",
+        "common-nighthawk"
+      ],
+      "length": 10
+    }
+  ]
+}

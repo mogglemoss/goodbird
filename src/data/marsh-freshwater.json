@@ -1,0 +1,583 @@
+{
+  "unit": {
+    "id": "marsh-freshwater",
+    "title": "Marsh & Wetland",
+    "habitat": "Marsh & Freshwater",
+    "description": "Cattails, sedges, and quiet ponds — Olema Marsh, Five Brooks, the freshwater edges of Abbott's Lagoon.",
+    "accent": "emerald"
+  },
+  "species": [
+    {
+      "id": "marsh-wren",
+      "commonName": "Marsh Wren",
+      "scientificName": "Cistothorus palustris",
+      "mnemonic": "Buzzy, sewing-machine chatter",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Marshwrenusfws.jpg/330px-Marshwrenusfws.jpg",
+      "recordings": [
+        {
+          "id": "XC459167",
+          "url": "https://xeno-canto.org/459167/download",
+          "duration": 6,
+          "type": "call",
+          "recordist": "Paul Marvin",
+          "location": "IID (Imperial Irrigation District) Marsh, Niland, Imperial County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/459167"
+        },
+        {
+          "id": "XC57378",
+          "url": "https://xeno-canto.org/57378/download",
+          "duration": 10,
+          "type": "song",
+          "recordist": "Ian Davies",
+          "location": "Great Meadows National Wildlife Refuge, Concord, Middlesex Co., Massachusetts, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
+          "sourceUrl": "https://xeno-canto.org/57378"
+        },
+        {
+          "id": "XC417865",
+          "url": "https://xeno-canto.org/417865/download",
+          "duration": 5,
+          "type": "song",
+          "recordist": "Sue Riffe",
+          "location": "Battelle Darby Metro Park - Wetlands, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/417865"
+        }
+      ]
+    },
+    {
+      "id": "red-winged-blackbird",
+      "commonName": "Red-winged Blackbird",
+      "scientificName": "Agelaius phoeniceus",
+      "mnemonic": "Konk-a-reee!",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Red-Winged_Blackbird.png/330px-Red-Winged_Blackbird.png",
+      "recordings": [
+        {
+          "id": "XC713846",
+          "url": "https://xeno-canto.org/713846/download",
+          "duration": 9,
+          "type": "song",
+          "recordist": "Ron Overholtz",
+          "location": "Lone Pine, Inyo County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/713846"
+        },
+        {
+          "id": "XC713844",
+          "url": "https://xeno-canto.org/713844/download",
+          "duration": 9,
+          "type": "song",
+          "recordist": "Ron Overholtz",
+          "location": "Diaz Lake, Inyo County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/713844"
+        },
+        {
+          "id": "XC368448",
+          "url": "https://xeno-canto.org/368448/download",
+          "duration": 9,
+          "type": "call, song",
+          "recordist": "Sue Riffe",
+          "location": "Crow Valley, Weld County, Colorado, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/368448"
+        }
+      ]
+    },
+    {
+      "id": "common-yellowthroat",
+      "commonName": "Common Yellowthroat",
+      "scientificName": "Geothlypis trichas",
+      "mnemonic": "Wichity-wichity-wichity",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Common_yellowthroat_in_PP_%2814155%29.jpg/330px-Common_yellowthroat_in_PP_%2814155%29.jpg",
+      "recordings": [
+        {
+          "id": "XC483964",
+          "url": "https://xeno-canto.org/483964/download",
+          "duration": 8,
+          "type": "call",
+          "recordist": "Paul Marvin",
+          "location": "Monument Rd and nearby trails, Tijuana River Valley, San Diego, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/483964"
+        },
+        {
+          "id": "XC342553",
+          "url": "https://xeno-canto.org/342553/download",
+          "duration": 8,
+          "type": "call",
+          "recordist": "Ted Floyd",
+          "location": "Boulder, Boulder County, Colorado, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/342553"
+        },
+        {
+          "id": "XC388604",
+          "url": "https://xeno-canto.org/388604/download",
+          "duration": 9,
+          "type": "call",
+          "recordist": "Antonio Xeira",
+          "location": "Stony Creek Metropark, Macomb County, Michigan, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/388604"
+        }
+      ]
+    },
+    {
+      "id": "sora",
+      "commonName": "Sora",
+      "scientificName": "Porzana carolina",
+      "mnemonic": "Descending whinny, plaintive 'ker-WEE'",
+      "imageUrl": null,
+      "recordings": [
+        {
+          "id": "XC357951",
+          "url": "https://xeno-canto.org/357951/download",
+          "duration": 8,
+          "type": "call",
+          "recordist": "Thomas G. Graves",
+          "location": "Sonny Bono Salton Sea National Wildlife Refuge, near Calipatria, Imperial County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/357951"
+        },
+        {
+          "id": "XC452184",
+          "url": "https://xeno-canto.org/452184/download",
+          "duration": 9,
+          "type": "call",
+          "recordist": "Paul Marvin",
+          "location": "Peña Blanca Lake, Arizona, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/452184"
+        },
+        {
+          "id": "XC228580",
+          "url": "https://xeno-canto.org/228580/download",
+          "duration": 7,
+          "type": "song",
+          "recordist": "Peter Boesman",
+          "location": "Salton Sea, CA, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+          "sourceUrl": "https://xeno-canto.org/228580"
+        }
+      ]
+    },
+    {
+      "id": "virginia-rail",
+      "commonName": "Virginia Rail",
+      "scientificName": "Rallus limicola",
+      "mnemonic": "Grunting 'kid-ick kid-ick'",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Virginia_rail_%2841109%29.jpg/330px-Virginia_rail_%2841109%29.jpg",
+      "recordings": [
+        {
+          "id": "XC602823",
+          "url": "https://xeno-canto.org/602823/download",
+          "duration": 8,
+          "type": "call",
+          "recordist": "Steve Hampton",
+          "location": "Kai Tai Lagoon, Port Townsend, Jefferson County, Washington, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/602823"
+        },
+        {
+          "id": "XC28270",
+          "url": "https://xeno-canto.org/28270/download",
+          "duration": 8,
+          "type": "call",
+          "recordist": "Daniel Lane",
+          "location": "Talon Landing Rd, Cameron Parish, Louisiana, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/28270"
+        },
+        {
+          "id": "XC28269",
+          "url": "https://xeno-canto.org/28269/download",
+          "duration": 8,
+          "type": "call",
+          "recordist": "Daniel Lane",
+          "location": "Talon Landing Rd, Cameron Parish, Louisiana, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/28269"
+        }
+      ]
+    },
+    {
+      "id": "pied-billed-grebe",
+      "commonName": "Pied-billed Grebe",
+      "scientificName": "Podilymbus podiceps",
+      "mnemonic": "Hooting 'wuk-wuk-wuk-cow-cow'",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Pied-billed_Grebe_0561.jpg/330px-Pied-billed_Grebe_0561.jpg",
+      "recordings": [
+        {
+          "id": "XC451362",
+          "url": "https://xeno-canto.org/451362/download",
+          "duration": 8,
+          "type": "call",
+          "recordist": "Paul Marvin",
+          "location": "Peña Blanca Lake, Arizona, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/451362"
+        },
+        {
+          "id": "XC971486",
+          "url": "https://xeno-canto.org/971486/download",
+          "duration": 7,
+          "type": "call",
+          "recordist": "Richard E. Webster",
+          "location": "San Bernardino National Wildlife Refuge, Cochise County, Arizona, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/971486"
+        },
+        {
+          "id": "XC600726",
+          "url": "https://xeno-canto.org/600726/download",
+          "duration": 9,
+          "type": "alarm call",
+          "recordist": "Richard E. Webster",
+          "location": "San Bernardino National Wildlife Refuge, Cochise County, Arizona, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/600726"
+        }
+      ]
+    },
+    {
+      "id": "american-bittern",
+      "commonName": "American Bittern",
+      "scientificName": "Botaurus lentiginosus",
+      "mnemonic": "Pump-er-lunk pump-er-lunk",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Botaurus_lentiginosus_28079.JPG/330px-Botaurus_lentiginosus_28079.JPG",
+      "recordings": [
+        {
+          "id": "XC417864",
+          "url": "https://xeno-canto.org/417864/download",
+          "duration": 9,
+          "type": "song",
+          "recordist": "Sue Riffe",
+          "location": "Battelle Darby Metro Park - Wetlands, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/417864"
+        },
+        {
+          "id": "XC172859",
+          "url": "https://xeno-canto.org/172859/download",
+          "duration": 10,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "Orlando Wetlands, Christmas, Orange County, Florida, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/172859"
+        },
+        {
+          "id": "XC408481",
+          "url": "https://xeno-canto.org/408481/download",
+          "duration": 12,
+          "type": "song",
+          "recordist": "Frank Lambert",
+          "location": "Pinto Lake, Watsonville, Santa Cruz County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+          "sourceUrl": "https://xeno-canto.org/408481"
+        }
+      ]
+    },
+    {
+      "id": "mallard",
+      "commonName": "Mallard",
+      "scientificName": "Anas platyrhynchos",
+      "mnemonic": "Classic descending quack",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Anas_platyrhynchos_male_female_quadrat.jpg/330px-Anas_platyrhynchos_male_female_quadrat.jpg",
+      "recordings": [
+        {
+          "id": "XC984930",
+          "url": "https://xeno-canto.org/984930/download",
+          "duration": 8,
+          "type": "displaying",
+          "recordist": "David Darrell-Lambert",
+          "location": "East Tilbury, Thurrock, England, United Kingdom",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/984930"
+        },
+        {
+          "id": "XC884217",
+          "url": "https://xeno-canto.org/884217/download",
+          "duration": 8,
+          "type": "call",
+          "recordist": "João Ferreira Tomás",
+          "location": "León (near  Banuncias), León, Castilla y León, Spain",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/884217"
+        },
+        {
+          "id": "XC635430",
+          "url": "https://xeno-canto.org/635430/download",
+          "duration": 8,
+          "type": "call, nocturnal flight call",
+          "recordist": "Susanne Kuijpers",
+          "location": "Berkel en Rodenrijs, Lansingerland, Zuid-Holland, Netherlands",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/635430"
+        }
+      ]
+    },
+    {
+      "id": "tree-swallow",
+      "commonName": "Tree Swallow",
+      "scientificName": "Tachycineta bicolor",
+      "mnemonic": "Liquid chittering, in flight",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Tree_swallow_in_JBWR_%2825579%29.jpg/330px-Tree_swallow_in_JBWR_%2825579%29.jpg",
+      "recordings": [
+        {
+          "id": "XC259259",
+          "url": "https://xeno-canto.org/259259/download",
+          "duration": 9,
+          "type": "flight call, flight calls",
+          "recordist": "John V. Moore",
+          "location": "California: near Lake Tahoe, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/259259"
+        },
+        {
+          "id": "XC490200",
+          "url": "https://xeno-canto.org/490200/download",
+          "duration": 10,
+          "type": "song",
+          "recordist": "William Whitehead",
+          "location": "South Amboy, Middlesex County, New Jersey, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/490200"
+        },
+        {
+          "id": "XC781096",
+          "url": "https://xeno-canto.org/781096/download",
+          "duration": 11,
+          "type": "alarm call",
+          "recordist": "Paul Driver",
+          "location": "Upper Moreland Township (near  Bryn Athyn), Montgomery County, Pennsylvania, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/781096"
+        }
+      ]
+    },
+    {
+      "id": "great-blue-heron",
+      "commonName": "Great Blue Heron",
+      "scientificName": "Ardea herodias",
+      "mnemonic": "Harsh prehistoric croak",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/GreatBlueHeronInARiver.jpg/330px-GreatBlueHeronInARiver.jpg",
+      "recordings": [
+        {
+          "id": "XC927403",
+          "url": "https://xeno-canto.org/927403/download",
+          "duration": 8,
+          "type": "call, Squawk",
+          "recordist": "Valerie Heemstra",
+          "location": "Escanaba, Delta County, Michigan, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/927403"
+        },
+        {
+          "id": "XC565135",
+          "url": "https://xeno-canto.org/565135/download",
+          "duration": 8,
+          "type": "call, flight call",
+          "recordist": "Russ Wigh",
+          "location": "Savannah, Chatham County, Georgia, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/565135"
+        },
+        {
+          "id": "XC395485",
+          "url": "https://xeno-canto.org/395485/download",
+          "duration": 8,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "Salt Lake WMA, Mims, Brevard County, Florida, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/395485"
+        }
+      ]
+    },
+    {
+      "id": "black-crowned-night-heron",
+      "commonName": "Black-crowned Night-Heron",
+      "scientificName": "Nycticorax nycticorax",
+      "mnemonic": "Hollow, abrupt 'quok!'",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Nycticorax_nycticorax_457953189.jpg/330px-Nycticorax_nycticorax_457953189.jpg",
+      "recordings": [
+        {
+          "id": "XC143604",
+          "url": "https://xeno-canto.org/143604/download",
+          "duration": 9,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "Orlando Wetlands, Christmas, Orange County, Florida, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/143604"
+        },
+        {
+          "id": "XC574404",
+          "url": "https://xeno-canto.org/574404/download",
+          "duration": 4,
+          "type": "flight call",
+          "recordist": "Richard E. Webster",
+          "location": "Bear River Migratory Bird Refuge, Box Elder County, UT, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/574404"
+        },
+        {
+          "id": "XC172927",
+          "url": "https://xeno-canto.org/172927/download",
+          "duration": 13,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "Orlando Wetlands, Christmas, Orange County, Florida, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/172927"
+        }
+      ]
+    },
+    {
+      "id": "killdeer",
+      "commonName": "Killdeer",
+      "scientificName": "Charadrius vociferus",
+      "mnemonic": "KILL-deer KILL-deer",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Killdeer_Heislerville.png/330px-Killdeer_Heislerville.png",
+      "recordings": [
+        {
+          "id": "XC1000428",
+          "url": "https://xeno-canto.org/1000428/download",
+          "duration": 9,
+          "type": "flight call",
+          "recordist": "David Tattersley",
+          "location": "Thrurmond Airport (PVT) (near  Animas), Hidalgo County, New Mexico, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/1000428"
+        },
+        {
+          "id": "XC169196",
+          "url": "https://xeno-canto.org/169196/download",
+          "duration": 10,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "River Lakes Conservation Area near Viera, Brevard Co, Florida, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/169196"
+        },
+        {
+          "id": "XC42584",
+          "url": "https://xeno-canto.org/42584/download",
+          "duration": 6,
+          "type": "call",
+          "recordist": "Todd Wilson",
+          "location": "Horicon Marsh, Dodge Co, Wisconsin, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
+          "sourceUrl": "https://xeno-canto.org/42584"
+        }
+      ]
+    },
+    {
+      "id": "song-sparrow",
+      "commonName": "Song Sparrow",
+      "scientificName": "Melospiza melodia",
+      "mnemonic": "Madge-madge-madge put-on-your-tea-kettle",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Song_sparrow_in_Prospect_Park_%2893031%29.jpg/330px-Song_sparrow_in_Prospect_Park_%2893031%29.jpg",
+      "recordings": [
+        {
+          "id": "XC301851",
+          "url": "https://xeno-canto.org/301851/download",
+          "duration": 8,
+          "type": "call",
+          "recordist": "Ted Floyd",
+          "location": "Lafayette, Boulder, Colorado, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/301851"
+        },
+        {
+          "id": "XC803814",
+          "url": "https://xeno-canto.org/803814/download",
+          "duration": 9,
+          "type": "song",
+          "recordist": "Bobby Wilcox",
+          "location": "DeWitt (near  East Syracuse), Onondaga County, New York, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/803814"
+        },
+        {
+          "id": "XC697998",
+          "url": "https://xeno-canto.org/697998/download",
+          "duration": 7,
+          "type": "call",
+          "recordist": "Paul Marvin",
+          "location": "Bird and Butterfly Garden, Tijuana River Valley Regional Park, San Diego Co, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/697998"
+        }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "mw-1",
+      "title": "Voices in the Cattails",
+      "speciesIds": [
+        "marsh-wren",
+        "red-winged-blackbird",
+        "common-yellowthroat",
+        "song-sparrow"
+      ],
+      "length": 8
+    },
+    {
+      "id": "mw-2",
+      "title": "Hidden in the Reeds",
+      "speciesIds": [
+        "sora",
+        "virginia-rail",
+        "american-bittern",
+        "pied-billed-grebe"
+      ],
+      "length": 8
+    },
+    {
+      "id": "mw-3",
+      "title": "Pond & Edge",
+      "speciesIds": [
+        "mallard",
+        "great-blue-heron",
+        "black-crowned-night-heron",
+        "killdeer"
+      ],
+      "length": 8
+    },
+    {
+      "id": "mw-4",
+      "title": "Skies Over Water",
+      "speciesIds": [
+        "tree-swallow",
+        "killdeer",
+        "red-winged-blackbird"
+      ],
+      "length": 8
+    },
+    {
+      "id": "mw-review",
+      "title": "Review: All 13",
+      "speciesIds": [
+        "marsh-wren",
+        "red-winged-blackbird",
+        "common-yellowthroat",
+        "sora",
+        "virginia-rail",
+        "pied-billed-grebe",
+        "american-bittern",
+        "mallard",
+        "tree-swallow",
+        "great-blue-heron",
+        "black-crowned-night-heron",
+        "killdeer",
+        "song-sparrow"
+      ],
+      "length": 12
+    }
+  ]
+}

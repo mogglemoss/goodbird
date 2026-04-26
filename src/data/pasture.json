@@ -1,0 +1,613 @@
+{
+  "unit": {
+    "id": "pasture",
+    "title": "Pasture & Open Country",
+    "habitat": "Grassland & Pasture",
+    "description": "The dairy pastures of the Pt. Reyes pastoral zone and the rolling grassland of Chileno Valley.",
+    "accent": "rose"
+  },
+  "species": [
+    {
+      "id": "western-meadowlark",
+      "commonName": "Western Meadowlark",
+      "scientificName": "Sturnella neglecta",
+      "mnemonic": "Liquid bubbling whistle from a fence post",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Sturnella_neglecta_GNP_02.jpg/330px-Sturnella_neglecta_GNP_02.jpg",
+      "recordings": [
+        {
+          "id": "XC246746",
+          "url": "https://xeno-canto.org/246746/download",
+          "duration": 8,
+          "type": "alarm call, call, flight call, song",
+          "recordist": "Ted Floyd",
+          "location": "Boulder, Colorado, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/246746"
+        },
+        {
+          "id": "XC714513",
+          "url": "https://xeno-canto.org/714513/download",
+          "duration": 7,
+          "type": "call",
+          "recordist": "Paul Marvin",
+          "location": "Peachtree Rd, Monterey County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/714513"
+        },
+        {
+          "id": "XC736222",
+          "url": "https://xeno-canto.org/736222/download",
+          "duration": 10,
+          "type": "call",
+          "recordist": "Sue Riffe",
+          "location": "Pueblo, Pueblo County, Colorado, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/736222"
+        }
+      ]
+    },
+    {
+      "id": "savannah-sparrow",
+      "commonName": "Savannah Sparrow",
+      "scientificName": "Passerculus sandwichensis",
+      "mnemonic": "Insect-like 'tsi-tsi-tsi-zheee'",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Passerculus_sandwichensis_crop.jpg/330px-Passerculus_sandwichensis_crop.jpg",
+      "recordings": [
+        {
+          "id": "XC34294",
+          "url": "https://xeno-canto.org/34294/download",
+          "duration": 8,
+          "type": "song",
+          "recordist": "Tayler Brooks",
+          "location": "Montlake Fill, King Co., WA, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
+          "sourceUrl": "https://xeno-canto.org/34294"
+        },
+        {
+          "id": "XC935283",
+          "url": "https://xeno-canto.org/935283/download",
+          "duration": 7,
+          "type": "begging call, call",
+          "recordist": "Tony Rinaud",
+          "location": "Middleton Island, Alaska, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/935283"
+        },
+        {
+          "id": "XC659283",
+          "url": "https://xeno-canto.org/659283/download",
+          "duration": 7,
+          "type": "alarm call",
+          "recordist": "Paul Driver",
+          "location": "Lavell Township (near  Zim), St. Louis County, Minnesota, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/659283"
+        }
+      ]
+    },
+    {
+      "id": "western-bluebird",
+      "commonName": "Western Bluebird",
+      "scientificName": "Sialia mexicana",
+      "mnemonic": "Soft 'few' contact notes",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Western_bluebird_%28male%29.jpg/330px-Western_bluebird_%28male%29.jpg",
+      "recordings": [
+        {
+          "id": "XC961965",
+          "url": "https://xeno-canto.org/961965/download",
+          "duration": 6,
+          "type": "call",
+          "recordist": "A Richardson",
+          "location": "Carlsbad, Eddy County, New Mexico, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/961965"
+        },
+        {
+          "id": "XC457218",
+          "url": "https://xeno-canto.org/457218/download",
+          "duration": 14,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "Percha Dam, Caballo Lake State Park, Sierra Co., New Mexico, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/457218"
+        }
+      ]
+    },
+    {
+      "id": "white-tailed-kite",
+      "commonName": "White-tailed Kite",
+      "scientificName": "Elanus leucurus",
+      "mnemonic": "Whistled 'keep keep keep'",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Elanus_leucurus_3.jpg/330px-Elanus_leucurus_3.jpg",
+      "recordings": [
+        {
+          "id": "XC987856",
+          "url": "https://xeno-canto.org/987856/download",
+          "duration": 10,
+          "type": "alarm call",
+          "recordist": "José María Loaiza B.",
+          "location": "Calacali, 1.5Km desde la \"Y a Moraspungo, Hacienda grande Amarilla, Ecuador",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/987856"
+        },
+        {
+          "id": "XC987852",
+          "url": "https://xeno-canto.org/987852/download",
+          "duration": 10,
+          "type": "song",
+          "recordist": "José María Loaiza B.",
+          "location": "Calacali, 1.5Km desde la \"Y a Moraspungo, Hacienda grande Amarilla, Ecuador",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/987852"
+        },
+        {
+          "id": "XC413291",
+          "url": "https://xeno-canto.org/413291/download",
+          "duration": 10,
+          "type": "alarm call",
+          "recordist": "Nicole Alfaro Ponce",
+          "location": "Urcuqui, Provincia de Imbabura, Ecuador",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/413291"
+        }
+      ]
+    },
+    {
+      "id": "loggerhead-shrike",
+      "commonName": "Loggerhead Shrike",
+      "scientificName": "Lanius ludovicianus",
+      "mnemonic": "Harsh squeaks plus mimicry",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Shrike_Loggerhead_JG.jpg/330px-Shrike_Loggerhead_JG.jpg",
+      "recordings": [
+        {
+          "id": "XC297260",
+          "url": "https://xeno-canto.org/297260/download",
+          "duration": 8,
+          "type": "call, song",
+          "recordist": "James Bradley",
+          "location": "San Clemente Island, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/297260"
+        },
+        {
+          "id": "XC297257",
+          "url": "https://xeno-canto.org/297257/download",
+          "duration": 10,
+          "type": "alarm call",
+          "recordist": "James Bradley",
+          "location": "San Clemente Island, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/297257"
+        },
+        {
+          "id": "XC265366",
+          "url": "https://xeno-canto.org/265366/download",
+          "duration": 10,
+          "type": "call",
+          "recordist": "Eric Hough",
+          "location": "Wenima Wildlife Area, Apache County, Arizona, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/265366"
+        }
+      ]
+    },
+    {
+      "id": "american-kestrel",
+      "commonName": "American Kestrel",
+      "scientificName": "Falco sparverius",
+      "mnemonic": "Sharp 'klee-klee-klee'",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/American_kestrel_%28Falco_sparverius_cinnamominus%29_male_Leona_Amarga.jpg/330px-American_kestrel_%28Falco_sparverius_cinnamominus%29_male_Leona_Amarga.jpg",
+      "recordings": [
+        {
+          "id": "XC420472",
+          "url": "https://xeno-canto.org/420472/download",
+          "duration": 7,
+          "type": "call",
+          "recordist": "Bobby Wilcox",
+          "location": "Nevada (near  Sparks), Washoe County, Nevada, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/420472"
+        },
+        {
+          "id": "XC426298",
+          "url": "https://xeno-canto.org/426298/download",
+          "duration": 6,
+          "type": "call",
+          "recordist": "Phil Brown",
+          "location": "Ipswich (near  Gloucester), Essex County, Massachusetts, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/426298"
+        },
+        {
+          "id": "XC147272",
+          "url": "https://xeno-canto.org/147272/download",
+          "duration": 6,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "Otay Lakes, San Diego Co., California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/147272"
+        }
+      ]
+    },
+    {
+      "id": "red-tailed-hawk",
+      "commonName": "Red-tailed Hawk",
+      "scientificName": "Buteo jamaicensis",
+      "mnemonic": "Iconic raspy descending scream",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Red-tailed_Hawk_%2845812546121%29.jpg/330px-Red-tailed_Hawk_%2845812546121%29.jpg",
+      "recordings": [
+        {
+          "id": "XC973864",
+          "url": "https://xeno-canto.org/973864/download",
+          "duration": 7,
+          "type": "call",
+          "recordist": "Richard E. Webster",
+          "location": "San Bernardino National Wildlife Refuge, Cochise County, Arizona, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/973864"
+        },
+        {
+          "id": "XC645523",
+          "url": "https://xeno-canto.org/645523/download",
+          "duration": 9,
+          "type": "call",
+          "recordist": "Bobby Wilcox",
+          "location": "Martinez Lake, Yuma County, Arizona, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/645523"
+        },
+        {
+          "id": "XC357068",
+          "url": "https://xeno-canto.org/357068/download",
+          "duration": 9,
+          "type": "call",
+          "recordist": "Bruce Lagerquist",
+          "location": "Everett Sewage Treatment Ponds, Snohomish County, Washington, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/357068"
+        }
+      ]
+    },
+    {
+      "id": "horned-lark",
+      "commonName": "Horned Lark",
+      "scientificName": "Eremophila alpestris",
+      "mnemonic": "Tinkling 'tsee-tinkly-tinkly'",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Horned_lark_%28eremophila_alpestris%29_01.jpg/330px-Horned_lark_%28eremophila_alpestris%29_01.jpg",
+      "recordings": [
+        {
+          "id": "XC460351",
+          "url": "https://xeno-canto.org/460351/download",
+          "duration": 9,
+          "type": "call, flight call, song",
+          "recordist": "Lukas Thiess",
+          "location": "Oukaimeden (village), Marrakech-Tensift-Al Haouz, Morocco",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/460351"
+        },
+        {
+          "id": "XC447701",
+          "url": "https://xeno-canto.org/447701/download",
+          "duration": 10,
+          "type": "alarm call, call, flight call",
+          "recordist": "Stanislas Wroza",
+          "location": "Saint-Quentin-en-Tourmont, Somme, Hauts-de-France, France",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/447701"
+        },
+        {
+          "id": "XC43857",
+          "url": "https://xeno-canto.org/43857/download",
+          "duration": 10,
+          "type": "call",
+          "recordist": "Jarek Matusiak",
+          "location": "Gasy near Warsaw, Poland, Poland",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
+          "sourceUrl": "https://xeno-canto.org/43857"
+        }
+      ]
+    },
+    {
+      "id": "brewers-blackbird",
+      "commonName": "Brewer's Blackbird",
+      "scientificName": "Euphagus cyanocephalus",
+      "mnemonic": "Squeaky-hinge 'k-shee'",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Brewers_Blackbird_Esquimalt_Lagoon.jpg/330px-Brewers_Blackbird_Esquimalt_Lagoon.jpg",
+      "recordings": [
+        {
+          "id": "XC352292",
+          "url": "https://xeno-canto.org/352292/download",
+          "duration": 8,
+          "type": "call, buzzy call",
+          "recordist": "Bruce Lagerquist",
+          "location": "Ferench Glen, Harney County, Oregon, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/352292"
+        },
+        {
+          "id": "XC104521",
+          "url": "https://xeno-canto.org/104521/download",
+          "duration": 8,
+          "type": "call",
+          "recordist": "Jonathon Jongsma",
+          "location": "Wildlife Loop Rd, Custer State Park, South Dakota, United States",
+          "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/104521"
+        },
+        {
+          "id": "XC139598",
+          "url": "https://xeno-canto.org/139598/download",
+          "duration": 10,
+          "type": "alarm call, flight call",
+          "recordist": "Garrett MacDonald",
+          "location": "Fairmont RV Park, Silver Bow County, Montana, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/139598"
+        }
+      ]
+    },
+    {
+      "id": "western-kingbird",
+      "commonName": "Western Kingbird",
+      "scientificName": "Tyrannus verticalis",
+      "mnemonic": "Sharp twittering 'kit-kit-kit'",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Western_kingbird_%2871748%29.jpg/330px-Western_kingbird_%2871748%29.jpg",
+      "recordings": [
+        {
+          "id": "XC161767",
+          "url": "https://xeno-canto.org/161767/download",
+          "duration": 9,
+          "type": "call",
+          "recordist": "Paul Marvin",
+          "location": "Rio Grande Village, Big Bend National Park, Brewster Co., Texas, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/161767"
+        },
+        {
+          "id": "XC161766",
+          "url": "https://xeno-canto.org/161766/download",
+          "duration": 9,
+          "type": "song",
+          "recordist": "Paul Marvin",
+          "location": "Proctor parking and trailhead, Madera Canyon, Arizona, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/161766"
+        },
+        {
+          "id": "XC552239",
+          "url": "https://xeno-canto.org/552239/download",
+          "duration": 10,
+          "type": "call",
+          "recordist": "Paul Marvin",
+          "location": "Proctor Valley Rd, San Diego County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/552239"
+        }
+      ]
+    },
+    {
+      "id": "mourning-dove",
+      "commonName": "Mourning Dove",
+      "scientificName": "Zenaida macroura",
+      "mnemonic": "Soft mournful 'oo-AHH-ooo-oo'",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Av_Mourning_Dove_JG.jpg/330px-Av_Mourning_Dove_JG.jpg",
+      "recordings": [
+        {
+          "id": "XC583581",
+          "url": "https://xeno-canto.org/583581/download",
+          "duration": 7,
+          "type": "song, wingbeats",
+          "recordist": "Richard E. Webster",
+          "location": "San Simon Cienega, Cochise County, Arizona, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/583581"
+        },
+        {
+          "id": "XC35100",
+          "url": "https://xeno-canto.org/35100/download",
+          "duration": 9,
+          "type": "wing sound",
+          "recordist": "Andrew Spencer",
+          "location": "near Rocksprings, Edwards Co., Texas, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
+          "sourceUrl": "https://xeno-canto.org/35100"
+        },
+        {
+          "id": "XC495471",
+          "url": "https://xeno-canto.org/495471/download",
+          "duration": 10,
+          "type": "wingbeats",
+          "recordist": "Phoenix Birder",
+          "location": "Willow Tank, San Simon Valley, Cochise County, Arizona, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/495471"
+        }
+      ]
+    },
+    {
+      "id": "american-crow",
+      "commonName": "American Crow",
+      "scientificName": "Corvus brachyrhynchos",
+      "mnemonic": "Plain 'caw caw caw'",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Corvus-brachyrhynchos-001.jpg/330px-Corvus-brachyrhynchos-001.jpg",
+      "recordings": [
+        {
+          "id": "XC941380",
+          "url": "https://xeno-canto.org/941380/download",
+          "duration": 9,
+          "type": "call",
+          "recordist": "Sue Riffe",
+          "location": "Milner, Routt County, Colorado, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/941380"
+        },
+        {
+          "id": "XC792018",
+          "url": "https://xeno-canto.org/792018/download",
+          "duration": 7,
+          "type": "call",
+          "recordist": "Paul Driver",
+          "location": "Bethayres (near  Bryn Athyn), Montgomery County, Pennsylvania, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/792018"
+        },
+        {
+          "id": "XC531008",
+          "url": "https://xeno-canto.org/531008/download",
+          "duration": 7,
+          "type": "call",
+          "recordist": "Thomas G. Graves",
+          "location": "San Simeon, San Luis Obispo County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/531008"
+        }
+      ]
+    },
+    {
+      "id": "lark-sparrow",
+      "commonName": "Lark Sparrow",
+      "scientificName": "Chondestes grammacus",
+      "mnemonic": "Bubbly varied warble",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/LarkSparrow.jpg/330px-LarkSparrow.jpg",
+      "recordings": [
+        {
+          "id": "XC1029355",
+          "url": "https://xeno-canto.org/1029355/download",
+          "duration": 8,
+          "type": "call",
+          "recordist": "Don Profota",
+          "location": "South Bozeman, Gallatin County, Montana, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/1029355"
+        },
+        {
+          "id": "XC684352",
+          "url": "https://xeno-canto.org/684352/download",
+          "duration": 8,
+          "type": "song",
+          "recordist": "Brad Banner",
+          "location": "Merkel, Taylor County, Texas, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/684352"
+        },
+        {
+          "id": "XC900999",
+          "url": "https://xeno-canto.org/900999/download",
+          "duration": 7,
+          "type": "song",
+          "recordist": "David Tattersley",
+          "location": "Brownsville, Cameron County, Texas, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/900999"
+        }
+      ]
+    },
+    {
+      "id": "bullocks-oriole",
+      "commonName": "Bullock's Oriole",
+      "scientificName": "Icterus bullockii",
+      "mnemonic": "Whistled, chattery, conversational",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Bullock%27s_Oriole.jpg/330px-Bullock%27s_Oriole.jpg",
+      "recordings": [
+        {
+          "id": "XC645472",
+          "url": "https://xeno-canto.org/645472/download",
+          "duration": 8,
+          "type": "call, song",
+          "recordist": "Bobby Wilcox",
+          "location": "Cibola Valley Conservation Area, La Paz County, Arizona, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/645472"
+        },
+        {
+          "id": "XC256758",
+          "url": "https://xeno-canto.org/256758/download",
+          "duration": 8,
+          "type": "call, clear call",
+          "recordist": "Richard E. Webster",
+          "location": "Portal, Arizona, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/256758"
+        },
+        {
+          "id": "XC13595",
+          "url": "https://xeno-canto.org/13595/download",
+          "duration": 9,
+          "type": "call, song",
+          "recordist": "Andrew Spencer",
+          "location": "Tamarack Ranch SWA, Logan Co., Colorado, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
+          "sourceUrl": "https://xeno-canto.org/13595"
+        }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "ps-1",
+      "title": "Voices on Fence Posts",
+      "speciesIds": [
+        "western-meadowlark",
+        "savannah-sparrow",
+        "western-bluebird",
+        "lark-sparrow"
+      ],
+      "length": 8
+    },
+    {
+      "id": "ps-2",
+      "title": "Hawks & Kites",
+      "speciesIds": [
+        "red-tailed-hawk",
+        "white-tailed-kite",
+        "american-kestrel",
+        "loggerhead-shrike"
+      ],
+      "length": 8
+    },
+    {
+      "id": "ps-3",
+      "title": "Crows & Kingbirds",
+      "speciesIds": [
+        "american-crow",
+        "brewers-blackbird",
+        "western-kingbird",
+        "mourning-dove"
+      ],
+      "length": 8
+    },
+    {
+      "id": "ps-4",
+      "title": "Open Sky",
+      "speciesIds": [
+        "horned-lark",
+        "western-meadowlark",
+        "bullocks-oriole"
+      ],
+      "length": 8
+    },
+    {
+      "id": "ps-review",
+      "title": "Review: All 14",
+      "speciesIds": [
+        "western-meadowlark",
+        "savannah-sparrow",
+        "western-bluebird",
+        "white-tailed-kite",
+        "loggerhead-shrike",
+        "american-kestrel",
+        "red-tailed-hawk",
+        "horned-lark",
+        "brewers-blackbird",
+        "western-kingbird",
+        "mourning-dove",
+        "american-crow",
+        "lark-sparrow",
+        "bullocks-oriole"
+      ],
+      "length": 12
+    }
+  ]
+}

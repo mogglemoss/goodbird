@@ -6,11 +6,11 @@ const modules = import.meta.glob<Manifest>("@/data/*.json", { eager: true, impor
 const sortOrder: Record<string, number> = {
   "coastal-scrub": 1,
   "oak-woodland": 2,
-  "marsh-freshwater": 3,
-  "riparian": 4,
+  "riparian": 3,
+  "marsh-freshwater": 4,
   "coastal-conifer": 5,
-  "night-voices": 6,
-  "pasture": 7,
+  "pasture": 6,
+  "night-voices": 7, // last — "after dark" feels like the capstone unit
 };
 
 export const units: Unit[] = [];

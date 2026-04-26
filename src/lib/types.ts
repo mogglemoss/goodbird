@@ -25,7 +25,7 @@ export interface LessonRef {
   length: number;
 }
 
-export type UnitAccent = "moss" | "amber" | "sky" | "indigo" | "rose" | "sand";
+export type UnitAccent = "moss" | "amber" | "sky" | "indigo" | "rose" | "sand" | "emerald" | "violet";
 
 export interface Unit {
   id: string;

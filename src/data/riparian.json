@@ -1,0 +1,623 @@
+{
+  "unit": {
+    "id": "riparian",
+    "title": "Creekside",
+    "habitat": "Riparian Corridors",
+    "description": "Lagunitas Creek, Pine Gulch, and the alder-willow tangles where streamside songsters concentrate.",
+    "accent": "sky"
+  },
+  "species": [
+    {
+      "id": "pacific-wren",
+      "commonName": "Pacific Wren",
+      "scientificName": "Troglodytes pacificus",
+      "mnemonic": "Endless tinkling, fast and loud",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Pacific_Wren_-_Vancouver_Is._%286842161146%29.jpg/330px-Pacific_Wren_-_Vancouver_Is._%286842161146%29.jpg",
+      "recordings": [
+        {
+          "id": "XC1094467",
+          "url": "https://xeno-canto.org/1094467/download",
+          "duration": 9,
+          "type": "song",
+          "recordist": "Greg Irving",
+          "location": "Manzanita Trail, Miller Peninsuls State Park, Sequim, Clallam Co, Washington, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/1094467"
+        },
+        {
+          "id": "XC1047662",
+          "url": "https://xeno-canto.org/1047662/download",
+          "duration": 7,
+          "type": "call",
+          "recordist": "Greg Irving",
+          "location": "Dungeness Recreation Area, Clallam County, Washington, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/1047662"
+        },
+        {
+          "id": "XC961628",
+          "url": "https://xeno-canto.org/961628/download",
+          "duration": 6,
+          "type": "song",
+          "recordist": "A Richardson",
+          "location": "Burgdorf, Idaho County, Idaho, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/961628"
+        }
+      ]
+    },
+    {
+      "id": "wilsons-warbler",
+      "commonName": "Wilson's Warbler",
+      "scientificName": "Cardellina pusilla",
+      "mnemonic": "Staccato 'chi-chi-chi-chi-chi'",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Wilsonia_pusilla.jpg/330px-Wilsonia_pusilla.jpg",
+      "recordings": [
+        {
+          "id": "XC172407",
+          "url": "https://xeno-canto.org/172407/download",
+          "duration": 8,
+          "type": "song",
+          "recordist": "Eric DeFonso",
+          "location": "Haskell Peak Road, Tahoe National Forest (near  Calpine), Sierra, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/172407"
+        },
+        {
+          "id": "XC898686",
+          "url": "https://xeno-canto.org/898686/download",
+          "duration": 10,
+          "type": "call, song",
+          "recordist": "Ed Pandolfino",
+          "location": "Sand Creek Rd, Colusa County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/898686"
+        },
+        {
+          "id": "XC480058",
+          "url": "https://xeno-canto.org/480058/download",
+          "duration": 6,
+          "type": "song",
+          "recordist": "Thomas G. Graves",
+          "location": "Montana de Oro State Park, Los Osos, San Luis Obispo County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/480058"
+        }
+      ]
+    },
+    {
+      "id": "swainsons-thrush",
+      "commonName": "Swainson's Thrush",
+      "scientificName": "Catharus ustulatus",
+      "mnemonic": "Spiraling, ethereal flute",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Catharus_ustulatus_-North_Dakota-8a.jpg/330px-Catharus_ustulatus_-North_Dakota-8a.jpg",
+      "recordings": [
+        {
+          "id": "XC206692",
+          "url": "https://xeno-canto.org/206692/download",
+          "duration": 9,
+          "type": "song",
+          "recordist": "Eric Cannizzaro",
+          "location": "Olympia, Thurston County, Washington, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/206692"
+        },
+        {
+          "id": "XC413794",
+          "url": "https://xeno-canto.org/413794/download",
+          "duration": 6,
+          "type": "call",
+          "recordist": "Steve Hampton",
+          "location": "Grasslands Park, Yolo County, CA, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/413794"
+        },
+        {
+          "id": "XC1056038",
+          "url": "https://xeno-canto.org/1056038/download",
+          "duration": 11,
+          "type": "call",
+          "recordist": "Denis Dujardin",
+          "location": "Cloverdale, Tillamook County, Oregon, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/1056038"
+        }
+      ]
+    },
+    {
+      "id": "black-headed-grosbeak",
+      "commonName": "Black-headed Grosbeak",
+      "scientificName": "Pheucticus melanocephalus",
+      "mnemonic": "A robin on caffeine",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Pheucticus_melanocephalus_-California%2C_USA-8.jpg/330px-Pheucticus_melanocephalus_-California%2C_USA-8.jpg",
+      "recordings": [
+        {
+          "id": "XC807036",
+          "url": "https://xeno-canto.org/807036/download",
+          "duration": 9,
+          "type": "song",
+          "recordist": "Ed Pandolfino",
+          "location": "Foresthill Divide Road, Placer County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/807036"
+        },
+        {
+          "id": "XC771205",
+          "url": "https://xeno-canto.org/771205/download",
+          "duration": 9,
+          "type": "begging call",
+          "recordist": "Richard E. Webster",
+          "location": "Portal, Arizona, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/771205"
+        },
+        {
+          "id": "XC700874",
+          "url": "https://xeno-canto.org/700874/download",
+          "duration": 7,
+          "type": "song",
+          "recordist": "Thomas Magarian",
+          "location": "Klamath Marsh NWR Headquarters, Chiloquin, Klamath County, Oregon, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/700874"
+        }
+      ]
+    },
+    {
+      "id": "warbling-vireo",
+      "commonName": "Warbling Vireo",
+      "scientificName": "Vireo gilvus",
+      "mnemonic": "Long run-on warble ending up",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Warbling_vireo_%2882141%29.jpg/330px-Warbling_vireo_%2882141%29.jpg",
+      "recordings": [
+        {
+          "id": "XC827584",
+          "url": "https://xeno-canto.org/827584/download",
+          "duration": 8,
+          "type": "call",
+          "recordist": "Richard E. Webster",
+          "location": "Tawas Point State Park (near  East Tawas), Iosco County, Michigan, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/827584"
+        },
+        {
+          "id": "XC378147",
+          "url": "https://xeno-canto.org/378147/download",
+          "duration": 10,
+          "type": "song",
+          "recordist": "Ted Floyd",
+          "location": "Colorado (near  Telluride), San Miguel County, Colorado, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/378147"
+        },
+        {
+          "id": "XC477609",
+          "url": "https://xeno-canto.org/477609/download",
+          "duration": 5,
+          "type": "song",
+          "recordist": "Sue Riffe",
+          "location": "Spring Valley (near  Waynesville), Greene Cty, Ohio, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/477609"
+        }
+      ]
+    },
+    {
+      "id": "belted-kingfisher",
+      "commonName": "Belted Kingfisher",
+      "scientificName": "Megaceryle alcyon",
+      "mnemonic": "Loud rattling call",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/BeltedKingfisherJG_Male.jpg/330px-BeltedKingfisherJG_Male.jpg",
+      "recordings": [
+        {
+          "id": "XC624466",
+          "url": "https://xeno-canto.org/624466/download",
+          "duration": 7,
+          "type": "call",
+          "recordist": "Thomas Magarian",
+          "location": "Warrior Point Trail, Sauvie Island, Columbia County, Oregon, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/624466"
+        },
+        {
+          "id": "XC448752",
+          "url": "https://xeno-canto.org/448752/download",
+          "duration": 11,
+          "type": "call",
+          "recordist": "Paul Marvin",
+          "location": "River Lakes Conservation Area near Viera, Brevard Co, Florida, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/448752"
+        },
+        {
+          "id": "XC144024",
+          "url": "https://xeno-canto.org/144024/download",
+          "duration": 4,
+          "type": "call",
+          "recordist": "Andrew Spencer",
+          "location": "Browns Lake, Beltrami Island State Forest, Lake of the Woods Co., Minnesota, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/144024"
+        }
+      ]
+    },
+    {
+      "id": "yellow-warbler",
+      "commonName": "Yellow Warbler",
+      "scientificName": "Setophaga petechia",
+      "mnemonic": "Sweet sweet sweet, I'm so sweet",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Yellow_warbler_%2882905%29.jpg/330px-Yellow_warbler_%2882905%29.jpg",
+      "recordings": [
+        {
+          "id": "XC815784",
+          "url": "https://xeno-canto.org/815784/download",
+          "duration": 8,
+          "type": "call",
+          "recordist": "Barry Edmonston",
+          "location": "Tomas de Berlanga (Santo Tomas), Isabela, Islas Galápagos, Ecuador",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/815784"
+        },
+        {
+          "id": "XC569605",
+          "url": "https://xeno-canto.org/569605/download",
+          "duration": 8,
+          "type": "song",
+          "recordist": "Isain Contreras Rodríguez",
+          "location": "Topolobampo, Ahome, Sinaloa, Mexico",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/569605"
+        },
+        {
+          "id": "XC5802",
+          "url": "https://xeno-canto.org/5802/download",
+          "duration": 8,
+          "type": "song",
+          "recordist": "Timothy Boucher",
+          "location": "Cozumel Island, Mexico",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
+          "sourceUrl": "https://xeno-canto.org/5802"
+        }
+      ]
+    },
+    {
+      "id": "black-phoebe",
+      "commonName": "Black Phoebe",
+      "scientificName": "Sayornis nigricans",
+      "mnemonic": "Crisp 'fee-bee'",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Black_phoebe_%28Sayornis_nigricans_aquaticus%29_Palopo.jpg/330px-Black_phoebe_%28Sayornis_nigricans_aquaticus%29_Palopo.jpg",
+      "recordings": [
+        {
+          "id": "XC353668",
+          "url": "https://xeno-canto.org/353668/download",
+          "duration": 11,
+          "type": "call",
+          "recordist": "Antonio Xeira",
+          "location": "Devereaux Slough, Santa Barbara County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/353668"
+        },
+        {
+          "id": "XC452150",
+          "url": "https://xeno-canto.org/452150/download",
+          "duration": 12,
+          "type": "call",
+          "recordist": "Paul Marvin",
+          "location": "Peña Blanca Lake, Arizona, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/452150"
+        },
+        {
+          "id": "XC451252",
+          "url": "https://xeno-canto.org/451252/download",
+          "duration": 12,
+          "type": "call",
+          "recordist": "Paul Marvin",
+          "location": "Saturn Blvd pond, Tijuana River Valley, San Diego County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/451252"
+        }
+      ]
+    },
+    {
+      "id": "pacific-slope-flycatcher",
+      "commonName": "Pacific-slope Flycatcher",
+      "scientificName": "Empidonax difficilis",
+      "mnemonic": "Rising 'pee-WEET'",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Empidonax_difficilis_1.jpg/330px-Empidonax_difficilis_1.jpg",
+      "recordings": [
+        {
+          "id": "XC473431",
+          "url": "https://xeno-canto.org/473431/download",
+          "duration": 10,
+          "type": "song",
+          "recordist": "bowtyler",
+          "location": "Olympia, Thurston County, Washington, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/473431"
+        },
+        {
+          "id": "XC178530",
+          "url": "https://xeno-canto.org/178530/download",
+          "duration": 5,
+          "type": "call",
+          "recordist": "Thomas G. Graves",
+          "location": "Pinnacles National Park (near  PAICINES), San Benito, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/178530"
+        },
+        {
+          "id": "XC725486",
+          "url": "https://xeno-canto.org/725486/download",
+          "duration": 4,
+          "type": "call",
+          "recordist": "Bobby Wilcox",
+          "location": "Lincoln Ranch, Bill Williams River, Arizona, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/725486"
+        }
+      ]
+    },
+    {
+      "id": "common-yellowthroat",
+      "commonName": "Common Yellowthroat",
+      "scientificName": "Geothlypis trichas",
+      "mnemonic": "Wichity-wichity-wichity",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Common_yellowthroat_in_PP_%2814155%29.jpg/330px-Common_yellowthroat_in_PP_%2814155%29.jpg",
+      "recordings": [
+        {
+          "id": "XC483964",
+          "url": "https://xeno-canto.org/483964/download",
+          "duration": 8,
+          "type": "call",
+          "recordist": "Paul Marvin",
+          "location": "Monument Rd and nearby trails, Tijuana River Valley, San Diego, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/483964"
+        },
+        {
+          "id": "XC342553",
+          "url": "https://xeno-canto.org/342553/download",
+          "duration": 8,
+          "type": "call",
+          "recordist": "Ted Floyd",
+          "location": "Boulder, Boulder County, Colorado, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/342553"
+        },
+        {
+          "id": "XC388604",
+          "url": "https://xeno-canto.org/388604/download",
+          "duration": 9,
+          "type": "call",
+          "recordist": "Antonio Xeira",
+          "location": "Stony Creek Metropark, Macomb County, Michigan, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/388604"
+        }
+      ]
+    },
+    {
+      "id": "song-sparrow",
+      "commonName": "Song Sparrow",
+      "scientificName": "Melospiza melodia",
+      "mnemonic": "Madge-madge-madge put-on-your-tea-kettle",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Song_sparrow_in_Prospect_Park_%2893031%29.jpg/330px-Song_sparrow_in_Prospect_Park_%2893031%29.jpg",
+      "recordings": [
+        {
+          "id": "XC301851",
+          "url": "https://xeno-canto.org/301851/download",
+          "duration": 8,
+          "type": "call",
+          "recordist": "Ted Floyd",
+          "location": "Lafayette, Boulder, Colorado, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/301851"
+        },
+        {
+          "id": "XC803814",
+          "url": "https://xeno-canto.org/803814/download",
+          "duration": 9,
+          "type": "song",
+          "recordist": "Bobby Wilcox",
+          "location": "DeWitt (near  East Syracuse), Onondaga County, New York, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/803814"
+        },
+        {
+          "id": "XC697998",
+          "url": "https://xeno-canto.org/697998/download",
+          "duration": 7,
+          "type": "call",
+          "recordist": "Paul Marvin",
+          "location": "Bird and Butterfly Garden, Tijuana River Valley Regional Park, San Diego Co, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/697998"
+        }
+      ]
+    },
+    {
+      "id": "lazuli-bunting",
+      "commonName": "Lazuli Bunting",
+      "scientificName": "Passerina amoena",
+      "mnemonic": "Bright, jumpy warbling phrase",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Lazuli_Bunting.jpg/330px-Lazuli_Bunting.jpg",
+      "recordings": [
+        {
+          "id": "XC646528",
+          "url": "https://xeno-canto.org/646528/download",
+          "duration": 7,
+          "type": "song",
+          "recordist": "Thomas G. Graves",
+          "location": "Coon Creek Trail, Montana de Oro State Park, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/646528"
+        },
+        {
+          "id": "XC36565",
+          "url": "https://xeno-canto.org/36565/download",
+          "duration": 9,
+          "type": "song",
+          "recordist": "Tayler Brooks",
+          "location": "Martin Rd, Skagit Co., WA, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
+          "sourceUrl": "https://xeno-canto.org/36565"
+        },
+        {
+          "id": "XC563913",
+          "url": "https://xeno-canto.org/563913/download",
+          "duration": 5,
+          "type": "song",
+          "recordist": "Sue Riffe",
+          "location": "Lyons, Boulder County, Colorado, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/563913"
+        }
+      ]
+    },
+    {
+      "id": "spotted-towhee",
+      "commonName": "Spotted Towhee",
+      "scientificName": "Pipilo maculatus",
+      "mnemonic": "Drink your teeeea",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Spotted_Towhee_%2832684403303%29.jpg/330px-Spotted_Towhee_%2832684403303%29.jpg",
+      "recordings": [
+        {
+          "id": "XC1056013",
+          "url": "https://xeno-canto.org/1056013/download",
+          "duration": 6,
+          "type": "call",
+          "recordist": "Denis Dujardin",
+          "location": "Tualatin River NWR, Washington County, Oregon, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/1056013"
+        },
+        {
+          "id": "XC1047676",
+          "url": "https://xeno-canto.org/1047676/download",
+          "duration": 10,
+          "type": "call",
+          "recordist": "Greg Irving",
+          "location": "Dungeness Recreation Area, Clallam County, Washington, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/1047676"
+        },
+        {
+          "id": "XC469011",
+          "url": "https://xeno-canto.org/469011/download",
+          "duration": 10,
+          "type": "call",
+          "recordist": "bowtyler",
+          "location": "Olympia, Thurston County, Washington, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/469011"
+        }
+      ]
+    },
+    {
+      "id": "western-wood-pewee",
+      "commonName": "Western Wood-Pewee",
+      "scientificName": "Contopus sordidulus",
+      "mnemonic": "Burry, slurred 'peeer'",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Western_Wood-Peewee_-_Sisters_-_Oregon_S4E1878_%2819236709745%29.jpg/330px-Western_Wood-Peewee_-_Sisters_-_Oregon_S4E1878_%2819236709745%29.jpg",
+      "recordings": [
+        {
+          "id": "XC1056075",
+          "url": "https://xeno-canto.org/1056075/download",
+          "duration": 9,
+          "type": "uncertain",
+          "recordist": "Denis Dujardin",
+          "location": "Rickreall, Polk County, Oregon, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/1056075"
+        },
+        {
+          "id": "XC199594",
+          "url": "https://xeno-canto.org/199594/download",
+          "duration": 7,
+          "type": "song",
+          "recordist": "Eddy Scheinpflug",
+          "location": "Helmville, Powell County, Montana, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/199594"
+        },
+        {
+          "id": "XC736227",
+          "url": "https://xeno-canto.org/736227/download",
+          "duration": 6,
+          "type": "song",
+          "recordist": "Sue Riffe",
+          "location": "Three R Road, Pueblo County, Colorado, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/736227"
+        }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "rp-1",
+      "title": "Streamside Songsters",
+      "speciesIds": [
+        "pacific-wren",
+        "swainsons-thrush",
+        "wilsons-warbler",
+        "yellow-warbler"
+      ],
+      "length": 8
+    },
+    {
+      "id": "rp-2",
+      "title": "Flycatchers & Phoebes",
+      "speciesIds": [
+        "black-phoebe",
+        "pacific-slope-flycatcher",
+        "western-wood-pewee",
+        "warbling-vireo"
+      ],
+      "length": 8
+    },
+    {
+      "id": "rp-3",
+      "title": "Brushy Banks",
+      "speciesIds": [
+        "song-sparrow",
+        "spotted-towhee",
+        "common-yellowthroat",
+        "lazuli-bunting"
+      ],
+      "length": 8
+    },
+    {
+      "id": "rp-4",
+      "title": "Loud & Liquid",
+      "speciesIds": [
+        "black-headed-grosbeak",
+        "belted-kingfisher",
+        "pacific-wren"
+      ],
+      "length": 8
+    },
+    {
+      "id": "rp-review",
+      "title": "Review: All 14",
+      "speciesIds": [
+        "pacific-wren",
+        "wilsons-warbler",
+        "swainsons-thrush",
+        "black-headed-grosbeak",
+        "warbling-vireo",
+        "belted-kingfisher",
+        "yellow-warbler",
+        "black-phoebe",
+        "pacific-slope-flycatcher",
+        "common-yellowthroat",
+        "song-sparrow",
+        "lazuli-bunting",
+        "spotted-towhee",
+        "western-wood-pewee"
+      ],
+      "length": 12
+    }
+  ]
+}
