@@ -1,6 +1,6 @@
 # goodbird
 
-Duolingo-style ear training for the birds of West Marin, California.
+Bite-sized ear training for the birds of West Marin, California.
 
 A small, polished web prototype for learning to identify common bird sounds
 of the **Coastal Scrub** habitat — Wrentit, Spotted Towhee, California Quail,

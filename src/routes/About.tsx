@@ -38,7 +38,7 @@ export function AboutRoute() {
 
       <section className="mt-8 space-y-4 text-sm leading-relaxed text-(--color-ink-soft)">
         <p>
-          Duolingo-style ear training for the birds of West Marin, California.
+          Bite-sized ear training for the birds of West Marin, California.
           {" "}
           <span className="text-(--color-ink)">{unitCount} habitats</span>,
           {" "}

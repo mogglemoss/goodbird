@@ -1,5 +1,5 @@
 // Simple Web-Audio-synthesized feedback chimes — no asset files needed.
-// Inspired by Duolingo's brief, percussive cues.
+// Brief, percussive cues — short feedback bursts that don't drag.
 
 let ctx: AudioContext | null = null;
 function ac(): AudioContext {
