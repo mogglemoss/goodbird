@@ -6,6 +6,7 @@ import { useGame } from "@/game/store";
 import { lessonComplete } from "@/lib/feedback";
 import { getLesson, getSpecies, getUnitForLesson, nextLesson as findNextLesson } from "@/lib/manifest";
 import { PlaySoundButton } from "@/components/PlaySoundButton";
+import { ShareButton } from "@/components/ShareButton";
 import { ACCENTS } from "@/lib/theme";
 import { cn } from "@/lib/cn";
 
@@ -142,6 +143,16 @@ export function ResultsRoute() {
           >
             Try again
           </Link>
+        )}
+
+        {snap.passed && (
+          <ShareButton
+            data={{
+              title: "goodbird",
+              text: `I just got ${accuracy}% on ${lessonTitle} in goodbird — a field guide you can hear.`,
+              url: typeof window !== "undefined" ? window.location.origin : "",
+            }}
+          />
         )}
         <Link
           to="/"

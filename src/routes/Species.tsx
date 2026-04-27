@@ -1,6 +1,7 @@
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { allLessons, getSpecies, units } from "@/lib/manifest";
 import { AudioPlayer } from "@/components/AudioPlayer";
+import { ShareButton } from "@/components/ShareButton";
 import { useGame } from "@/game/store";
 import { ACCENTS } from "@/lib/theme";
 import { cn } from "@/lib/cn";
@@ -49,19 +50,29 @@ export function SpeciesRoute() {
             <path d="M15 6l-6 6 6 6" />
           </svg>
         </button>
-        <button
-          onClick={() => toggleFavorite(id)}
-          aria-label={isFavorite ? "Remove favorite" : "Add favorite"}
-          aria-pressed={isFavorite}
-          className={cn(
-            "grid h-10 w-10 place-items-center rounded-full transition-colors cursor-pointer",
-            isFavorite ? "text-(--color-wrong)" : "text-(--color-ink-soft) hover:bg-(--color-line)",
-          )}
-        >
-          <svg viewBox="0 0 24 24" className="h-6 w-6" fill={isFavorite ? "currentColor" : "none"} stroke="currentColor" strokeWidth="2">
-            <path d="M12 21s-7.5-4.6-9.6-9.2C1 8.5 2.6 5 6.1 5c2 0 3.6 1.1 4.4 2.7C11.3 6.1 12.9 5 14.9 5c3.5 0 5.1 3.5 3.7 6.8C19.5 16.4 12 21 12 21z" />
-          </svg>
-        </button>
+        <div className="flex items-center gap-1">
+          <ShareButton
+            variant="icon"
+            data={{
+              title: `goodbird — ${species.commonName}`,
+              text: `Listen: "${species.mnemonic}"`,
+              url: typeof window !== "undefined" ? `${window.location.origin}/species/${species.id}` : "",
+            }}
+          />
+          <button
+            onClick={() => toggleFavorite(id)}
+            aria-label={isFavorite ? "Remove favorite" : "Add favorite"}
+            aria-pressed={isFavorite}
+            className={cn(
+              "grid h-10 w-10 place-items-center rounded-full transition-colors cursor-pointer",
+              isFavorite ? "text-(--color-wrong)" : "text-(--color-ink-soft) hover:bg-(--color-line)",
+            )}
+          >
+            <svg viewBox="0 0 24 24" className="h-6 w-6" fill={isFavorite ? "currentColor" : "none"} stroke="currentColor" strokeWidth="2">
+              <path d="M12 21s-7.5-4.6-9.6-9.2C1 8.5 2.6 5 6.1 5c2 0 3.6 1.1 4.4 2.7C11.3 6.1 12.9 5 14.9 5c3.5 0 5.1 3.5 3.7 6.8C19.5 16.4 12 21 12 21z" />
+            </svg>
+          </button>
+        </div>
       </div>
 
       <div
