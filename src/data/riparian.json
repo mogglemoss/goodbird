@@ -653,6 +653,38 @@
           "gain": 1
         }
       ]
+    },
+    {
+      "id": "american-dipper",
+      "commonName": "American Dipper",
+      "scientificName": "Cinclus mexicanus",
+      "mnemonic": "Long bubbly wren-like song carrying over rapids",
+      "field": "Year-round on swift unsilted streams — Lagunitas Creek above the dam, Olema Creek tributaries. The only North American songbird that swims; walks underwater grazing aquatic insects from cobble. Constantly bobs on its perch.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/AmericanDipper.jpg/330px-AmericanDipper.jpg",
+      "recordings": [
+        {
+          "id": "XC1059135",
+          "url": "https://xeno-canto.org/1059135/download",
+          "duration": 7,
+          "type": "call",
+          "recordist": "Yoann Blanchon",
+          "location": "Gold Cord Lake Trailhead (near  Fishhook), Matanuska-Susitna Borough, Alaska, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/1059135",
+          "gain": 0.3372873086588688
+        },
+        {
+          "id": "XC1059133",
+          "url": "https://xeno-canto.org/1059133/download",
+          "duration": 14,
+          "type": "call",
+          "recordist": "Yoann Blanchon",
+          "location": "Gold Cord Lake Trailhead (near  Fishhook), Matanuska-Susitna Borough, Alaska, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/1059133",
+          "gain": 0.46719695117188015
+        }
+      ]
     }
   ],
   "lessons": [
@@ -710,8 +742,18 @@
       "length": 8
     },
     {
+      "id": "rp-6",
+      "title": "Streamcraft Specialists",
+      "speciesIds": [
+        "american-dipper",
+        "belted-kingfisher",
+        "pacific-wren"
+      ],
+      "length": 8
+    },
+    {
       "id": "rp-review",
-      "title": "Review: All 15",
+      "title": "Review: All 16",
       "speciesIds": [
         "pacific-wren",
         "wilsons-warbler",
@@ -727,7 +769,8 @@
         "lazuli-bunting",
         "spotted-towhee",
         "western-wood-pewee",
-        "wood-duck"
+        "wood-duck",
+        "american-dipper"
       ],
       "length": 14
     }

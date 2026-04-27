@@ -24,6 +24,9 @@ export const SPECIES = [
   { id: "chestnut-backed-chickadee",commonName:"Chestnut-backed Chickadee",scientificName: "Poecile rufescens",       mnemonic: "Buzzy, hurried 'chick-a-dee-dee'", field: "Year-round in mixed evergreen forest. Often the lead species in mixed-flock foraging movements through the winter canopy." },
   { id: "spotted-towhee",          commonName: "Spotted Towhee",          scientificName: "Pipilo maculatus",        mnemonic: "Drink your teeeea", field: "Year-round in dense scrub. Forages by 'double-scratching' both feet backward in leaf litter — the rustle is often the first sign of the bird." },
   { id: "warbling-vireo",          commonName: "Western Warbling-Vireo",  scientificName: "Vireo swainsoni",         xcAlias: "Vireo gilvus",                  mnemonic: "Long, run-on warble ending up", field: "April through September in tall riparian and oak gallery. The slow-building warble is delivered from a single mid-canopy perch. Split from Eastern Warbling-Vireo in the 66th AOS Supplement (2025)." },
+  // Small woodpeckers of West Marin oak country
+  { id: "downy-woodpecker",        commonName: "Downy Woodpecker",        scientificName: "Dryobates pubescens",     mnemonic: "High descending whinny; sharp 'pik' call", field: "Year-round in oak and riparian edges. Smallest North American woodpecker; the short stubby bill (about a third the head's length) separates it from the otherwise identical Hairy Woodpecker." },
+  { id: "nuttalls-woodpecker",     commonName: "Nuttall's Woodpecker",    scientificName: "Dryobates nuttallii",     mnemonic: "Sharp rattling 'prrrt'; sharper than Downy's whinny", field: "Year-round in California oak woodland — a near-endemic to California (just barely into Baja). Black-and-white ladder-backed; barely overlaps with Downy in habitat preference." },
 ];
 
 export const LESSONS = [
@@ -31,6 +34,7 @@ export const LESSONS = [
   { id: "ow-2",      title: "Songs in the Canopy",   speciesIds: ["western-tanager", "purple-finch", "warbling-vireo", "huttons-vireo"], length: 8 },
   { id: "ow-3",      title: "Understory Voices",     speciesIds: ["spotted-towhee", "dark-eyed-junco", "pacific-slope-flycatcher", "lesser-goldfinch"], length: 8 },
   { id: "ow-4",      title: "Bold & Loud",           speciesIds: ["stellers-jay", "acorn-woodpecker", "oak-titmouse"], length: 8 },
-  { id: "ow-review", title: "Review: All 13",        speciesIds: [], length: 12 }, // populated below
+  { id: "ow-5",      title: "Small Woodpeckers",     speciesIds: ["downy-woodpecker", "nuttalls-woodpecker", "acorn-woodpecker"], length: 8 },
+  { id: "ow-review", title: "Review: All 15",        speciesIds: [], length: 14 }, // populated below
 ];
 LESSONS[LESSONS.length - 1].speciesIds = SPECIES.map((s) => s.id);

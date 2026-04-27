@@ -394,6 +394,49 @@
           "gain": 1
         }
       ]
+    },
+    {
+      "id": "white-throated-swift",
+      "commonName": "White-throated Swift",
+      "scientificName": "Aeronautes saxatalis",
+      "mnemonic": "Loud descending chittering 'kee-kee-kee-kee' from overhead",
+      "field": "March through October on coastal cliffs and inland canyons (Pt. Reyes lighthouse cliffs, Bolinas headlands). Black-and-white roller-coaster flight; courtship pairs lock together and tumble through the air.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/White-throated_Swift_%28Aeronautes_saxatalis%29_in_flight.jpg/330px-White-throated_Swift_%28Aeronautes_saxatalis%29_in_flight.jpg",
+      "recordings": [
+        {
+          "id": "XC22010",
+          "url": "https://xeno-canto.org/22010/download",
+          "duration": 10,
+          "type": "call, song",
+          "recordist": "Chris Parrish",
+          "location": "Tower Falls, Yellowstone NP, Wyoming, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
+          "sourceUrl": "https://xeno-canto.org/22010",
+          "gain": 0.762956891161533
+        },
+        {
+          "id": "XC326718",
+          "url": "https://xeno-canto.org/326718/download",
+          "duration": 12,
+          "type": "call, flight call, copulation call",
+          "recordist": "Nick Komar",
+          "location": "Fort Collins, Larimer County, Colorado, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/326718",
+          "gain": 1
+        },
+        {
+          "id": "XC942738",
+          "url": "https://xeno-canto.org/942738/download",
+          "duration": 9,
+          "type": "call",
+          "recordist": "Tero Linjama",
+          "location": "Chinle, Apache County, Arizona, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/942738",
+          "gain": 0.1749846688624657
+        }
+      ]
     }
   ],
   "lessons": [
@@ -428,8 +471,18 @@
       "length": 8
     },
     {
+      "id": "sc-4",
+      "title": "Cliffs & Canyons",
+      "speciesIds": [
+        "white-throated-swift",
+        "peregrine-falcon",
+        "common-raven"
+      ],
+      "length": 8
+    },
+    {
       "id": "sc-review",
-      "title": "Review: All 9",
+      "title": "Review: All 10",
       "speciesIds": [
         "turkey-vulture",
         "common-raven",
@@ -439,7 +492,8 @@
         "red-shouldered-hawk",
         "northern-harrier",
         "osprey",
-        "peregrine-falcon"
+        "peregrine-falcon",
+        "white-throated-swift"
       ],
       "length": 12
     }

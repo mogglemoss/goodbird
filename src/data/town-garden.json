@@ -523,6 +523,49 @@
           "gain": 0.4456562483975033
         }
       ]
+    },
+    {
+      "id": "rufous-hummingbird",
+      "commonName": "Rufous Hummingbird",
+      "scientificName": "Selasphorus rufus",
+      "mnemonic": "Sharp metallic 'tip' chips; wing buzz 'zzeee'",
+      "field": "March through May (spring migration) and July through September (fall) at flowering shrubs and feeders. Males are entirely rusty-orange. Aggressive at feeders, often dominating Anna's and Allen's despite smaller size.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Rufous_Hummingbird%2C_male_01.jpg/330px-Rufous_Hummingbird%2C_male_01.jpg",
+      "recordings": [
+        {
+          "id": "XC133580",
+          "url": "https://xeno-canto.org/133580/download",
+          "duration": 9,
+          "type": "call, interaction calls, wing whine",
+          "recordist": "Richard E. Webster",
+          "location": "Portal, Arizona, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/133580",
+          "gain": 0.9078205301781858
+        },
+        {
+          "id": "XC581027",
+          "url": "https://xeno-canto.org/581027/download",
+          "duration": 10,
+          "type": "call, wing whirr",
+          "recordist": "Eric DeFonso",
+          "location": "Twin Spruce Rd area, Jefferson County, Colorado, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/581027",
+          "gain": 0.50991759757487
+        },
+        {
+          "id": "XC133552",
+          "url": "https://xeno-canto.org/133552/download",
+          "duration": 6,
+          "type": "call, chase call",
+          "recordist": "Richard E. Webster",
+          "location": "Portal, Arizona, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/133552",
+          "gain": 0.8308067187019145
+        }
+      ]
     }
   ],
   "lessons": [
@@ -541,6 +584,7 @@
       "title": "Hummers & Finches",
       "speciesIds": [
         "allens-hummingbird",
+        "rufous-hummingbird",
         "house-finch",
         "american-goldfinch"
       ],
@@ -568,7 +612,7 @@
     },
     {
       "id": "tg-review",
-      "title": "Review: All 12",
+      "title": "Review: All 13",
       "speciesIds": [
         "american-robin",
         "northern-flicker",
@@ -581,9 +625,10 @@
         "cedar-waxwing",
         "house-sparrow",
         "european-starling",
-        "rock-pigeon"
+        "rock-pigeon",
+        "rufous-hummingbird"
       ],
-      "length": 12
+      "length": 14
     }
   ]
 }

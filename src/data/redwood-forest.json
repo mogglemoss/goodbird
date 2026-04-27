@@ -60,6 +60,17 @@
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Vaux%27s_Swift_-_La_Paz_-_Costa_Rica_MG_1768_%2826435571450%29.jpg/330px-Vaux%27s_Swift_-_La_Paz_-_Costa_Rica_MG_1768_%2826435571450%29.jpg",
       "recordings": [
         {
+          "id": "XC264030",
+          "url": "https://xeno-canto.org/264030/download",
+          "duration": 6,
+          "type": "song",
+          "recordist": "Elias Aristides Elias",
+          "location": "Arcata, Humboldt County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/264030",
+          "gain": 1
+        },
+        {
           "id": "XC150252",
           "url": "https://xeno-canto.org/150252/download",
           "duration": 5,
@@ -71,15 +82,15 @@
           "gain": 0.8288959162731062
         },
         {
-          "id": "XC649060",
-          "url": "https://xeno-canto.org/649060/download",
-          "duration": 3,
-          "type": "call",
-          "recordist": "Don Henise",
-          "location": "Myrtle Point, Coos County, Oregon, United States",
+          "id": "XC367713",
+          "url": "https://xeno-canto.org/367713/download",
+          "duration": 8,
+          "type": "flight call",
+          "recordist": "Nick Komar",
+          "location": "Reserva El Jaguar, Jinotega, Nicaragua",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/649060",
-          "gain": 0.32583670100200884
+          "sourceUrl": "https://xeno-canto.org/367713",
+          "gain": 1
         }
       ]
     },
@@ -264,15 +275,37 @@
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Hermit_Warbler_%28Dendroica_occidentalis%29.jpg/330px-Hermit_Warbler_%28Dendroica_occidentalis%29.jpg",
       "recordings": [
         {
-          "id": "XC143152",
-          "url": "https://xeno-canto.org/143152/download",
-          "duration": 7,
-          "type": "flight call",
-          "recordist": "Andrew Spencer",
-          "location": "Mary's Peak, Benton Co., Oregon, United States",
+          "id": "XC150324",
+          "url": "https://xeno-canto.org/150324/download",
+          "duration": 18,
+          "type": "song",
+          "recordist": "Paul Marvin",
+          "location": "Chevron Meadow (Crane  Flat), Yosemite National Park, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
-          "sourceUrl": "https://xeno-canto.org/143152",
-          "gain": 0.49773708497893604
+          "sourceUrl": "https://xeno-canto.org/150324",
+          "gain": 0.7691304402866095
+        },
+        {
+          "id": "XC668550",
+          "url": "https://xeno-canto.org/668550/download",
+          "duration": 10,
+          "type": "song",
+          "recordist": "Thomas Magarian",
+          "location": "Larch Mountain, Multnomah County, Oregon, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/668550",
+          "gain": 0.28906798823654756
+        },
+        {
+          "id": "XC580354",
+          "url": "https://xeno-canto.org/580354/download",
+          "duration": 11,
+          "type": "song",
+          "recordist": "Steve Hampton",
+          "location": "Davis, Yolo County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/580354",
+          "gain": 0.31296804715636695
         }
       ]
     },
@@ -339,14 +372,68 @@
           "gain": 0.24945947269429547
         },
         {
-          "id": "XC153478",
-          "url": "https://xeno-canto.org/153478/download",
-          "duration": 5,
-          "type": "call",
-          "recordist": "Paul Marvin",
-          "location": "Palm Canyon, Borrego Springs, San Diego County, California, United States",
-          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
-          "sourceUrl": "https://xeno-canto.org/153478",
+          "id": "XC293949",
+          "url": "https://xeno-canto.org/293949/download",
+          "duration": 19,
+          "type": "song",
+          "recordist": "Patrick Turgeon",
+          "location": "Grand Canyon Village, Coconino County, Arizona, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/293949",
+          "gain": 0.48361526430204366
+        },
+        {
+          "id": "XC649301",
+          "url": "https://xeno-canto.org/649301/download",
+          "duration": 7,
+          "type": "song",
+          "recordist": "Aziza Cooper",
+          "location": "Vancouver Island (near  Victoria), Capital, British Columbia, Canada",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/649301",
+          "gain": 1
+        }
+      ]
+    },
+    {
+      "id": "marbled-murrelet",
+      "commonName": "Marbled Murrelet",
+      "scientificName": "Brachyramphus marmoratus",
+      "mnemonic": "Ringing 'keer' calls in pre-dawn flights through the canopy",
+      "field": "Year-round; forages at sea but nests on mossy old-growth limbs in Muir Woods, Mt. Tam, and Bolinas Ridge — sometimes 25+ km inland. Federally Threatened. **Listen here for ID — never play recordings in the field. Disturbance from playback is documented to disrupt nesting.**",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Marbled_murrelet.jpg/330px-Marbled_murrelet.jpg",
+      "recordings": [
+        {
+          "id": "XC956779",
+          "url": "https://xeno-canto.org/956779/download",
+          "duration": 8,
+          "type": "call, flight call, jet, ",
+          "recordist": "Kayla Brown",
+          "location": "Briar Creek 14-08W-32.04, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/956779",
+          "gain": 1
+        },
+        {
+          "id": "XC956784",
+          "url": "https://xeno-canto.org/956784/download",
+          "duration": 10,
+          "type": "call, flight call, wing, ",
+          "recordist": "Kayla Brown",
+          "location": "North Deadwood 17.04, Lane County, Oregon, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/956784",
+          "gain": 1
+        },
+        {
+          "id": "XC956783",
+          "url": "https://xeno-canto.org/956783/download",
+          "duration": 12,
+          "type": "call, flight call, jet, ",
+          "recordist": "Kayla Brown",
+          "location": "North Deadwood 17.04, Lane County, Oregon, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/956783",
           "gain": 1
         }
       ]
@@ -384,8 +471,18 @@
       "length": 8
     },
     {
+      "id": "rf-4",
+      "title": "Old-Growth Specialists",
+      "speciesIds": [
+        "marbled-murrelet",
+        "pileated-woodpecker",
+        "vauxs-swift"
+      ],
+      "length": 8
+    },
+    {
       "id": "rf-review",
-      "title": "Review: All 9",
+      "title": "Review: All 10",
       "speciesIds": [
         "pileated-woodpecker",
         "vauxs-swift",
@@ -395,7 +492,8 @@
         "hermit-thrush",
         "hermit-warbler",
         "macgillivrays-warbler",
-        "black-throated-gray-warbler"
+        "black-throated-gray-warbler",
+        "marbled-murrelet"
       ],
       "length": 12
     }

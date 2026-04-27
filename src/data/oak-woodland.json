@@ -3,16 +3,16 @@
     "id": "oak-woodland",
     "title": "Oak Woodland",
     "habitat": "Oak Woodland & Bay Laurel",
-    "description": "The acorn-strewn understory of Inverness Ridge, Olema, and Mt. Tamalpais \u2014 cavity-nesters and woodland songsters.",
-    "accent": "amber",
-    "tagline": "Acorn woodpeckers in dappled cathedrals."
+    "description": "The acorn-strewn understory of Inverness Ridge, Olema, and Mt. Tamalpais — cavity-nesters and woodland songsters.",
+    "tagline": "Acorn woodpeckers in dappled cathedrals.",
+    "accent": "amber"
   },
   "species": [
     {
       "id": "acorn-woodpecker",
       "commonName": "Acorn Woodpecker",
       "scientificName": "Melanerpes formicivorus",
-      "mnemonic": "Wheka-wheka-wheka \u2014 clown laughter",
+      "mnemonic": "Wheka-wheka-wheka — clown laughter",
       "field": "Year-round in oak woodland. Lives in cooperative groups of up to a dozen, anchored to a single granary tree pierced with thousands of acorn-storage holes.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Acorn_woodpecker_holding_a_nut_in_its_beak-0225.jpg/330px-Acorn_woodpecker_holding_a_nut_in_its_beak-0225.jpg",
       "recordings": [
@@ -69,6 +69,28 @@
           "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
           "sourceUrl": "https://xeno-canto.org/72232",
           "gain": 0.2360478233180577
+        },
+        {
+          "id": "XC357029",
+          "url": "https://xeno-canto.org/357029/download",
+          "duration": 15,
+          "type": "song",
+          "recordist": "Jim Holmes",
+          "location": "Partrick, Napa County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/357029",
+          "gain": 0.2058258890542055
+        },
+        {
+          "id": "XC149462",
+          "url": "https://xeno-canto.org/149462/download",
+          "duration": 16,
+          "type": "song",
+          "recordist": "Paul Marvin",
+          "location": "Hollenbeck Canyon Trail, Jamul, San Diego County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/149462",
+          "gain": 1
         }
       ]
     },
@@ -77,6 +99,7 @@
       "commonName": "Western Flycatcher",
       "scientificName": "Empidonax difficilis",
       "mnemonic": "Rising 'pee-WEET'",
+      "field": "April through September in shaded oak and conifer canyons. Nests on rock ledges and within house eaves throughout coastal California.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Empidonax_difficilis_1.jpg/330px-Empidonax_difficilis_1.jpg",
       "recordings": [
         {
@@ -112,14 +135,14 @@
           "sourceUrl": "https://xeno-canto.org/178530",
           "gain": 0.25556419010641385
         }
-      ],
-      "field": "April through September in shaded oak and conifer canyons. Nests on rock ledges and within house eaves throughout coastal California."
+      ]
     },
     {
       "id": "stellers-jay",
       "commonName": "Steller's Jay",
       "scientificName": "Cyanocitta stelleri",
       "mnemonic": "Harsh 'shaak-shaak-shaak'",
+      "field": "Year-round in coniferous and oak forest. Mimics Red-tailed Hawk calls — possibly to clear feeders of competitors.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Steller%27s_Jay_flagstaff_arizona.jpg/330px-Steller%27s_Jay_flagstaff_arizona.jpg",
       "recordings": [
         {
@@ -155,14 +178,14 @@
           "sourceUrl": "https://xeno-canto.org/605631",
           "gain": 1
         }
-      ],
-      "field": "Year-round in coniferous and oak forest. Mimics Red-tailed Hawk calls \u2014 possibly to clear feeders of competitors."
+      ]
     },
     {
       "id": "huttons-vireo",
       "commonName": "Hutton's Vireo",
       "scientificName": "Vireo huttoni",
       "mnemonic": "Endlessly repeated 'zu-wee'",
+      "field": "Year-round in evergreen oak. Often confused with Ruby-crowned Kinglet by sight; the repetitive 'zu-wee' song is diagnostic.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Hutton%27s_Vireo_%2843379432594%29.jpg/330px-Hutton%27s_Vireo_%2843379432594%29.jpg",
       "recordings": [
         {
@@ -198,8 +221,7 @@
           "sourceUrl": "https://xeno-canto.org/639924",
           "gain": 1
         }
-      ],
-      "field": "Year-round in evergreen oak. Often confused with Ruby-crowned Kinglet by sight; the repetitive 'zu-wee' song is diagnostic."
+      ]
     },
     {
       "id": "western-tanager",
@@ -249,6 +271,7 @@
       "commonName": "Dark-eyed Junco",
       "scientificName": "Junco hyemalis",
       "mnemonic": "Even, ringing trill on one pitch",
+      "field": "Year-round in oak and conifer edges; numbers swell in winter. The flashing white outer tail feathers are flicked open in alarm.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Junco_hyemalis_hyemalis_CT1_%28cropped%29.jpg/330px-Junco_hyemalis_hyemalis_CT1_%28cropped%29.jpg",
       "recordings": [
         {
@@ -284,14 +307,14 @@
           "sourceUrl": "https://xeno-canto.org/381586",
           "gain": 0.19498445997580455
         }
-      ],
-      "field": "Year-round in oak and conifer edges; numbers swell in winter. The flashing white outer tail feathers are flicked open in alarm."
+      ]
     },
     {
       "id": "purple-finch",
       "commonName": "Purple Finch",
       "scientificName": "Haemorhous purpureus",
       "mnemonic": "Long rich warble that tumbles downward",
+      "field": "Year-round in mixed oak-fir; more numerous in winter. Adult males develop their raspberry plumage gradually over their second year.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Carpodacus_purpureus_CT3.jpg/330px-Carpodacus_purpureus_CT3.jpg",
       "recordings": [
         {
@@ -311,7 +334,7 @@
           "duration": 6,
           "type": "song",
           "recordist": "Martin St-Michel",
-          "location": "Stoneham-et-Tewkesbury, La Jacques-Cartier, Qu\u00e9bec, Canada",
+          "location": "Stoneham-et-Tewkesbury, La Jacques-Cartier, Québec, Canada",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
           "sourceUrl": "https://xeno-canto.org/175355",
           "gain": 0.3622429984166986
@@ -327,14 +350,14 @@
           "sourceUrl": "https://xeno-canto.org/160261",
           "gain": 0.3863669770540691
         }
-      ],
-      "field": "Year-round in mixed oak-fir; more numerous in winter. Adult males develop their raspberry plumage gradually over their second year."
+      ]
     },
     {
       "id": "lesser-goldfinch",
       "commonName": "Lesser Goldfinch",
       "scientificName": "Spinus psaltria",
       "mnemonic": "Plaintive 'tee-yeer', mimics",
+      "field": "Year-round in open oak country and weedy edges. Often nests in loose colonies; juveniles begin to sing within two months of fledging.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Lesser_Goldfinch_%28_Eastern_race%29_Kerr_WMA_Kerrville_TX_2018-05-06_12-11-15-2_%2842881554344%29.jpg/330px-Lesser_Goldfinch_%28_Eastern_race%29_Kerr_WMA_Kerrville_TX_2018-05-06_12-11-15-2_%2842881554344%29.jpg",
       "recordings": [
         {
@@ -370,46 +393,57 @@
           "sourceUrl": "https://xeno-canto.org/72940",
           "gain": 0.2520577179639108
         }
-      ],
-      "field": "Year-round in open oak country and weedy edges. Often nests in loose colonies; juveniles begin to sing within two months of fledging."
+      ]
     },
     {
       "id": "western-bluebird",
       "commonName": "Western Bluebird",
       "scientificName": "Sialia mexicana",
       "mnemonic": "Soft 'few' contact notes",
+      "field": "Year-round in oak savanna and pasture edges. Cavity nester; competes with starlings, swallows, and other bluebirds for nest holes.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Western_bluebird_%28male%29.jpg/330px-Western_bluebird_%28male%29.jpg",
       "recordings": [
         {
-          "id": "XC457218",
-          "url": "https://xeno-canto.org/457218/download",
-          "duration": 14,
-          "type": "flight call",
-          "recordist": "Paul Marvin",
-          "location": "Percha Dam, Caballo Lake State Park, Sierra Co., New Mexico, United States",
-          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/457218",
-          "gain": 0.45081670454146006
+          "id": "XC229709",
+          "url": "https://xeno-canto.org/229709/download",
+          "duration": 9,
+          "type": "song",
+          "recordist": "Peter Boesman",
+          "location": "Mount Laguna, CA, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+          "sourceUrl": "https://xeno-canto.org/229709",
+          "gain": 1
         },
         {
-          "id": "XC961965",
-          "url": "https://xeno-canto.org/961965/download",
+          "id": "XC899401",
+          "url": "https://xeno-canto.org/899401/download",
           "duration": 6,
-          "type": "call",
-          "recordist": "A Richardson",
-          "location": "Carlsbad, Eddy County, New Mexico, United States",
+          "type": "song",
+          "recordist": "Paul Driver",
+          "location": "Bryce Canyon City, Garfield County, Utah, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/961965",
+          "sourceUrl": "https://xeno-canto.org/899401",
+          "gain": 0.4618489918952488
+        },
+        {
+          "id": "XC229708",
+          "url": "https://xeno-canto.org/229708/download",
+          "duration": 12,
+          "type": "song",
+          "recordist": "Peter Boesman",
+          "location": "Mount Laguna, CA, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+          "sourceUrl": "https://xeno-canto.org/229708",
           "gain": 1
         }
-      ],
-      "field": "Year-round in oak savanna and pasture edges. Cavity nester; competes with starlings, swallows, and other bluebirds for nest holes."
+      ]
     },
     {
       "id": "chestnut-backed-chickadee",
       "commonName": "Chestnut-backed Chickadee",
       "scientificName": "Poecile rufescens",
       "mnemonic": "Buzzy, hurried 'chick-a-dee-dee'",
+      "field": "Year-round in mixed evergreen forest. Often the lead species in mixed-flock foraging movements through the winter canopy.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Chestnut-backed_Chickadee_2154ab_%28cropped%29.jpg/330px-Chestnut-backed_Chickadee_2154ab_%28cropped%29.jpg",
       "recordings": [
         {
@@ -445,14 +479,14 @@
           "sourceUrl": "https://xeno-canto.org/363150",
           "gain": 0.3051406029141043
         }
-      ],
-      "field": "Year-round in mixed evergreen forest. Often the lead species in mixed-flock foraging movements through the winter canopy."
+      ]
     },
     {
       "id": "spotted-towhee",
       "commonName": "Spotted Towhee",
       "scientificName": "Pipilo maculatus",
       "mnemonic": "Drink your teeeea",
+      "field": "Year-round in dense scrub. Forages by 'double-scratching' both feet backward in leaf litter — the rustle is often the first sign of the bird.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Spotted_Towhee_%2832684403303%29.jpg/330px-Spotted_Towhee_%2832684403303%29.jpg",
       "recordings": [
         {
@@ -488,14 +522,15 @@
           "sourceUrl": "https://xeno-canto.org/728366",
           "gain": 0.2155261643566158
         }
-      ],
-      "field": "Year-round in dense scrub. Forages by 'double-scratching' both feet backward in leaf litter \u2014 the rustle is often the first sign of the bird."
+      ]
     },
     {
       "id": "warbling-vireo",
       "commonName": "Western Warbling-Vireo",
       "scientificName": "Vireo swainsoni",
+      "xcAlias": "Vireo gilvus",
       "mnemonic": "Long, run-on warble ending up",
+      "field": "April through September in tall riparian and oak gallery. The slow-building warble is delivered from a single mid-canopy perch. Split from Eastern Warbling-Vireo in the 66th AOS Supplement (2025).",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Warbling_vireo_%2882141%29.jpg/330px-Warbling_vireo_%2882141%29.jpg",
       "recordings": [
         {
@@ -531,8 +566,93 @@
           "sourceUrl": "https://xeno-canto.org/477609",
           "gain": 0.4581418867145334
         }
-      ],
-      "field": "April through September in tall riparian and oak gallery. The slow-building warble is delivered from a single mid-canopy perch. Split from Eastern Warbling-Vireo in the 66th AOS Supplement (2025)."
+      ]
+    },
+    {
+      "id": "downy-woodpecker",
+      "commonName": "Downy Woodpecker",
+      "scientificName": "Dryobates pubescens",
+      "mnemonic": "High descending whinny; sharp 'pik' call",
+      "field": "Year-round in oak and riparian edges. Smallest North American woodpecker; the short stubby bill (about a third the head's length) separates it from the otherwise identical Hairy Woodpecker.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Dryobates_pubescens_UL_03.jpg/330px-Dryobates_pubescens_UL_03.jpg",
+      "recordings": [
+        {
+          "id": "XC542747",
+          "url": "https://xeno-canto.org/542747/download",
+          "duration": 4,
+          "type": "song",
+          "recordist": "William Whitehead",
+          "location": "Hawk Rise Sanctuary (near  Linden), Union County, New Jersey, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/542747",
+          "gain": 0.32847324430306774
+        },
+        {
+          "id": "XC1049467",
+          "url": "https://xeno-canto.org/1049467/download",
+          "duration": 9,
+          "type": "call, Whinny",
+          "recordist": "Valerie Heemstra",
+          "location": "Nadeau Township (near  Carney), Menominee County, Michigan, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/1049467",
+          "gain": 0.39400342764474555
+        },
+        {
+          "id": "XC144084",
+          "url": "https://xeno-canto.org/144084/download",
+          "duration": 7,
+          "type": "call",
+          "recordist": "Mike Nelson",
+          "location": "Schoolhouse Gap Trail, Great Smoky Mountains National Park, Tennessee, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/144084",
+          "gain": 0.8619855787057585
+        }
+      ]
+    },
+    {
+      "id": "nuttalls-woodpecker",
+      "commonName": "Nuttall's Woodpecker",
+      "scientificName": "Dryobates nuttallii",
+      "mnemonic": "Sharp rattling 'prrrt'; sharper than Downy's whinny",
+      "field": "Year-round in California oak woodland — a near-endemic to California (just barely into Baja). Black-and-white ladder-backed; barely overlaps with Downy in habitat preference.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/NuttallsWoodpecker-28MAR2016.jpg/330px-NuttallsWoodpecker-28MAR2016.jpg",
+      "recordings": [
+        {
+          "id": "XC408009",
+          "url": "https://xeno-canto.org/408009/download",
+          "duration": 10,
+          "type": "song",
+          "recordist": "Frank Lambert",
+          "location": "Pine Valley, San Diego County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+          "sourceUrl": "https://xeno-canto.org/408009",
+          "gain": 0.37110772949292586
+        },
+        {
+          "id": "XC482294",
+          "url": "https://xeno-canto.org/482294/download",
+          "duration": 8,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "Monument Rd and nearby trails, Tijuana River Valley, San Diego, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/482294",
+          "gain": 0.49945918020824825
+        },
+        {
+          "id": "XC161352",
+          "url": "https://xeno-canto.org/161352/download",
+          "duration": 8,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "Hollenbeck Canyon Trail, Jamul, San Diego County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/161352",
+          "gain": 0.7834296427662116
+        }
+      ]
     }
   ],
   "lessons": [
@@ -580,8 +700,18 @@
       "length": 8
     },
     {
+      "id": "ow-5",
+      "title": "Small Woodpeckers",
+      "speciesIds": [
+        "downy-woodpecker",
+        "nuttalls-woodpecker",
+        "acorn-woodpecker"
+      ],
+      "length": 8
+    },
+    {
       "id": "ow-review",
-      "title": "Review: All 13",
+      "title": "Review: All 15",
       "speciesIds": [
         "acorn-woodpecker",
         "oak-titmouse",
@@ -595,9 +725,11 @@
         "western-bluebird",
         "chestnut-backed-chickadee",
         "spotted-towhee",
-        "warbling-vireo"
+        "warbling-vireo",
+        "downy-woodpecker",
+        "nuttalls-woodpecker"
       ],
-      "length": 12
+      "length": 14
     }
   ]
 }

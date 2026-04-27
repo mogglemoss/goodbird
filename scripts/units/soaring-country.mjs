@@ -23,12 +23,15 @@ export const SPECIES = [
   { id: "northern-harrier",      commonName: "Northern Harrier",     scientificName: "Circus hudsonius",       mnemonic: "Mostly silent in winter; nasal 'eh-eh-eh' at nest", field: "October through April in pasture and marsh — males pale gray, females and juveniles brown. Distinctive low coursing flight with wings held in a shallow V and a white rump patch." },
   { id: "osprey",                commonName: "Osprey",               scientificName: "Pandion haliaetus",      mnemonic: "Sharp piercing whistles, often a series", field: "March through October at Tomales Bay and Bolinas Lagoon; some winter. Plunge-dives feet-first for fish from a hover. The whistle is a clear, evenly-spaced series — totally distinct from a hawk's scream." },
   { id: "peregrine-falcon",      commonName: "Peregrine Falcon",     scientificName: "Falco peregrinus",       mnemonic: "Harsh 'kak-kak-kak' near eyrie", field: "Year-round on the cliffs of Pt. Reyes and Marin Headlands. Pointed wings and short tail in flight. Diving stoop reaches 200+ mph — fastest animal on earth." },
+  // The fast cliff-side aerialist
+  { id: "white-throated-swift",  commonName: "White-throated Swift",  scientificName: "Aeronautes saxatalis",   mnemonic: "Loud descending chittering 'kee-kee-kee-kee' from overhead", field: "March through October on coastal cliffs and inland canyons (Pt. Reyes lighthouse cliffs, Bolinas headlands). Black-and-white roller-coaster flight; courtship pairs lock together and tumble through the air." },
 ];
 
 export const LESSONS = [
   { id: "sc-1",      title: "Big Soarers",            speciesIds: ["turkey-vulture", "common-raven", "bald-eagle"], length: 8 },
   { id: "sc-2",      title: "Pursuit & Stoop",        speciesIds: ["coopers-hawk", "sharp-shinned-hawk", "peregrine-falcon"], length: 8 },
   { id: "sc-3",      title: "Field & Marsh Hunters",  speciesIds: ["red-shouldered-hawk", "northern-harrier", "osprey"], length: 8 },
-  { id: "sc-review", title: "Review: All 9",          speciesIds: [], length: 12 },
+  { id: "sc-4",      title: "Cliffs & Canyons",       speciesIds: ["white-throated-swift", "peregrine-falcon", "common-raven"], length: 8 },
+  { id: "sc-review", title: "Review: All 10",         speciesIds: [], length: 12 },
 ];
 LESSONS[LESSONS.length - 1].speciesIds = SPECIES.map((s) => s.id);

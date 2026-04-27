@@ -1,6 +1,9 @@
 // Night Voices — owls and nocturnal callers across West Marin habitats.
-// Note: deliberately omits Northern Spotted Owl — endangered & sensitive
-// to playback; not appropriate for an ear-training app at this scale.
+// Includes Northern Spotted Owl (Strix occidentalis caurina) so users can
+// recognize it if heard — but the species is federally Threatened and the
+// field note is firm: identify only, never play recordings near suspected
+// territory. Our global Field Ethics callout in Settings says the same;
+// this is the one species where we double-down on it explicitly.
 
 export const UNIT = {
   id: "night-voices",
@@ -20,12 +23,14 @@ export const SPECIES = [
   { id: "barn-owl",                commonName: "Barn Owl",               scientificName: "Tyto alba",               mnemonic: "Eerie raspy scream", wikipediaTitle: "Western barn owl", field: "Year-round in open country with old buildings. Nests in barns, hollow trees, and tower cavities; relies on hearing alone to capture prey in total darkness." },
   { id: "long-eared-owl", commonName: "Long-eared Owl",         scientificName: "Asio otus",               mnemonic: "Soft, even 'hoo' every few seconds", field: "Year-round but uncommon; numbers higher in winter. The 'ear' tufts are skin and feather, not actual ears." },
   { id: "common-nighthawk",        commonName: "Common Nighthawk",       scientificName: "Chordeiles minor",        mnemonic: "Nasal 'peent' overhead at dusk", field: "May through September; declining in California. Forages on the wing at dusk, with the male's booming display dive audible across pastures." },
+  { id: "spotted-owl",             commonName: "Spotted Owl",            scientificName: "Strix occidentalis",      mnemonic: "Four-note hoot 'who, who-who, whoo' — paced and resonant", field: "Year-round in old-growth conifer (Mt. Tam, the deeper Bolinas Ridge canyons). The local subspecies is Northern Spotted Owl (S. o. caurina), federally Threatened. **Listen to recordings here for ID — never play them in the field. Disturbance from playback is documented to displace nesting birds.**" },
 ];
 
 export const LESSONS = [
   { id: "nv-1",      title: "The Big Owls",       speciesIds: ["great-horned-owl", "barn-owl", "western-screech-owl"], length: 8 },
   { id: "nv-2",      title: "Small Owls",         speciesIds: ["northern-saw-whet-owl", "northern-pygmy-owl", "long-eared-owl"], length: 8 },
   { id: "nv-3",      title: "After the Owls",     speciesIds: ["common-poorwill", "common-nighthawk", "barn-owl"], length: 8 },
-  { id: "nv-review", title: "Review: All 8",      speciesIds: [], length: 10 },
+  { id: "nv-4",      title: "Old-Growth Owls",    speciesIds: ["spotted-owl", "northern-pygmy-owl", "northern-saw-whet-owl"], length: 8 },
+  { id: "nv-review", title: "Review: All 9",      speciesIds: [], length: 12 },
 ];
 LESSONS[LESSONS.length - 1].speciesIds = SPECIES.map((s) => s.id);

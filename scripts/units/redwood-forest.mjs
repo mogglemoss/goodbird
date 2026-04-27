@@ -24,12 +24,15 @@ export const SPECIES = [
   { id: "hermit-warbler",        commonName: "Hermit Warbler",       scientificName: "Setophaga occidentalis", mnemonic: "Buzzy 'see-see-see-see-zee'", field: "April through August in tall conifer canopy. Yellow head, gray back, white belly. Easier to hear than to see — stays high in the redwood crowns." },
   { id: "macgillivrays-warbler", commonName: "MacGillivray's Warbler", scientificName: "Geothlypis tolmiei",   mnemonic: "Rolling 'churry-churry-churry, sweet-sweet'", field: "April through September in dense brushy undergrowth at forest edges. Gray hood with broken white eye-arcs and a dark eye-line. Skulks; voice is the giveaway." },
   { id: "black-throated-gray-warbler", commonName: "Black-throated Gray Warbler", scientificName: "Setophaga nigrescens", mnemonic: "Buzzy 'weezy-weezy-weezy-weezy-WEET'", field: "April through September in mixed oak-conifer canopy. Boldly patterned in black, white, and gray with a tiny yellow lore spot. Often forages mid-story." },
+  // The improbable seabird that nests in redwood crowns. Federally Threatened.
+  { id: "marbled-murrelet",      commonName: "Marbled Murrelet",       scientificName: "Brachyramphus marmoratus", mnemonic: "Ringing 'keer' calls in pre-dawn flights through the canopy", field: "Year-round; forages at sea but nests on mossy old-growth limbs in Muir Woods, Mt. Tam, and Bolinas Ridge — sometimes 25+ km inland. Federally Threatened. **Listen here for ID — never play recordings in the field. Disturbance from playback is documented to disrupt nesting.**" },
 ];
 
 export const LESSONS = [
   { id: "rf-1",      title: "Big Forest Birds",       speciesIds: ["pileated-woodpecker", "vauxs-swift", "band-tailed-pigeon"], length: 8 },
   { id: "rf-2",      title: "Forest Floor & Bark",    speciesIds: ["red-breasted-sapsucker", "pacific-wren", "hermit-thrush"], length: 8 },
   { id: "rf-3",      title: "Forest Warblers",        speciesIds: ["hermit-warbler", "macgillivrays-warbler", "black-throated-gray-warbler"], length: 8 },
-  { id: "rf-review", title: "Review: All 9",          speciesIds: [], length: 12 },
+  { id: "rf-4",      title: "Old-Growth Specialists", speciesIds: ["marbled-murrelet", "pileated-woodpecker", "vauxs-swift"], length: 8 },
+  { id: "rf-review", title: "Review: All 10",         speciesIds: [], length: 12 },
 ];
 LESSONS[LESSONS.length - 1].speciesIds = SPECIES.map((s) => s.id);

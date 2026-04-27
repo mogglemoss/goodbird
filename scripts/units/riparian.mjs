@@ -26,6 +26,8 @@ export const SPECIES = [
   { id: "western-wood-pewee",      commonName: "Western Wood-Pewee",     scientificName: "Contopus sordidulus",     mnemonic: "Burry, slurred 'peeer'", field: "May through September in oak and riparian edges. Sings the burry 'pee-er' from an exposed perch, often returning to the same one between sallies." },
   // Cavity-nester of slow stream backwaters and willow ponds
   { id: "wood-duck",               commonName: "Wood Duck",              scientificName: "Aix sponsa",              mnemonic: "Squealing 'oo-EEK oo-EEK' rising whistle (female)", field: "Year-round on slow creek backwaters and willow-shaded ponds. Cavity nester; ducklings leap from the nest hole hours after hatching. Drakes one of the most striking ducks in North America." },
+  // The underwater songbird — songs over fast water you have to lean in for
+  { id: "american-dipper",         commonName: "American Dipper",        scientificName: "Cinclus mexicanus",       mnemonic: "Long bubbly wren-like song carrying over rapids", field: "Year-round on swift unsilted streams — Lagunitas Creek above the dam, Olema Creek tributaries. The only North American songbird that swims; walks underwater grazing aquatic insects from cobble. Constantly bobs on its perch." },
 ];
 
 export const LESSONS = [
@@ -34,6 +36,7 @@ export const LESSONS = [
   { id: "rp-3",      title: "Brushy Banks",         speciesIds: ["song-sparrow", "spotted-towhee", "common-yellowthroat", "lazuli-bunting"], length: 8 },
   { id: "rp-4",      title: "Loud & Liquid",        speciesIds: ["black-headed-grosbeak", "belted-kingfisher", "pacific-wren"], length: 8 },
   { id: "rp-5",      title: "Backwater Quiet",      speciesIds: ["wood-duck", "belted-kingfisher", "black-phoebe"], length: 8 },
-  { id: "rp-review", title: "Review: All 15",       speciesIds: [], length: 14 },
+  { id: "rp-6",      title: "Streamcraft Specialists", speciesIds: ["american-dipper", "belted-kingfisher", "pacific-wren"], length: 8 },
+  { id: "rp-review", title: "Review: All 16",       speciesIds: [], length: 14 },
 ];
 LESSONS[LESSONS.length - 1].speciesIds = SPECIES.map((s) => s.id);

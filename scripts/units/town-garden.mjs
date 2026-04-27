@@ -29,13 +29,15 @@ export const SPECIES = [
   { id: "house-sparrow",         commonName: "House Sparrow",        scientificName: "Passer domesticus",      mnemonic: "Endless cheerful 'chirrup chirrup'", field: "Year-round at feed stores, parking lots, and dense hedges. Introduced from Europe in the 1850s. Males have black bib and gray cap; females nondescript brown." },
   { id: "european-starling",     commonName: "European Starling",    scientificName: "Sturnus vulgaris",       mnemonic: "Wheezy whistles, clicks, and mimicry of other species", field: "Year-round in town flocks; introduced 1890. A relentless mimic — can copy meadowlarks, Killdeer, even car alarms. Glossy black with white spots in fall, plain glossy in spring." },
   { id: "rock-pigeon",           commonName: "Rock Pigeon",          scientificName: "Columba livia",          mnemonic: "Soft cooing 'oh-roo-coo-coo'", field: "Year-round around buildings, bridges, and barns. The familiar feral pigeon, ancestrally a cliff-nester. Highly variable plumage — feral flocks include white, blue-bar, checker, and red morphs." },
+  // Migration-only hummingbird; passes through West Marin gardens spring & fall
+  { id: "rufous-hummingbird",    commonName: "Rufous Hummingbird",   scientificName: "Selasphorus rufus",      mnemonic: "Sharp metallic 'tip' chips; wing buzz 'zzeee'", field: "March through May (spring migration) and July through September (fall) at flowering shrubs and feeders. Males are entirely rusty-orange. Aggressive at feeders, often dominating Anna's and Allen's despite smaller size." },
 ];
 
 export const LESSONS = [
   { id: "tg-1",      title: "Lawn Birds",             speciesIds: ["american-robin", "northern-flicker", "brown-headed-cowbird"], length: 8 },
-  { id: "tg-2",      title: "Hummers & Finches",      speciesIds: ["allens-hummingbird", "house-finch", "american-goldfinch"], length: 8 },
+  { id: "tg-2",      title: "Hummers & Finches",      speciesIds: ["allens-hummingbird", "rufous-hummingbird", "house-finch", "american-goldfinch"], length: 8 },
   { id: "tg-3",      title: "Winter Visitors",        speciesIds: ["yellow-rumped-warbler", "ruby-crowned-kinglet", "cedar-waxwing"], length: 8 },
   { id: "tg-4",      title: "Introduced Townies",     speciesIds: ["house-sparrow", "european-starling", "rock-pigeon"], length: 8 },
-  { id: "tg-review", title: "Review: All 12",         speciesIds: [], length: 12 },
+  { id: "tg-review", title: "Review: All 13",         speciesIds: [], length: 14 },
 ];
 LESSONS[LESSONS.length - 1].speciesIds = SPECIES.map((s) => s.id);
