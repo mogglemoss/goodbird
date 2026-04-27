@@ -92,7 +92,7 @@ export function UnitRoute() {
                       title={s.commonName}
                     >
                       {s.imageUrl ? (
-                        <img src={s.imageUrl} alt="" className="h-full w-full object-cover" />
+                        <img src={s.imageUrl} alt="" className="h-full w-full object-cover" style={{ objectPosition: s.imagePosition ?? "top" }} />
                       ) : (
                         <div className="grid h-full w-full place-items-center text-base">🪶</div>
                       )}
@@ -127,7 +127,13 @@ export function UnitRoute() {
             >
               <div className="aspect-square w-full overflow-hidden rounded-xl bg-(--color-sand-50)">
                 {sp.imageUrl ? (
-                  <img src={sp.imageUrl} alt="" loading="lazy" className="h-full w-full object-cover transition-transform group-hover:scale-105" />
+                  <img
+                    src={sp.imageUrl}
+                    alt=""
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform group-hover:scale-105"
+                    style={{ objectPosition: sp.imagePosition ?? "top" }}
+                  />
                 ) : (
                   <div className="grid h-full w-full place-items-center text-2xl">🪶</div>
                 )}

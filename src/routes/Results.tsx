@@ -178,7 +178,13 @@ function MissedSpeciesRow({ speciesId }: { speciesId: string }) {
       >
         <div className="h-12 w-12 shrink-0 overflow-hidden rounded-xl bg-(--color-sand-50)">
           {sp.imageUrl ? (
-            <img src={sp.imageUrl} alt="" className="h-full w-full object-cover" loading="lazy" />
+            <img
+              src={sp.imageUrl}
+              alt=""
+              loading="lazy"
+              className="h-full w-full object-cover"
+              style={{ objectPosition: sp.imagePosition ?? "top" }}
+            />
           ) : (
             <div className="grid h-full w-full place-items-center text-xl">🪶</div>
           )}

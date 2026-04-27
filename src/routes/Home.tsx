@@ -9,6 +9,7 @@ import { cn } from "@/lib/cn";
 import { SettingsSheet } from "@/components/SettingsSheet";
 import { OnboardingCard } from "@/components/OnboardingCard";
 import { Hero } from "@/components/Hero";
+import { StickyTopBar } from "@/components/StickyTopBar";
 import { HabitatGlyph } from "@/components/brand/HabitatGlyph";
 import { BirdOfTheDay } from "@/components/BirdOfTheDay";
 import { InstallHint } from "@/components/InstallHint";
@@ -48,7 +49,7 @@ export function HomeRoute() {
     return target;
   })();
 
-  const heroControls = (
+  const headerControls = (
     <HeaderControls
       xp={xp}
       streakDays={streak.days}
@@ -59,8 +60,9 @@ export function HomeRoute() {
   );
 
   return (
-    <div className="mx-auto w-full max-w-md px-5 pb-24 pt-2 sm:max-w-2xl lg:max-w-4xl">
-      <Hero controls={heroControls} />
+    <div className="mx-auto w-full max-w-md px-5 pb-24 sm:max-w-2xl lg:max-w-4xl">
+      <StickyTopBar controls={headerControls} />
+      <Hero />
       <SettingsSheet open={settingsOpen} onClose={() => setSettingsOpen(false)} />
 
       <OnboardingCard />
@@ -80,32 +82,40 @@ export function HomeRoute() {
       </div>
 
       {favoriteSpecies.length > 0 && (
-        <section className="mt-10">
-          <h2 className="font-mono text-[11px] font-medium uppercase tracking-[0.2em] text-(--color-ink-soft)">
-            Favorites
-          </h2>
-          <div className="mt-3 -mx-5 overflow-x-auto px-5">
-            <ul className="flex gap-3 pb-2">
-              {favoriteSpecies.map((sp) => (
-                <li key={sp.id} className="shrink-0">
-                  <Link
-                    to={`/species/${sp.id}`}
-                    className="flex w-24 flex-col items-center gap-1.5"
-                  >
-                    <div className="aspect-square w-full overflow-hidden rounded-2xl border-2 border-(--color-line) bg-(--color-sand-50) transition-colors hover:border-(--color-moss-300)">
-                      {sp.imageUrl ? (
-                        <img src={sp.imageUrl} alt="" loading="lazy" className="h-full w-full object-cover" />
-                      ) : (
-                        <div className="grid h-full w-full place-items-center text-2xl">🪶</div>
-                      )}
-                    </div>
-                    <div className="line-clamp-2 w-full text-center text-xs font-medium leading-tight">
-                      {sp.commonName}
-                    </div>
-                  </Link>
-                </li>
-              ))}
-            </ul>
+        <section className="mt-12">
+          <div className="flex items-baseline justify-between">
+            <h2 className="font-mono text-[11px] font-medium uppercase tracking-[0.2em] text-(--color-ink-soft)">
+              Favorites
+            </h2>
+            <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-(--color-ink-soft)">
+              {favoriteSpecies.length} {favoriteSpecies.length === 1 ? "bird" : "birds"}
+            </span>
+          </div>
+          <div className="mt-3 grid grid-cols-3 gap-3 sm:grid-cols-4 lg:grid-cols-6">
+            {favoriteSpecies.map((sp) => (
+              <Link
+                key={sp.id}
+                to={`/species/${sp.id}`}
+                className="group flex flex-col items-center gap-1.5 rounded-(--radius-card) border-2 border-(--color-line) bg-(--color-surface) p-2 shadow-(--shadow-soft) transition-colors hover:border-(--color-moss-300)"
+              >
+                <div className="aspect-square w-full overflow-hidden rounded-xl bg-(--color-sand-50)">
+                  {sp.imageUrl ? (
+                    <img
+                      src={sp.imageUrl}
+                      alt=""
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform group-hover:scale-105"
+                      style={{ objectPosition: sp.imagePosition ?? "top" }}
+                    />
+                  ) : (
+                    <div className="grid h-full w-full place-items-center text-2xl">🪶</div>
+                  )}
+                </div>
+                <div className="line-clamp-2 w-full text-center text-xs font-medium leading-tight">
+                  {sp.commonName}
+                </div>
+              </Link>
+            ))}
           </div>
         </section>
       )}
@@ -286,7 +296,12 @@ function HabitatCard({ unit, index, completed }: HabitatCardProps) {
                 title={s.commonName}
               >
                 {s.imageUrl ? (
-                  <img src={s.imageUrl} alt="" className="h-full w-full object-cover" />
+                  <img
+                    src={s.imageUrl}
+                    alt=""
+                    className="h-full w-full object-cover"
+                    style={{ objectPosition: s.imagePosition ?? "top" }}
+                  />
                 ) : (
                   <div className="grid h-full w-full place-items-center text-sm">🪶</div>
                 )}

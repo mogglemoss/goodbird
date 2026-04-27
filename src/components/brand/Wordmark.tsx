@@ -7,9 +7,9 @@ interface Props {
 }
 
 const SIZES = {
-  sm: { wrap: "gap-1.5", bird: "h-5 w-auto", text: "text-xl" },
-  md: { wrap: "gap-2",   bird: "h-7 w-auto", text: "text-2xl" },
-  lg: { wrap: "gap-3",   bird: "h-10 w-auto", text: "text-4xl" },
+  sm: { wrap: "gap-0", bird: "h-5 w-auto", text: "text-xl -ms-0.5" },
+  md: { wrap: "gap-0", bird: "h-7 w-auto", text: "text-2xl -ms-0.5" },
+  lg: { wrap: "gap-0", bird: "h-10 w-auto", text: "text-4xl -ms-1" },
 };
 
 export function Wordmark({ size = "sm", className }: Props) {

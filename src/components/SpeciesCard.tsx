@@ -42,6 +42,7 @@ export function SpeciesCard({ species, onClick, state = "idle", showName = true,
             alt={species.commonName}
             loading="lazy"
             className="h-full w-full object-cover"
+            style={{ objectPosition: species.imagePosition ?? "top" }}
           />
         ) : (
           <div className="flex h-full w-full items-center justify-center text-3xl">🪶</div>

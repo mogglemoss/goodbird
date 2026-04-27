@@ -57,7 +57,13 @@ export function BirdOfTheDay() {
         )}
       >
         {species.imageUrl ? (
-          <img src={species.imageUrl} alt="" loading="lazy" className="h-full w-full object-cover" />
+          <img
+            src={species.imageUrl}
+            alt=""
+            loading="lazy"
+            className="h-full w-full object-cover"
+            style={{ objectPosition: species.imagePosition ?? "top" }}
+          />
         ) : (
           <div className="grid h-full w-full place-items-center bg-(--color-sand-50) text-2xl">🪶</div>
         )}

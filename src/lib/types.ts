@@ -18,6 +18,10 @@ export interface Species {
   recordings: Recording[];
   /** Optional one-line "where + when" hint for naturalists. */
   field?: string;
+  /** Override default object-position when the photo's subject is offset.
+   *  Defaults to "top" for small circular crops; "center" for the detail page.
+   *  Use this for photos where the bird is unusually placed and gets cropped poorly. */
+  imagePosition?: "top" | "center" | "bottom" | "left" | "right";
 }
 
 export interface LessonRef {
