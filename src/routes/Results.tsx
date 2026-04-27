@@ -4,8 +4,10 @@ import { motion } from "framer-motion";
 import confetti from "canvas-confetti";
 import { useGame } from "@/game/store";
 import { lessonComplete } from "@/lib/feedback";
-import { getLesson, getSpecies, nextLesson as findNextLesson } from "@/lib/manifest";
+import { getLesson, getSpecies, getUnitForLesson, nextLesson as findNextLesson } from "@/lib/manifest";
 import { PlaySoundButton } from "@/components/PlaySoundButton";
+import { ACCENTS } from "@/lib/theme";
+import { cn } from "@/lib/cn";
 
 interface Snapshot {
   xpGained: number;
@@ -63,6 +65,8 @@ export function ResultsRoute() {
     try { return getLesson(id).title; } catch { return "Lesson"; }
   }, [id]);
   const nextLesson = useMemo(() => findNextLesson(id), [id]);
+  const unit = useMemo(() => getUnitForLesson(id), [id]);
+  const accent = unit ? ACCENTS[unit.accent] : null;
 
   if (!snap) return null;
   const accuracy = Math.round((snap.correct / snap.total) * 100);
@@ -73,7 +77,7 @@ export function ResultsRoute() {
         initial={{ scale: 0.6, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ type: "spring", stiffness: 220, damping: 18 }}
-        className="grid h-24 w-24 place-items-center rounded-full bg-(--color-moss-100) text-5xl"
+        className={cn("grid h-24 w-24 place-items-center rounded-full text-5xl", accent?.badgeBg ?? "bg-(--color-moss-100)")}
       >
         {snap.passed ? "🪶" : "🌱"}
       </motion.div>
@@ -84,7 +88,12 @@ export function ResultsRoute() {
         <p className="mt-1 text-(--color-ink-soft)">{lessonTitle}</p>
       </div>
       <div className="grid w-full grid-cols-3 gap-3">
-        <Stat label="XP" value={`+${snap.xpGained}`} accent="moss" />
+        <Stat
+          label="XP"
+          value={`+${snap.xpGained}`}
+          highlightBg={accent?.doneBg}
+          highlightBorder={accent?.unlockedBorder}
+        />
         <Stat label="Accuracy" value={`${accuracy}%`} />
         <Stat label="Hearts" value={`${snap.hearts}/3`} />
       </div>
@@ -93,11 +102,12 @@ export function ResultsRoute() {
         xpToday={snap.xpToday}
         dailyGoal={snap.dailyGoal}
         justReached={snap.goalReached}
+        fillClass={accent?.doneBadgeBg}
       />
 
       {snap.missedSpeciesIds.length > 0 && (
         <section className="w-full">
-          <h2 className="text-left text-xs font-semibold uppercase tracking-wider text-(--color-ink-soft)">
+          <h2 className="text-left font-mono text-[11px] font-medium uppercase tracking-[0.2em] text-(--color-ink-soft)">
             Listen again
           </h2>
           <ul className="mt-2 flex flex-col gap-2">
@@ -112,7 +122,11 @@ export function ResultsRoute() {
         {snap.passed && nextLesson && completed[id] && (
           <Link
             to={`/lesson/${nextLesson.id}`}
-            className="tap-target rounded-full bg-(--color-moss-500) px-6 py-3 text-center font-semibold text-white shadow-(--shadow-pop) transition-transform active:scale-95 hover:bg-(--color-moss-600)"
+            className={cn(
+              "tap-target rounded-full px-6 py-3 text-center font-semibold text-white shadow-(--shadow-pop) transition-transform active:scale-95",
+              accent?.doneBadgeBg ?? "bg-(--color-moss-500)",
+              "hover:brightness-110",
+            )}
           >
             Next lesson →
           </Link>
@@ -120,7 +134,11 @@ export function ResultsRoute() {
         {!snap.passed && (
           <Link
             to={`/lesson/${id}`}
-            className="tap-target rounded-full bg-(--color-moss-500) px-6 py-3 text-center font-semibold text-white shadow-(--shadow-pop) transition-transform active:scale-95 hover:bg-(--color-moss-600)"
+            className={cn(
+              "tap-target rounded-full px-6 py-3 text-center font-semibold text-white shadow-(--shadow-pop) transition-transform active:scale-95",
+              accent?.doneBadgeBg ?? "bg-(--color-moss-500)",
+              "hover:brightness-110",
+            )}
           >
             Try again
           </Link>
@@ -163,7 +181,17 @@ function MissedSpeciesRow({ speciesId }: { speciesId: string }) {
   );
 }
 
-function DailyGoalBar({ xpToday, dailyGoal, justReached }: { xpToday: number; dailyGoal: number; justReached: boolean }) {
+function DailyGoalBar({
+  xpToday,
+  dailyGoal,
+  justReached,
+  fillClass,
+}: {
+  xpToday: number;
+  dailyGoal: number;
+  justReached: boolean;
+  fillClass?: string;
+}) {
   const pct = Math.min(100, Math.round((xpToday / dailyGoal) * 100));
   const reached = xpToday >= dailyGoal;
   return (
@@ -182,7 +210,7 @@ function DailyGoalBar({ xpToday, dailyGoal, justReached }: { xpToday: number; da
       </div>
       <div className="mt-2 h-2 overflow-hidden rounded-full bg-(--color-line)">
         <motion.div
-          className="h-full rounded-full bg-(--color-moss-500)"
+          className={cn("h-full rounded-full", fillClass ?? "bg-(--color-moss-500)")}
           initial={{ width: `${Math.max(0, pct - 30)}%` }}
           animate={{ width: `${pct}%` }}
           transition={{ duration: 0.7, ease: "easeOut" }}
@@ -192,11 +220,29 @@ function DailyGoalBar({ xpToday, dailyGoal, justReached }: { xpToday: number; da
   );
 }
 
-function Stat({ label, value, accent }: { label: string; value: string; accent?: "moss" }) {
+function Stat({
+  label,
+  value,
+  highlightBg,
+  highlightBorder,
+}: {
+  label: string;
+  value: string;
+  highlightBg?: string;
+  highlightBorder?: string;
+}) {
+  const highlighted = !!(highlightBg || highlightBorder);
   return (
-    <div className={`rounded-2xl border-2 border-(--color-line) bg-(--color-surface) px-3 py-4 ${accent === "moss" ? "border-(--color-moss-300) bg-(--color-moss-50)" : ""}`}>
+    <div
+      className={cn(
+        "rounded-2xl border-2 px-3 py-4",
+        highlighted
+          ? cn(highlightBorder ?? "border-(--color-moss-300)", highlightBg ?? "bg-(--color-moss-50)")
+          : "border-(--color-line) bg-(--color-surface)",
+      )}
+    >
       <div className="font-display text-2xl text-(--color-ink)">{value}</div>
-      <div className="text-xs uppercase tracking-wider text-(--color-ink-soft)">{label}</div>
+      <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-(--color-ink-soft)">{label}</div>
     </div>
   );
 }

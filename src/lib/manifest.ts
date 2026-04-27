@@ -82,3 +82,9 @@ export const nextLesson = (lessonId: string) => {
   const idx = sameUnit.findIndex((x) => x.id === lessonId);
   return sameUnit[idx + 1] ?? null;
 };
+
+export const getUnitForLesson = (lessonId: string): Unit | null => {
+  const l = lessonsById.get(lessonId);
+  if (!l?.unitId) return null;
+  return units.find((u) => u.id === l.unitId) ?? null;
+};

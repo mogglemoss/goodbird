@@ -27,6 +27,12 @@ export function SpeciesRoute() {
     allLessons.some((l) => l.unitId === u.id && l.speciesIds.includes(id)),
   );
 
+  // Pick the first member unit's accent as the page tint. Most species belong to
+  // a single unit; for a few cross-unit species (Spotted Towhee, etc.) the
+  // primary unit determines the look.
+  const primaryAccent = memberUnits[0]?.accent;
+  const accent = primaryAccent ? ACCENTS[primaryAccent] : null;
+
   const accuracy = stats && stats.timesSeen
     ? Math.round((stats.timesCorrect / stats.timesSeen) * 100)
     : null;
@@ -58,7 +64,13 @@ export function SpeciesRoute() {
         </button>
       </div>
 
-      <div className="mt-2 overflow-hidden rounded-(--radius-card) bg-(--color-sand-50) shadow-(--shadow-soft)">
+      <div
+        className={cn(
+          "mt-2 overflow-hidden rounded-(--radius-card) border-2 shadow-(--shadow-soft)",
+          accent?.unlockedBorder ?? "border-(--color-line)",
+          accent?.doneBg ?? "bg-(--color-sand-50)",
+        )}
+      >
         {species.imageUrl ? (
           <img src={species.imageUrl} alt={species.commonName} className="aspect-[4/3] w-full object-cover" />
         ) : (
@@ -111,7 +123,7 @@ export function SpeciesRoute() {
 
       <section className="mt-8">
         <div className="flex items-baseline justify-between">
-          <h2 className="text-xs font-semibold uppercase tracking-wider text-(--color-ink-soft)">
+          <h2 className="font-mono text-[11px] font-medium uppercase tracking-[0.2em] text-(--color-ink-soft)">
             Recordings ({species.recordings.length})
           </h2>
         </div>

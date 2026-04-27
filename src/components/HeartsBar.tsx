@@ -6,10 +6,12 @@ interface Props {
   max: number;
   progress: number; // 0..1
   freeplay?: boolean;
+  /** Tailwind class for the progress-bar fill — usually the unit's doneBadgeBg. */
+  progressFillClass?: string;
   onExit?: () => void;
 }
 
-export function HeartsBar({ hearts, max, progress, freeplay, onExit }: Props) {
+export function HeartsBar({ hearts, max, progress, freeplay, progressFillClass, onExit }: Props) {
   return (
     <div className="flex items-center gap-3 px-4 py-3">
       <button
@@ -23,14 +25,14 @@ export function HeartsBar({ hearts, max, progress, freeplay, onExit }: Props) {
       </button>
       <div className="relative h-3 flex-1 overflow-hidden rounded-full bg-(--color-line)">
         <motion.div
-          className="absolute inset-y-0 left-0 rounded-full bg-(--color-moss-500)"
+          className={cn("absolute inset-y-0 left-0 rounded-full", progressFillClass ?? "bg-(--color-moss-500)")}
           initial={false}
           animate={{ width: `${Math.max(4, progress * 100)}%` }}
           transition={{ type: "spring", stiffness: 200, damping: 25 }}
         />
       </div>
       {freeplay ? (
-        <span className="rounded-full border-2 border-(--color-moss-300) bg-(--color-moss-50) px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wider text-(--color-moss-700)">
+        <span className="rounded-full border-2 border-(--color-moss-300) bg-(--color-moss-50) px-2 py-0.5 font-mono text-[10px] font-semibold uppercase tracking-[0.18em] text-(--color-moss-700)">
           Freeplay
         </span>
       ) : (

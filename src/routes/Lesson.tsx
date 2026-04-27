@@ -4,6 +4,8 @@ import { ExerciseRunner } from "@/components/ExerciseRunner";
 import { HeartsBar } from "@/components/HeartsBar";
 import { useGame } from "@/game/store";
 import { STARTING_HEARTS } from "@/game/scoring";
+import { getUnitForLesson } from "@/lib/manifest";
+import { ACCENTS } from "@/lib/theme";
 
 export function LessonRoute() {
   const { id = "" } = useParams();
@@ -34,6 +36,8 @@ export function LessonRoute() {
   if (!ex) return null;
 
   const progress = active.index / active.exercises.length;
+  const unit = getUnitForLesson(id);
+  const accent = unit ? ACCENTS[unit.accent] : null;
 
   return (
     <div className="mx-auto flex h-[100dvh] w-full max-w-2xl flex-col bg-(--color-bg)">
@@ -42,6 +46,7 @@ export function LessonRoute() {
         max={STARTING_HEARTS}
         progress={progress}
         freeplay={freeplay}
+        progressFillClass={accent?.doneBadgeBg}
         onExit={() => { abandon(); nav("/"); }}
       />
       <div className="flex-1 min-h-0">
@@ -49,6 +54,7 @@ export function LessonRoute() {
           exercise={ex}
           exerciseIndex={active.index}
           previouslyAnswered={active.results[active.index] ?? null}
+          accent={unit?.accent ?? null}
           onAnswered={(correct, speciesId) => answer(correct, speciesId)}
           onContinue={next}
         />

@@ -9,6 +9,8 @@ import { correctChime, wrongBuzz } from "@/lib/feedback";
 import { stopAll } from "@/lib/audio";
 import { getSpecies } from "@/lib/manifest";
 import { PlaySoundButton } from "./PlaySoundButton";
+import { ACCENTS } from "@/lib/theme";
+import type { UnitAccent } from "@/lib/types";
 import { cn } from "@/lib/cn";
 
 interface Props {
@@ -18,11 +20,14 @@ interface Props {
    * navigated away and came back. Lets us re-show the locked feedback
    * state instead of allowing them to re-answer. */
   previouslyAnswered?: { correct: boolean } | null;
+  /** Unit accent — used to color the Hint pill so it matches the lesson's habitat. */
+  accent?: UnitAccent | null;
   onAnswered: (correct: boolean, speciesId: string | null) => void;
   onContinue: () => void;
 }
 
-export function ExerciseRunner({ exercise, exerciseIndex, previouslyAnswered, onAnswered, onContinue }: Props) {
+export function ExerciseRunner({ exercise, exerciseIndex, previouslyAnswered, accent, onAnswered, onContinue }: Props) {
+  const a = accent ? ACCENTS[accent] : null;
   // Locked answer state lives here so the child can stay simple.
   // If the store already has a result for this exercise (user navigated to a
   // species page and back), seed locked so they can't re-answer.
@@ -76,7 +81,12 @@ export function ExerciseRunner({ exercise, exerciseIndex, previouslyAnswered, on
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 8 }}
                   transition={{ duration: 0.18 }}
-                  className="max-w-xs rounded-2xl border-2 border-(--color-moss-300) bg-(--color-moss-50) px-4 py-2 text-center text-sm font-medium text-(--color-moss-700) shadow-(--shadow-soft)"
+                  className={cn(
+                    "max-w-xs rounded-2xl border-2 px-4 py-2 text-center text-sm font-medium shadow-(--shadow-soft)",
+                    a?.unlockedBorder ?? "border-(--color-moss-300)",
+                    a?.doneBg ?? "bg-(--color-moss-50)",
+                    a?.label ?? "text-(--color-moss-700)",
+                  )}
                 >
                   "{hintFor(exercise)}"
                 </motion.div>
@@ -88,8 +98,8 @@ export function ExerciseRunner({ exercise, exerciseIndex, previouslyAnswered, on
               className={cn(
                 "rounded-full border-2 bg-(--color-surface) px-3 py-1 text-xs font-semibold shadow-(--shadow-soft) transition-colors cursor-pointer",
                 hintShown
-                  ? "border-(--color-moss-500) text-(--color-moss-700)"
-                  : "border-(--color-line) text-(--color-ink-soft) hover:border-(--color-moss-300)",
+                  ? cn(a?.doneBorder ?? "border-(--color-moss-500)", a?.label ?? "text-(--color-moss-700)")
+                  : cn("border-(--color-line) text-(--color-ink-soft)", a?.unlockedHover ?? "hover:border-(--color-moss-300)"),
               )}
             >
               {hintShown ? "Hide hint" : "💡 Hint"}
