@@ -94,10 +94,17 @@ const GLYPHS: Record<UnitAccent, ReactElement> = {
       <circle cx="6" cy="14" r="0.7" fill="currentColor" />
     </>
   ),
-  // Fallback (sand) — unused but type-required
+  // Tomales Bay / Estuary & Tideflats — shorebird at the tideline
   indigo: (
     <>
-      <circle cx="16" cy="16" r="10" />
+      {/* Tideline — two soft horizontals */}
+      <path d="M3 22c4-1 6-1 10 0s6 1 10 0 4-1 6-1" strokeWidth="1.2" />
+      <path d="M3 26h26" strokeWidth="1" />
+      {/* Long-billed shorebird silhouette */}
+      <path d="M14 16a2.5 2.5 0 0 1 5 0v3h-5z" fill="currentColor" stroke="none" />
+      <circle cx="20.4" cy="14.4" r="1.6" fill="currentColor" stroke="none" />
+      <path d="M22 14l5-3" />
+      <path d="M15 19v3M18 19v3" strokeWidth="1.2" />
     </>
   ),
 };

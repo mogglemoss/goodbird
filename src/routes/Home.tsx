@@ -11,10 +11,12 @@ import { OnboardingCard } from "@/components/OnboardingCard";
 import { Hero } from "@/components/Hero";
 import { StickyTopBar } from "@/components/StickyTopBar";
 import { HabitatGlyph } from "@/components/brand/HabitatGlyph";
+import { CompletionSeal } from "@/components/brand/CompletionSeal";
 import { BirdOfTheDay } from "@/components/BirdOfTheDay";
 import { InstallHint } from "@/components/InstallHint";
 import { DailyReviewCard } from "@/components/DailyReviewCard";
 import { SpeciesSearch, useSearchHotkey } from "@/components/SpeciesSearch";
+import { FieldMasterBanner } from "@/components/FieldMasterBanner";
 
 export function HomeRoute() {
   const xp = useGame((s) => s.xp);
@@ -37,6 +39,15 @@ export function HomeRoute() {
     const ids = Object.keys(favorites);
     return ids.map((id) => { try { return getSpecies(id); } catch { return null; } }).filter((s): s is Species => !!s);
   }, [favorites]);
+
+  // True once every lesson in every unit has been completed at least once.
+  // Drives the FieldMasterBanner + variant copy on Results.
+  const allUnitsComplete = useMemo(() => {
+    if (units.length === 0) return false;
+    return units.every((u) =>
+      getLessonsForUnit(u.id).every((l) => completed[l.id]),
+    );
+  }, [completed]);
 
   const continueTarget = (() => {
     let bestAt = 0;
@@ -78,6 +89,8 @@ export function HomeRoute() {
       <BirdOfTheDay />
 
       <DailyReviewCard />
+
+      {allUnitsComplete && <FieldMasterBanner />}
 
       {continueTarget && (
         <ContinueChip target={continueTarget} />
@@ -286,20 +299,7 @@ function HabitatCard({ unit, index, completed }: HabitatCardProps) {
             {num}
           </div>
           <div className="flex items-center gap-1.5">
-            {isComplete && (
-              <span
-                aria-label="Habitat complete"
-                title="Complete"
-                className={cn(
-                  "grid h-6 w-6 place-items-center rounded-full text-white shadow-(--shadow-soft)",
-                  accent.doneBadgeBg,
-                )}
-              >
-                <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-              </span>
-            )}
+            {isComplete && <CompletionSeal bgClass={accent.doneBadgeBg} />}
             <div className={accent.label}>
               <HabitatGlyph accent={unit.accent} />
             </div>

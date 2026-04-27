@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import confetti from "canvas-confetti";
 import { useGame } from "@/game/store";
 import { lessonComplete } from "@/lib/feedback";
-import { getLesson, getLessonsForUnit, getSpecies, getUnitForLesson, nextLesson as findNextLesson } from "@/lib/manifest";
+import { getLesson, getLessonsForUnit, getSpecies, getUnitForLesson, nextLesson as findNextLesson, units } from "@/lib/manifest";
 import { PlaySoundButton } from "@/components/PlaySoundButton";
 import { ShareButton } from "@/components/ShareButton";
 import { ACCENTS } from "@/lib/theme";
@@ -60,12 +60,25 @@ export function ResultsRoute() {
           }, 350);
         }
         // Bigger celebration when the entire unit was completed this lesson.
-        if (unit && getLessonsForUnit(unit.id).every((l) => completed[l.id] || l.id === id)) {
+        const unitNowDone = !!unit && getLessonsForUnit(unit.id).every((l) => completed[l.id] || l.id === id);
+        if (unitNowDone) {
           setTimeout(() => {
             confetti({ particleCount: 220, spread: 160, startVelocity: 55, origin: { y: 0.4 } });
             confetti({ particleCount: 80, angle: 60, spread: 70, origin: { x: 0, y: 0.5 } });
             confetti({ particleCount: 80, angle: 120, spread: 70, origin: { x: 1, y: 0.5 } });
           }, 600);
+        }
+        // Capstone: this lesson finished the *last* unmaster habitat. One more
+        // generous volley a beat after the unit-complete one so the moment lands.
+        const allNowDone = unitNowDone && units.every((u) =>
+          getLessonsForUnit(u.id).every((l) => completed[l.id] || l.id === id),
+        );
+        if (allNowDone) {
+          setTimeout(() => {
+            confetti({ particleCount: 320, spread: 180, startVelocity: 60, origin: { y: 0.35 } });
+            confetti({ particleCount: 140, angle: 55, spread: 80, origin: { x: 0.05, y: 0.5 } });
+            confetti({ particleCount: 140, angle: 125, spread: 80, origin: { x: 0.95, y: 0.5 } });
+          }, 1100);
         }
       }
     }
@@ -86,6 +99,16 @@ export function ResultsRoute() {
     return lessons.every((l) => completed[l.id]);
   }, [unit, snap?.passed, completed]);
 
+  // True when this completion is the *last* habitat in the guide — every
+  // lesson in every unit is now done. Triggers the "Field Master" variant
+  // headline + a heavier confetti volley below.
+  const justCompletedAll = useMemo(() => {
+    if (!justCompletedUnit) return false;
+    return units.every((u) =>
+      getLessonsForUnit(u.id).every((l) => completed[l.id]),
+    );
+  }, [justCompletedUnit, completed]);
+
   if (!snap) return null;
   const accuracy = Math.round((snap.correct / snap.total) * 100);
 
@@ -97,20 +120,29 @@ export function ResultsRoute() {
         transition={{ type: "spring", stiffness: 220, damping: 18 }}
         className={cn("grid h-24 w-24 place-items-center rounded-full text-5xl", accent?.badgeBg ?? "bg-(--color-moss-100)")}
       >
-        {justCompletedUnit ? "🏆" : snap.passed ? "🪶" : "🌱"}
+        {justCompletedAll ? "🌅" : justCompletedUnit ? "🏆" : snap.passed ? "🪶" : "🌱"}
       </motion.div>
       <div>
+        {justCompletedAll && (
+          <p className="mb-1 font-mono text-[10px] font-medium uppercase tracking-[0.22em] text-(--color-moss-700)">
+            Field master · West Marin
+          </p>
+        )}
         <h1 className="font-display text-3xl" role="status" aria-live="polite">
-          {justCompletedUnit
-            ? `${unit?.title} complete`
-            : snap.passed
-              ? "Lesson complete"
-              : "Out of hearts"}
+          {justCompletedAll
+            ? "Every voice in the guide"
+            : justCompletedUnit
+              ? `${unit?.title} complete`
+              : snap.passed
+                ? "Lesson complete"
+                : "Out of hearts"}
         </h1>
         <p className="mt-1 text-(--color-ink-soft)">
-          {justCompletedUnit
-            ? "Every lesson done. Habitat unlocked in your field guide."
-            : lessonTitle}
+          {justCompletedAll
+            ? "From scrub wrentits to barred owls — all eight habitats done."
+            : justCompletedUnit
+              ? "Every lesson done. Habitat unlocked in your field guide."
+              : lessonTitle}
         </p>
       </div>
       <div className="grid w-full grid-cols-3 gap-3">

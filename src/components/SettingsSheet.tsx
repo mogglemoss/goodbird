@@ -6,6 +6,7 @@ import { allMediaUrls } from "@/lib/manifest";
 import { clearMediaCache, countCachedMedia, precacheUrls } from "@/lib/sw";
 import { Wordmark } from "@/components/brand/Wordmark";
 import { FeedbackDialog } from "@/components/FeedbackDialog";
+import { HabitatProgressStrip } from "@/components/HabitatProgressStrip";
 import { cn } from "@/lib/cn";
 
 interface Props {
@@ -219,6 +220,9 @@ export function SettingsSheet({ open, onClose }: Props) {
                   value={Object.values(speciesStats).reduce((n, s) => n + s.timesSeen, 0)}
                 />
               </dl>
+              <div className="mt-4 border-t border-(--color-line)/60 pt-4">
+                <HabitatProgressStrip />
+              </div>
             </Section>
 
             <Section label="Offline">
