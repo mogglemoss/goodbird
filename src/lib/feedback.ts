@@ -3,7 +3,12 @@
 
 let ctx: AudioContext | null = null;
 function ac(): AudioContext {
-  if (!ctx) ctx = new (window.AudioContext || (window as any).webkitAudioContext)();
+  if (!ctx) {
+    const Ctor =
+      window.AudioContext ??
+      (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
+    ctx = new Ctor();
+  }
   if (ctx.state === "suspended") ctx.resume();
   return ctx;
 }

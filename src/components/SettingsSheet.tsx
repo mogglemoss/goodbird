@@ -4,6 +4,7 @@ import { useGame } from "@/game/store";
 import { allMediaUrls } from "@/lib/manifest";
 import { clearMediaCache, countCachedMedia, precacheUrls } from "@/lib/sw";
 import { Wordmark } from "@/components/brand/Wordmark";
+import { FeedbackDialog } from "@/components/FeedbackDialog";
 import { cn } from "@/lib/cn";
 
 interface Props {
@@ -31,6 +32,7 @@ export function SettingsSheet({ open, onClose }: Props) {
   const [confirming, setConfirming] = useState(false);
   const [offline, setOffline] = useState<OfflineState>({ kind: "idle" });
   const [cachedCount, setCachedCount] = useState<number | null>(null);
+  const [feedbackOpen, setFeedbackOpen] = useState(false);
 
   // We deliberately don't show a byte-size estimate. Browsers pad cross-origin
   // (no-cors) cache entries to ~7 MB each as a side-channel-attack defense, so
@@ -39,6 +41,8 @@ export function SettingsSheet({ open, onClose }: Props) {
     countCachedMedia().then(setCachedCount);
   };
 
+  // Reset the destructive-confirm state when the sheet closes.
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => { if (!open) setConfirming(false); }, [open]);
   useEffect(() => {
     if (!open) return;
@@ -259,7 +263,14 @@ export function SettingsSheet({ open, onClose }: Props) {
                   <span className="text-(--color-ink-soft)">MIT licensed</span>
                 </div>
               </div>
+              <button
+                onClick={() => setFeedbackOpen(true)}
+                className="mt-3 tap-target w-full rounded-full border-2 border-(--color-line) bg-(--color-surface) px-5 py-3 text-sm font-semibold text-(--color-ink) transition-colors hover:border-(--color-moss-300) cursor-pointer"
+              >
+                Send feedback
+              </button>
             </Section>
+            <FeedbackDialog open={feedbackOpen} onClose={() => setFeedbackOpen(false)} />
 
             <Section label="Danger" tone="warn">
               {!confirming ? (

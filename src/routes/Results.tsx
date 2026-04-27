@@ -47,6 +47,7 @@ export function ResultsRoute() {
       const missedSpeciesIds = [...missed];
       const result = finalize();
       if (result) {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setSnap({ ...result, correct, total, hearts, missedSpeciesIds });
         if (result.passed) {
           lessonComplete();
@@ -83,7 +84,7 @@ export function ResultsRoute() {
         {snap.passed ? "🪶" : "🌱"}
       </motion.div>
       <div>
-        <h1 className="font-display text-3xl">
+        <h1 className="font-display text-3xl" role="status" aria-live="polite">
           {snap.passed ? "Lesson complete" : "Out of hearts"}
         </h1>
         <p className="mt-1 text-(--color-ink-soft)">{lessonTitle}</p>

@@ -32,15 +32,22 @@ export function ExerciseRunner({ exercise, exerciseIndex, previouslyAnswered, ac
   // If the store already has a result for this exercise (user navigated to a
   // species page and back), seed locked so they can't re-answer.
   const seed = previouslyAnswered ? { value: null, correct: previouslyAnswered.correct } : null;
-  const [locked, setLocked] = useState<{ value: any; correct: boolean } | null>(seed);
+  // The "locker value" is exercise-specific (species id for identify/mnemonic,
+  // boolean for discriminate, index for find-bird). Keep it as unknown rather
+  // than any so callers can't accidentally compare the wrong shape.
+  const [locked, setLocked] = useState<{ value: unknown; correct: boolean } | null>(seed);
   const [hintShown, setHintShown] = useState(false);
 
+  // Reset on prop change — standard pattern even though this triggers the
+  // react-hooks/set-state-in-effect rule.
   useEffect(() => {
+    /* eslint-disable react-hooks/set-state-in-effect */
     setLocked(previouslyAnswered ? { value: null, correct: previouslyAnswered.correct } : null);
     setHintShown(false);
+    /* eslint-enable react-hooks/set-state-in-effect */
   }, [exerciseIndex, previouslyAnswered]);
 
-  const handleAnswered = (correct: boolean, locker: any, speciesId: string | null) => {
+  const handleAnswered = (correct: boolean, locker: unknown, speciesId: string | null) => {
     setLocked({ value: locker, correct });
     if (correct) correctChime(); else wrongBuzz();
     onAnswered(correct, speciesId);
@@ -115,15 +122,15 @@ export function ExerciseRunner({ exercise, exerciseIndex, previouslyAnswered, ac
 
 function renderExercise(
   exercise: Exercise,
-  locked: { value: any; correct: boolean } | null,
-  onAnswered: (correct: boolean, locker: any, speciesId: string | null) => void,
+  locked: { value: unknown; correct: boolean } | null,
+  onAnswered: (correct: boolean, locker: unknown, speciesId: string | null) => void,
 ) {
   switch (exercise.kind) {
     case "identify":
       return (
         <IdentifyExerciseView
           exercise={exercise}
-          locked={locked?.value ?? null}
+          locked={(locked?.value as string | null) ?? null}
           onAnswered={(correct) => onAnswered(correct, exercise.choices.find(id => id === exercise.correctSpeciesId)!, exercise.correctSpeciesId)}
         />
       );
@@ -131,7 +138,7 @@ function renderExercise(
       return (
         <MnemonicExerciseView
           exercise={exercise}
-          locked={locked?.value ?? null}
+          locked={(locked?.value as string | null) ?? null}
           onAnswered={(correct) => onAnswered(correct, exercise.correctSpeciesId, exercise.correctSpeciesId)}
         />
       );
@@ -139,7 +146,7 @@ function renderExercise(
       return (
         <DiscriminateExerciseView
           exercise={exercise}
-          locked={locked?.value ?? null}
+          locked={(locked?.value as boolean | null) ?? null}
           onAnswered={(correct) => onAnswered(correct, exercise.same, exercise.speciesIdA)}
         />
       );
@@ -147,7 +154,7 @@ function renderExercise(
       return (
         <FindBirdExerciseView
           exercise={exercise}
-          locked={locked?.value ?? null}
+          locked={(locked?.value as number | null) ?? null}
           onAnswered={(correct) => onAnswered(correct, exercise.correctIndex, exercise.targetSpeciesId)}
         />
       );
@@ -159,7 +166,7 @@ function FeedbackBar({
   exercise,
   onContinue,
 }: {
-  locked: { value: any; correct: boolean } | null;
+  locked: { value: unknown; correct: boolean } | null;
   exercise: Exercise;
   onContinue: () => void;
 }) {
@@ -171,6 +178,7 @@ function FeedbackBar({
   const [advancing, setAdvancing] = useState(false);
 
   // Reset the guard when a fresh answer comes in (new locked, new exercise).
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => { setAdvancing(false); }, [locked, exercise]);
 
   const handleClick = () => {
