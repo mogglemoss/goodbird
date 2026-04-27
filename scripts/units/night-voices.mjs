@@ -7,6 +7,7 @@ export const UNIT = {
   title: "Night Voices",
   habitat: "After Dark",
   description: "The owls and nightjars heard from your driveway after dark — Inverness, Olema, anywhere the streetlights end.",
+  tagline: "Owls calling from the redwood dark.",
   accent: "violet",
 };
 

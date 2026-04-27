@@ -37,6 +37,8 @@ export interface Unit {
   habitat: string;
   description: string;
   accent: UnitAccent;
+  /** One-line italic narrative descriptor for the home grid card. */
+  tagline?: string;
 }
 
 export interface Manifest {

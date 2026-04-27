@@ -6,6 +6,7 @@ export const UNIT = {
   title: "Oak Woodland",
   habitat: "Oak Woodland & Bay Laurel",
   description: "The acorn-strewn understory of Inverness Ridge, Olema, and Mt. Tamalpais — cavity-nesters and woodland songsters.",
+  tagline: "Acorn woodpeckers in dappled cathedrals.",
   accent: "amber",
 };
 

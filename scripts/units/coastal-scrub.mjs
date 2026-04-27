@@ -5,6 +5,7 @@ export const UNIT = {
   title: "Coastal Scrub",
   habitat: "Chaparral & Brush",
   description: "The chaparral, scrub, and brushy edges along the Point Reyes, Bolinas, and Tomales coastline.",
+  tagline: "Where wrentits whisper through coyote brush.",
   accent: "moss", // tints lesson nodes; see src/lib/theme.ts
 };
 

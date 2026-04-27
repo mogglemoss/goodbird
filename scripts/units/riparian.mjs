@@ -5,6 +5,7 @@ export const UNIT = {
   title: "Creekside",
   habitat: "Riparian Corridors",
   description: "Lagunitas Creek, Pine Gulch, and the alder-willow tangles where streamside songsters concentrate.",
+  tagline: "Warblers at the water's edge.",
   accent: "sky",
 };
 

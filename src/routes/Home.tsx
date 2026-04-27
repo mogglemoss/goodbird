@@ -2,14 +2,14 @@ import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { units, getLessonsForUnit, getSpecies, allLessons } from "@/lib/manifest";
-import type { Species } from "@/lib/types";
+import type { Species, Unit } from "@/lib/types";
 import { useGame } from "@/game/store";
 import { ACCENTS } from "@/lib/theme";
-import type { Unit } from "@/lib/types";
 import { cn } from "@/lib/cn";
-import { Wordmark } from "@/components/brand/Wordmark";
 import { SettingsSheet } from "@/components/SettingsSheet";
 import { OnboardingCard } from "@/components/OnboardingCard";
+import { Hero } from "@/components/Hero";
+import { HabitatGlyph } from "@/components/brand/HabitatGlyph";
 
 export function HomeRoute() {
   const xp = useGame((s) => s.xp);
@@ -21,8 +21,6 @@ export function HomeRoute() {
   const xpTodayDay = useGame((s) => s.xpTodayDay);
   const [settingsOpen, setSettingsOpen] = useState(false);
 
-  // Reset displayed xpToday at midnight (without writing to the store —
-  // finalizeLesson handles the write next time the user plays).
   const todayXp = useMemo(() => {
     const t = (() => { const d = new Date(); return `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`; })();
     return xpTodayDay === t ? xpToday : 0;
@@ -33,10 +31,9 @@ export function HomeRoute() {
     return ids.map((id) => { try { return getSpecies(id); } catch { return null; } }).filter((s): s is Species => !!s);
   }, [favorites]);
 
-  // Most-recently-completed lesson → which unit it belongs to → "Continue" hint.
   const continueTarget = (() => {
     let bestAt = 0;
-    let target: { unitSlug: string; unitTitle: string } | null = null;
+    let target: { unitSlug: string; unitTitle: string; accent: Unit["accent"] } | null = null;
     for (const [lessonId, info] of Object.entries(completed)) {
       if (!info.lastPlayedAt || info.lastPlayedAt <= bestAt) continue;
       const lesson = allLessons.find((l) => l.id === lessonId);
@@ -44,62 +41,41 @@ export function HomeRoute() {
       const unit = units.find((u) => u.id === lesson.unitId);
       if (!unit) continue;
       bestAt = info.lastPlayedAt;
-      target = { unitSlug: unit.id, unitTitle: unit.title };
+      target = { unitSlug: unit.id, unitTitle: unit.title, accent: unit.accent };
     }
     return target;
   })();
 
+  const heroControls = (
+    <HeaderControls
+      xp={xp}
+      streakDays={streak.days}
+      xpToday={todayXp}
+      dailyGoal={dailyGoal}
+      onSettings={() => setSettingsOpen(true)}
+    />
+  );
+
   return (
-    <div className="mx-auto w-full max-w-md px-5 pb-24 pt-6 sm:max-w-2xl lg:max-w-4xl">
-      <Header
-        xp={xp}
-        streakDays={streak.days}
-        xpToday={todayXp}
-        dailyGoal={dailyGoal}
-        onSettings={() => setSettingsOpen(true)}
-      />
+    <div className="mx-auto w-full max-w-md px-5 pb-24 pt-2 sm:max-w-2xl lg:max-w-4xl">
+      <Hero controls={heroControls} />
       <SettingsSheet open={settingsOpen} onClose={() => setSettingsOpen(false)} />
 
       <OnboardingCard />
 
-      <div className="mt-8 text-center">
-        <p className="text-sm font-medium uppercase tracking-wider text-(--color-ink-soft)">
-          West Marin
-        </p>
-        <h1 className="mt-1 font-display text-3xl">Pick a habitat</h1>
-        <p className="mx-auto mt-2 max-w-xs text-sm text-(--color-ink-soft)">
-          Each habitat is its own ear-training course. Tap any to start.
-        </p>
-      </div>
-
       {continueTarget && (
-        <Link
-          to={`/unit/${continueTarget.unitSlug}`}
-          className="mt-6 flex items-center justify-between gap-3 rounded-(--radius-card) border-2 border-(--color-moss-300) bg-(--color-moss-50) px-5 py-3 shadow-(--shadow-soft) transition-colors hover:border-(--color-moss-500)"
-        >
-          <div className="min-w-0">
-            <div className="text-xs font-medium uppercase tracking-wider text-(--color-moss-700)">Continue</div>
-            <div className="truncate font-display text-base">
-              {(() => { try { return units.find((u) => u.id === continueTarget!.unitSlug)?.title ?? ""; } catch { return ""; } })()}
-            </div>
-          </div>
-          <div className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-(--color-moss-500) text-white">
-            <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
-              <path d="M9 6l6 6-6 6" />
-            </svg>
-          </div>
-        </Link>
+        <ContinueChip target={continueTarget} />
       )}
 
       <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-        {units.map((unit) => (
-          <HabitatCard key={unit.id} unit={unit} completed={completed} />
+        {units.map((unit, i) => (
+          <HabitatCard key={unit.id} unit={unit} index={i} completed={completed} />
         ))}
       </div>
 
       {favoriteSpecies.length > 0 && (
         <section className="mt-10">
-          <h2 className="text-xs font-semibold uppercase tracking-wider text-(--color-ink-soft)">
+          <h2 className="font-mono text-[11px] font-medium uppercase tracking-[0.2em] text-(--color-ink-soft)">
             Favorites
           </h2>
           <div className="mt-3 -mx-5 overflow-x-auto px-5">
@@ -131,7 +107,7 @@ export function HomeRoute() {
   );
 }
 
-function Header({
+function HeaderControls({
   xp,
   streakDays,
   xpToday,
@@ -146,24 +122,21 @@ function Header({
 }) {
   const goalReached = xpToday >= dailyGoal;
   return (
-    <div className="flex items-center justify-between">
-      <Wordmark size="sm" />
-      <div className="flex items-center gap-2">
-        <DailyGoalRing xpToday={xpToday} dailyGoal={dailyGoal} />
-        <Pill icon="🔥" value={streakDays} label="day streak" muted={streakDays === 0 && !goalReached} />
-        <Pill icon="✦" value={xp} label="xp" />
-        <button
-          onClick={onSettings}
-          aria-label="Settings"
-          className="grid h-9 w-9 place-items-center rounded-full border-2 border-(--color-line) bg-(--color-surface) text-(--color-ink-soft) hover:border-(--color-moss-300) cursor-pointer"
-        >
-          <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden>
-            <circle cx="5" cy="12" r="1.6" />
-            <circle cx="12" cy="12" r="1.6" />
-            <circle cx="19" cy="12" r="1.6" />
-          </svg>
-        </button>
-      </div>
+    <div className="flex items-center gap-2">
+      <DailyGoalRing xpToday={xpToday} dailyGoal={dailyGoal} />
+      <Pill icon="🔥" value={streakDays} label="day streak" muted={streakDays === 0 && !goalReached} />
+      <Pill icon="✦" value={xp} label="xp" />
+      <button
+        onClick={onSettings}
+        aria-label="Settings"
+        className="grid h-9 w-9 place-items-center rounded-full border-2 border-(--color-line) bg-(--color-surface) text-(--color-ink-soft) hover:border-(--color-moss-300) cursor-pointer"
+      >
+        <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden>
+          <circle cx="5" cy="12" r="1.6" />
+          <circle cx="12" cy="12" r="1.6" />
+          <circle cx="19" cy="12" r="1.6" />
+        </svg>
+      </button>
     </div>
   );
 }
@@ -210,12 +183,40 @@ function Pill({ icon, value, label, muted }: { icon: string; value: number; labe
   );
 }
 
+function ContinueChip({ target }: { target: { unitSlug: string; unitTitle: string; accent: Unit["accent"] } }) {
+  const accent = ACCENTS[target.accent];
+  return (
+    <Link
+      to={`/unit/${target.unitSlug}`}
+      className={cn(
+        "mt-6 flex items-center justify-between gap-3 rounded-(--radius-card) border-2 px-5 py-3 shadow-(--shadow-soft) transition-colors",
+        accent.unlockedBorder,
+        accent.doneBg,
+        accent.unlockedHover,
+      )}
+    >
+      <div className="min-w-0">
+        <div className={cn("font-mono text-[10px] font-medium uppercase tracking-[0.2em]", accent.label)}>
+          Continue
+        </div>
+        <div className="truncate font-display text-base">{target.unitTitle}</div>
+      </div>
+      <div className={cn("grid h-10 w-10 shrink-0 place-items-center rounded-full text-white", accent.doneBadgeBg)}>
+        <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+          <path d="M9 6l6 6-6 6" />
+        </svg>
+      </div>
+    </Link>
+  );
+}
+
 interface HabitatCardProps {
   unit: Unit;
+  index: number;
   completed: Record<string, { bestAccuracy: number }>;
 }
 
-function HabitatCard({ unit, completed }: HabitatCardProps) {
+function HabitatCard({ unit, index, completed }: HabitatCardProps) {
   const lessons = getLessonsForUnit(unit.id);
   const speciesCount = new Set(lessons.flatMap((l) => l.speciesIds)).size;
   const lessonsDone = lessons.filter((l) => completed[l.id]).length;
@@ -223,66 +224,92 @@ function HabitatCard({ unit, completed }: HabitatCardProps) {
   const progress = totalLessons === 0 ? 0 : lessonsDone / totalLessons;
   const accent = ACCENTS[unit.accent];
 
-  // Pull a few species to use as a visual sample (3 thumbnails on the card).
   const sampleSpecies = Array.from(new Set(lessons.flatMap((l) => l.speciesIds)))
     .slice(0, 3)
     .map((id) => getSpecies(id));
 
+  const num = String(index + 1).padStart(2, "0");
+
   return (
     <Link to={`/unit/${unit.id}`} className="block">
-      <motion.div
+      <motion.article
         whileHover={{ y: -2 }}
         whileTap={{ scale: 0.97 }}
         className={cn(
-          "relative flex h-full flex-col overflow-hidden rounded-(--radius-card) border-2 bg-(--color-surface) p-4 shadow-(--shadow-soft) transition-colors",
+          "relative flex h-full flex-col overflow-hidden rounded-(--radius-card) border-2 p-4 shadow-(--shadow-soft) transition-colors",
           accent.unlockedBorder,
+          accent.doneBg, // subtle accent wash on every card
           accent.unlockedHover,
         )}
       >
-        {/* species avatar strip */}
-        <div className="flex -space-x-2">
-          {sampleSpecies.map((s) => (
-            <div
-              key={s.id}
-              className="h-9 w-9 overflow-hidden rounded-full border-2 border-(--color-surface) bg-(--color-sand-50)"
-              title={s.commonName}
-            >
-              {s.imageUrl ? (
-                <img src={s.imageUrl} alt="" className="h-full w-full object-cover" />
-              ) : (
-                <div className="grid h-full w-full place-items-center text-base">🪶</div>
-              )}
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-3 flex-1">
-          <div className={cn("text-[11px] font-semibold uppercase tracking-wider", accent.label)}>
-            {unit.habitat}
+        {/* Top row: number + glyph */}
+        <header className="flex items-start justify-between">
+          <div className={cn("font-display text-2xl leading-none tabular-nums sm:text-3xl", accent.label)}>
+            {num}
           </div>
-          <div className="mt-0.5 font-display text-lg leading-tight">{unit.title}</div>
+          <div className={accent.label}>
+            <HabitatGlyph accent={unit.accent} />
+          </div>
+        </header>
+
+        {/* Region label */}
+        <p className={cn("mt-3 font-mono text-[10px] font-medium uppercase tracking-[0.18em]", accent.label)}>
+          {unit.habitat}
+        </p>
+
+        {/* Title */}
+        <h2 className="mt-1 font-display text-lg leading-tight sm:text-xl">{unit.title}</h2>
+
+        {/* Italic narrative */}
+        {unit.tagline && (
+          <p className="mt-1.5 font-display text-xs italic leading-snug text-(--color-ink-soft) sm:text-sm">
+            {unit.tagline}
+          </p>
+        )}
+
+        {/* Spacer to push thumbs to bottom */}
+        <div className="flex-1" />
+
+        {/* Bottom row: thumbnails + bird count */}
+        <div className="mt-4 flex items-center justify-between gap-2">
+          <div className="flex -space-x-1.5">
+            {sampleSpecies.map((s) => (
+              <div
+                key={s.id}
+                className="h-7 w-7 overflow-hidden rounded-full border-2 border-(--color-surface) bg-(--color-sand-50)"
+                title={s.commonName}
+              >
+                {s.imageUrl ? (
+                  <img src={s.imageUrl} alt="" className="h-full w-full object-cover" />
+                ) : (
+                  <div className="grid h-full w-full place-items-center text-sm">🪶</div>
+                )}
+              </div>
+            ))}
+          </div>
+          <div className="flex items-baseline gap-1 font-mono text-[10px] text-(--color-ink-soft)">
+            <span className="font-display text-base font-medium text-(--color-ink) tabular-nums">{speciesCount}</span>
+            <span className="hidden sm:inline">birds</span>
+          </div>
         </div>
 
-        <div className="mt-3 flex items-center gap-2 text-xs text-(--color-ink-soft)">
-          <span>{speciesCount} birds</span>
-          {lessonsDone > 0 && (
-            <>
-              <span aria-hidden>·</span>
-              <span>{lessonsDone}/{totalLessons}</span>
-            </>
-          )}
-        </div>
-
-        {/* Progress bar */}
-        <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-(--color-line)">
-          <motion.div
-            className={cn("h-full rounded-full", accent.doneBadgeBg)}
-            initial={false}
-            animate={{ width: `${Math.max(progress * 100, lessonsDone > 0 ? 8 : 0)}%` }}
-            transition={{ type: "spring", stiffness: 200, damping: 25 }}
-          />
-        </div>
-      </motion.div>
+        {/* Progress bar — only when there's progress */}
+        {lessonsDone > 0 && (
+          <div className="mt-3 flex items-center gap-2">
+            <div className="h-1 flex-1 overflow-hidden rounded-full bg-(--color-line)">
+              <motion.div
+                className={cn("h-full rounded-full", accent.doneBadgeBg)}
+                initial={false}
+                animate={{ width: `${Math.max(progress * 100, 8)}%` }}
+                transition={{ type: "spring", stiffness: 200, damping: 25 }}
+              />
+            </div>
+            <span className="font-mono text-[10px] tabular-nums text-(--color-ink-soft)">
+              {lessonsDone}/{totalLessons}
+            </span>
+          </div>
+        )}
+      </motion.article>
     </Link>
   );
 }

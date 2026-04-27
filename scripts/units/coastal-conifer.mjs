@@ -5,6 +5,7 @@ export const UNIT = {
   title: "Coastal Conifer",
   habitat: "Bishop Pine Forest",
   description: "Inverness Ridge's foggy Bishop pine and Douglas-fir — high voices and bark-creepers.",
+  tagline: "Specialists in a vanishing forest.",
   accent: "sand",
 };
 
