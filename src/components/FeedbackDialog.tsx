@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/cn";
+import { getRouteHistory } from "@/lib/route-history";
+import { useGame } from "@/game/store";
 
 /**
  * Formspree form ID — the path segment from formspree.io/f/<this-bit>.
@@ -45,10 +47,35 @@ export function FeedbackDialog({ open, onClose }: Props) {
     const form = e.currentTarget;
     const data = new FormData(form);
     // Auto-attach diagnostic info so bug reports include something useful.
+    // The user's last few routes are more useful than just the current one —
+    // they may have navigated home (or anywhere) before tapping Settings → Send.
     data.set("_subject", `goodbird feedback (v${__APP_VERSION__})`);
     data.set("app_version", __APP_VERSION__);
     data.set("user_agent", navigator.userAgent);
     data.set("page", window.location.pathname);
+    const trail = getRouteHistory();
+    data.set("recent_routes", trail.length ? trail.slice(-6).join(" → ") : "(none)");
+    data.set("viewport", `${window.innerWidth}×${window.innerHeight}`);
+    data.set("online", String(navigator.onLine));
+    // Snapshot of the user's local state — useful for "0 XP fresh user" vs
+    // "user with progress" context. No PII.
+    try {
+      const s = useGame.getState();
+      data.set(
+        "state",
+        JSON.stringify({
+          xp: s.xp,
+          streak: s.streak.days,
+          completed: Object.keys(s.completedLessons).length,
+          species_seen: Object.keys(s.speciesStats).length,
+          favorites: Object.keys(s.favorites).length,
+          freeplay: s.freeplay,
+          daily_goal: s.dailyGoal,
+          xp_today: s.xpToday,
+          onboarded: s.hasOnboarded,
+        }),
+      );
+    } catch { /* ignore */ }
     try {
       const res = await fetch(`https://formspree.io/f/${FORMSPREE_FORM_ID}`, {
         method: "POST",
@@ -131,9 +158,9 @@ export function FeedbackDialog({ open, onClose }: Props) {
             ) : (
               <form ref={formRef} onSubmit={handleSubmit} className="mt-6 space-y-3">
                 <p className="text-sm leading-snug text-(--color-ink-soft)">
-                  What broke, what's confusing, what could be better. App version
-                  and the page you're on are auto-attached so you don't have to
-                  describe them.
+                  What broke, what's confusing, what could be better. Your
+                  recent pages, app version, and device are auto-attached so
+                  you don't have to describe them.
                 </p>
                 <label className="block">
                   <span className="font-mono text-[10px] font-medium uppercase tracking-[0.2em] text-(--color-ink-soft)">
