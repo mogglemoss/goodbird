@@ -129,13 +129,17 @@ async function fetchInat(species) {
 async function fetchImage(species) {
   const title = (species.wikipediaTitle ?? species.commonName).replace(/ /g, "_");
   const res = await fetch(`${WIKI_BASE}/${encodeURIComponent(title)}`);
-  if (!res.ok) {
+  // Fall through to the scientific-name lookup not just on HTTP failure but
+  // also when the common-name page is a disambiguation (e.g. "Whimbrel" is now
+  // a disambig hub split between Eurasian and Hudsonian — no image, no thumbnail).
+  let data = res.ok ? await res.json() : null;
+  const isUsable = data && data.type !== "disambiguation" && (data.thumbnail?.source || data.originalimage?.source);
+  if (!isUsable) {
     const r2 = await fetch(`${WIKI_BASE}/${encodeURIComponent(species.scientificName.replace(/ /g, "_"))}`);
     if (!r2.ok) return null;
     const d2 = await r2.json();
     return d2.thumbnail?.source ?? d2.originalimage?.source ?? null;
   }
-  const data = await res.json();
   return data.thumbnail?.source ?? data.originalimage?.source ?? null;
 }
 

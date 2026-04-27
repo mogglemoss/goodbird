@@ -1,0 +1,675 @@
+{
+  "unit": {
+    "id": "tomales-bay",
+    "title": "Tomales Bay",
+    "habitat": "Estuary & Tideflats",
+    "description": "Mudflats, salt marsh, and shallow bays — Hog Island, Walker Creek, the eel-grass beds off Inverness.",
+    "tagline": "Long bills probing the mudflats at low tide.",
+    "accent": "indigo"
+  },
+  "species": [
+    {
+      "id": "marbled-godwit",
+      "commonName": "Marbled Godwit",
+      "scientificName": "Limosa fedoa",
+      "mnemonic": "Loud nasal 'godWIT godWIT' from the flats",
+      "field": "Year-round on Tomales Bay; numbers peak August through April. Long upturned bill probes deep into mudflat invertebrates.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/MarbledGodwit.jpg/330px-MarbledGodwit.jpg",
+      "recordings": [
+        {
+          "id": "XC562624",
+          "url": "https://xeno-canto.org/562624/download",
+          "duration": 11,
+          "type": "call, flight call",
+          "recordist": "Paul Marvin",
+          "location": "J Street Marina, Chula Vista, San Diego Co, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/562624",
+          "gain": 0.31405086938762183
+        },
+        {
+          "id": "XC408631",
+          "url": "https://xeno-canto.org/408631/download",
+          "duration": 11,
+          "type": "flight call",
+          "recordist": "Frank Lambert",
+          "location": "Thermal, Imperial County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+          "sourceUrl": "https://xeno-canto.org/408631",
+          "gain": 0.8137668607787872
+        },
+        {
+          "id": "XC305218",
+          "url": "https://xeno-canto.org/305218/download",
+          "duration": 11,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "Fort Pierre National Grasslands, South Dakota, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/305218",
+          "gain": 0.31405086938762183
+        }
+      ]
+    },
+    {
+      "id": "willet",
+      "commonName": "Willet",
+      "scientificName": "Tringa semipalmata",
+      "mnemonic": "Clear ringing 'pill-will-WILLET'",
+      "field": "Year-round on tidal flats and rocky edges. Drab brown until it flies and flashes a bold black-and-white wing pattern.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Catoptrophorus_semipalmatus_edit.jpg/330px-Catoptrophorus_semipalmatus_edit.jpg",
+      "recordings": [
+        {
+          "id": "XC48865",
+          "url": "https://xeno-canto.org/48865/download",
+          "duration": 6,
+          "type": "call, song",
+          "recordist": "Ian Davies",
+          "location": "Allen's Pond Wildlife Sanctuary, Westport, Bristol County, Massachusetts, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
+          "sourceUrl": "https://xeno-canto.org/48865",
+          "gain": 0.3079640341502392
+        },
+        {
+          "id": "XC723894",
+          "url": "https://xeno-canto.org/723894/download",
+          "duration": 12,
+          "type": "call, song",
+          "recordist": "Molly Jacobson",
+          "location": "Eel Pond, Edgartown, Dukes County, Massachusetts, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/723894",
+          "gain": 0.4456562483975033
+        },
+        {
+          "id": "XC877027",
+          "url": "https://xeno-canto.org/877027/download",
+          "duration": 7,
+          "type": "song",
+          "recordist": "Skyler Bol",
+          "location": "Freezeout Lake, Teton County, Montana, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/877027",
+          "gain": 1
+        }
+      ]
+    },
+    {
+      "id": "long-billed-curlew",
+      "commonName": "Long-billed Curlew",
+      "scientificName": "Numenius americanus",
+      "mnemonic": "Curling 'curlee, curlee' that gives the bird its name",
+      "field": "August through April on Tomales Bay flats. Largest North American shorebird; the comically long down-curved bill probes deep burrows.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Long-billed_curlew_at_Drakes_Beach%2C_Point_Reyes.jpg/330px-Long-billed_curlew_at_Drakes_Beach%2C_Point_Reyes.jpg",
+      "recordings": [
+        {
+          "id": "XC1047420",
+          "url": "https://xeno-canto.org/1047420/download",
+          "duration": 9,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "Tijuana Slough NWR, trail from south end of 5th street, Imperial Beach, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/1047420",
+          "gain": 0.20488020499575052
+        },
+        {
+          "id": "XC488168",
+          "url": "https://xeno-canto.org/488168/download",
+          "duration": 6,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "J Street Marina, Chula Vista, San Diego Co, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/488168",
+          "gain": 0.17378008287493754
+        },
+        {
+          "id": "XC1047421",
+          "url": "https://xeno-canto.org/1047421/download",
+          "duration": 15,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "Tijuana Slough NWR, trail from south end of 5th street, Imperial Beach, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/1047421",
+          "gain": 0.2011407198200908
+        }
+      ]
+    },
+    {
+      "id": "whimbrel",
+      "commonName": "Whimbrel",
+      "scientificName": "Numenius phaeopus",
+      "mnemonic": "Rolling 'whi-whi-whi-whi-whi' — seven even notes",
+      "field": "Migration in spring and fall; some winter on Tomales Bay. Smaller curlew with a kinked rather than smoothly curved bill.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Whimbrel_%28Numenius_phaeopus%29_Dalvikurbyggd.jpg/330px-Whimbrel_%28Numenius_phaeopus%29_Dalvikurbyggd.jpg",
+      "recordings": [
+        {
+          "id": "XC840860",
+          "url": "https://xeno-canto.org/840860/download",
+          "duration": 9,
+          "type": "call, song",
+          "recordist": "Ray Tsu 诸仁",
+          "location": "Jiuduansha Wetland National Nature Reserve, Shanghai, China",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/840860",
+          "gain": 0.345939377826122
+        },
+        {
+          "id": "XC840833",
+          "url": "https://xeno-canto.org/840833/download",
+          "duration": 9,
+          "type": "call, song, wing beats",
+          "recordist": "Ray Tsu 诸仁",
+          "location": "Jiuduansha Wetland National Nature Reserve, Shanghai, China",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/840833",
+          "gain": 0.30760968147407086
+        },
+        {
+          "id": "XC978101",
+          "url": "https://xeno-canto.org/978101/download",
+          "duration": 10,
+          "type": "call, song",
+          "recordist": "Albert Lastukhin",
+          "location": "Toliara, Toliary-I, Atsimo-Andrefana, Madagascar",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+          "sourceUrl": "https://xeno-canto.org/978101",
+          "gain": 0.1761976046411629
+        }
+      ]
+    },
+    {
+      "id": "black-bellied-plover",
+      "commonName": "Black-bellied Plover",
+      "scientificName": "Pluvialis squatarola",
+      "mnemonic": "Plaintive whistled 'plee-oo-eee'",
+      "field": "August through April on tidal flats. The black belly only shows on breeding adults; in winter, an unassuming gray.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Breeding_plumage_Black-bellied_plover_%28Pluvialis_squatarola%29_Great_Bay_Wildlife_Management_Area%2C_New_Jersey%2C_USA.png/330px-Breeding_plumage_Black-bellied_plover_%28Pluvialis_squatarola%29_Great_Bay_Wildlife_Management_Area%2C_New_Jersey%2C_USA.png",
+      "recordings": [
+        {
+          "id": "XC150225",
+          "url": "https://xeno-canto.org/150225/download",
+          "duration": 5,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "Fiesta Island, San Diego, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/150225",
+          "gain": 0.7673614893618189
+        },
+        {
+          "id": "XC766704",
+          "url": "https://xeno-canto.org/766704/download",
+          "duration": 12,
+          "type": "nocturnal flight call",
+          "recordist": "Kevin Tolan",
+          "location": "Hazen St. 2 WB (near  Norwich), Windsor County, Vermont, United States",
+          "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+          "sourceUrl": "https://xeno-canto.org/766704",
+          "gain": 1
+        },
+        {
+          "id": "XC165315",
+          "url": "https://xeno-canto.org/165315/download",
+          "duration": 8,
+          "type": "call",
+          "recordist": "Paul Marvin",
+          "location": "Petit Manan Point, Washington Co, Maine, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/165315",
+          "gain": 1
+        }
+      ]
+    },
+    {
+      "id": "killdeer",
+      "commonName": "Killdeer",
+      "scientificName": "Charadrius vociferus",
+      "mnemonic": "KILL-deer KILL-deer",
+      "field": "Year-round in open ground near water — pastures, gravel parking lots, golf-course edges. Feigns a broken wing to lure intruders from the nest.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Killdeer_Heislerville.png/330px-Killdeer_Heislerville.png",
+      "recordings": [
+        {
+          "id": "XC1000428",
+          "url": "https://xeno-canto.org/1000428/download",
+          "duration": 9,
+          "type": "flight call",
+          "recordist": "David Tattersley",
+          "location": "Thrurmond Airport (PVT) (near  Animas), Hidalgo County, New Mexico, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/1000428",
+          "gain": 0.5814334323084471
+        },
+        {
+          "id": "XC169196",
+          "url": "https://xeno-canto.org/169196/download",
+          "duration": 10,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "River Lakes Conservation Area near Viera, Brevard Co, Florida, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/169196",
+          "gain": 0.45603691595129614
+        },
+        {
+          "id": "XC1004462",
+          "url": "https://xeno-canto.org/1004462/download",
+          "duration": 5,
+          "type": "flight call",
+          "recordist": "Rory Nefdt",
+          "location": "Edith G. Reed Sanctuary, Rye, New York, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/1004462",
+          "gain": 0.8790225168308843
+        }
+      ]
+    },
+    {
+      "id": "great-blue-heron",
+      "commonName": "Great Blue Heron",
+      "scientificName": "Ardea herodias",
+      "mnemonic": "Harsh prehistoric croak",
+      "field": "Year-round at all wetland edges. Wing strokes are slow, about two per second; rookery nests are stick platforms in tall trees, often near water.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/GreatBlueHeronInARiver.jpg/330px-GreatBlueHeronInARiver.jpg",
+      "recordings": [
+        {
+          "id": "XC565135",
+          "url": "https://xeno-canto.org/565135/download",
+          "duration": 8,
+          "type": "call, flight call",
+          "recordist": "Russ Wigh",
+          "location": "Savannah, Chatham County, Georgia, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/565135",
+          "gain": 1
+        },
+        {
+          "id": "XC395485",
+          "url": "https://xeno-canto.org/395485/download",
+          "duration": 8,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "Salt Lake WMA, Mims, Brevard County, Florida, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/395485",
+          "gain": 0.3423733876264525
+        },
+        {
+          "id": "XC196154",
+          "url": "https://xeno-canto.org/196154/download",
+          "duration": 8,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "Flamingo Campground, Everglades National Park, Florida, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/196154",
+          "gain": 0.40738027780411273
+        }
+      ]
+    },
+    {
+      "id": "great-egret",
+      "commonName": "Great Egret",
+      "scientificName": "Ardea alba",
+      "mnemonic": "Hoarse rattling croak",
+      "field": "Year-round in shallow tidal water. Stalks slowly with the long S-curved neck poised to strike fish.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Great_Egret_%28Ardea_alba%29_in_Breeding_Plumage%2C_Cape_May_County%2C_New_Jersey%2C_USA_%28cropped%29.png/330px-Great_Egret_%28Ardea_alba%29_in_Breeding_Plumage%2C_Cape_May_County%2C_New_Jersey%2C_USA_%28cropped%29.png",
+      "recordings": [
+        {
+          "id": "XC147337",
+          "url": "https://xeno-canto.org/147337/download",
+          "duration": 11,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "Viera Wetlands, Florida, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/147337",
+          "gain": 1
+        },
+        {
+          "id": "XC468531",
+          "url": "https://xeno-canto.org/468531/download",
+          "duration": 3,
+          "type": "flight call",
+          "recordist": "Bruce Lagerquist",
+          "location": "TM Goodwin WMA, Brevard County, Florida, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/468531",
+          "gain": 0.34001650580407106
+        },
+        {
+          "id": "XC143578",
+          "url": "https://xeno-canto.org/143578/download",
+          "duration": 5,
+          "type": "call",
+          "recordist": "Paul Marvin",
+          "location": "Viera Wetlands, Florida, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/143578",
+          "gain": 1
+        }
+      ]
+    },
+    {
+      "id": "snowy-egret",
+      "commonName": "Snowy Egret",
+      "scientificName": "Egretta thula",
+      "mnemonic": "Sharp nasal 'aaak'",
+      "field": "Year-round at salt-marsh edges. Stirs the bottom with its bright yellow feet to flush prey — 'golden slippers' are diagnostic.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Snowy_Egret_%28Egretta_thula%29_Edwin_B_Forsythe_NWR%2C_Galloway%2C_NJ%2C_USA.jpg/330px-Snowy_Egret_%28Egretta_thula%29_Edwin_B_Forsythe_NWR%2C_Galloway%2C_NJ%2C_USA.jpg",
+      "recordings": [
+        {
+          "id": "XC345867",
+          "url": "https://xeno-canto.org/345867/download",
+          "duration": 6,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "River Lakes Conservation Area near Viera, Brevard Co, Florida, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/345867",
+          "gain": 0.4988844874600123
+        },
+        {
+          "id": "XC143595",
+          "url": "https://xeno-canto.org/143595/download",
+          "duration": 8,
+          "type": "call",
+          "recordist": "Paul Marvin",
+          "location": "Viera Wetlands, Florida, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/143595",
+          "gain": 0.7014552984199713
+        },
+        {
+          "id": "XC1027118",
+          "url": "https://xeno-canto.org/1027118/download",
+          "duration": 9,
+          "type": "call",
+          "recordist": "Paul Driver",
+          "location": "Brigantine National Wildlife Refuge, NJ, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/1027118",
+          "gain": 0.49034302279189546
+        }
+      ]
+    },
+    {
+      "id": "caspian-tern",
+      "commonName": "Caspian Tern",
+      "scientificName": "Hydroprogne caspia",
+      "mnemonic": "Loud rasping 'kaaaaarrr' from overhead",
+      "field": "April through October at Tomales Bay. Largest tern; thick coral-red bill, plunges from height for fish.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Sterna-caspia-010.jpg/330px-Sterna-caspia-010.jpg",
+      "recordings": [
+        {
+          "id": "XC140788",
+          "url": "https://xeno-canto.org/140788/download",
+          "duration": 8,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "San Diego Bay, Coronado, San Diego County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/140788",
+          "gain": 0.30338911841942706
+        },
+        {
+          "id": "XC173581",
+          "url": "https://xeno-canto.org/173581/download",
+          "duration": 6,
+          "type": "flight call, splash",
+          "recordist": "Paul Marvin",
+          "location": "Pine Island Conservation Area, Merritt Island, Florida, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/173581",
+          "gain": 0.8912509381337456
+        },
+        {
+          "id": "XC452796",
+          "url": "https://xeno-canto.org/452796/download",
+          "duration": 12,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "Estero Llano Grande SP, Weslaco, Hidalgo County, Texas, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/452796",
+          "gain": 0.46719695117188015
+        }
+      ]
+    },
+    {
+      "id": "forsters-tern",
+      "commonName": "Forster's Tern",
+      "scientificName": "Sterna forsteri",
+      "mnemonic": "Sharp rising 'kyaarr' calls in flight",
+      "field": "April through October on the bay. Slimmer than Caspian; the pale-tipped orange bill and longer tail streamers separate them.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Forster%27s_Tern%2C_Horicon_NWR%2C_Wisconsin.jpg/330px-Forster%27s_Tern%2C_Horicon_NWR%2C_Wisconsin.jpg",
+      "recordings": [
+        {
+          "id": "XC406598",
+          "url": "https://xeno-canto.org/406598/download",
+          "duration": 12,
+          "type": "song",
+          "recordist": "Bates Estabrooks",
+          "location": "Nags Head, Dare County, North Carolina, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/406598",
+          "gain": 1
+        },
+        {
+          "id": "XC1155",
+          "url": "https://xeno-canto.org/1155/download",
+          "duration": 3,
+          "type": "song",
+          "recordist": "Don Jones",
+          "location": "Cape May County Park, New Jersey, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
+          "sourceUrl": "https://xeno-canto.org/1155",
+          "gain": 0.32696404683430524
+        },
+        {
+          "id": "XC161114",
+          "url": "https://xeno-canto.org/161114/download",
+          "duration": 8,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "Viera Wetlands, Florida, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/161114",
+          "gain": 1
+        }
+      ]
+    },
+    {
+      "id": "black-oystercatcher",
+      "commonName": "Black Oystercatcher",
+      "scientificName": "Haematopus bachmani",
+      "mnemonic": "Loud whistled 'wheep wheep wheep' from rocks",
+      "field": "Year-round on rocky shorelines around the bay mouth and Pt. Reyes. Pries mussels and limpets with its red chisel-bill.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Black_Oystercatcher_HMB_RWD4.jpg/330px-Black_Oystercatcher_HMB_RWD4.jpg",
+      "recordings": [
+        {
+          "id": "XC209345",
+          "url": "https://xeno-canto.org/209345/download",
+          "duration": 14,
+          "type": "call",
+          "recordist": "Ian Cruickshank",
+          "location": "Moorecroft Regional Park, Nanoose Bay, British Columbia, Canada",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/209345",
+          "gain": 1
+        },
+        {
+          "id": "XC348700",
+          "url": "https://xeno-canto.org/348700/download",
+          "duration": 3,
+          "type": "alarm call, call",
+          "recordist": "Anthony Gliozzo",
+          "location": "Dana Point Harbor, Orange County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/348700",
+          "gain": 0.15903766838224662
+        }
+      ]
+    },
+    {
+      "id": "western-grebe",
+      "commonName": "Western Grebe",
+      "scientificName": "Aechmophorus occidentalis",
+      "mnemonic": "Loud creaking 'crick-creek' duet",
+      "field": "October through April on Tomales Bay. Famous courtship display: pairs run together upright across the water.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Western_Grebe_swimming.jpg/330px-Western_Grebe_swimming.jpg",
+      "recordings": [
+        {
+          "id": "XC527697",
+          "url": "https://xeno-canto.org/527697/download",
+          "duration": 8,
+          "type": "song, rattle",
+          "recordist": "Thomas G. Graves",
+          "location": "Santa Margarita Lake, San Luis Obispo, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/527697",
+          "gain": 0.3086739645683859
+        },
+        {
+          "id": "XC493114",
+          "url": "https://xeno-canto.org/493114/download",
+          "duration": 7,
+          "type": "song",
+          "recordist": "Paul Marvin",
+          "location": "Otay Lakes, San Diego Co., California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/493114",
+          "gain": 0.22130947096056375
+        },
+        {
+          "id": "XC358606",
+          "url": "https://xeno-canto.org/358606/download",
+          "duration": 7,
+          "type": "song",
+          "recordist": "Paul Marvin",
+          "location": "Otay Lakes, San Diego Co., California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/358606",
+          "gain": 0.22750974307720706
+        }
+      ]
+    },
+    {
+      "id": "double-crested-cormorant",
+      "commonName": "Double-crested Cormorant",
+      "scientificName": "Nannopterum auritum",
+      "mnemonic": "Mostly silent; deep guttural grunts at colonies",
+      "field": "Year-round on the bay. Holds wings outstretched to dry after diving — feathers are deliberately wettable, unlike most waterbirds.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Phalacrocorax-auritus-007.jpg/330px-Phalacrocorax-auritus-007.jpg",
+      "recordings": [
+        {
+          "id": "XC145782",
+          "url": "https://xeno-canto.org/145782/download",
+          "duration": 7,
+          "type": "call",
+          "recordist": "Paul Marvin",
+          "location": "Biolab Road, Canaveral National Seashore, Brevard County, Florida, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/145782",
+          "gain": 1
+        },
+        {
+          "id": "XC145783",
+          "url": "https://xeno-canto.org/145783/download",
+          "duration": 10,
+          "type": "call",
+          "recordist": "Paul Marvin",
+          "location": "Biolab Road, Canaveral National Seashore, Brevard County, Florida, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/145783",
+          "gain": 1
+        },
+        {
+          "id": "XC145779",
+          "url": "https://xeno-canto.org/145779/download",
+          "duration": 6,
+          "type": "call",
+          "recordist": "Paul Marvin",
+          "location": "Biolab Road, Canaveral National Seashore, Brevard County, Florida, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/145779",
+          "gain": 1
+        }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "tb-1",
+      "title": "Big Long Bills",
+      "speciesIds": [
+        "marbled-godwit",
+        "long-billed-curlew",
+        "whimbrel",
+        "willet"
+      ],
+      "length": 8
+    },
+    {
+      "id": "tb-2",
+      "title": "Plovers & Killdeer",
+      "speciesIds": [
+        "black-bellied-plover",
+        "killdeer"
+      ],
+      "length": 8
+    },
+    {
+      "id": "tb-3",
+      "title": "Herons & Egrets",
+      "speciesIds": [
+        "great-blue-heron",
+        "great-egret",
+        "snowy-egret"
+      ],
+      "length": 8
+    },
+    {
+      "id": "tb-4",
+      "title": "Terns, Cormorants & Grebes",
+      "speciesIds": [
+        "caspian-tern",
+        "forsters-tern",
+        "double-crested-cormorant",
+        "western-grebe"
+      ],
+      "length": 8
+    },
+    {
+      "id": "tb-5",
+      "title": "Rocky Edges",
+      "speciesIds": [
+        "black-oystercatcher"
+      ],
+      "length": 8
+    },
+    {
+      "id": "tb-review",
+      "title": "Review: All 14",
+      "speciesIds": [
+        "marbled-godwit",
+        "willet",
+        "long-billed-curlew",
+        "whimbrel",
+        "black-bellied-plover",
+        "killdeer",
+        "great-blue-heron",
+        "great-egret",
+        "snowy-egret",
+        "caspian-tern",
+        "forsters-tern",
+        "black-oystercatcher",
+        "western-grebe",
+        "double-crested-cormorant"
+      ],
+      "length": 12
+    }
+  ]
+}

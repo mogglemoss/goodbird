@@ -1,4 +1,4 @@
-import type { LessonRef, Manifest, Species, Unit } from "./types";
+import type { LessonRef, Manifest, Species, SpeciesStat, Unit } from "./types";
 
 // Eager-load every unit JSON in src/data/. Adding a new unit = drop in a JSON.
 const modules = import.meta.glob<Manifest>("@/data/*.json", { eager: true, import: "default" });
@@ -9,8 +9,9 @@ const sortOrder: Record<string, number> = {
   "riparian": 3,
   "marsh-freshwater": 4,
   "coastal-conifer": 5,
-  "pasture": 6,
-  "night-voices": 7, // last — "after dark" feels like the capstone unit
+  "tomales-bay": 6,
+  "pasture": 7,
+  "night-voices": 8, // last — "after dark" feels like the capstone unit
 };
 
 export const units: Unit[] = [];
@@ -39,7 +40,21 @@ export const getSpecies = (id: string): Species => {
   return s;
 };
 
+/** Sentinel id for the cross-unit "Daily review" lesson. */
+export const REVIEW_LESSON_ID = "review";
+
 export const getLesson = (id: string) => {
+  if (id === REVIEW_LESSON_ID) {
+    // Synthetic lesson — the lesson-generator handles species selection
+    // from speciesStats (most-needs-review) rather than a fixed list.
+    return {
+      id: REVIEW_LESSON_ID,
+      title: "Daily review",
+      speciesIds: [],
+      length: 10,
+      unitId: undefined,
+    };
+  }
   const l = lessonsById.get(id);
   if (!l) throw new Error(`Unknown lesson id: ${id}`);
   return l;
@@ -64,6 +79,33 @@ for (const u of units) {
   speciesByUnit.set(u.id, [...ids].map((id) => speciesById.get(id)).filter((s): s is Species => !!s && s.recordings.length > 0));
 }
 export const getSpeciesForUnit = (unitId: string): Species[] => speciesByUnit.get(unitId) ?? [];
+
+/**
+ * Pick the species most in need of review, sorted by weakness + how
+ * overdue they are. Used by the Daily Review lesson type.
+ *
+ * Scoring: low accuracy (1-acc) + days overdue (dueAt past now) + a small
+ * boost for species seen fewer than 3 times. Brand-new (never-seen)
+ * species get a fixed mid-high score so they surface but don't dominate.
+ */
+export function pickReviewSpeciesIds(
+  stats: Record<string, SpeciesStat>,
+  max = 15,
+): string[] {
+  const pool = allSpeciesWithRecordings();
+  if (!pool.length) return [];
+  const now = Date.now();
+  const scored = pool.map((s) => {
+    const st = stats[s.id];
+    if (!st || st.timesSeen === 0) return { id: s.id, weight: 1.5 };
+    const acc = st.timesCorrect / Math.max(1, st.timesSeen);
+    const overdueDays = st.dueAt ? Math.max(0, (now - st.dueAt) / 86_400_000) : 0;
+    const fewBoost = st.timesSeen < 3 ? 1 : 0;
+    return { id: s.id, weight: (1 - acc) * 4 + Math.min(overdueDays, 5) + fewBoost };
+  });
+  scored.sort((a, b) => b.weight - a.weight);
+  return scored.slice(0, max).map((x) => x.id);
+}
 
 /** Every audio + image URL across all units — for offline pre-caching. */
 export function allMediaUrls(): string[] {

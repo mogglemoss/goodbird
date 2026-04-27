@@ -13,6 +13,8 @@ import { StickyTopBar } from "@/components/StickyTopBar";
 import { HabitatGlyph } from "@/components/brand/HabitatGlyph";
 import { BirdOfTheDay } from "@/components/BirdOfTheDay";
 import { InstallHint } from "@/components/InstallHint";
+import { DailyReviewCard } from "@/components/DailyReviewCard";
+import { SpeciesSearch, useSearchHotkey } from "@/components/SpeciesSearch";
 
 export function HomeRoute() {
   const xp = useGame((s) => s.xp);
@@ -23,6 +25,8 @@ export function HomeRoute() {
   const xpToday = useGame((s) => s.xpToday);
   const xpTodayDay = useGame((s) => s.xpTodayDay);
   const [settingsOpen, setSettingsOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
+  useSearchHotkey(setSearchOpen);
 
   const todayXp = useMemo(() => {
     const t = (() => { const d = new Date(); return `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`; })();
@@ -55,6 +59,7 @@ export function HomeRoute() {
       streakDays={streak.days}
       xpToday={todayXp}
       dailyGoal={dailyGoal}
+      onSearch={() => setSearchOpen(true)}
       onSettings={() => setSettingsOpen(true)}
     />
   );
@@ -64,12 +69,15 @@ export function HomeRoute() {
       <StickyTopBar controls={headerControls} />
       <Hero />
       <SettingsSheet open={settingsOpen} onClose={() => setSettingsOpen(false)} />
+      <SpeciesSearch open={searchOpen} onClose={() => setSearchOpen(false)} />
 
       <OnboardingCard />
 
       <InstallHint />
 
       <BirdOfTheDay />
+
+      <DailyReviewCard />
 
       {continueTarget && (
         <ContinueChip target={continueTarget} />
@@ -128,12 +136,14 @@ function HeaderControls({
   streakDays,
   xpToday,
   dailyGoal,
+  onSearch,
   onSettings,
 }: {
   xp: number;
   streakDays: number;
   xpToday: number;
   dailyGoal: number;
+  onSearch: () => void;
   onSettings: () => void;
 }) {
   const goalReached = xpToday >= dailyGoal;
@@ -143,9 +153,20 @@ function HeaderControls({
       <Pill icon="🔥" value={streakDays} label="day streak" muted={streakDays === 0 && !goalReached} />
       <Pill icon="✦" value={xp} label="xp" muted={xp === 0} />
       <button
+        onClick={onSearch}
+        aria-label="Search species"
+        title="Search (⌘K)"
+        className="ml-0.5 grid h-9 w-9 place-items-center rounded-full border-2 border-(--color-line) bg-(--color-surface) text-(--color-ink-soft) hover:border-(--color-moss-300) cursor-pointer"
+      >
+        <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+          <circle cx="11" cy="11" r="7" />
+          <line x1="20" y1="20" x2="16.5" y2="16.5" />
+        </svg>
+      </button>
+      <button
         onClick={onSettings}
         aria-label="Settings"
-        className="ml-0.5 grid h-9 w-9 place-items-center rounded-full border-2 border-(--color-line) bg-(--color-surface) text-(--color-ink-soft) hover:border-(--color-moss-300) cursor-pointer"
+        className="grid h-9 w-9 place-items-center rounded-full border-2 border-(--color-line) bg-(--color-surface) text-(--color-ink-soft) hover:border-(--color-moss-300) cursor-pointer"
       >
         <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden>
           <circle cx="5" cy="12" r="1.6" />
@@ -238,6 +259,7 @@ function HabitatCard({ unit, index, completed }: HabitatCardProps) {
   const lessonsDone = lessons.filter((l) => completed[l.id]).length;
   const totalLessons = lessons.length;
   const progress = totalLessons === 0 ? 0 : lessonsDone / totalLessons;
+  const isComplete = totalLessons > 0 && lessonsDone === totalLessons;
   const accent = ACCENTS[unit.accent];
 
   const sampleSpecies = Array.from(new Set(lessons.flatMap((l) => l.speciesIds)))
@@ -263,8 +285,24 @@ function HabitatCard({ unit, index, completed }: HabitatCardProps) {
           <div className={cn("font-display text-2xl leading-none tabular-nums sm:text-3xl", accent.label)}>
             {num}
           </div>
-          <div className={accent.label}>
-            <HabitatGlyph accent={unit.accent} />
+          <div className="flex items-center gap-1.5">
+            {isComplete && (
+              <span
+                aria-label="Habitat complete"
+                title="Complete"
+                className={cn(
+                  "grid h-6 w-6 place-items-center rounded-full text-white shadow-(--shadow-soft)",
+                  accent.doneBadgeBg,
+                )}
+              >
+                <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </span>
+            )}
+            <div className={accent.label}>
+              <HabitatGlyph accent={unit.accent} />
+            </div>
           </div>
         </header>
 

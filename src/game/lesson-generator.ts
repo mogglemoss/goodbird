@@ -1,5 +1,5 @@
 import type { Exercise, ExerciseKind, LessonRef, Recording, Species, SpeciesStat } from "@/lib/types";
-import { allSpeciesWithRecordings, getSpecies, getSpeciesForUnit } from "@/lib/manifest";
+import { REVIEW_LESSON_ID, allSpeciesWithRecordings, getSpecies, getSpeciesForUnit, pickReviewSpeciesIds } from "@/lib/manifest";
 
 function rand<T>(arr: T[]): T {
   return arr[Math.floor(Math.random() * arr.length)];
@@ -122,11 +122,19 @@ export function generateLesson(
   lesson: LessonRef,
   stats: Record<string, SpeciesStat>,
 ): Exercise[] {
-  const pool = lesson.speciesIds.map(getSpecies).filter((s) => s.recordings.length > 0);
+  // Daily Review is a virtual cross-unit lesson — pick a fresh weighted
+  // sample of "needs review" species each time it's started.
+  const isReview = lesson.id === REVIEW_LESSON_ID;
+  const speciesIds = isReview
+    ? pickReviewSpeciesIds(stats, 15)
+    : lesson.speciesIds;
+
+  const pool = speciesIds.map(getSpecies).filter((s) => s.recordings.length > 0);
   // Distractors prefer same-unit species; backfill from the global pool when
-  // the unit is too small (e.g. Night Voices has only ~7 species).
-  const unitPool = lesson.unitId ? getSpeciesForUnit(lesson.unitId) : pool;
+  // the unit is too small (e.g. Night Voices has only ~7 species). Review
+  // mode is cross-unit by definition, so its unitPool is everything.
   const allPool = allSpeciesWithRecordings();
+  const unitPool = lesson.unitId ? getSpeciesForUnit(lesson.unitId) : allPool;
   const exercises: Exercise[] = [];
   const lastKinds: ExerciseKind[] = [];
 
