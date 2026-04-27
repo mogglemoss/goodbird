@@ -138,14 +138,14 @@ function HeaderControls({
 }) {
   const goalReached = xpToday >= dailyGoal;
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex items-center gap-1.5">
       <DailyGoalRing xpToday={xpToday} dailyGoal={dailyGoal} />
       <Pill icon="🔥" value={streakDays} label="day streak" muted={streakDays === 0 && !goalReached} />
       <Pill icon="✦" value={xp} label="xp" muted={xp === 0} />
       <button
         onClick={onSettings}
         aria-label="Settings"
-        className="grid h-9 w-9 place-items-center rounded-full border-2 border-(--color-line) bg-(--color-surface) text-(--color-ink-soft) hover:border-(--color-moss-300) cursor-pointer"
+        className="ml-0.5 grid h-9 w-9 place-items-center rounded-full border-2 border-(--color-line) bg-(--color-surface) text-(--color-ink-soft) hover:border-(--color-moss-300) cursor-pointer"
       >
         <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden>
           <circle cx="5" cy="12" r="1.6" />

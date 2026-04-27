@@ -19,7 +19,7 @@ export function StickyTopBar({ controls }: Props) {
     <div
       className="sticky top-0 z-30 -mx-5 ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] border-b border-(--color-line)/80 bg-(--color-bg)/90 px-5 py-2.5 backdrop-blur-md sm:py-3"
     >
-      <div className="mx-auto flex w-full max-w-md items-center justify-between sm:max-w-2xl lg:max-w-4xl">
+      <div className="mx-auto flex w-full max-w-md items-center justify-between gap-4 sm:max-w-2xl lg:max-w-4xl">
         <Wordmark size="md" />
         {controls}
       </div>

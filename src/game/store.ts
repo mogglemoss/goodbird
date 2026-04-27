@@ -44,6 +44,7 @@ interface GameState {
   toggleFavorite: (speciesId: string) => void;
   setFreeplay: (on: boolean) => void;
   setOnboarded: () => void;
+  restartTour: () => void;
   setDailyGoal: (n: number) => void;
   setTheme: (t: "auto" | "light" | "dark") => void;
   dismissInstallHint: () => void;
@@ -150,12 +151,15 @@ export const useGame = create<GameState>()(
       resetProgress: () => {
         set({
           xp: 0,
+          xpToday: 0,
+          xpTodayDay: null,
           streak: { lastPlayedDay: null, days: 0 },
           speciesStats: {},
           completedLessons: {},
           favorites: {},
           active: null,
-          // Don't wipe freeplay or hasOnboarded — those are user preferences, not progress.
+          // Don't wipe freeplay, hasOnboarded, theme, or dailyGoal — those are
+          // user preferences, not progress.
         });
       },
 
@@ -168,6 +172,7 @@ export const useGame = create<GameState>()(
 
       setFreeplay: (on) => set({ freeplay: on }),
       setOnboarded: () => set({ hasOnboarded: true }),
+      restartTour: () => set({ hasOnboarded: false }),
       setDailyGoal: (n) => set({ dailyGoal: Math.max(5, Math.floor(n)) }),
       setTheme: (t) => set({ theme: t }),
       dismissInstallHint: () => set({ dismissedInstallHint: true }),

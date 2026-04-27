@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { useGame } from "@/game/store";
 import { allMediaUrls } from "@/lib/manifest";
@@ -23,6 +24,19 @@ export function SettingsSheet({ open, onClose }: Props) {
   const streakDays = useGame((s) => s.streak.days);
   const completedCount = useGame((s) => Object.keys(s.completedLessons).length);
   const speciesSeen = useGame((s) => Object.keys(s.speciesStats).length);
+  const speciesStats = useGame((s) => s.speciesStats);
+
+  // Aggregate accuracy across every species the user has answered.
+  const overallAccuracy = (() => {
+    let seen = 0;
+    let correct = 0;
+    for (const s of Object.values(speciesStats)) {
+      seen += s.timesSeen;
+      correct += s.timesCorrect;
+    }
+    if (!seen) return null;
+    return Math.round((correct / seen) * 100);
+  })();
   const resetProgress = useGame((s) => s.resetProgress);
   const freeplay = useGame((s) => s.freeplay);
   const setFreeplay = useGame((s) => s.setFreeplay);
@@ -30,6 +44,7 @@ export function SettingsSheet({ open, onClose }: Props) {
   const setDailyGoal = useGame((s) => s.setDailyGoal);
   const theme = useGame((s) => s.theme);
   const setTheme = useGame((s) => s.setTheme);
+  const restartTour = useGame((s) => s.restartTour);
 
   const [confirming, setConfirming] = useState(false);
   const [offline, setOffline] = useState<OfflineState>({ kind: "idle" });
@@ -195,6 +210,14 @@ export function SettingsSheet({ open, onClose }: Props) {
                 <Stat label="Day streak" value={streakDays} />
                 <Stat label="Lessons" value={completedCount} />
                 <Stat label="Species heard" value={speciesSeen} />
+                <Stat
+                  label="Overall accuracy"
+                  value={overallAccuracy != null ? `${overallAccuracy}%` : "—"}
+                />
+                <Stat
+                  label="Times heard"
+                  value={Object.values(speciesStats).reduce((n, s) => n + s.timesSeen, 0)}
+                />
               </dl>
             </Section>
 
@@ -272,6 +295,14 @@ export function SettingsSheet({ open, onClose }: Props) {
                   All under Creative Commons; recordist credit on each clip.
                 </p>
                 <div className="mt-3 flex items-center justify-center gap-3 font-mono text-[10px] uppercase tracking-[0.18em]">
+                  <Link
+                    to="/about"
+                    onClick={onClose}
+                    className="text-(--color-ink-soft) underline hover:text-(--color-ink)"
+                  >
+                    More
+                  </Link>
+                  <span aria-hidden className="text-(--color-line)">·</span>
                   <a
                     href="https://github.com/mogglemoss/goodbird"
                     target="_blank"
@@ -280,16 +311,22 @@ export function SettingsSheet({ open, onClose }: Props) {
                   >
                     GitHub
                   </a>
-                  <span aria-hidden className="text-(--color-line)">·</span>
-                  <span className="text-(--color-ink-soft)">MIT licensed</span>
                 </div>
               </div>
-              <button
-                onClick={() => setFeedbackOpen(true)}
-                className="mt-3 tap-target w-full rounded-full border-2 border-(--color-line) bg-(--color-surface) px-5 py-3 text-sm font-semibold text-(--color-ink) transition-colors hover:border-(--color-moss-300) cursor-pointer"
-              >
-                Send feedback
-              </button>
+              <div className="mt-3 grid grid-cols-2 gap-2">
+                <button
+                  onClick={() => { restartTour(); onClose(); }}
+                  className="tap-target rounded-full border-2 border-(--color-line) bg-(--color-surface) px-4 py-3 text-sm font-semibold text-(--color-ink) transition-colors hover:border-(--color-moss-300) cursor-pointer"
+                >
+                  Show tour again
+                </button>
+                <button
+                  onClick={() => setFeedbackOpen(true)}
+                  className="tap-target rounded-full border-2 border-(--color-line) bg-(--color-surface) px-4 py-3 text-sm font-semibold text-(--color-ink) transition-colors hover:border-(--color-moss-300) cursor-pointer"
+                >
+                  Send feedback
+                </button>
+              </div>
             </Section>
             <FeedbackDialog open={feedbackOpen} onClose={() => setFeedbackOpen(false)} />
 
@@ -346,7 +383,7 @@ function Section({ label, tone, children }: { label: string; tone?: "warn"; chil
   );
 }
 
-function Stat({ label, value }: { label: string; value: number }) {
+function Stat({ label, value }: { label: string; value: number | string }) {
   return (
     <div className="rounded-2xl border-2 border-(--color-line) bg-(--color-moss-50) px-3 py-3">
       <div className="font-display text-2xl tabular-nums">{value}</div>
