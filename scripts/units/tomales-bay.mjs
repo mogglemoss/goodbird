@@ -26,6 +26,11 @@ export const SPECIES = [
   { id: "black-oystercatcher",     commonName: "Black Oystercatcher",    scientificName: "Haematopus bachmani",     mnemonic: "Loud whistled 'wheep wheep wheep' from rocks", field: "Year-round on rocky shorelines around the bay mouth and Pt. Reyes. Pries mussels and limpets with its red chisel-bill." },
   { id: "western-grebe",           commonName: "Western Grebe",          scientificName: "Aechmophorus occidentalis", mnemonic: "Loud creaking 'crick-creek' duet", field: "October through April on Tomales Bay. Famous courtship display: pairs run together upright across the water." },
   { id: "double-crested-cormorant",commonName: "Double-crested Cormorant",scientificName: "Nannopterum auritum",    mnemonic: "Mostly silent; deep guttural grunts at colonies", field: "Year-round on the bay. Holds wings outstretched to dry after diving — feathers are deliberately wettable, unlike most waterbirds." },
+  // Small "peep" sandpipers — easy to hear, hard to tell apart visually
+  { id: "western-sandpiper",       commonName: "Western Sandpiper",      scientificName: "Calidris mauri",          mnemonic: "Thin high 'jeet' or 'cheep' calls", field: "August through May on Tomales Bay flats; very abundant. Slightly longer drooping bill than Least Sandpiper, with black legs." },
+  { id: "least-sandpiper",         commonName: "Least Sandpiper",        scientificName: "Calidris minutilla",      mnemonic: "Reedy rolling 'kreee-eep'", field: "August through May on tidal flats. Smallest sandpiper in the world. Yellow-green legs distinguish from Western Sandpiper at any range." },
+  { id: "greater-yellowlegs",      commonName: "Greater Yellowlegs",     scientificName: "Tringa melanoleuca",      mnemonic: "Loud ringing 'tew-tew-tew' (3 or 4 notes)", field: "August through May on shallow margins. Bright yellow legs, slim long-bodied profile. The whistled call carries further than any other shorebird's." },
+  { id: "common-loon",             commonName: "Common Loon",            scientificName: "Gavia immer",             mnemonic: "Yodeling tremolo at the breeding lakes; mostly silent here", field: "October through April on Tomales Bay. Larger and stouter than Pacific Loon; thicker bill held horizontal when swimming. Sometimes calls in spring before departing north." },
 ];
 
 // Merged "Plovers & Killdeer" + "Rocky Edges" into one shore-edge lesson —
@@ -37,6 +42,7 @@ export const LESSONS = [
   { id: "tb-2",      title: "Plovers & Oystercatcher",   speciesIds: ["black-bellied-plover", "killdeer", "black-oystercatcher"], length: 8 },
   { id: "tb-3",      title: "Herons & Egrets",           speciesIds: ["great-blue-heron", "great-egret", "snowy-egret"], length: 8 },
   { id: "tb-4",      title: "Terns, Cormorants & Grebes", speciesIds: ["caspian-tern", "forsters-tern", "double-crested-cormorant", "western-grebe"], length: 8 },
-  { id: "tb-review", title: "Review: All 14",            speciesIds: [], length: 12 },
+  { id: "tb-5",      title: "Small Sandpipers & Loon",   speciesIds: ["western-sandpiper", "least-sandpiper", "greater-yellowlegs", "common-loon"], length: 8 },
+  { id: "tb-review", title: "Review: All 18",            speciesIds: [], length: 14 },
 ];
 LESSONS[LESSONS.length - 1].speciesIds = SPECIES.map((s) => s.id);

@@ -3,7 +3,7 @@
     "id": "oak-woodland",
     "title": "Oak Woodland",
     "habitat": "Oak Woodland & Bay Laurel",
-    "description": "The acorn-strewn understory of Inverness Ridge, Olema, and Mt. Tamalpais — cavity-nesters and woodland songsters.",
+    "description": "The acorn-strewn understory of Inverness Ridge, Olema, and Mt. Tamalpais \u2014 cavity-nesters and woodland songsters.",
     "accent": "amber",
     "tagline": "Acorn woodpeckers in dappled cathedrals."
   },
@@ -12,7 +12,7 @@
       "id": "acorn-woodpecker",
       "commonName": "Acorn Woodpecker",
       "scientificName": "Melanerpes formicivorus",
-      "mnemonic": "Wheka-wheka-wheka — clown laughter",
+      "mnemonic": "Wheka-wheka-wheka \u2014 clown laughter",
       "field": "Year-round in oak woodland. Lives in cooperative groups of up to a dozen, anchored to a single granary tree pierced with thousands of acorn-storage holes.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Acorn_woodpecker_holding_a_nut_in_its_beak-0225.jpg/330px-Acorn_woodpecker_holding_a_nut_in_its_beak-0225.jpg",
       "recordings": [
@@ -156,7 +156,7 @@
           "gain": 1
         }
       ],
-      "field": "Year-round in coniferous and oak forest. Mimics Red-tailed Hawk calls — possibly to clear feeders of competitors."
+      "field": "Year-round in coniferous and oak forest. Mimics Red-tailed Hawk calls \u2014 possibly to clear feeders of competitors."
     },
     {
       "id": "huttons-vireo",
@@ -311,7 +311,7 @@
           "duration": 6,
           "type": "song",
           "recordist": "Martin St-Michel",
-          "location": "Stoneham-et-Tewkesbury, La Jacques-Cartier, Québec, Canada",
+          "location": "Stoneham-et-Tewkesbury, La Jacques-Cartier, Qu\u00e9bec, Canada",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
           "sourceUrl": "https://xeno-canto.org/175355",
           "gain": 0.3622429984166986
@@ -489,12 +489,12 @@
           "gain": 0.2155261643566158
         }
       ],
-      "field": "Year-round in dense scrub. Forages by 'double-scratching' both feet backward in leaf litter — the rustle is often the first sign of the bird."
+      "field": "Year-round in dense scrub. Forages by 'double-scratching' both feet backward in leaf litter \u2014 the rustle is often the first sign of the bird."
     },
     {
       "id": "warbling-vireo",
-      "commonName": "Warbling Vireo",
-      "scientificName": "Vireo gilvus",
+      "commonName": "Western Warbling-Vireo",
+      "scientificName": "Vireo swainsoni",
       "mnemonic": "Long, run-on warble ending up",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Warbling_vireo_%2882141%29.jpg/330px-Warbling_vireo_%2882141%29.jpg",
       "recordings": [
@@ -532,7 +532,7 @@
           "gain": 0.4581418867145334
         }
       ],
-      "field": "April through September in tall riparian and oak gallery. The slow-building warble is delivered from a single mid-canopy perch."
+      "field": "April through September in tall riparian and oak gallery. The slow-building warble is delivered from a single mid-canopy perch. Split from Eastern Warbling-Vireo in the 66th AOS Supplement (2025)."
     }
   ],
   "lessons": [

@@ -4,8 +4,8 @@
     "title": "Pasture & Open Country",
     "habitat": "Open Country",
     "description": "The dairy pastures of the Pt. Reyes pastoral zone and the rolling grassland of Chileno Valley.",
-    "accent": "rose",
-    "tagline": "Kestrels hovering above gold hills."
+    "tagline": "Kestrels hovering above gold hills.",
+    "accent": "rose"
   },
   "species": [
     {
@@ -56,6 +56,7 @@
       "commonName": "Savannah Sparrow",
       "scientificName": "Passerculus sandwichensis",
       "mnemonic": "Insect-like 'tsi-tsi-tsi-zheee'",
+      "field": "Year-round in coastal grassland. Many local subspecies; the 'Belding's' Savannah Sparrow is a tidal-marsh specialist of the southern California coast.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Passerculus_sandwichensis_crop.jpg/330px-Passerculus_sandwichensis_crop.jpg",
       "recordings": [
         {
@@ -91,46 +92,57 @@
           "sourceUrl": "https://xeno-canto.org/166114",
           "gain": 1
         }
-      ],
-      "field": "Year-round in coastal grassland. Many local subspecies; the 'Belding's' Savannah Sparrow is a tidal-marsh specialist of the southern California coast."
+      ]
     },
     {
       "id": "western-bluebird",
       "commonName": "Western Bluebird",
       "scientificName": "Sialia mexicana",
       "mnemonic": "Soft 'few' contact notes",
+      "field": "Year-round in oak savanna and pasture edges. Cavity nester; competes with starlings, swallows, and other bluebirds for nest holes.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Western_bluebird_%28male%29.jpg/330px-Western_bluebird_%28male%29.jpg",
       "recordings": [
         {
-          "id": "XC457218",
-          "url": "https://xeno-canto.org/457218/download",
-          "duration": 14,
-          "type": "flight call",
-          "recordist": "Paul Marvin",
-          "location": "Percha Dam, Caballo Lake State Park, Sierra Co., New Mexico, United States",
-          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/457218",
-          "gain": 0.45081670454146006
+          "id": "XC229709",
+          "url": "https://xeno-canto.org/229709/download",
+          "duration": 9,
+          "type": "song",
+          "recordist": "Peter Boesman",
+          "location": "Mount Laguna, CA, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+          "sourceUrl": "https://xeno-canto.org/229709",
+          "gain": 1
         },
         {
-          "id": "XC961965",
-          "url": "https://xeno-canto.org/961965/download",
+          "id": "XC899401",
+          "url": "https://xeno-canto.org/899401/download",
           "duration": 6,
-          "type": "call",
-          "recordist": "A Richardson",
-          "location": "Carlsbad, Eddy County, New Mexico, United States",
+          "type": "song",
+          "recordist": "Paul Driver",
+          "location": "Bryce Canyon City, Garfield County, Utah, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/961965",
+          "sourceUrl": "https://xeno-canto.org/899401",
+          "gain": 0.4618489918952488
+        },
+        {
+          "id": "XC229708",
+          "url": "https://xeno-canto.org/229708/download",
+          "duration": 12,
+          "type": "song",
+          "recordist": "Peter Boesman",
+          "location": "Mount Laguna, CA, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+          "sourceUrl": "https://xeno-canto.org/229708",
           "gain": 1
         }
-      ],
-      "field": "Year-round in oak savanna and pasture edges. Cavity nester; competes with starlings, swallows, and other bluebirds for nest holes."
+      ]
     },
     {
       "id": "white-tailed-kite",
       "commonName": "White-tailed Kite",
       "scientificName": "Elanus leucurus",
       "mnemonic": "Whistled 'keep keep keep'",
+      "field": "Year-round in open grassland. Hovers over tall grass to spot voles; nests in isolated trees within ranchland.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Elanus_leucurus_3.jpg/330px-Elanus_leucurus_3.jpg",
       "recordings": [
         {
@@ -166,14 +178,14 @@
           "sourceUrl": "https://xeno-canto.org/57604",
           "gain": 0.9908319448927677
         }
-      ],
-      "field": "Year-round in open grassland. Hovers over tall grass to spot voles; nests in isolated trees within ranchland."
+      ]
     },
     {
       "id": "loggerhead-shrike",
       "commonName": "Loggerhead Shrike",
       "scientificName": "Lanius ludovicianus",
       "mnemonic": "Squeaky 'gri-grew gri-grew' — the butcher bird",
+      "field": "Year-round in open country with scattered shrubs. Impales prey — large insects, lizards, small rodents — on thorns and barbed wire.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Shrike_Loggerhead_JG.jpg/330px-Shrike_Loggerhead_JG.jpg",
       "recordings": [
         {
@@ -209,14 +221,14 @@
           "sourceUrl": "https://xeno-canto.org/883583",
           "gain": 1
         }
-      ],
-      "field": "Year-round in open country with scattered shrubs. Impales prey — large insects, lizards, small rodents — on thorns and barbed wire."
+      ]
     },
     {
       "id": "american-kestrel",
       "commonName": "American Kestrel",
       "scientificName": "Falco sparverius",
       "mnemonic": "Sharp 'klee-klee-klee'",
+      "field": "Year-round in open habitats. Smallest North American falcon; often perches on power lines along ranch roads.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/American_kestrel_%28Falco_sparverius_cinnamominus%29_male_Leona_Amarga.jpg/330px-American_kestrel_%28Falco_sparverius_cinnamominus%29_male_Leona_Amarga.jpg",
       "recordings": [
         {
@@ -252,14 +264,14 @@
           "sourceUrl": "https://xeno-canto.org/420472",
           "gain": 0.148081225526751
         }
-      ],
-      "field": "Year-round in open habitats. Smallest North American falcon; often perches on power lines along ranch roads."
+      ]
     },
     {
       "id": "red-tailed-hawk",
       "commonName": "Red-tailed Hawk",
       "scientificName": "Buteo jamaicensis",
       "mnemonic": "Iconic raspy descending scream",
+      "field": "Year-round in open and edge habitats throughout the region. The screaming call is so often used in films that it serves as the default cinematic 'eagle.'",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Red-tailed_Hawk_%2845812546121%29.jpg/330px-Red-tailed_Hawk_%2845812546121%29.jpg",
       "recordings": [
         {
@@ -295,14 +307,14 @@
           "sourceUrl": "https://xeno-canto.org/173875",
           "gain": 0.38018939632056126
         }
-      ],
-      "field": "Year-round in open and edge habitats throughout the region. The screaming call is so often used in films that it serves as the default cinematic 'eagle.'"
+      ]
     },
     {
       "id": "horned-lark",
       "commonName": "Horned Lark",
       "scientificName": "Eremophila alpestris",
       "mnemonic": "Tinkling 'tsee-tinkly-tinkly'",
+      "field": "Year-round in short-grass pasture and bare ground. Males perform a sky-larking display flight up to 250 meters, singing throughout.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Horned_lark_%28eremophila_alpestris%29_01.jpg/330px-Horned_lark_%28eremophila_alpestris%29_01.jpg",
       "recordings": [
         {
@@ -338,14 +350,14 @@
           "sourceUrl": "https://xeno-canto.org/43857",
           "gain": 1
         }
-      ],
-      "field": "Year-round in short-grass pasture and bare ground. Males perform a sky-larking display flight up to 250 meters, singing throughout."
+      ]
     },
     {
       "id": "brewers-blackbird",
       "commonName": "Brewer's Blackbird",
       "scientificName": "Euphagus cyanocephalus",
       "mnemonic": "Squeaky-hinge 'k-shee'",
+      "field": "Year-round in pastures, parking lots, and town edges. Walks rather than hops; iridescent males catch sunlight in striking purples and greens.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Brewers_Blackbird_Esquimalt_Lagoon.jpg/330px-Brewers_Blackbird_Esquimalt_Lagoon.jpg",
       "recordings": [
         {
@@ -381,14 +393,14 @@
           "sourceUrl": "https://xeno-canto.org/104521",
           "gain": 0.5284452517751804
         }
-      ],
-      "field": "Year-round in pastures, parking lots, and town edges. Walks rather than hops; iridescent males catch sunlight in striking purples and greens."
+      ]
     },
     {
       "id": "western-kingbird",
       "commonName": "Western Kingbird",
       "scientificName": "Tyrannus verticalis",
       "mnemonic": "Sharp twittering 'kit-kit-kit'",
+      "field": "April through September in open country with scattered trees. Defends nest sites aggressively against hawks and corvids of much greater size.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Western_kingbird_%2871748%29.jpg/330px-Western_kingbird_%2871748%29.jpg",
       "recordings": [
         {
@@ -424,14 +436,14 @@
           "sourceUrl": "https://xeno-canto.org/570382",
           "gain": 0.5623413251903491
         }
-      ],
-      "field": "April through September in open country with scattered trees. Defends nest sites aggressively against hawks and corvids of much greater size."
+      ]
     },
     {
       "id": "mourning-dove",
       "commonName": "Mourning Dove",
       "scientificName": "Zenaida macroura",
       "mnemonic": "Soft mournful 'oo-AHH-ooo-oo'",
+      "field": "Year-round across most habitats. The whistled wing-rise on takeoff is mechanical, not vocal.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Av_Mourning_Dove_JG.jpg/330px-Av_Mourning_Dove_JG.jpg",
       "recordings": [
         {
@@ -467,14 +479,14 @@
           "sourceUrl": "https://xeno-canto.org/35100",
           "gain": 0.8861352236594998
         }
-      ],
-      "field": "Year-round across most habitats. The whistled wing-rise on takeoff is mechanical, not vocal."
+      ]
     },
     {
       "id": "american-crow",
       "commonName": "American Crow",
       "scientificName": "Corvus brachyrhynchos",
       "mnemonic": "The crow caw — flat, three or four in a row",
+      "field": "Year-round in nearly all habitats. Cooperative breeders; helpers from previous broods assist with nesting and territory defense.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Corvus-brachyrhynchos-001.jpg/330px-Corvus-brachyrhynchos-001.jpg",
       "recordings": [
         {
@@ -510,14 +522,14 @@
           "sourceUrl": "https://xeno-canto.org/958966",
           "gain": 0.743875062907567
         }
-      ],
-      "field": "Year-round in nearly all habitats. Cooperative breeders; helpers from previous broods assist with nesting and territory defense."
+      ]
     },
     {
       "id": "lark-sparrow",
       "commonName": "Lark Sparrow",
       "scientificName": "Chondestes grammacus",
       "mnemonic": "Bright varied warble with buzzes and trills mixed in",
+      "field": "Year-round in open ground with scattered cover. Pairs breed in loose colonies; juveniles wear a quail-like striped face useful for identification.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/LarkSparrow.jpg/330px-LarkSparrow.jpg",
       "recordings": [
         {
@@ -553,14 +565,14 @@
           "sourceUrl": "https://xeno-canto.org/1103030",
           "gain": 0.10268334316680866
         }
-      ],
-      "field": "Year-round in open ground with scattered cover. Pairs breed in loose colonies; juveniles wear a quail-like striped face useful for identification."
+      ]
     },
     {
       "id": "bullocks-oriole",
       "commonName": "Bullock's Oriole",
       "scientificName": "Icterus bullockii",
       "mnemonic": "Whistled, chattery, conversational",
+      "field": "April through August in tall riparian and scrub-oak. Builds a pendulous woven nest, often suspended from the tip of a sycamore branch.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Bullock%27s_Oriole.jpg/330px-Bullock%27s_Oriole.jpg",
       "recordings": [
         {
@@ -596,8 +608,179 @@
           "sourceUrl": "https://xeno-canto.org/645479",
           "gain": 0.2398832919019491
         }
-      ],
-      "field": "April through August in tall riparian and scrub-oak. Builds a pendulous woven nest, often suspended from the tip of a sycamore branch."
+      ]
+    },
+    {
+      "id": "wild-turkey",
+      "commonName": "Wild Turkey",
+      "scientificName": "Meleagris gallopavo",
+      "mnemonic": "Resonant gobble; soft 'putt-putt' contact calls",
+      "field": "Year-round in oak savanna and pasture edges; introduced/reintroduced and now thriving across West Marin. Toms display in spring with fanned tails and bare red wattles.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Gall-dindi.jpg/330px-Gall-dindi.jpg",
+      "recordings": [
+        {
+          "id": "XC1003798",
+          "url": "https://xeno-canto.org/1003798/download",
+          "duration": 14,
+          "type": "song, Gobble",
+          "recordist": "Sue Riffe",
+          "location": "Black Canyon of the Gunnison NP, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/1003798",
+          "gain": 0.1796801080173494
+        },
+        {
+          "id": "XC417806",
+          "url": "https://xeno-canto.org/417806/download",
+          "duration": 9,
+          "type": "call",
+          "recordist": "Bruce Lagerquist",
+          "location": "Orion Oaks County Park, Oakland County, Michigan, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/417806",
+          "gain": 0.3086739645683859
+        },
+        {
+          "id": "XC13619",
+          "url": "https://xeno-canto.org/13619/download",
+          "duration": 7,
+          "type": "call",
+          "recordist": "Andrew Spencer",
+          "location": "Cottonwood Canyon, Las Animas County, Colorado, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
+          "sourceUrl": "https://xeno-canto.org/13619",
+          "gain": 0.5642869413451037
+        }
+      ]
+    },
+    {
+      "id": "cliff-swallow",
+      "commonName": "Cliff Swallow",
+      "scientificName": "Petrochelidon pyrrhonota",
+      "mnemonic": "Squeaky chattering at the colony; harsh 'churr'",
+      "field": "April through August around bridges, barns, and cliff faces. Builds gourd-shaped mud nests in dense colonies. Square tail and pale forehead distinguish from Barn Swallow.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Cliff_Swallow_Builder.jpg/330px-Cliff_Swallow_Builder.jpg",
+      "recordings": [
+        {
+          "id": "XC485511",
+          "url": "https://xeno-canto.org/485511/download",
+          "duration": 14,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "Otay Lakes, San Diego Co., California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/485511",
+          "gain": 0.35034828830157105
+        },
+        {
+          "id": "XC304948",
+          "url": "https://xeno-canto.org/304948/download",
+          "duration": 13,
+          "type": "call",
+          "recordist": "Paul Marvin",
+          "location": "Cheyenne Bottoms, Barton County, Kansas, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/304948",
+          "gain": 0.3634963045460814
+        },
+        {
+          "id": "XC819382",
+          "url": "https://xeno-canto.org/819382/download",
+          "duration": 14,
+          "type": "call",
+          "recordist": "Sue Riffe",
+          "location": "Anahuac, Chambers County, Texas, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/819382",
+          "gain": 0.47424198526024464
+        }
+      ]
+    },
+    {
+      "id": "barn-swallow",
+      "commonName": "Barn Swallow",
+      "scientificName": "Hirundo rustica",
+      "mnemonic": "Twittering 'vit-vit-vit' chatter, often in flight",
+      "field": "April through September around farms and open water. Long deeply-forked tail streamers and rusty throat are diagnostic. Famous for nesting inside barns and outbuildings.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Rauchschwalbe_Hirundo_rustica.jpg/330px-Rauchschwalbe_Hirundo_rustica.jpg",
+      "recordings": [
+        {
+          "id": "XC727116",
+          "url": "https://xeno-canto.org/727116/download",
+          "duration": 9,
+          "type": "call, song",
+          "recordist": "Lars Edenius",
+          "location": "Holmögadd, Västerbottens län, Sweden",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/727116",
+          "gain": 0.24350057999520247
+        },
+        {
+          "id": "XC805598",
+          "url": "https://xeno-canto.org/805598/download",
+          "duration": 13,
+          "type": "call, song",
+          "recordist": "Lars Edenius",
+          "location": "Storavan, Stöcke, Umeå Municipality, Västerbottens län, Sweden",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/805598",
+          "gain": 0.17278259805078636
+        },
+        {
+          "id": "XC657553",
+          "url": "https://xeno-canto.org/657553/download",
+          "duration": 10,
+          "type": "song",
+          "recordist": "Simon Elliott",
+          "location": "Hessay, York, England, United Kingdom",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+          "sourceUrl": "https://xeno-canto.org/657553",
+          "gain": 0.6123503917247733
+        }
+      ]
+    },
+    {
+      "id": "violet-green-swallow",
+      "commonName": "Violet-green Swallow",
+      "scientificName": "Tachycineta thalassina",
+      "mnemonic": "Soft 'chee-chee' chips and chittering at cavity nest",
+      "field": "March through September in oak savanna and conifer edges. Iridescent green back and violet rump above; the white face wraps clearly behind the eye, distinguishing from Tree Swallow.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Violet-green_Swallow%2C_Mono_Lake%2C_California.jpg/330px-Violet-green_Swallow%2C_Mono_Lake%2C_California.jpg",
+      "recordings": [
+        {
+          "id": "XC164579",
+          "url": "https://xeno-canto.org/164579/download",
+          "duration": 8,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "Mono Lake, south end, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/164579",
+          "gain": 0.801678063387679
+        },
+        {
+          "id": "XC164574",
+          "url": "https://xeno-canto.org/164574/download",
+          "duration": 7,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "Cuyamaca Rancho State Park, San Diego County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/164574",
+          "gain": 0.7269423992141196
+        },
+        {
+          "id": "XC164575",
+          "url": "https://xeno-canto.org/164575/download",
+          "duration": 6,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "Cuyamaca Rancho State Park, San Diego County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/164575",
+          "gain": 0.8404270070999394
+        }
+      ]
     }
   ],
   "lessons": [
@@ -645,8 +828,28 @@
       "length": 8
     },
     {
+      "id": "ps-5",
+      "title": "Swallows of the Pastures",
+      "speciesIds": [
+        "cliff-swallow",
+        "barn-swallow",
+        "violet-green-swallow"
+      ],
+      "length": 8
+    },
+    {
+      "id": "ps-6",
+      "title": "Big Ground Birds",
+      "speciesIds": [
+        "wild-turkey",
+        "american-crow",
+        "mourning-dove"
+      ],
+      "length": 8
+    },
+    {
       "id": "ps-review",
-      "title": "Review: All 14",
+      "title": "Review: All 18",
       "speciesIds": [
         "western-meadowlark",
         "savannah-sparrow",
@@ -661,9 +864,13 @@
         "mourning-dove",
         "american-crow",
         "lark-sparrow",
-        "bullocks-oriole"
+        "bullocks-oriole",
+        "wild-turkey",
+        "cliff-swallow",
+        "barn-swallow",
+        "violet-green-swallow"
       ],
-      "length": 12
+      "length": 14
     }
   ]
 }

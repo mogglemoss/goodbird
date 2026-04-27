@@ -23,6 +23,14 @@ export const SPECIES = [
   { id: "black-crowned-night-heron",commonName:"Black-crowned Night-Heron",scientificName:"Nycticorax nycticorax",  mnemonic: "Hollow, abrupt 'quok!'", field: "Year-round at wetland edges. Forages by night; daytime roosts are communal in dense waterside trees." },
   { id: "killdeer",                commonName: "Killdeer",               scientificName: "Charadrius vociferus",    mnemonic: "KILL-deer KILL-deer", field: "Year-round in open ground near water — pastures, gravel parking lots, golf-course edges. Feigns a broken wing to lure intruders from the nest." },
   { id: "song-sparrow",            commonName: "Song Sparrow",           scientificName: "Melospiza melodia",       mnemonic: "Madge-madge-madge put-on-your-tea-kettle", field: "Year-round in any low brush near water. Each male sings 8 to 10 distinct songs, learned from neighbors as a juvenile." },
+  // Dabbling ducks of West Marin freshwater ponds and lagoon edges
+  { id: "american-wigeon",         commonName: "American Wigeon",        scientificName: "Mareca americana",        mnemonic: "Whistled three-note 'WHEW-whew-whew' (males)", field: "October through April on Five Brooks, Olema Marsh, and Bolinas Lagoon. Males have a green eye-stripe and white forehead; the high whistle is unmistakable in winter mixed flocks." },
+  { id: "northern-shoveler",       commonName: "Northern Shoveler",      scientificName: "Spatula clypeata",        mnemonic: "Soft 'took-took' grunts; mostly a quiet duck", field: "October through April on quiet ponds. The huge spatulate bill is diagnostic; flocks often spin in circles to stir up plankton." },
+  { id: "cinnamon-teal",           commonName: "Cinnamon Teal",          scientificName: "Spatula cyanoptera",      mnemonic: "Mostly silent; soft chatter and rattling 'kerek'", field: "March through October on shallow freshwater. Males a brilliant cinnamon-red; smaller and more secretive than other dabblers, often hugging the marsh edge." },
+  { id: "american-coot",           commonName: "American Coot",          scientificName: "Fulica americana",        mnemonic: "Grunting 'puhlk', clucking, and harsh squawks", field: "Year-round on freshwater. Not a duck — a rail with lobed toes. Often in dense rafts; squabbles loudly when feeding." },
+  // Long-legged waders of the freshwater pond edges
+  { id: "black-necked-stilt",      commonName: "Black-necked Stilt",     scientificName: "Himantopus mexicanus",    mnemonic: "Loud yapping 'kek-kek-kek-kek'", field: "March through October on shallow freshwater and brackish edges (Limantour, Abbott's Lagoon). Sky-pink legs absurdly long; bold black-and-white pattern." },
+  { id: "american-avocet",         commonName: "American Avocet",        scientificName: "Recurvirostra americana", mnemonic: "Sharp piping 'wheek-wheek-wheek'", field: "August through May on shallow ponds and lagoon edges. The upturned needle bill sweeps side-to-side through soft mud; in breeding plumage the head and neck flush rusty buff." },
 ];
 
 export const LESSONS = [
@@ -30,6 +38,8 @@ export const LESSONS = [
   { id: "mw-2",      title: "Hidden in the Reeds",    speciesIds: ["sora", "virginia-rail", "american-bittern", "pied-billed-grebe"], length: 8 },
   { id: "mw-3",      title: "Pond & Edge",            speciesIds: ["mallard", "great-blue-heron", "black-crowned-night-heron", "killdeer"], length: 8 },
   { id: "mw-4",      title: "Skies Over Water",       speciesIds: ["tree-swallow", "killdeer", "red-winged-blackbird"], length: 8 },
-  { id: "mw-review", title: "Review: All 13",         speciesIds: [], length: 12 },
+  { id: "mw-5",      title: "Dabbling Ducks",         speciesIds: ["american-wigeon", "northern-shoveler", "cinnamon-teal", "american-coot"], length: 8 },
+  { id: "mw-6",      title: "Long-legged Waders",     speciesIds: ["black-necked-stilt", "american-avocet", "great-blue-heron"], length: 8 },
+  { id: "mw-review", title: "Review: All 19",         speciesIds: [], length: 14 },
 ];
 LESSONS[LESSONS.length - 1].speciesIds = SPECIES.map((s) => s.id);

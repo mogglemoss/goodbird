@@ -490,26 +490,37 @@
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Black_Oystercatcher_HMB_RWD4.jpg/330px-Black_Oystercatcher_HMB_RWD4.jpg",
       "recordings": [
         {
-          "id": "XC209345",
-          "url": "https://xeno-canto.org/209345/download",
-          "duration": 14,
-          "type": "call",
-          "recordist": "Ian Cruickshank",
-          "location": "Moorecroft Regional Park, Nanoose Bay, British Columbia, Canada",
+          "id": "XC1082014",
+          "url": "https://xeno-canto.org/1082014/download",
+          "duration": 10,
+          "type": "song",
+          "recordist": "Manuel Grosselet - Kristine Taylor",
+          "location": "Del Monte Forest, Monterey County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/209345",
+          "sourceUrl": "https://xeno-canto.org/1082014",
           "gain": 1
         },
         {
-          "id": "XC348700",
-          "url": "https://xeno-canto.org/348700/download",
-          "duration": 3,
-          "type": "alarm call, call",
-          "recordist": "Anthony Gliozzo",
-          "location": "Dana Point Harbor, Orange County, California, United States",
+          "id": "XC1090700",
+          "url": "https://xeno-canto.org/1090700/download",
+          "duration": 12,
+          "type": "song",
+          "recordist": "Manuel Grosselet",
+          "location": "Pacific Grove, Monterey County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/348700",
-          "gain": 0.15903766838224662
+          "sourceUrl": "https://xeno-canto.org/1090700",
+          "gain": 1
+        },
+        {
+          "id": "XC762168",
+          "url": "https://xeno-canto.org/762168/download",
+          "duration": 9,
+          "type": "flight call",
+          "recordist": "Bruce Lagerquist",
+          "location": "Ozette, Clallam County, Washington, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/762168",
+          "gain": 0.16143585568264862
         }
       ]
     },
@@ -598,6 +609,178 @@
           "gain": 1
         }
       ]
+    },
+    {
+      "id": "western-sandpiper",
+      "commonName": "Western Sandpiper",
+      "scientificName": "Calidris mauri",
+      "mnemonic": "Thin high 'jeet' or 'cheep' calls",
+      "field": "August through May on Tomales Bay flats; very abundant. Slightly longer drooping bill than Least Sandpiper, with black legs.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Western_Sandpiper.jpg/330px-Western_Sandpiper.jpg",
+      "recordings": [
+        {
+          "id": "XC38465",
+          "url": "https://xeno-canto.org/38465/download",
+          "duration": 10,
+          "type": "flight call",
+          "recordist": "Tayler Brooks",
+          "location": "Grant Co., WA, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
+          "sourceUrl": "https://xeno-canto.org/38465",
+          "gain": 0.4492623246702934
+        },
+        {
+          "id": "XC324726",
+          "url": "https://xeno-canto.org/324726/download",
+          "duration": 14,
+          "type": "call, flight call",
+          "recordist": "Paul Marvin",
+          "location": "Poe Road, Salton Sea, Imperial County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/324726",
+          "gain": 0.15559656316050743
+        },
+        {
+          "id": "XC406209",
+          "url": "https://xeno-canto.org/406209/download",
+          "duration": 8,
+          "type": "call",
+          "recordist": "Patrik Åberg",
+          "location": "Nome, Nome Census Area, Alaska, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/406209",
+          "gain": 0.259716774140201
+        }
+      ]
+    },
+    {
+      "id": "least-sandpiper",
+      "commonName": "Least Sandpiper",
+      "scientificName": "Calidris minutilla",
+      "mnemonic": "Reedy rolling 'kreee-eep'",
+      "field": "August through May on tidal flats. Smallest sandpiper in the world. Yellow-green legs distinguish from Western Sandpiper at any range.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Least_Sandpiper_Foraging.png/330px-Least_Sandpiper_Foraging.png",
+      "recordings": [
+        {
+          "id": "XC453003",
+          "url": "https://xeno-canto.org/453003/download",
+          "duration": 14,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "Falcon State Park, Starr Co., TX, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/453003",
+          "gain": 0.21527817347243727
+        },
+        {
+          "id": "XC433086",
+          "url": "https://xeno-canto.org/433086/download",
+          "duration": 8,
+          "type": "call",
+          "recordist": "Phil Brown",
+          "location": "Plum Island, Newbury, Essex County, Massachusetts, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/433086",
+          "gain": 0.133813521515402
+        },
+        {
+          "id": "XC742129",
+          "url": "https://xeno-canto.org/742129/download",
+          "duration": 9,
+          "type": "call",
+          "recordist": "William Whitehead",
+          "location": "Hawk Rise Sanctuary (near  Linden), Union County, New Jersey, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+          "sourceUrl": "https://xeno-canto.org/742129",
+          "gain": 0.7861401911481284
+        }
+      ]
+    },
+    {
+      "id": "greater-yellowlegs",
+      "commonName": "Greater Yellowlegs",
+      "scientificName": "Tringa melanoleuca",
+      "mnemonic": "Loud ringing 'tew-tew-tew' (3 or 4 notes)",
+      "field": "August through May on shallow margins. Bright yellow legs, slim long-bodied profile. The whistled call carries further than any other shorebird's.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Greater_yellowlegs_%28Tringa_melanoleuca%29_foraging_at_Huntley_Meadows%2C_Alexandria%2C_Virginia%2C_USA.png/330px-Greater_yellowlegs_%28Tringa_melanoleuca%29_foraging_at_Huntley_Meadows%2C_Alexandria%2C_Virginia%2C_USA.png",
+      "recordings": [
+        {
+          "id": "XC408113",
+          "url": "https://xeno-canto.org/408113/download",
+          "duration": 10,
+          "type": "song",
+          "recordist": "Paul Marvin",
+          "location": "River Lakes Conservation Area near Viera, Brevard Co, Florida, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/408113",
+          "gain": 0.2004472027365161
+        },
+        {
+          "id": "XC719922",
+          "url": "https://xeno-canto.org/719922/download",
+          "duration": 8,
+          "type": "flight call",
+          "recordist": "Valerie Heemstra",
+          "location": "Portage Point  (near  Escanaba), Delta County, Michigan, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/719922",
+          "gain": 0.46344691973628804
+        },
+        {
+          "id": "XC453004",
+          "url": "https://xeno-canto.org/453004/download",
+          "duration": 8,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "Falcon State Park, Starr Co., TX, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/453004",
+          "gain": 0.2588212915153092
+        }
+      ]
+    },
+    {
+      "id": "common-loon",
+      "commonName": "Common Loon",
+      "scientificName": "Gavia immer",
+      "mnemonic": "Yodeling tremolo at the breeding lakes; mostly silent here",
+      "field": "October through April on Tomales Bay. Larger and stouter than Pacific Loon; thicker bill held horizontal when swimming. Sometimes calls in spring before departing north.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Gavia_immer_-Minocqua%2C_Wisconsin%2C_USA_-swimming-8.jpg/330px-Gavia_immer_-Minocqua%2C_Wisconsin%2C_USA_-swimming-8.jpg",
+      "recordings": [
+        {
+          "id": "XC1054224",
+          "url": "https://xeno-canto.org/1054224/download",
+          "duration": 3,
+          "type": "song",
+          "recordist": "Dan P  Bilderback",
+          "location": "Sterling, Kenai Peninsula Borough, Alaska, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/1054224",
+          "gain": 1
+        },
+        {
+          "id": "XC436665",
+          "url": "https://xeno-canto.org/436665/download",
+          "duration": 7,
+          "type": "call",
+          "recordist": "Bruce Lagerquist",
+          "location": "Big Meadows Lake, Pend Oreille County, Washington, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/436665",
+          "gain": 0.11181498245842192
+        },
+        {
+          "id": "XC436667",
+          "url": "https://xeno-canto.org/436667/download",
+          "duration": 10,
+          "type": "call",
+          "recordist": "Bruce Lagerquist",
+          "location": "Big Meadows Lake, Pend Oreille County, Washington, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/436667",
+          "gain": 0.3250872973854343
+        }
+      ]
     }
   ],
   "lessons": [
@@ -614,10 +797,11 @@
     },
     {
       "id": "tb-2",
-      "title": "Plovers & Killdeer",
+      "title": "Plovers & Oystercatcher",
       "speciesIds": [
         "black-bellied-plover",
-        "killdeer"
+        "killdeer",
+        "black-oystercatcher"
       ],
       "length": 8
     },
@@ -644,15 +828,18 @@
     },
     {
       "id": "tb-5",
-      "title": "Rocky Edges",
+      "title": "Small Sandpipers & Loon",
       "speciesIds": [
-        "black-oystercatcher"
+        "western-sandpiper",
+        "least-sandpiper",
+        "greater-yellowlegs",
+        "common-loon"
       ],
       "length": 8
     },
     {
       "id": "tb-review",
-      "title": "Review: All 14",
+      "title": "Review: All 18",
       "speciesIds": [
         "marbled-godwit",
         "willet",
@@ -667,9 +854,13 @@
         "forsters-tern",
         "black-oystercatcher",
         "western-grebe",
-        "double-crested-cormorant"
+        "double-crested-cormorant",
+        "western-sandpiper",
+        "least-sandpiper",
+        "greater-yellowlegs",
+        "common-loon"
       ],
-      "length": 12
+      "length": 14
     }
   ]
 }

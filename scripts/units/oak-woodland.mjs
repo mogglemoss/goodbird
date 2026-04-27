@@ -23,7 +23,7 @@ export const SPECIES = [
   { id: "western-bluebird",        commonName: "Western Bluebird",        scientificName: "Sialia mexicana",         mnemonic: "Soft 'few' contact notes", field: "Year-round in oak savanna and pasture edges. Cavity nester; competes with starlings, swallows, and other bluebirds for nest holes." },
   { id: "chestnut-backed-chickadee",commonName:"Chestnut-backed Chickadee",scientificName: "Poecile rufescens",       mnemonic: "Buzzy, hurried 'chick-a-dee-dee'", field: "Year-round in mixed evergreen forest. Often the lead species in mixed-flock foraging movements through the winter canopy." },
   { id: "spotted-towhee",          commonName: "Spotted Towhee",          scientificName: "Pipilo maculatus",        mnemonic: "Drink your teeeea", field: "Year-round in dense scrub. Forages by 'double-scratching' both feet backward in leaf litter — the rustle is often the first sign of the bird." },
-  { id: "warbling-vireo",          commonName: "Warbling Vireo",          scientificName: "Vireo gilvus",            mnemonic: "Long, run-on warble ending up", field: "April through September in tall riparian and oak gallery. The slow-building warble is delivered from a single mid-canopy perch." },
+  { id: "warbling-vireo",          commonName: "Western Warbling-Vireo",  scientificName: "Vireo swainsoni",         xcAlias: "Vireo gilvus",                  mnemonic: "Long, run-on warble ending up", field: "April through September in tall riparian and oak gallery. The slow-building warble is delivered from a single mid-canopy perch. Split from Eastern Warbling-Vireo in the 66th AOS Supplement (2025)." },
 ];
 
 export const LESSONS = [

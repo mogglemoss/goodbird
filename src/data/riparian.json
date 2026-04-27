@@ -4,8 +4,8 @@
     "title": "Creekside",
     "habitat": "Riparian Corridors",
     "description": "Lagunitas Creek, Pine Gulch, and the alder-willow tangles where streamside songsters concentrate.",
-    "accent": "sky",
-    "tagline": "Warblers at the water's edge."
+    "tagline": "Warblers at the water's edge.",
+    "accent": "sky"
   },
   "species": [
     {
@@ -142,6 +142,7 @@
       "commonName": "Black-headed Grosbeak",
       "scientificName": "Pheucticus melanocephalus",
       "mnemonic": "A robin on caffeine",
+      "field": "April through August in riparian edges and oak canyons. Both males and females sing; males also incubate, unusual among grosbeaks.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Pheucticus_melanocephalus_-California%2C_USA-8.jpg/330px-Pheucticus_melanocephalus_-California%2C_USA-8.jpg",
       "recordings": [
         {
@@ -177,14 +178,15 @@
           "sourceUrl": "https://xeno-canto.org/624569",
           "gain": 0.28906798823654756
         }
-      ],
-      "field": "April through August in riparian edges and oak canyons. Both males and females sing; males also incubate, unusual among grosbeaks."
+      ]
     },
     {
       "id": "warbling-vireo",
-      "commonName": "Warbling Vireo",
-      "scientificName": "Vireo gilvus",
+      "commonName": "Western Warbling-Vireo",
+      "scientificName": "Vireo swainsoni",
+      "xcAlias": "Vireo gilvus",
       "mnemonic": "Long run-on warble ending up",
+      "field": "April through September in tall riparian and oak gallery. The slow-building warble is delivered from a single mid-canopy perch. Split from Eastern Warbling-Vireo in the 66th AOS Supplement (2025).",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Warbling_vireo_%2882141%29.jpg/330px-Warbling_vireo_%2882141%29.jpg",
       "recordings": [
         {
@@ -220,14 +222,14 @@
           "sourceUrl": "https://xeno-canto.org/477609",
           "gain": 0.4581418867145334
         }
-      ],
-      "field": "April through September in tall riparian and oak gallery. The slow-building warble is delivered from a single mid-canopy perch."
+      ]
     },
     {
       "id": "belted-kingfisher",
       "commonName": "Belted Kingfisher",
       "scientificName": "Megaceryle alcyon",
       "mnemonic": "Loud dry rattle, like a fishing reel",
+      "field": "Year-round along streams and lagoons. Both sexes excavate burrows in earthen banks; the female is more colorful, with an extra rufous belt.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/BeltedKingfisherJG_Male.jpg/330px-BeltedKingfisherJG_Male.jpg",
       "recordings": [
         {
@@ -263,14 +265,14 @@
           "sourceUrl": "https://xeno-canto.org/144024",
           "gain": 0.40973210981354147
         }
-      ],
-      "field": "Year-round along streams and lagoons. Both sexes excavate burrows in earthen banks; the female is more colorful, with an extra rufous belt."
+      ]
     },
     {
       "id": "yellow-warbler",
       "commonName": "Yellow Warbler",
       "scientificName": "Setophaga petechia",
       "mnemonic": "Sweet sweet sweet, I'm so sweet",
+      "field": "April through August in willow and alder near water. Brood parasitism by cowbirds is common; some Yellow Warblers build a new nest floor over the cowbird's egg.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Yellow_warbler_%2882905%29.jpg/330px-Yellow_warbler_%2882905%29.jpg",
       "recordings": [
         {
@@ -306,14 +308,14 @@
           "sourceUrl": "https://xeno-canto.org/870749",
           "gain": 1
         }
-      ],
-      "field": "April through August in willow and alder near water. Brood parasitism by cowbirds is common; some Yellow Warblers build a new nest floor over the cowbird's egg."
+      ]
     },
     {
       "id": "black-phoebe",
       "commonName": "Black Phoebe",
       "scientificName": "Sayornis nigricans",
       "mnemonic": "Crisp 'fee-bee'",
+      "field": "Year-round near any open water. Tail-pumping from a low perch is diagnostic; nests under bridges and eaves are made of mud pellets.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Black_phoebe_%28Sayornis_nigricans_aquaticus%29_Palopo.jpg/330px-Black_phoebe_%28Sayornis_nigricans_aquaticus%29_Palopo.jpg",
       "recordings": [
         {
@@ -349,14 +351,14 @@
           "sourceUrl": "https://xeno-canto.org/451252",
           "gain": 0.35974933515574237
         }
-      ],
-      "field": "Year-round near any open water. Tail-pumping from a low perch is diagnostic; nests under bridges and eaves are made of mud pellets."
+      ]
     },
     {
       "id": "pacific-slope-flycatcher",
       "commonName": "Western Flycatcher",
       "scientificName": "Empidonax difficilis",
       "mnemonic": "Rising 'pee-WEET'",
+      "field": "April through September in shaded oak and conifer canyons. Nests on rock ledges and within house eaves throughout coastal California.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Empidonax_difficilis_1.jpg/330px-Empidonax_difficilis_1.jpg",
       "recordings": [
         {
@@ -392,14 +394,14 @@
           "sourceUrl": "https://xeno-canto.org/178530",
           "gain": 0.25556419010641385
         }
-      ],
-      "field": "April through September in shaded oak and conifer canyons. Nests on rock ledges and within house eaves throughout coastal California."
+      ]
     },
     {
       "id": "common-yellowthroat",
       "commonName": "Common Yellowthroat",
       "scientificName": "Geothlypis trichas",
       "mnemonic": "Wichity-wichity-wichity",
+      "field": "Year-round in damp brush, often along marsh edges. Males sing from cattail tops and willow thickets; the black mask is unmistakable.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Common_yellowthroat_in_PP_%2814155%29.jpg/330px-Common_yellowthroat_in_PP_%2814155%29.jpg",
       "recordings": [
         {
@@ -435,14 +437,14 @@
           "sourceUrl": "https://xeno-canto.org/78732",
           "gain": 0.5591135275705601
         }
-      ],
-      "field": "Year-round in damp brush, often along marsh edges. Males sing from cattail tops and willow thickets; the black mask is unmistakable."
+      ]
     },
     {
       "id": "song-sparrow",
       "commonName": "Song Sparrow",
       "scientificName": "Melospiza melodia",
       "mnemonic": "Madge-madge-madge put-on-your-tea-kettle",
+      "field": "Year-round in any low brush near water. Each male sings 8 to 10 distinct songs, learned from neighbors as a juvenile.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Song_sparrow_in_Prospect_Park_%2893031%29.jpg/330px-Song_sparrow_in_Prospect_Park_%2893031%29.jpg",
       "recordings": [
         {
@@ -478,14 +480,14 @@
           "sourceUrl": "https://xeno-canto.org/803814",
           "gain": 0.1838653953864026
         }
-      ],
-      "field": "Year-round in any low brush near water. Each male sings 8 to 10 distinct songs, learned from neighbors as a juvenile."
+      ]
     },
     {
       "id": "lazuli-bunting",
       "commonName": "Lazuli Bunting",
       "scientificName": "Passerina amoena",
       "mnemonic": "Jumpy phrase: 'fire fire — where? where? — here here!'",
+      "field": "April through August in dense scrub near water. Young males assemble their first-year song from neighbors' phrases; resulting 'song neighborhoods' persist for years.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Lazuli_Bunting.jpg/330px-Lazuli_Bunting.jpg",
       "recordings": [
         {
@@ -521,14 +523,14 @@
           "sourceUrl": "https://xeno-canto.org/563913",
           "gain": 0.5514422023817436
         }
-      ],
-      "field": "April through August in dense scrub near water. Young males assemble their first-year song from neighbors' phrases; resulting 'song neighborhoods' persist for years."
+      ]
     },
     {
       "id": "spotted-towhee",
       "commonName": "Spotted Towhee",
       "scientificName": "Pipilo maculatus",
       "mnemonic": "Drink your teeeea",
+      "field": "Year-round in dense scrub. Forages by 'double-scratching' both feet backward in leaf litter — the rustle is often the first sign of the bird.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Spotted_Towhee_%2832684403303%29.jpg/330px-Spotted_Towhee_%2832684403303%29.jpg",
       "recordings": [
         {
@@ -564,14 +566,14 @@
           "sourceUrl": "https://xeno-canto.org/728366",
           "gain": 0.2155261643566158
         }
-      ],
-      "field": "Year-round in dense scrub. Forages by 'double-scratching' both feet backward in leaf litter — the rustle is often the first sign of the bird."
+      ]
     },
     {
       "id": "western-wood-pewee",
       "commonName": "Western Wood-Pewee",
       "scientificName": "Contopus sordidulus",
       "mnemonic": "Burry, slurred 'peeer'",
+      "field": "May through September in oak and riparian edges. Sings the burry 'pee-er' from an exposed perch, often returning to the same one between sallies.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Western_Wood-Peewee_-_Sisters_-_Oregon_S4E1878_%2819236709745%29.jpg/330px-Western_Wood-Peewee_-_Sisters_-_Oregon_S4E1878_%2819236709745%29.jpg",
       "recordings": [
         {
@@ -607,8 +609,50 @@
           "sourceUrl": "https://xeno-canto.org/34871",
           "gain": 0.4251087068046157
         }
-      ],
-      "field": "May through September in oak and riparian edges. Sings the burry 'pee-er' from an exposed perch, often returning to the same one between sallies."
+      ]
+    },
+    {
+      "id": "wood-duck",
+      "commonName": "Wood Duck",
+      "scientificName": "Aix sponsa",
+      "mnemonic": "Squealing 'oo-EEK oo-EEK' rising whistle (female)",
+      "field": "Year-round on slow creek backwaters and willow-shaded ponds. Cavity nester; ducklings leap from the nest hole hours after hatching. Drakes one of the most striking ducks in North America.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Wood_Duck_Wissahickon_Creek.png/330px-Wood_Duck_Wissahickon_Creek.png",
+      "recordings": [
+        {
+          "id": "XC332246",
+          "url": "https://xeno-canto.org/332246/download",
+          "duration": 10,
+          "type": "call, flight call, wing beat",
+          "recordist": "Jim Berry",
+          "location": "Watts Flats Wildlife Management Area, Town of Harmony (near  Ashville), Chautauqua County, New York, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/332246",
+          "gain": 1
+        },
+        {
+          "id": "XC389582",
+          "url": "https://xeno-canto.org/389582/download",
+          "duration": 7,
+          "type": "alarm call, \"sea-shell\" like drone of suburban surroundings.",
+          "recordist": "Dan Kopp",
+          "location": "Sacramento, American River Parkway, Estates Dr. Access, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/389582",
+          "gain": 1
+        },
+        {
+          "id": "XC347194",
+          "url": "https://xeno-canto.org/347194/download",
+          "duration": 11,
+          "type": "alarm call",
+          "recordist": "Antonio Xeira",
+          "location": "Michigan, Metro Beach Metropark, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/347194",
+          "gain": 1
+        }
+      ]
     }
   ],
   "lessons": [
@@ -656,8 +700,18 @@
       "length": 8
     },
     {
+      "id": "rp-5",
+      "title": "Backwater Quiet",
+      "speciesIds": [
+        "wood-duck",
+        "belted-kingfisher",
+        "black-phoebe"
+      ],
+      "length": 8
+    },
+    {
       "id": "rp-review",
-      "title": "Review: All 14",
+      "title": "Review: All 15",
       "speciesIds": [
         "pacific-wren",
         "wilsons-warbler",
@@ -672,9 +726,10 @@
         "song-sparrow",
         "lazuli-bunting",
         "spotted-towhee",
-        "western-wood-pewee"
+        "western-wood-pewee",
+        "wood-duck"
       ],
-      "length": 12
+      "length": 14
     }
   ]
 }

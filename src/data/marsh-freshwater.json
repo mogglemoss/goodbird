@@ -4,8 +4,8 @@
     "title": "Marsh & Wetland",
     "habitat": "Cattails & Ponds",
     "description": "Cattails, sedges, and quiet ponds — Olema Marsh, Five Brooks, the freshwater edges of Abbott's Lagoon.",
-    "accent": "emerald",
-    "tagline": "Hidden rails and patient herons."
+    "tagline": "Hidden rails and patient herons.",
+    "accent": "emerald"
   },
   "species": [
     {
@@ -99,6 +99,7 @@
       "commonName": "Common Yellowthroat",
       "scientificName": "Geothlypis trichas",
       "mnemonic": "Wichity-wichity-wichity",
+      "field": "Year-round in damp brush, often along marsh edges. Males sing from cattail tops and willow thickets; the black mask is unmistakable.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Common_yellowthroat_in_PP_%2814155%29.jpg/330px-Common_yellowthroat_in_PP_%2814155%29.jpg",
       "recordings": [
         {
@@ -134,8 +135,7 @@
           "sourceUrl": "https://xeno-canto.org/78732",
           "gain": 0.5591135275705601
         }
-      ],
-      "field": "Year-round in damp brush, often along marsh edges. Males sing from cattail tops and willow thickets; the black mask is unmistakable."
+      ]
     },
     {
       "id": "sora",
@@ -186,6 +186,7 @@
       "commonName": "Virginia Rail",
       "scientificName": "Rallus limicola",
       "mnemonic": "Grunting 'kid-ick kid-ick'",
+      "field": "Year-round in dense cattail and tule. The body is laterally compressed for moving through reeds.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Virginia_rail_%2841109%29.jpg/330px-Virginia_rail_%2841109%29.jpg",
       "recordings": [
         {
@@ -221,14 +222,14 @@
           "sourceUrl": "https://xeno-canto.org/636885",
           "gain": 0.10046157902783952
         }
-      ],
-      "field": "Year-round in dense cattail and tule. The body is laterally compressed for moving through reeds."
+      ]
     },
     {
       "id": "pied-billed-grebe",
       "commonName": "Pied-billed Grebe",
       "scientificName": "Podilymbus podiceps",
       "mnemonic": "Hooting 'wuk-wuk-wuk-cow-cow'",
+      "field": "Year-round on freshwater ponds. Submerges by expelling air rather than diving; the head sometimes vanishes alone, leaving the body at the surface.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Pied-billed_Grebe_0561.jpg/330px-Pied-billed_Grebe_0561.jpg",
       "recordings": [
         {
@@ -264,14 +265,14 @@
           "sourceUrl": "https://xeno-canto.org/563118",
           "gain": 0.17640057644764137
         }
-      ],
-      "field": "Year-round on freshwater ponds. Submerges by expelling air rather than diving; the head sometimes vanishes alone, leaving the body at the surface."
+      ]
     },
     {
       "id": "american-bittern",
       "commonName": "American Bittern",
       "scientificName": "Botaurus lentiginosus",
       "mnemonic": "Pump-er-lunk pump-er-lunk",
+      "field": "April through October in dense marsh. The 'pump-er-lunk' call, low and resonant, is produced by a specialized esophageal sac.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Botaurus_lentiginosus_28079.JPG/330px-Botaurus_lentiginosus_28079.JPG",
       "recordings": [
         {
@@ -307,14 +308,14 @@
           "sourceUrl": "https://xeno-canto.org/408483",
           "gain": 0.6109420249055719
         }
-      ],
-      "field": "April through October in dense marsh. The 'pump-er-lunk' call, low and resonant, is produced by a specialized esophageal sac."
+      ]
     },
     {
       "id": "mallard",
       "commonName": "Mallard",
       "scientificName": "Anas platyrhynchos",
       "mnemonic": "The duck quack — descending, in twos and threes",
+      "field": "Year-round on any open water. The vocal 'quack' is the female's; males give a softer, raspier 'reb-reb'.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Anas_platyrhynchos_male_female_quadrat.jpg/330px-Anas_platyrhynchos_male_female_quadrat.jpg",
       "recordings": [
         {
@@ -350,14 +351,14 @@
           "sourceUrl": "https://xeno-canto.org/303989",
           "gain": 0.7507580541199372
         }
-      ],
-      "field": "Year-round on any open water. The vocal 'quack' is the female's; males give a softer, raspier 'reb-reb'."
+      ]
     },
     {
       "id": "tree-swallow",
       "commonName": "Tree Swallow",
       "scientificName": "Tachycineta bicolor",
       "mnemonic": "Liquid chittering, in flight",
+      "field": "Year-round on the coast; widespread breeder. Cavity nester; lines the nest cup with white feathers, often gathered in mid-air from other birds.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Tree_swallow_in_JBWR_%2825579%29.jpg/330px-Tree_swallow_in_JBWR_%2825579%29.jpg",
       "recordings": [
         {
@@ -393,14 +394,14 @@
           "sourceUrl": "https://xeno-canto.org/612860",
           "gain": 0.35196542252476576
         }
-      ],
-      "field": "Year-round on the coast; widespread breeder. Cavity nester; lines the nest cup with white feathers, often gathered in mid-air from other birds."
+      ]
     },
     {
       "id": "great-blue-heron",
       "commonName": "Great Blue Heron",
       "scientificName": "Ardea herodias",
       "mnemonic": "Harsh prehistoric croak",
+      "field": "Year-round at all wetland edges. Wing strokes are slow, about two per second; rookery nests are stick platforms in tall trees, often near water.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/GreatBlueHeronInARiver.jpg/330px-GreatBlueHeronInARiver.jpg",
       "recordings": [
         {
@@ -436,14 +437,14 @@
           "sourceUrl": "https://xeno-canto.org/196154",
           "gain": 0.40738027780411273
         }
-      ],
-      "field": "Year-round at all wetland edges. Wing strokes are slow, about two per second; rookery nests are stick platforms in tall trees, often near water."
+      ]
     },
     {
       "id": "black-crowned-night-heron",
       "commonName": "Black-crowned Night-Heron",
       "scientificName": "Nycticorax nycticorax",
       "mnemonic": "Hollow, abrupt 'quok!'",
+      "field": "Year-round at wetland edges. Forages by night; daytime roosts are communal in dense waterside trees.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Nycticorax_nycticorax_457953189.jpg/330px-Nycticorax_nycticorax_457953189.jpg",
       "recordings": [
         {
@@ -479,14 +480,14 @@
           "sourceUrl": "https://xeno-canto.org/172927",
           "gain": 0.502342589522387
         }
-      ],
-      "field": "Year-round at wetland edges. Forages by night; daytime roosts are communal in dense waterside trees."
+      ]
     },
     {
       "id": "killdeer",
       "commonName": "Killdeer",
       "scientificName": "Charadrius vociferus",
       "mnemonic": "KILL-deer KILL-deer",
+      "field": "Year-round in open ground near water — pastures, gravel parking lots, golf-course edges. Feigns a broken wing to lure intruders from the nest.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Killdeer_Heislerville.png/330px-Killdeer_Heislerville.png",
       "recordings": [
         {
@@ -522,14 +523,14 @@
           "sourceUrl": "https://xeno-canto.org/1004462",
           "gain": 0.8790225168308843
         }
-      ],
-      "field": "Year-round in open ground near water — pastures, gravel parking lots, golf-course edges. Feigns a broken wing to lure intruders from the nest."
+      ]
     },
     {
       "id": "song-sparrow",
       "commonName": "Song Sparrow",
       "scientificName": "Melospiza melodia",
       "mnemonic": "Madge-madge-madge put-on-your-tea-kettle",
+      "field": "Year-round in any low brush near water. Each male sings 8 to 10 distinct songs, learned from neighbors as a juvenile.",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Song_sparrow_in_Prospect_Park_%2893031%29.jpg/330px-Song_sparrow_in_Prospect_Park_%2893031%29.jpg",
       "recordings": [
         {
@@ -565,8 +566,265 @@
           "sourceUrl": "https://xeno-canto.org/803814",
           "gain": 0.1838653953864026
         }
-      ],
-      "field": "Year-round in any low brush near water. Each male sings 8 to 10 distinct songs, learned from neighbors as a juvenile."
+      ]
+    },
+    {
+      "id": "american-wigeon",
+      "commonName": "American Wigeon",
+      "scientificName": "Mareca americana",
+      "mnemonic": "Whistled three-note 'WHEW-whew-whew' (males)",
+      "field": "October through April on Five Brooks, Olema Marsh, and Bolinas Lagoon. Males have a green eye-stripe and white forehead; the high whistle is unmistakable in winter mixed flocks.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/American_Wigeon_Male.jpg/330px-American_Wigeon_Male.jpg",
+      "recordings": [
+        {
+          "id": "XC857365",
+          "url": "https://xeno-canto.org/857365/download",
+          "duration": 17,
+          "type": "call, song",
+          "recordist": "Scott Crabtree",
+          "location": "Fort Lowell Park (near  Tucson), Pima County, Arizona, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/857365",
+          "gain": 0.35115592451629074
+        },
+        {
+          "id": "XC1012762",
+          "url": "https://xeno-canto.org/1012762/download",
+          "duration": 10,
+          "type": "call, song",
+          "recordist": "Stanislas Wroza",
+          "location": "Baie-du-Febvre, Nicolet-Yamaska, Québec, Canada",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/1012762",
+          "gain": 0.9908319448927677
+        },
+        {
+          "id": "XC1013533",
+          "url": "https://xeno-canto.org/1013533/download",
+          "duration": 19,
+          "type": "song",
+          "recordist": "Stanislas Wroza",
+          "location": "La Haute-Côte-Nord (near  Grandes-Bergeronnes), Côte-Nord, Québec, Canada",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/1013533",
+          "gain": 1
+        }
+      ]
+    },
+    {
+      "id": "northern-shoveler",
+      "commonName": "Northern Shoveler",
+      "scientificName": "Spatula clypeata",
+      "mnemonic": "Soft 'took-took' grunts; mostly a quiet duck",
+      "field": "October through April on quiet ponds. The huge spatulate bill is diagnostic; flocks often spin in circles to stir up plankton.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Bommer_Weiher_-_Erpel_der_L%C3%B6ffelente.jpg/330px-Bommer_Weiher_-_Erpel_der_L%C3%B6ffelente.jpg",
+      "recordings": [
+        {
+          "id": "XC368726",
+          "url": "https://xeno-canto.org/368726/download",
+          "duration": 9,
+          "type": "song, flying in and landing on water",
+          "recordist": "Sue Riffe",
+          "location": "Pole Mtn Lake, Jackson County, Colorado, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/368726",
+          "gain": 1
+        },
+        {
+          "id": "XC218538",
+          "url": "https://xeno-canto.org/218538/download",
+          "duration": 12,
+          "type": "flight call",
+          "recordist": "Peter Boesman",
+          "location": "Sequoyah NWR, OK, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+          "sourceUrl": "https://xeno-canto.org/218538",
+          "gain": 1
+        },
+        {
+          "id": "XC74951",
+          "url": "https://xeno-canto.org/74951/download",
+          "duration": 9,
+          "type": "call, female and male calls",
+          "recordist": "Todd Wilson",
+          "location": "Vernon Marsh, Waukesha County, Wisconsin, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
+          "sourceUrl": "https://xeno-canto.org/74951",
+          "gain": 0.6660395212984229
+        }
+      ]
+    },
+    {
+      "id": "cinnamon-teal",
+      "commonName": "Cinnamon Teal",
+      "scientificName": "Spatula cyanoptera",
+      "mnemonic": "Mostly silent; soft chatter and rattling 'kerek'",
+      "field": "March through October on shallow freshwater. Males a brilliant cinnamon-red; smaller and more secretive than other dabblers, often hugging the marsh edge.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Sarcelle_cannelle_%28Spatula_cyanoptera%29.jpg/330px-Sarcelle_cannelle_%28Spatula_cyanoptera%29.jpg",
+      "recordings": [
+        {
+          "id": "XC611977",
+          "url": "https://xeno-canto.org/611977/download",
+          "duration": 8,
+          "type": "flight call",
+          "recordist": "Richard E. Webster",
+          "location": "Whitewater Draw WA, near McNeal, Cochise Co, Arizona, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/611977",
+          "gain": 1
+        },
+        {
+          "id": "XC324095",
+          "url": "https://xeno-canto.org/324095/download",
+          "duration": 8,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "west end of Pound Road, Niland, Imperial County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/324095",
+          "gain": 0.6194410750767814
+        },
+        {
+          "id": "XC323984",
+          "url": "https://xeno-canto.org/323984/download",
+          "duration": 7,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "west end of Pound Road, Niland, Imperial County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/323984",
+          "gain": 0.5761028185598561
+        }
+      ]
+    },
+    {
+      "id": "american-coot",
+      "commonName": "American Coot",
+      "scientificName": "Fulica americana",
+      "mnemonic": "Grunting 'puhlk', clucking, and harsh squawks",
+      "field": "Year-round on freshwater. Not a duck — a rail with lobed toes. Often in dense rafts; squabbles loudly when feeding.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/American_coot_in_Prospect_Park_%2806152%29.jpg/330px-American_coot_in_Prospect_Park_%2806152%29.jpg",
+      "recordings": [
+        {
+          "id": "XC739246",
+          "url": "https://xeno-canto.org/739246/download",
+          "duration": 8,
+          "type": "call",
+          "recordist": "Sue Riffe",
+          "location": "Monte Vista NWR, Rio Grande Co., Colorado, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/739246",
+          "gain": 1
+        },
+        {
+          "id": "XC277615",
+          "url": "https://xeno-canto.org/277615/download",
+          "duration": 8,
+          "type": "call",
+          "recordist": "Paul Marvin",
+          "location": "Lostwood NWR, Burke County, North Dakota, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/277615",
+          "gain": 1
+        },
+        {
+          "id": "XC223219",
+          "url": "https://xeno-canto.org/223219/download",
+          "duration": 8,
+          "type": "call",
+          "recordist": "Peter Boesman",
+          "location": "Patagonia Lake State Park, AZ, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+          "sourceUrl": "https://xeno-canto.org/223219",
+          "gain": 0.6737518954705829
+        }
+      ]
+    },
+    {
+      "id": "black-necked-stilt",
+      "commonName": "Black-necked Stilt",
+      "scientificName": "Himantopus mexicanus",
+      "mnemonic": "Loud yapping 'kek-kek-kek-kek'",
+      "field": "March through October on shallow freshwater and brackish edges (Limantour, Abbott's Lagoon). Sky-pink legs absurdly long; bold black-and-white pattern.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Black-necked_Stilt_%28Himantopus_mexicanus%29%2C_Corte_Madera.jpg/330px-Black-necked_Stilt_%28Himantopus_mexicanus%29%2C_Corte_Madera.jpg",
+      "recordings": [
+        {
+          "id": "XC902598",
+          "url": "https://xeno-canto.org/902598/download",
+          "duration": 10,
+          "type": "flight call",
+          "recordist": "Daniel Parker",
+          "location": "Birdwalk, Myakka River State Park, Sarasota County, Florida, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/902598",
+          "gain": 0.7612021390057183
+        },
+        {
+          "id": "XC210361",
+          "url": "https://xeno-canto.org/210361/download",
+          "duration": 8,
+          "type": "call",
+          "recordist": "Ross Gallardy",
+          "location": "Kauai County, Hawaii, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/210361",
+          "gain": 1
+        },
+        {
+          "id": "XC145752",
+          "url": "https://xeno-canto.org/145752/download",
+          "duration": 8,
+          "type": "call",
+          "recordist": "Paul Marvin",
+          "location": "Biolab Road, Canaveral National Seashore, Brevard County, Florida, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/145752",
+          "gain": 1
+        }
+      ]
+    },
+    {
+      "id": "american-avocet",
+      "commonName": "American Avocet",
+      "scientificName": "Recurvirostra americana",
+      "mnemonic": "Sharp piping 'wheek-wheek-wheek'",
+      "field": "August through May on shallow ponds and lagoon edges. The upturned needle bill sweeps side-to-side through soft mud; in breeding plumage the head and neck flush rusty buff.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/American_Avocet1.jpg/330px-American_Avocet1.jpg",
+      "recordings": [
+        {
+          "id": "XC304677",
+          "url": "https://xeno-canto.org/304677/download",
+          "duration": 7,
+          "type": "call",
+          "recordist": "Paul Marvin",
+          "location": "Cheyenne Bottoms, Barton County, Kansas, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/304677",
+          "gain": 0.21478304741305343
+        },
+        {
+          "id": "XC304441",
+          "url": "https://xeno-canto.org/304441/download",
+          "duration": 9,
+          "type": "call",
+          "recordist": "Paul Marvin",
+          "location": "Cheyenne Bottoms, Barton County, Kansas, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/304441",
+          "gain": 0.20892961308540392
+        },
+        {
+          "id": "XC587206",
+          "url": "https://xeno-canto.org/587206/download",
+          "duration": 10,
+          "type": "call",
+          "recordist": "Craig Robertson",
+          "location": "Bear River Migratory Bird Refuge (near  Brigham City), Box Elder County, Utah, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/587206",
+          "gain": 0.2792543841237338
+        }
+      ]
     }
   ],
   "lessons": [
@@ -614,8 +872,29 @@
       "length": 8
     },
     {
+      "id": "mw-5",
+      "title": "Dabbling Ducks",
+      "speciesIds": [
+        "american-wigeon",
+        "northern-shoveler",
+        "cinnamon-teal",
+        "american-coot"
+      ],
+      "length": 8
+    },
+    {
+      "id": "mw-6",
+      "title": "Long-legged Waders",
+      "speciesIds": [
+        "black-necked-stilt",
+        "american-avocet",
+        "great-blue-heron"
+      ],
+      "length": 8
+    },
+    {
       "id": "mw-review",
-      "title": "Review: All 13",
+      "title": "Review: All 19",
       "speciesIds": [
         "marsh-wren",
         "red-winged-blackbird",
@@ -629,9 +908,15 @@
         "great-blue-heron",
         "black-crowned-night-heron",
         "killdeer",
-        "song-sparrow"
+        "song-sparrow",
+        "american-wigeon",
+        "northern-shoveler",
+        "cinnamon-teal",
+        "american-coot",
+        "black-necked-stilt",
+        "american-avocet"
       ],
-      "length": 12
+      "length": 14
     }
   ]
 }

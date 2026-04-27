@@ -25,7 +25,11 @@ const XC_KEY = process.env.XC_API_KEY;
 const SOURCE = XC_KEY ? "xc" : "inat";
 
 async function fetchXC(species) {
-  const [gen, sp] = species.scientificName.split(" ");
+  // Allow per-species override when xeno-canto's database lags behind AOS
+  // taxonomy (e.g. Western Warbling-Vireo split — XC still files it under
+  // Vireo gilvus). We display the AOS-current name but query the legacy one.
+  const queryName = species.xcAlias ?? species.scientificName;
+  const [gen, sp] = queryName.split(" ");
   // Walk a relaxation ladder — start with the strictest filter that gives us
   // clean US recordings, then progressively loosen so silent or rarely-recorded
   // species (Turkey Vulture, the cormorants) still get something useful.

@@ -24,6 +24,11 @@ export const SPECIES = [
   { id: "american-crow",           commonName: "American Crow",          scientificName: "Corvus brachyrhynchos",   mnemonic: "The crow caw — flat, three or four in a row", field: "Year-round in nearly all habitats. Cooperative breeders; helpers from previous broods assist with nesting and territory defense." },
   { id: "lark-sparrow",            commonName: "Lark Sparrow",           scientificName: "Chondestes grammacus",    mnemonic: "Bright varied warble with buzzes and trills mixed in", field: "Year-round in open ground with scattered cover. Pairs breed in loose colonies; juveniles wear a quail-like striped face useful for identification." },
   { id: "bullocks-oriole",         commonName: "Bullock's Oriole",       scientificName: "Icterus bullockii",       mnemonic: "Whistled, chattery, conversational", field: "April through August in tall riparian and scrub-oak. Builds a pendulous woven nest, often suspended from the tip of a sycamore branch." },
+  // The big ground bird and the swallows that wheel above the dairies
+  { id: "wild-turkey",             commonName: "Wild Turkey",            scientificName: "Meleagris gallopavo",     mnemonic: "Resonant gobble; soft 'putt-putt' contact calls", field: "Year-round in oak savanna and pasture edges; introduced/reintroduced and now thriving across West Marin. Toms display in spring with fanned tails and bare red wattles." },
+  { id: "cliff-swallow",           commonName: "Cliff Swallow",          scientificName: "Petrochelidon pyrrhonota", mnemonic: "Squeaky chattering at the colony; harsh 'churr'", field: "April through August around bridges, barns, and cliff faces. Builds gourd-shaped mud nests in dense colonies. Square tail and pale forehead distinguish from Barn Swallow." },
+  { id: "barn-swallow",            commonName: "Barn Swallow",           scientificName: "Hirundo rustica",         mnemonic: "Twittering 'vit-vit-vit' chatter, often in flight", field: "April through September around farms and open water. Long deeply-forked tail streamers and rusty throat are diagnostic. Famous for nesting inside barns and outbuildings." },
+  { id: "violet-green-swallow",    commonName: "Violet-green Swallow",   scientificName: "Tachycineta thalassina",  mnemonic: "Soft 'chee-chee' chips and chittering at cavity nest", field: "March through September in oak savanna and conifer edges. Iridescent green back and violet rump above; the white face wraps clearly behind the eye, distinguishing from Tree Swallow." },
 ];
 
 export const LESSONS = [
@@ -31,6 +36,8 @@ export const LESSONS = [
   { id: "ps-2",      title: "Hawks & Kites",          speciesIds: ["red-tailed-hawk", "white-tailed-kite", "american-kestrel", "loggerhead-shrike"], length: 8 },
   { id: "ps-3",      title: "Crows & Kingbirds",      speciesIds: ["american-crow", "brewers-blackbird", "western-kingbird", "mourning-dove"], length: 8 },
   { id: "ps-4",      title: "Open Sky",               speciesIds: ["horned-lark", "western-meadowlark", "bullocks-oriole"], length: 8 },
-  { id: "ps-review", title: "Review: All 14",         speciesIds: [], length: 12 },
+  { id: "ps-5",      title: "Swallows of the Pastures", speciesIds: ["cliff-swallow", "barn-swallow", "violet-green-swallow"], length: 8 },
+  { id: "ps-6",      title: "Big Ground Birds",       speciesIds: ["wild-turkey", "american-crow", "mourning-dove"], length: 8 },
+  { id: "ps-review", title: "Review: All 18",         speciesIds: [], length: 14 },
 ];
 LESSONS[LESSONS.length - 1].speciesIds = SPECIES.map((s) => s.id);
