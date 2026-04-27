@@ -39,7 +39,19 @@ export interface LessonRef {
   unitId?: string;
 }
 
-export type UnitAccent = "moss" | "amber" | "sky" | "indigo" | "rose" | "sand" | "emerald" | "violet";
+export type UnitAccent =
+  | "moss"      // Coastal Scrub
+  | "amber"     // Oak Woodland
+  | "sky"       // Riparian / Creekside
+  | "indigo"    // Tomales Bay / Estuary
+  | "rose"      // Pasture & Open Country
+  | "sand"      // Coastal Conifer
+  | "emerald"   // Marsh & Wetland
+  | "violet"    // Night Voices
+  | "slate"     // Soaring Country (raptors + sky)
+  | "teal"      // Open Coast & Headlands
+  | "orange"    // Redwood & Mixed Forest (bark color)
+  | "fuchsia";  // Town & Garden
 
 export interface Unit {
   id: string;

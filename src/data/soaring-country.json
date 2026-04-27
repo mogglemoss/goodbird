@@ -1,0 +1,447 @@
+{
+  "unit": {
+    "id": "soaring-country",
+    "title": "Soaring Country",
+    "habitat": "Raptors & Open Sky",
+    "description": "Hawks, vultures, and ravens — what to look up for when you're between habitats.",
+    "tagline": "Patience above the ridge — wings working a thermal.",
+    "accent": "slate"
+  },
+  "species": [
+    {
+      "id": "turkey-vulture",
+      "commonName": "Turkey Vulture",
+      "scientificName": "Cathartes aura",
+      "mnemonic": "Mostly silent — soft hisses at the kill",
+      "field": "Year-round, riding thermals on dihedral wings (V-shape) that wobble. The naked red head and silent flight are diagnostic. Vocalizations are rare; mostly hisses near a carcass.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Turkey_vulture_%28Cathartes_aura%29_Orange_Walk.jpg/330px-Turkey_vulture_%28Cathartes_aura%29_Orange_Walk.jpg",
+      "recordings": [
+        {
+          "id": "XC552488",
+          "url": "https://xeno-canto.org/552488/download",
+          "duration": 6,
+          "type": "call, wing flaps",
+          "recordist": "Kent Livezey",
+          "location": "Costa del Este, near Panama City, Panama",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+          "sourceUrl": "https://xeno-canto.org/552488",
+          "gain": 0.278612116862977
+        },
+        {
+          "id": "XC16325",
+          "url": "https://xeno-canto.org/16325/download",
+          "duration": 6,
+          "type": "call",
+          "recordist": "Charlie Vogt",
+          "location": "Rio Palenque, Patricia Pilar, Pichincha, Ecuador",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
+          "sourceUrl": "https://xeno-canto.org/16325",
+          "gain": 0.1568555897680292
+        },
+        {
+          "id": "XC39894",
+          "url": "https://xeno-canto.org/39894/download",
+          "duration": 15,
+          "type": "call",
+          "recordist": "Alvaro Riccetto",
+          "location": "Cerro Blanco,Lavalleja, Uruguay",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
+          "sourceUrl": "https://xeno-canto.org/39894",
+          "gain": 1
+        }
+      ]
+    },
+    {
+      "id": "common-raven",
+      "commonName": "Common Raven",
+      "scientificName": "Corvus corax",
+      "mnemonic": "Deep guttural 'krrruk-krrruk'",
+      "field": "Year-round throughout West Marin. Larger than crows, with a wedge-shaped tail and shaggy throat. Far more varied vocally than crows — knocking, gurgling, and bell-like notes.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Corvus_corax.jpg/330px-Corvus_corax.jpg",
+      "recordings": [
+        {
+          "id": "XC593330",
+          "url": "https://xeno-canto.org/593330/download",
+          "duration": 12,
+          "type": "flight call",
+          "recordist": "Bruce Lagerquist",
+          "location": "Tiffany Lake, Okanogan County, Washington, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/593330",
+          "gain": 0.40831938633269205
+        },
+        {
+          "id": "XC620696",
+          "url": "https://xeno-canto.org/620696/download",
+          "duration": 14,
+          "type": "call",
+          "recordist": "Phoebe Barnes",
+          "location": "Moore Creek Preserve (near  Santa Cruz), Santa Cruz County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/620696",
+          "gain": 0.19860949173573716
+        },
+        {
+          "id": "XC379126",
+          "url": "https://xeno-canto.org/379126/download",
+          "duration": 14,
+          "type": "call",
+          "recordist": "Steve Hampton",
+          "location": "Manzanita Lake, Lassen National Park, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/379126",
+          "gain": 1
+        }
+      ]
+    },
+    {
+      "id": "bald-eagle",
+      "commonName": "Bald Eagle",
+      "scientificName": "Haliaeetus leucocephalus",
+      "mnemonic": "Surprisingly weak chittering whistles",
+      "field": "Year-round around Tomales Bay and Nicasio Reservoir; population recovering. Calls sound thinner than expected for such a large bird — not the Hollywood scream (that's a Red-tailed Hawk dub).",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Bald_eagle_about_to_fly_in_Alaska_%282016%29.jpg/330px-Bald_eagle_about_to_fly_in_Alaska_%282016%29.jpg",
+      "recordings": [
+        {
+          "id": "XC165314",
+          "url": "https://xeno-canto.org/165314/download",
+          "duration": 7,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "Pine Island Conservation Area, Merritt Island, Florida, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/165314",
+          "gain": 0.3780071373018111
+        },
+        {
+          "id": "XC344281",
+          "url": "https://xeno-canto.org/344281/download",
+          "duration": 12,
+          "type": "call, flight call",
+          "recordist": "Paul Marvin",
+          "location": "River Lakes Conservation Area near Viera, Brevard Co, Florida, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/344281",
+          "gain": 0.2055890595984142
+        },
+        {
+          "id": "XC191961",
+          "url": "https://xeno-canto.org/191961/download",
+          "duration": 13,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "Three Lakes WMA, near Lake Marian, Osceola County, Florida, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/191961",
+          "gain": 1
+        }
+      ]
+    },
+    {
+      "id": "coopers-hawk",
+      "commonName": "Cooper's Hawk",
+      "scientificName": "Accipiter cooperii",
+      "mnemonic": "Loud rapid 'kek-kek-kek-kek' near the nest",
+      "field": "Year-round in wooded yards and edges. Hunts smaller birds in fast pursuit through cover. Almost identical to Sharp-shinned but larger, with a more rounded tail tip.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Accipiter_cooperii_m_Sam_Smith_Toronto3.jpg/330px-Accipiter_cooperii_m_Sam_Smith_Toronto3.jpg",
+      "recordings": [
+        {
+          "id": "XC550330",
+          "url": "https://xeno-canto.org/550330/download",
+          "duration": 7,
+          "type": "call",
+          "recordist": "Paul Marvin",
+          "location": "Monument Rd and nearby trails, Tijuana River Valley, San Diego, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/550330",
+          "gain": 0.39039118250766
+        },
+        {
+          "id": "XC360233",
+          "url": "https://xeno-canto.org/360233/download",
+          "duration": 9,
+          "type": "call",
+          "recordist": "Jim Holmes",
+          "location": "Lewis Park, Sacramento, Sacramento County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/360233",
+          "gain": 0.7620790100254121
+        },
+        {
+          "id": "XC580820",
+          "url": "https://xeno-canto.org/580820/download",
+          "duration": 10,
+          "type": "call",
+          "recordist": "Paul Marvin",
+          "location": "Monument Rd and nearby trails, Tijuana River Valley, San Diego, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/580820",
+          "gain": 0.3985657723134012
+        }
+      ]
+    },
+    {
+      "id": "sharp-shinned-hawk",
+      "commonName": "Sharp-shinned Hawk",
+      "scientificName": "Accipiter striatus",
+      "mnemonic": "High thin 'kik-kik-kik' faster than Cooper's",
+      "field": "October through April in West Marin; some breeders in conifer forests. Smaller than Cooper's, with a square tail tip and pencil-thin legs. Calls are higher and faster.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Accipiter_striatus%2C_Canet_Road%2C_San_Luis_Obispo_1.jpg/330px-Accipiter_striatus%2C_Canet_Road%2C_San_Luis_Obispo_1.jpg",
+      "recordings": [
+        {
+          "id": "XC791005",
+          "url": "https://xeno-canto.org/791005/download",
+          "duration": 5,
+          "type": "song",
+          "recordist": "Pedro Rinaldi",
+          "location": "Alrededores Paso Centurión, Cerro Largo, Uruguay",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/791005",
+          "gain": 0.38459178204535355
+        },
+        {
+          "id": "XC1102086",
+          "url": "https://xeno-canto.org/1102086/download",
+          "duration": 4,
+          "type": "song",
+          "recordist": "William Zaca",
+          "location": "Atibaia, São Paulo, Brazil",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/1102086",
+          "gain": 0.15995580286146688
+        },
+        {
+          "id": "XC600402",
+          "url": "https://xeno-canto.org/600402/download",
+          "duration": 6,
+          "type": "call",
+          "recordist": "Thiago Augusto Mendes Pinheiro",
+          "location": "Parque Nacional Serra da Canastra, São Roque de Minas, MG, Brazil",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/600402",
+          "gain": 1
+        }
+      ]
+    },
+    {
+      "id": "red-shouldered-hawk",
+      "commonName": "Red-shouldered Hawk",
+      "scientificName": "Buteo lineatus",
+      "mnemonic": "Loud descending 'kee-aah, kee-aah'",
+      "field": "Year-round in oak-riparian edges. Smaller than Red-tailed, with banded tail and rusty shoulder. The piercing 'kee-aah' is one of the most familiar raptor calls in West Marin woods.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Red-shouldered_Hawk_%28Buteo_lineatus%29_-_Blue_Cypress_Lake%2C_Florida.jpg/330px-Red-shouldered_Hawk_%28Buteo_lineatus%29_-_Blue_Cypress_Lake%2C_Florida.jpg",
+      "recordings": [
+        {
+          "id": "XC564543",
+          "url": "https://xeno-canto.org/564543/download",
+          "duration": 10,
+          "type": "song",
+          "recordist": "Brian Hendrix",
+          "location": "Hendrix Habitat - Fairview, Williamson County, Tennessee, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/564543",
+          "gain": 0.2910717118066606
+        },
+        {
+          "id": "XC698948",
+          "url": "https://xeno-canto.org/698948/download",
+          "duration": 10,
+          "type": "flight call",
+          "recordist": "Valerie Heemstra",
+          "location": "Galt Preserve (near  Saint James City), Lee County, Florida, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/698948",
+          "gain": 0.2600159563165272
+        },
+        {
+          "id": "XC729076",
+          "url": "https://xeno-canto.org/729076/download",
+          "duration": 7,
+          "type": "call",
+          "recordist": "William Whitehead",
+          "location": "Great SWamp NWR, Morris County, New Jersey, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+          "sourceUrl": "https://xeno-canto.org/729076",
+          "gain": 0.7396052750582377
+        }
+      ]
+    },
+    {
+      "id": "northern-harrier",
+      "commonName": "Northern Harrier",
+      "scientificName": "Circus hudsonius",
+      "mnemonic": "Mostly silent in winter; nasal 'eh-eh-eh' at nest",
+      "field": "October through April in pasture and marsh — males pale gray, females and juveniles brown. Distinctive low coursing flight with wings held in a shallow V and a white rump patch.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Circus_hudsonius%2C_male_perched%2C_Berkeley%2C_California_%28cropped%29.jpg/330px-Circus_hudsonius%2C_male_perched%2C_Berkeley%2C_California_%28cropped%29.jpg",
+      "recordings": [
+        {
+          "id": "XC279717",
+          "url": "https://xeno-canto.org/279717/download",
+          "duration": 8,
+          "type": "call, \"squeal\" call",
+          "recordist": "Nick Komar",
+          "location": "East of Fort Collins, CR52, Larimer County, Colorado, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/279717",
+          "gain": 0.31659204634322385
+        },
+        {
+          "id": "XC164241",
+          "url": "https://xeno-canto.org/164241/download",
+          "duration": 5,
+          "type": "call",
+          "recordist": "Paul Marvin",
+          "location": "Whitewater Draw WA, near McNeal, Cochise Co, Arizona, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/164241",
+          "gain": 0.4187935651179184
+        },
+        {
+          "id": "XC310076",
+          "url": "https://xeno-canto.org/310076/download",
+          "duration": 3,
+          "type": "call",
+          "recordist": "Dylan Pedro",
+          "location": "Quonochontaug, Charlestown, Washington County, Rhode Island, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/310076",
+          "gain": 1
+        }
+      ]
+    },
+    {
+      "id": "osprey",
+      "commonName": "Osprey",
+      "scientificName": "Pandion haliaetus",
+      "mnemonic": "Sharp piercing whistles, often a series",
+      "field": "March through October at Tomales Bay and Bolinas Lagoon; some winter. Plunge-dives feet-first for fish from a hover. The whistle is a clear, evenly-spaced series — totally distinct from a hawk's scream.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Osprey_Perched_Snag_Heislerville.jpg/330px-Osprey_Perched_Snag_Heislerville.jpg",
+      "recordings": [
+        {
+          "id": "XC573484",
+          "url": "https://xeno-canto.org/573484/download",
+          "duration": 8,
+          "type": "song",
+          "recordist": "Manuel Grosselet",
+          "location": "Cerca de Maviri, Ahome, Sinaloa, Mexico",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/573484",
+          "gain": 0.2725837738928532
+        },
+        {
+          "id": "XC573482",
+          "url": "https://xeno-canto.org/573482/download",
+          "duration": 5,
+          "type": "song",
+          "recordist": "Manuel Grosselet",
+          "location": "Cerca de Maviri, Ahome, Sinaloa, Mexico",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/573482",
+          "gain": 0.24717241450161304
+        },
+        {
+          "id": "XC573483",
+          "url": "https://xeno-canto.org/573483/download",
+          "duration": 4,
+          "type": "song",
+          "recordist": "Manuel Grosselet",
+          "location": "Cerca de Maviri, Ahome, Sinaloa, Mexico",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/573483",
+          "gain": 0.28674773755813154
+        }
+      ]
+    },
+    {
+      "id": "peregrine-falcon",
+      "commonName": "Peregrine Falcon",
+      "scientificName": "Falco peregrinus",
+      "mnemonic": "Harsh 'kak-kak-kak' near eyrie",
+      "field": "Year-round on the cliffs of Pt. Reyes and Marin Headlands. Pointed wings and short tail in flight. Diving stoop reaches 200+ mph — fastest animal on earth.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Falco_peregrinus_m_Humber_Bay_Park_Toronto.jpg/330px-Falco_peregrinus_m_Humber_Bay_Park_Toronto.jpg",
+      "recordings": [
+        {
+          "id": "XC757590",
+          "url": "https://xeno-canto.org/757590/download",
+          "duration": 10,
+          "type": "call, song",
+          "recordist": "William Visser",
+          "location": "Oud-Beijerland, Hoeksche Waard, South Holland, Netherlands",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/757590",
+          "gain": 1
+        },
+        {
+          "id": "XC985567",
+          "url": "https://xeno-canto.org/985567/download",
+          "duration": 10,
+          "type": "song",
+          "recordist": "Gil Lissens",
+          "location": "Arrondissement Mechelen (near  Puurs-Sint-Amands), Antwerpen, Vlaams Gewest, Belgium",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/985567",
+          "gain": 1
+        },
+        {
+          "id": "XC750854",
+          "url": "https://xeno-canto.org/750854/download",
+          "duration": 10,
+          "type": "flight call",
+          "recordist": "Mirko Tomasi",
+          "location": "Induno Olona, Province of Varese, Lombardy, Italy",
+          "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/750854",
+          "gain": 1
+        }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "sc-1",
+      "title": "Big Soarers",
+      "speciesIds": [
+        "turkey-vulture",
+        "common-raven",
+        "bald-eagle"
+      ],
+      "length": 8
+    },
+    {
+      "id": "sc-2",
+      "title": "Pursuit & Stoop",
+      "speciesIds": [
+        "coopers-hawk",
+        "sharp-shinned-hawk",
+        "peregrine-falcon"
+      ],
+      "length": 8
+    },
+    {
+      "id": "sc-3",
+      "title": "Field & Marsh Hunters",
+      "speciesIds": [
+        "red-shouldered-hawk",
+        "northern-harrier",
+        "osprey"
+      ],
+      "length": 8
+    },
+    {
+      "id": "sc-review",
+      "title": "Review: All 9",
+      "speciesIds": [
+        "turkey-vulture",
+        "common-raven",
+        "bald-eagle",
+        "coopers-hawk",
+        "sharp-shinned-hawk",
+        "red-shouldered-hawk",
+        "northern-harrier",
+        "osprey",
+        "peregrine-falcon"
+      ],
+      "length": 12
+    }
+  ]
+}

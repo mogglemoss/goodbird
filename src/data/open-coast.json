@@ -1,0 +1,589 @@
+{
+  "unit": {
+    "id": "open-coast",
+    "title": "Open Coast & Headlands",
+    "habitat": "Rocky Shore & Surfline",
+    "description": "Sea cliffs and surfline — Drake's Beach, Duxbury Reef, the Pt. Reyes lighthouse stacks.",
+    "tagline": "Salt spray on the basalt; cormorants drying their wings.",
+    "accent": "teal"
+  },
+  "species": [
+    {
+      "id": "brown-pelican",
+      "commonName": "Brown Pelican",
+      "scientificName": "Pelecanus occidentalis",
+      "mnemonic": "Mostly silent; soft grunts at the colony",
+      "field": "March through November along the open coast; population recovered post-DDT. Plunge-dives from 30+ ft. Lines of pelicans gliding inches above wave crests are diagnostic.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Brown_pelican_in_flight_%28Bodega_Bay%29.jpg/330px-Brown_pelican_in_flight_%28Bodega_Bay%29.jpg",
+      "recordings": [
+        {
+          "id": "XC357928",
+          "url": "https://xeno-canto.org/357928/download",
+          "duration": 10,
+          "type": "call",
+          "recordist": "Judith PRIAM",
+          "location": "Guadeloupe, FWI., France",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/357928",
+          "gain": 0.2190281828068454
+        },
+        {
+          "id": "XC530843",
+          "url": "https://xeno-canto.org/530843/download",
+          "duration": 41,
+          "type": "call",
+          "recordist": "Isain Contreras Rodríguez",
+          "location": "Topolobampo, Ahome, Sinaloa, Mexico",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/530843",
+          "gain": 1
+        },
+        {
+          "id": "XC131667",
+          "url": "https://xeno-canto.org/131667/download",
+          "duration": 34,
+          "type": "call",
+          "recordist": "Thore Noernberg",
+          "location": "Pearl Islands - Panama , Panama",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/131667",
+          "gain": 0.33923448954144325
+        }
+      ]
+    },
+    {
+      "id": "brandts-cormorant",
+      "commonName": "Brandt's Cormorant",
+      "scientificName": "Urile penicillatus",
+      "mnemonic": "Deep guttural croaks at the colony",
+      "field": "Year-round on rocky offshore stacks and breakwaters. Breeding adults have a vivid blue throat patch. Largest of the three local cormorants.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Brandt%27s_Cormorant.jpg/330px-Brandt%27s_Cormorant.jpg",
+      "recordings": [
+        {
+          "id": "XC349956",
+          "url": "https://xeno-canto.org/349956/download",
+          "duration": 4,
+          "type": "call",
+          "recordist": "Paul Marvin",
+          "location": "La Jolla Cove, San Diego County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/349956",
+          "gain": 0.6538829300047418
+        },
+        {
+          "id": "XC349954",
+          "url": "https://xeno-canto.org/349954/download",
+          "duration": 4,
+          "type": "call",
+          "recordist": "Paul Marvin",
+          "location": "La Jolla Cove, San Diego County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/349954",
+          "gain": 0.4173495984653171
+        },
+        {
+          "id": "XC354689",
+          "url": "https://xeno-canto.org/354689/download",
+          "duration": 11,
+          "type": "begging call, call",
+          "recordist": "David Vander Pluym",
+          "location": "Cannery Row, Monterey County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/354689",
+          "gain": 0.40878975211111984
+        }
+      ]
+    },
+    {
+      "id": "pelagic-cormorant",
+      "commonName": "Pelagic Cormorant",
+      "scientificName": "Urile pelagicus",
+      "mnemonic": "Soft grunting calls at cliff nest",
+      "field": "Year-round on sheer cliffs of the open coast. Smallest, most slender cormorant; breeding adults show white flank patches and an iridescent green sheen.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Pelagic_Cormorant_flying.jpg/330px-Pelagic_Cormorant_flying.jpg",
+      "recordings": [
+        {
+          "id": "XC209339",
+          "url": "https://xeno-canto.org/209339/download",
+          "duration": 275,
+          "type": "call",
+          "recordist": "Ian Cruickshank",
+          "location": "Helliwell Park, Hornby Island, British Columbia, Canada",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/209339",
+          "gain": 0.5741164622073275
+        },
+        {
+          "id": "XC209336",
+          "url": "https://xeno-canto.org/209336/download",
+          "duration": 335,
+          "type": "call",
+          "recordist": "Ian Cruickshank",
+          "location": "Helliwell Park, Hornby Island, British Columbia, Canada",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/209336",
+          "gain": 0.4943106869868354
+        },
+        {
+          "id": "XC209340",
+          "url": "https://xeno-canto.org/209340/download",
+          "duration": 422,
+          "type": "call",
+          "recordist": "Ian Cruickshank",
+          "location": "Helliwell Park, Hornby Island, British Columbia, Canada",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/209340",
+          "gain": 0.508744819644691
+        }
+      ]
+    },
+    {
+      "id": "common-murre",
+      "commonName": "Common Murre",
+      "scientificName": "Uria aalge",
+      "mnemonic": "Loud purring 'arrrr' at colony",
+      "field": "April through August on offshore rocks (Pt. Reyes, Bird Island). Penguin-like shape, dense colonies. Murre Island colonies were devastated mid-century but have largely recovered.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Common_Murre_Uria_aalge.jpg/330px-Common_Murre_Uria_aalge.jpg",
+      "recordings": [
+        {
+          "id": "XC929915",
+          "url": "https://xeno-canto.org/929915/download",
+          "duration": 7,
+          "type": "call, song",
+          "recordist": "Arjun Dutta",
+          "location": "Bempton, East Riding of Yorkshire, England, United Kingdom",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/929915",
+          "gain": 1
+        },
+        {
+          "id": "XC487622",
+          "url": "https://xeno-canto.org/487622/download",
+          "duration": 6,
+          "type": "call, song",
+          "recordist": "Stanislas Wroza",
+          "location": "Onverdarnes, Iceland",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/487622",
+          "gain": 0.6046443513447594
+        },
+        {
+          "id": "XC399818",
+          "url": "https://xeno-canto.org/399818/download",
+          "duration": 14,
+          "type": "call, song",
+          "recordist": "Stein Ø. Nilsen",
+          "location": "Hornøya, Vardø, Finnmark, Norway",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/399818",
+          "gain": 0.19860949173573716
+        }
+      ]
+    },
+    {
+      "id": "pigeon-guillemot",
+      "commonName": "Pigeon Guillemot",
+      "scientificName": "Cepphus columba",
+      "mnemonic": "High thin whistled 'peeee' at cliff nest",
+      "field": "March through August on the rocky coast. Black with bold white wing patches and bright red feet. Often perched in sea caves and on cliff ledges.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Pigeon_guillemot.jpg/330px-Pigeon_guillemot.jpg",
+      "recordings": [
+        {
+          "id": "XC246790",
+          "url": "https://xeno-canto.org/246790/download",
+          "duration": 11,
+          "type": "call, song",
+          "recordist": "Rachel Hudson",
+          "location": "Neah Bay, Clallam County, Washington, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/246790",
+          "gain": 1
+        },
+        {
+          "id": "XC728363",
+          "url": "https://xeno-canto.org/728363/download",
+          "duration": 8,
+          "type": "song",
+          "recordist": "Thomas G. Graves",
+          "location": "Baywood-Los Osos, San Luis Obispo County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/728363",
+          "gain": 0.5546257129579106
+        },
+        {
+          "id": "XC728364",
+          "url": "https://xeno-canto.org/728364/download",
+          "duration": 9,
+          "type": "song",
+          "recordist": "Thomas G. Graves",
+          "location": "Baywood-Los Osos, San Luis Obispo County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/728364",
+          "gain": 0.5093308710571954
+        }
+      ]
+    },
+    {
+      "id": "western-gull",
+      "commonName": "Western Gull",
+      "scientificName": "Larus occidentalis",
+      "mnemonic": "Loud yelping 'keow-keow-keow'",
+      "field": "Year-round throughout the coast — the local 'white-headed black-mantled big gull.' The default gull on Pt. Reyes beaches; nests on offshore rocks.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Larus_occidentalis_%28Western_Gull%29%2C_Point_Lobos%2C_CA%2C_US_-_May_2013.jpg/330px-Larus_occidentalis_%28Western_Gull%29%2C_Point_Lobos%2C_CA%2C_US_-_May_2013.jpg",
+      "recordings": [
+        {
+          "id": "XC493643",
+          "url": "https://xeno-canto.org/493643/download",
+          "duration": 10,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "J Street Marina, Chula Vista, San Diego Co, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/493643",
+          "gain": 0.3054921113215513
+        },
+        {
+          "id": "XC620780",
+          "url": "https://xeno-canto.org/620780/download",
+          "duration": 12,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "Glorietta Bay Park, Coronado, San Diego County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/620780",
+          "gain": 0.5695082241279306
+        },
+        {
+          "id": "XC572576",
+          "url": "https://xeno-canto.org/572576/download",
+          "duration": 4,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "J Street Marina, Chula Vista, San Diego Co, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/572576",
+          "gain": 0.28411881849832443
+        }
+      ]
+    },
+    {
+      "id": "heermanns-gull",
+      "commonName": "Heermann's Gull",
+      "scientificName": "Larus heermanni",
+      "mnemonic": "Nasal 'keeyaaah' calls",
+      "field": "August through April after dispersing north from Mexican breeding colonies. Slate-gray body, white head, and bright red bill — the most distinctive West Marin gull.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Larus_heermanni13.JPG/330px-Larus_heermanni13.JPG",
+      "recordings": [
+        {
+          "id": "XC522924",
+          "url": "https://xeno-canto.org/522924/download",
+          "duration": 11,
+          "type": "flight call",
+          "recordist": "Manuel Grosselet",
+          "location": "Ahome, Sinaloa, Mexico",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/522924",
+          "gain": 1
+        },
+        {
+          "id": "XC109915",
+          "url": "https://xeno-canto.org/109915/download",
+          "duration": 9,
+          "type": "call",
+          "recordist": "Andrew Spencer",
+          "location": "Clallam Bay, Clallam Co., Washington, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/109915",
+          "gain": 0.27574014523463597
+        },
+        {
+          "id": "XC62247",
+          "url": "https://xeno-canto.org/62247/download",
+          "duration": 3,
+          "type": "call",
+          "recordist": "Sandra Gallo-Corona",
+          "location": "Isla Rasa, Mexico",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
+          "sourceUrl": "https://xeno-canto.org/62247",
+          "gain": 0.152580839480749
+        }
+      ]
+    },
+    {
+      "id": "california-gull",
+      "commonName": "California Gull",
+      "scientificName": "Larus californicus",
+      "mnemonic": "Higher-pitched 'kyow-kyow' than Western",
+      "field": "Year-round but most abundant October through May. Medium-sized; thinner black-tipped yellow bill with a red and black spot. Breeds on inland alkaline lakes.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/CaliforniaGull.jpg/330px-CaliforniaGull.jpg",
+      "recordings": [
+        {
+          "id": "XC362781",
+          "url": "https://xeno-canto.org/362781/download",
+          "duration": 8,
+          "type": "call",
+          "recordist": "Paul Marvin",
+          "location": "J Street Marina, Chula Vista, San Diego Co, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/362781",
+          "gain": 0.4390358656409447
+        },
+        {
+          "id": "XC109696",
+          "url": "https://xeno-canto.org/109696/download",
+          "duration": 8,
+          "type": "call",
+          "recordist": "Andrew Spencer",
+          "location": "Clallam Bay, Clallam Co., Washington, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/109696",
+          "gain": 0.3047894989627983
+        },
+        {
+          "id": "XC189397",
+          "url": "https://xeno-canto.org/189397/download",
+          "duration": 9,
+          "type": "call",
+          "recordist": "Andrew Spencer",
+          "location": "Lake Mason, Lake Mason NWR, Musselshell Co., Montana, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/189397",
+          "gain": 0.48977881936844625
+        }
+      ]
+    },
+    {
+      "id": "black-turnstone",
+      "commonName": "Black Turnstone",
+      "scientificName": "Arenaria melanocephala",
+      "mnemonic": "Sharp rattling 'tuk-tuk-tuk-tuk'",
+      "field": "August through May on rocky shores. Stocky black-and-white shorebird that flips kelp and pebbles to find prey. Often in mixed flocks with Surfbirds.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Black_Turnstone%2C_breeding_plumage_%282112366200%29.jpg/330px-Black_Turnstone%2C_breeding_plumage_%282112366200%29.jpg",
+      "recordings": [
+        {
+          "id": "XC452406",
+          "url": "https://xeno-canto.org/452406/download",
+          "duration": 8,
+          "type": "call",
+          "recordist": "Bruce Lagerquist",
+          "location": "Semiahmoo spit, Whatcom County, Washington, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/452406",
+          "gain": 0.11350108156723152
+        },
+        {
+          "id": "XC452409",
+          "url": "https://xeno-canto.org/452409/download",
+          "duration": 9,
+          "type": "call",
+          "recordist": "Bruce Lagerquist",
+          "location": "Semiahmoo spit, Whatcom County, Washington, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/452409",
+          "gain": 0.25763211570025746
+        },
+        {
+          "id": "XC109836",
+          "url": "https://xeno-canto.org/109836/download",
+          "duration": 9,
+          "type": "call",
+          "recordist": "Andrew Spencer",
+          "location": "Oyhut Game Range, Ocean Shores, Grays Harbor, Washington, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/109836",
+          "gain": 0.3614098626396133
+        }
+      ]
+    },
+    {
+      "id": "surfbird",
+      "commonName": "Surfbird",
+      "scientificName": "Calidris virgata",
+      "mnemonic": "Soft 'tuk' contact calls amid the spray",
+      "field": "August through May on rocky shores, foraging in the wave wash. Dumpy gray shorebird with a yellow-based bill. Tame and often clambering through breaking surf.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Aphriza_virgata_Cayucos_1.jpg/330px-Aphriza_virgata_Cayucos_1.jpg",
+      "recordings": [
+        {
+          "id": "XC243979",
+          "url": "https://xeno-canto.org/243979/download",
+          "duration": 14,
+          "type": "call, song",
+          "recordist": "Davyd Betchkal",
+          "location": "Fang Mountain, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/243979",
+          "gain": 0.39491169934897513
+        },
+        {
+          "id": "XC739011",
+          "url": "https://xeno-canto.org/739011/download",
+          "duration": 8,
+          "type": "call, song",
+          "recordist": "Seth Beaudreault (Toolik Field Station)",
+          "location": "Surfbird spot, upper Atigun River area, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/739011",
+          "gain": 0.4869675251658631
+        },
+        {
+          "id": "XC549249",
+          "url": "https://xeno-canto.org/549249/download",
+          "duration": 7,
+          "type": "call, flight call",
+          "recordist": "Logan McLeod",
+          "location": "Unorganized Yukon, Yukon, Yukon, Canada",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/549249",
+          "gain": 1
+        }
+      ]
+    },
+    {
+      "id": "sanderling",
+      "commonName": "Sanderling",
+      "scientificName": "Calidris alba",
+      "mnemonic": "Sharp 'wick wick' calls in flight",
+      "field": "August through May on sandy beaches. The little pale shorebird that runs in and out with each wave. Can look almost white in winter plumage.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Sanderling_%28Calidris_alba%29_breeding_plumage.jpg/330px-Sanderling_%28Calidris_alba%29_breeding_plumage.jpg",
+      "recordings": [
+        {
+          "id": "XC169239",
+          "url": "https://xeno-canto.org/169239/download",
+          "duration": 5,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "Parrish Park, Titusville, Brevard County, Florida, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/169239",
+          "gain": 1
+        },
+        {
+          "id": "XC169241",
+          "url": "https://xeno-canto.org/169241/download",
+          "duration": 4,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "Parrish Park, Titusville, Brevard County, Florida, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/169241",
+          "gain": 0.7655966069112563
+        },
+        {
+          "id": "XC70466",
+          "url": "https://xeno-canto.org/70466/download",
+          "duration": 4,
+          "type": "flight call",
+          "recordist": "Paul Driver",
+          "location": "Stone Harbor, NJ, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
+          "sourceUrl": "https://xeno-canto.org/70466",
+          "gain": 0.4102041029866069
+        }
+      ]
+    },
+    {
+      "id": "pacific-loon",
+      "commonName": "Pacific Loon",
+      "scientificName": "Gavia pacifica",
+      "mnemonic": "Deep yodeling at the breeding lakes; mostly silent here",
+      "field": "October through May offshore. Slim, dark-capped loon often in loose flocks just past the surf. Holds neck straighter than Common Loon when swimming.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/PacificLoon24.jpg/330px-PacificLoon24.jpg",
+      "recordings": [
+        {
+          "id": "XC276965",
+          "url": "https://xeno-canto.org/276965/download",
+          "duration": 17,
+          "type": "song",
+          "recordist": "Frank Lambert",
+          "location": "Barrow, North Slope, Alaska, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+          "sourceUrl": "https://xeno-canto.org/276965",
+          "gain": 0.07655966069112562
+        },
+        {
+          "id": "XC69948",
+          "url": "https://xeno-canto.org/69948/download",
+          "duration": 6,
+          "type": "call",
+          "recordist": "Paul Driver",
+          "location": "Deadhorse, AK, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
+          "sourceUrl": "https://xeno-canto.org/69948",
+          "gain": 0.1692388244436418
+        },
+        {
+          "id": "XC991767",
+          "url": "https://xeno-canto.org/991767/download",
+          "duration": 8,
+          "type": "call",
+          "recordist": "Doug Hynes",
+          "location": "\"the Fen\", near Churchill Northern Studies Centre, Manitoba, Canada",
+          "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/991767",
+          "gain": 0.19010782799233
+        }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "oc-1",
+      "title": "Coastal Gulls",
+      "speciesIds": [
+        "western-gull",
+        "heermanns-gull",
+        "california-gull"
+      ],
+      "length": 8
+    },
+    {
+      "id": "oc-2",
+      "title": "Pelican & Cormorants",
+      "speciesIds": [
+        "brown-pelican",
+        "brandts-cormorant",
+        "pelagic-cormorant"
+      ],
+      "length": 8
+    },
+    {
+      "id": "oc-3",
+      "title": "Diving Seabirds",
+      "speciesIds": [
+        "common-murre",
+        "pigeon-guillemot",
+        "pacific-loon"
+      ],
+      "length": 8
+    },
+    {
+      "id": "oc-4",
+      "title": "Surf & Sand",
+      "speciesIds": [
+        "black-turnstone",
+        "surfbird",
+        "sanderling"
+      ],
+      "length": 8
+    },
+    {
+      "id": "oc-review",
+      "title": "Review: All 12",
+      "speciesIds": [
+        "brown-pelican",
+        "brandts-cormorant",
+        "pelagic-cormorant",
+        "common-murre",
+        "pigeon-guillemot",
+        "western-gull",
+        "heermanns-gull",
+        "california-gull",
+        "black-turnstone",
+        "surfbird",
+        "sanderling",
+        "pacific-loon"
+      ],
+      "length": 12
+    }
+  ]
+}

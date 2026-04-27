@@ -26,17 +26,22 @@ const SOURCE = XC_KEY ? "xc" : "inat";
 
 async function fetchXC(species) {
   const [gen, sp] = species.scientificName.split(" ");
-  const query = `gen:${gen} sp:${sp} q:A len_lt:15 cnt:"United States"`;
-  const url = `${XC_BASE}?query=${encodeURIComponent(query)}&key=${XC_KEY}`;
-  const res = await fetch(url);
-  if (!res.ok) throw new Error(`xeno-canto ${species.commonName}: ${res.status}`);
-  const data = await res.json();
-  let recs = data.recordings || [];
-  if (recs.length < 3) {
-    const fb = `gen:${gen} sp:${sp} q:A len_lt:15`;
-    const r2 = await fetch(`${XC_BASE}?query=${encodeURIComponent(fb)}&key=${XC_KEY}`);
-    const d2 = await r2.json();
-    recs = d2.recordings || recs;
+  // Walk a relaxation ladder — start with the strictest filter that gives us
+  // clean US recordings, then progressively loosen so silent or rarely-recorded
+  // species (Turkey Vulture, the cormorants) still get something useful.
+  const ladders = [
+    `gen:${gen} sp:${sp} q:A len_lt:15 cnt:"United States"`,
+    `gen:${gen} sp:${sp} q:A len_lt:15`,
+    `gen:${gen} sp:${sp} len_lt:20`,
+    `gen:${gen} sp:${sp}`,
+  ];
+  let recs = [];
+  for (const query of ladders) {
+    const res = await fetch(`${XC_BASE}?query=${encodeURIComponent(query)}&key=${XC_KEY}`);
+    if (!res.ok) throw new Error(`xeno-canto ${species.commonName}: ${res.status}`);
+    const data = await res.json();
+    recs = data.recordings || [];
+    if (recs.length >= 3) break;
   }
   // Drop playback-used (recorded by playing another recording) and pure alarm calls.
   const filtered = recs.filter((r) => {

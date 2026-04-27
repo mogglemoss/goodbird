@@ -1,0 +1,589 @@
+{
+  "unit": {
+    "id": "town-garden",
+    "title": "Town & Garden",
+    "habitat": "Backyard & Street Edge",
+    "description": "Yards, hedgerows, and parking lots — Pt. Reyes Station, Inverness, Bolinas, the everyday voices.",
+    "tagline": "What you hear from the kitchen window.",
+    "accent": "fuchsia"
+  },
+  "species": [
+    {
+      "id": "american-robin",
+      "commonName": "American Robin",
+      "scientificName": "Turdus migratorius",
+      "mnemonic": "Cheerful 'cheer-up, cheerily, cheer-up' phrases",
+      "field": "Year-round on lawns and under fruit trees. The classic dawn-chorus voice in town — long carolling phrases, slightly slurred, often before sunrise.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/American_robin_%2871307%29.jpg/330px-American_robin_%2871307%29.jpg",
+      "recordings": [
+        {
+          "id": "XC550087",
+          "url": "https://xeno-canto.org/550087/download",
+          "duration": 8,
+          "type": "song",
+          "recordist": "Bruce Lagerquist",
+          "location": "Thornton Creek Ravine, Seattle, King County, Washington, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/550087",
+          "gain": 0.12823305826560213
+        },
+        {
+          "id": "XC1046358",
+          "url": "https://xeno-canto.org/1046358/download",
+          "duration": 6,
+          "type": "song",
+          "recordist": "AUDEVARD Aurélien",
+          "location": "Anchorage, Anchorage Municipality, Alaska, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/1046358",
+          "gain": 0.13677288255958486
+        },
+        {
+          "id": "XC467907",
+          "url": "https://xeno-canto.org/467907/download",
+          "duration": 10,
+          "type": "song",
+          "recordist": "Andy Wilson",
+          "location": "1113 Wilcox Ct, Frederick, MD, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+          "sourceUrl": "https://xeno-canto.org/467907",
+          "gain": 0.8007556285067009
+        }
+      ]
+    },
+    {
+      "id": "northern-flicker",
+      "commonName": "Northern Flicker",
+      "scientificName": "Colaptes auratus",
+      "mnemonic": "Loud rolling 'wik-wik-wik-wik' (long series)",
+      "field": "Year-round in open yards and edges; the 'red-shafted' subspecies is local. Often forages on the ground for ants. White rump flashes in flight.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Northern_yellow-shafted_flicker_male_%2833737%29_%28cropped%29.jpg/330px-Northern_yellow-shafted_flicker_male_%2833737%29_%28cropped%29.jpg",
+      "recordings": [
+        {
+          "id": "XC410727",
+          "url": "https://xeno-canto.org/410727/download",
+          "duration": 11,
+          "type": "song",
+          "recordist": "Ted Floyd",
+          "location": "Boulder, Boulder County, Colorado, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/410727",
+          "gain": 0.18344251671177286
+        },
+        {
+          "id": "XC645833",
+          "url": "https://xeno-canto.org/645833/download",
+          "duration": 13,
+          "type": "song",
+          "recordist": "Ted Floyd",
+          "location": "Lafayette, Boulder County, Colorado, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/645833",
+          "gain": 0.1538154640303035
+        },
+        {
+          "id": "XC768323",
+          "url": "https://xeno-canto.org/768323/download",
+          "duration": 8,
+          "type": "distress call as pursued by raptor",
+          "recordist": "Richard E. Webster",
+          "location": "San Bernardino National Wildlife Refuge, Cochise County, Arizona, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/768323",
+          "gain": 0.24099054286865948
+        }
+      ]
+    },
+    {
+      "id": "brown-headed-cowbird",
+      "commonName": "Brown-headed Cowbird",
+      "scientificName": "Molothrus ater",
+      "mnemonic": "Liquid bubbling 'glug-glug-glee'",
+      "field": "April through September on lawns, fences, and parking lots. Brood parasite — never builds its own nest. Males do a fluttering 'topple-over' bow when calling.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Brown-headed_cowbird_male_%2871126%29.jpg/330px-Brown-headed_cowbird_male_%2871126%29.jpg",
+      "recordings": [
+        {
+          "id": "XC418533",
+          "url": "https://xeno-canto.org/418533/download",
+          "duration": 6,
+          "type": "song",
+          "recordist": "Bobby Wilcox",
+          "location": "Corn Creek Field Station, Desert NWR, NV, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/418533",
+          "gain": 0.38459178204535355
+        },
+        {
+          "id": "XC313062",
+          "url": "https://xeno-canto.org/313062/download",
+          "duration": 6,
+          "type": "song",
+          "recordist": "Sue Riffe",
+          "location": "Bonny SWA, Yuma County, Colorado, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/313062",
+          "gain": 1
+        },
+        {
+          "id": "XC192083",
+          "url": "https://xeno-canto.org/192083/download",
+          "duration": 11,
+          "type": "song",
+          "recordist": "Paul Marvin",
+          "location": "Joe Overstreet Rd, Lake Kissimmee, Osceola County, Florida, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/192083",
+          "gain": 0.5075747390289015
+        }
+      ]
+    },
+    {
+      "id": "allens-hummingbird",
+      "commonName": "Allen's Hummingbird",
+      "scientificName": "Selasphorus sasin",
+      "mnemonic": "Sharp metallic 'tsip' chips; courtship dive 'pip-pip-WHEEEW'",
+      "field": "February through August in coastal scrub and gardens. Males have a coppery back (separating from Anna's, which is fully green-backed). The dive-display whoosh is diagnostic.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Allen%27s_Hummingbird_Selasphorus_sasin_%2832540935410%29.jpg/330px-Allen%27s_Hummingbird_Selasphorus_sasin_%2832540935410%29.jpg",
+      "recordings": [
+        {
+          "id": "XC691196",
+          "url": "https://xeno-canto.org/691196/download",
+          "duration": 6,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "Tijuana Slough National Wildlife Refuge visitor center, Imperial Beach, San Diego County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/691196",
+          "gain": 0.25644840365177174
+        },
+        {
+          "id": "XC691197",
+          "url": "https://xeno-canto.org/691197/download",
+          "duration": 13,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "Tijuana Slough National Wildlife Refuge visitor center, Imperial Beach, San Diego County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/691197",
+          "gain": 0.4430982144892988
+        },
+        {
+          "id": "XC691195",
+          "url": "https://xeno-canto.org/691195/download",
+          "duration": 13,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "Tijuana Slough National Wildlife Refuge visitor center, Imperial Beach, San Diego County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/691195",
+          "gain": 0.2094112455850893
+        }
+      ]
+    },
+    {
+      "id": "house-finch",
+      "commonName": "House Finch",
+      "scientificName": "Haemorhous mexicanus",
+      "mnemonic": "Long warbling jumble ending in a buzzy 'zreee'",
+      "field": "Year-round in towns and yards. Males have variable raspberry-red on the head and breast. Song is a sustained tumbling warble, longer than Purple Finch's.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/House_finch_%2833688%292.jpg/330px-House_finch_%2833688%292.jpg",
+      "recordings": [
+        {
+          "id": "XC34860",
+          "url": "https://xeno-canto.org/34860/download",
+          "duration": 7,
+          "type": "song",
+          "recordist": "Tayler Brooks",
+          "location": "Grant Co., WA, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
+          "sourceUrl": "https://xeno-canto.org/34860",
+          "gain": 0.18599445632225764
+        },
+        {
+          "id": "XC13700",
+          "url": "https://xeno-canto.org/13700/download",
+          "duration": 5,
+          "type": "song",
+          "recordist": "Chris Parrish",
+          "location": "Sewanee, Franklin County, Tennessee, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
+          "sourceUrl": "https://xeno-canto.org/13700",
+          "gain": 0.40878975211111984
+        },
+        {
+          "id": "XC622745",
+          "url": "https://xeno-canto.org/622745/download",
+          "duration": 12,
+          "type": "song",
+          "recordist": "Ted Floyd",
+          "location": "Lafayette, Boulder County, Colorado, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/622745",
+          "gain": 0.3535900211003868
+        }
+      ]
+    },
+    {
+      "id": "american-goldfinch",
+      "commonName": "American Goldfinch",
+      "scientificName": "Spinus tristis",
+      "mnemonic": "Bouncy 'po-ta-to-chip' in flight; long 'per-CHEE' song",
+      "field": "Year-round on weedy edges, sunflowers, and feeders. Males brilliant yellow with black cap in summer; both sexes drabber in winter. Undulating flight.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Carduelis_tristis_-Michigan%2C_USA_-male-8.jpg/330px-Carduelis_tristis_-Michigan%2C_USA_-male-8.jpg",
+      "recordings": [
+        {
+          "id": "XC49047",
+          "url": "https://xeno-canto.org/49047/download",
+          "duration": 8,
+          "type": "song",
+          "recordist": "Ian Davies",
+          "location": "Manomet Bird Observatory, Manomet, Plymouth County, Massachusetts, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
+          "sourceUrl": "https://xeno-canto.org/49047",
+          "gain": 0.892277619587827
+        },
+        {
+          "id": "XC1034478",
+          "url": "https://xeno-canto.org/1034478/download",
+          "duration": 7,
+          "type": "song",
+          "recordist": "Rory Nefdt",
+          "location": "Pound Ridge Reservation Lewisboro (near  Cross River), Westchester County, New York, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/1034478",
+          "gain": 1
+        },
+        {
+          "id": "XC720038",
+          "url": "https://xeno-canto.org/720038/download",
+          "duration": 9,
+          "type": "song",
+          "recordist": "William Whitehead",
+          "location": "Ernest Oros Nature Preserve, Avenel, New Jersey, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+          "sourceUrl": "https://xeno-canto.org/720038",
+          "gain": 1
+        }
+      ]
+    },
+    {
+      "id": "yellow-rumped-warbler",
+      "commonName": "Yellow-rumped Warbler",
+      "scientificName": "Setophaga coronata",
+      "mnemonic": "Sharp 'chek' calls; thin warbled trill in spring",
+      "field": "October through April — the most common winter warbler in West Marin. Yellow rump patch always visible in flight. Two forms occur: 'Audubon's' (yellow throat) and 'Myrtle' (white throat).",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Yellow-rumped_warbler_singing_%2841612%29_%28cropped%29.jpg/330px-Yellow-rumped_warbler_singing_%2841612%29_%28cropped%29.jpg",
+      "recordings": [
+        {
+          "id": "XC188619",
+          "url": "https://xeno-canto.org/188619/download",
+          "duration": 9,
+          "type": "song",
+          "recordist": "Nathan Pieplow",
+          "location": "Boulder, Boulder County, Colorado, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/188619",
+          "gain": 0.28707805820246907
+        },
+        {
+          "id": "XC30789",
+          "url": "https://xeno-canto.org/30789/download",
+          "duration": 13,
+          "type": "song",
+          "recordist": "Andrew Spencer",
+          "location": "East Inlet Road, Coos Co., New Hampshire, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
+          "sourceUrl": "https://xeno-canto.org/30789",
+          "gain": 0.317687407064977
+        },
+        {
+          "id": "XC165360",
+          "url": "https://xeno-canto.org/165360/download",
+          "duration": 3,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "Pine Island Conservation Area, Merritt Island, Florida, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/165360",
+          "gain": 0.47151987133644774
+        }
+      ]
+    },
+    {
+      "id": "ruby-crowned-kinglet",
+      "commonName": "Ruby-crowned Kinglet",
+      "scientificName": "Corthylio calendula",
+      "mnemonic": "Tiny scolding 'che-dit'; loud disjointed song much bigger than the bird",
+      "field": "October through April flicking through oaks and yard shrubs. Tiny, olive, with a broken eye-ring. Males rarely flash a red crown patch when agitated.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Regulus_calendula_MP_3.jpg/330px-Regulus_calendula_MP_3.jpg",
+      "recordings": [
+        {
+          "id": "XC175095",
+          "url": "https://xeno-canto.org/175095/download",
+          "duration": 10,
+          "type": "song",
+          "recordist": "Jonathon Jongsma",
+          "location": "Miesville Ravine Park Reserve, Goodhue County, Minnesota, United States",
+          "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/175095",
+          "gain": 0.4092606597300108
+        },
+        {
+          "id": "XC558996",
+          "url": "https://xeno-canto.org/558996/download",
+          "duration": 11,
+          "type": "song",
+          "recordist": "Ron Overholtz",
+          "location": "Schulman Grove, White Mountains, Inyo, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/558996",
+          "gain": 0.16368165214278085
+        },
+        {
+          "id": "XC680409",
+          "url": "https://xeno-canto.org/680409/download",
+          "duration": 4,
+          "type": "song",
+          "recordist": "Seth Beaudreault (Toolik Field Station)",
+          "location": "Sag DOT Station, North Slope, Alaska, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/680409",
+          "gain": 0.7473086341912761
+        }
+      ]
+    },
+    {
+      "id": "cedar-waxwing",
+      "commonName": "Cedar Waxwing",
+      "scientificName": "Bombycilla cedrorum",
+      "mnemonic": "Very high thin whistled 'sreeeee'",
+      "field": "Year-round in mixed flocks, often at fruiting trees (toyon, pyracantha, madrone). Sleek crest, masked face, yellow-tipped tail. Voice is so high some adults can't hear it.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Cedar_Waxwing_-_Bombycilla_cedrorum%2C_George_Washington%27s_Birthplace_National_Monument%2C_Colonial_Beach%2C_Virginia_%2839997434862%29.jpg/330px-Cedar_Waxwing_-_Bombycilla_cedrorum%2C_George_Washington%27s_Birthplace_National_Monument%2C_Colonial_Beach%2C_Virginia_%2839997434862%29.jpg",
+      "recordings": [
+        {
+          "id": "XC1005316",
+          "url": "https://xeno-canto.org/1005316/download",
+          "duration": 10,
+          "type": "flight call, song",
+          "recordist": "Rory Nefdt",
+          "location": "Pound Ridge Reservation Lewisboro (near  Cross River), Westchester County, New York, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/1005316",
+          "gain": 1
+        },
+        {
+          "id": "XC36559",
+          "url": "https://xeno-canto.org/36559/download",
+          "duration": 2,
+          "type": "flight call",
+          "recordist": "Tayler Brooks",
+          "location": "Barnaby Slough, Skagit Co., WA, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
+          "sourceUrl": "https://xeno-canto.org/36559",
+          "gain": 0.2606153549998896
+        },
+        {
+          "id": "XC408580",
+          "url": "https://xeno-canto.org/408580/download",
+          "duration": 10,
+          "type": "call",
+          "recordist": "Frank Lambert",
+          "location": "Zzyzx--Desert Studies Center, Baker, San Bernardino County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+          "sourceUrl": "https://xeno-canto.org/408580",
+          "gain": 0.4290421892388854
+        }
+      ]
+    },
+    {
+      "id": "house-sparrow",
+      "commonName": "House Sparrow",
+      "scientificName": "Passer domesticus",
+      "mnemonic": "Endless cheerful 'chirrup chirrup'",
+      "field": "Year-round at feed stores, parking lots, and dense hedges. Introduced from Europe in the 1850s. Males have black bib and gray cap; females nondescript brown.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/House_sparrow_male_in_Prospect_Park_%2853532%29.jpg/330px-House_sparrow_male_in_Prospect_Park_%2853532%29.jpg",
+      "recordings": [
+        {
+          "id": "XC539455",
+          "url": "https://xeno-canto.org/539455/download",
+          "duration": 6,
+          "type": "call, song",
+          "recordist": "Gaëtan Mineau",
+          "location": "Augan, Morbihan, Bretagne, France",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/539455",
+          "gain": 0.4613175745603794
+        },
+        {
+          "id": "XC503474",
+          "url": "https://xeno-canto.org/503474/download",
+          "duration": 6,
+          "type": "call, song",
+          "recordist": "Nelson Conceição",
+          "location": "Vila Nova de Cacela, Vila Real de Santo António, Faro, Portugal",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/503474",
+          "gain": 0.24154608344449405
+        },
+        {
+          "id": "XC896492",
+          "url": "https://xeno-canto.org/896492/download",
+          "duration": 14,
+          "type": "call, song",
+          "recordist": "Martin Billard",
+          "location": "Centre bourg de Petiville (near  Petiville), Calvados, Normandie, France",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/896492",
+          "gain": 0.13273944577297395
+        }
+      ]
+    },
+    {
+      "id": "european-starling",
+      "commonName": "European Starling",
+      "scientificName": "Sturnus vulgaris",
+      "mnemonic": "Wheezy whistles, clicks, and mimicry of other species",
+      "field": "Year-round in town flocks; introduced 1890. A relentless mimic — can copy meadowlarks, Killdeer, even car alarms. Glossy black with white spots in fall, plain glossy in spring.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Toulouse_-_Sturnus_vulgaris_-_2012-02-26_-_3.jpg/330px-Toulouse_-_Sturnus_vulgaris_-_2012-02-26_-_3.jpg",
+      "recordings": [
+        {
+          "id": "XC981795",
+          "url": "https://xeno-canto.org/981795/download",
+          "duration": 11,
+          "type": "song",
+          "recordist": "Susanne Kuijpers",
+          "location": "Berkel en Rodenrijs, Lansingerland, Zuid-Holland, Netherlands",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/981795",
+          "gain": 0.5949767567589801
+        },
+        {
+          "id": "XC628940",
+          "url": "https://xeno-canto.org/628940/download",
+          "duration": 3,
+          "type": "imitation, song, mimicry/imitation",
+          "recordist": "Peter Stronach",
+          "location": "Baile nan Granndach, Strath Spè, Na Gaidhealtachd, Scotland, United Kingdom",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/628940",
+          "gain": 0.4943106869868354
+        },
+        {
+          "id": "XC1031530",
+          "url": "https://xeno-canto.org/1031530/download",
+          "duration": 4,
+          "type": "call",
+          "recordist": "Paul Kelly",
+          "location": "Tacumshin Lake (East End), County Wexford, Ireland",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/1031530",
+          "gain": 1
+        }
+      ]
+    },
+    {
+      "id": "rock-pigeon",
+      "commonName": "Rock Pigeon",
+      "scientificName": "Columba livia",
+      "mnemonic": "Soft cooing 'oh-roo-coo-coo'",
+      "field": "Year-round around buildings, bridges, and barns. The familiar feral pigeon, ancestrally a cliff-nester. Highly variable plumage — feral flocks include white, blue-bar, checker, and red morphs.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Columba_livia_%28Rock_Dove%2C_wild%29%2C_Duncansby_Head%2C_Caithness%2C_Scotland_1.jpg/330px-Columba_livia_%28Rock_Dove%2C_wild%29%2C_Duncansby_Head%2C_Caithness%2C_Scotland_1.jpg",
+      "recordings": [
+        {
+          "id": "XC306692",
+          "url": "https://xeno-canto.org/306692/download",
+          "duration": 10,
+          "type": "song, beat wings",
+          "recordist": "Leonardo Ordóñez-Delgado",
+          "location": "Casitas, Jambelí, El Oro, Ecuador",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/306692",
+          "gain": 0.35850894827655494
+        },
+        {
+          "id": "XC116226",
+          "url": "https://xeno-canto.org/116226/download",
+          "duration": 5,
+          "type": "song",
+          "recordist": "Jarek Matusiak",
+          "location": "Warszawa (near  Warsaw), Warszawa, Mazowieckie, Poland",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/116226",
+          "gain": 0.6902398038402421
+        },
+        {
+          "id": "XC270097",
+          "url": "https://xeno-canto.org/270097/download",
+          "duration": 12,
+          "type": "song",
+          "recordist": "Timo Schnabel",
+          "location": "Sélestat, Bas-Rhin, Alsace, France",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/270097",
+          "gain": 0.4456562483975033
+        }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "tg-1",
+      "title": "Lawn Birds",
+      "speciesIds": [
+        "american-robin",
+        "northern-flicker",
+        "brown-headed-cowbird"
+      ],
+      "length": 8
+    },
+    {
+      "id": "tg-2",
+      "title": "Hummers & Finches",
+      "speciesIds": [
+        "allens-hummingbird",
+        "house-finch",
+        "american-goldfinch"
+      ],
+      "length": 8
+    },
+    {
+      "id": "tg-3",
+      "title": "Winter Visitors",
+      "speciesIds": [
+        "yellow-rumped-warbler",
+        "ruby-crowned-kinglet",
+        "cedar-waxwing"
+      ],
+      "length": 8
+    },
+    {
+      "id": "tg-4",
+      "title": "Introduced Townies",
+      "speciesIds": [
+        "house-sparrow",
+        "european-starling",
+        "rock-pigeon"
+      ],
+      "length": 8
+    },
+    {
+      "id": "tg-review",
+      "title": "Review: All 12",
+      "speciesIds": [
+        "american-robin",
+        "northern-flicker",
+        "brown-headed-cowbird",
+        "allens-hummingbird",
+        "house-finch",
+        "american-goldfinch",
+        "yellow-rumped-warbler",
+        "ruby-crowned-kinglet",
+        "cedar-waxwing",
+        "house-sparrow",
+        "european-starling",
+        "rock-pigeon"
+      ],
+      "length": 12
+    }
+  ]
+}

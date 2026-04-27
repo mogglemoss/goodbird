@@ -1,0 +1,403 @@
+{
+  "unit": {
+    "id": "redwood-forest",
+    "title": "Redwood & Mixed Forest",
+    "habitat": "Inland Forest",
+    "description": "Bolinas Ridge, Mt. Tam, Muir Woods — old-growth redwoods and the canyons below them.",
+    "tagline": "Drumming in the still cathedral; warblers in the canopy.",
+    "accent": "orange"
+  },
+  "species": [
+    {
+      "id": "pileated-woodpecker",
+      "commonName": "Pileated Woodpecker",
+      "scientificName": "Dryocopus pileatus",
+      "mnemonic": "Loud ringing 'kuk-kuk-kuk-kuk' that fades",
+      "field": "Year-round in mature redwood and Douglas-fir forest of Mt. Tam and Bolinas Ridge. Crow-sized with a flaming red crest. Drilling produces large rectangular holes.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/PileatedWoodpeckerFeedingonTree%2C_crop.jpg/330px-PileatedWoodpeckerFeedingonTree%2C_crop.jpg",
+      "recordings": [
+        {
+          "id": "XC351542",
+          "url": "https://xeno-canto.org/351542/download",
+          "duration": 3,
+          "type": "song",
+          "recordist": "Melani Sleder",
+          "location": "Massachusetts (near Concord), Middlesex County, Massachusetts, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/351542",
+          "gain": 0.18492686189780783
+        },
+        {
+          "id": "XC569931",
+          "url": "https://xeno-canto.org/569931/download",
+          "duration": 8,
+          "type": "call",
+          "recordist": "Russ Wigh",
+          "location": "Skidaway Island, Chatham County, GA USA, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/569931",
+          "gain": 0.15776112696993488
+        },
+        {
+          "id": "XC560603",
+          "url": "https://xeno-canto.org/560603/download",
+          "duration": 8,
+          "type": "call",
+          "recordist": "Russ Wigh",
+          "location": "Skidaway Island, Chatham County, GA USA, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/560603",
+          "gain": 0.15776112696993488
+        }
+      ]
+    },
+    {
+      "id": "vauxs-swift",
+      "commonName": "Vaux's Swift",
+      "scientificName": "Chaetura vauxi",
+      "mnemonic": "High insect-like chittering twitter",
+      "field": "April through September; tens of thousands roost in old-growth tree hollows during migration. Smallest swift in North America — looks like a flying cigar.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Vaux%27s_Swift_-_La_Paz_-_Costa_Rica_MG_1768_%2826435571450%29.jpg/330px-Vaux%27s_Swift_-_La_Paz_-_Costa_Rica_MG_1768_%2826435571450%29.jpg",
+      "recordings": [
+        {
+          "id": "XC150252",
+          "url": "https://xeno-canto.org/150252/download",
+          "duration": 5,
+          "type": "flight call",
+          "recordist": "Paul Marvin",
+          "location": "Glacier National Park (west side), Montana, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/150252",
+          "gain": 0.8288959162731062
+        },
+        {
+          "id": "XC649060",
+          "url": "https://xeno-canto.org/649060/download",
+          "duration": 3,
+          "type": "call",
+          "recordist": "Don Henise",
+          "location": "Myrtle Point, Coos County, Oregon, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/649060",
+          "gain": 0.32583670100200884
+        }
+      ]
+    },
+    {
+      "id": "band-tailed-pigeon",
+      "commonName": "Band-tailed Pigeon",
+      "scientificName": "Patagioenas fasciata",
+      "mnemonic": "Deep low 'whoo-whoo' from the canopy",
+      "field": "Year-round in oak-redwood ecotone, especially when madrone and oak fruit. Larger than a feral pigeon, with a yellow-tipped bill and a pale gray band across the tail.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Patagioenas_fasciata_-San_Luis_Obispo%2C_California%2C_USA-8_%281%29.jpg/330px-Patagioenas_fasciata_-San_Luis_Obispo%2C_California%2C_USA-8_%281%29.jpg",
+      "recordings": [
+        {
+          "id": "XC379325",
+          "url": "https://xeno-canto.org/379325/download",
+          "duration": 9,
+          "type": "song",
+          "recordist": "Bruce Lagerquist",
+          "location": "Enumclaw, King County, Washington, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/379325",
+          "gain": 0.42805541958620397
+        },
+        {
+          "id": "XC34635",
+          "url": "https://xeno-canto.org/34635/download",
+          "duration": 6,
+          "type": "song",
+          "recordist": "Andrew Spencer",
+          "location": "Reef Campground, Carr Canyon, Cochise Co., Arizona, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
+          "sourceUrl": "https://xeno-canto.org/34635",
+          "gain": 1
+        },
+        {
+          "id": "XC491897",
+          "url": "https://xeno-canto.org/491897/download",
+          "duration": 11,
+          "type": "song",
+          "recordist": "Paul Marvin",
+          "location": "Road 42D, Chiricahua Mountains, Arizona, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/491897",
+          "gain": 1
+        }
+      ]
+    },
+    {
+      "id": "red-breasted-sapsucker",
+      "commonName": "Red-breasted Sapsucker",
+      "scientificName": "Sphyrapicus ruber",
+      "mnemonic": "Mewing 'chee-aar' and irregular drumming",
+      "field": "Year-round in mixed conifer forest. Brilliant red head and breast. Drills neat horizontal rows of sap wells; other birds and insects feed at them.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Sphyrapicus_ruber_2.jpg/330px-Sphyrapicus_ruber_2.jpg",
+      "recordings": [
+        {
+          "id": "XC408661",
+          "url": "https://xeno-canto.org/408661/download",
+          "duration": 10,
+          "type": "song",
+          "recordist": "Frank Lambert",
+          "location": "Green Valley Campground, San Bernardino County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+          "sourceUrl": "https://xeno-canto.org/408661",
+          "gain": 0.20749135174549097
+        },
+        {
+          "id": "XC76215",
+          "url": "https://xeno-canto.org/76215/download",
+          "duration": 5,
+          "type": "call",
+          "recordist": "Andrew Spencer",
+          "location": "Cougar Mountain Regional Wildland Park, King Co., Washington, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
+          "sourceUrl": "https://xeno-canto.org/76215",
+          "gain": 0.24462452760512784
+        },
+        {
+          "id": "XC172406",
+          "url": "https://xeno-canto.org/172406/download",
+          "duration": 3,
+          "type": "call",
+          "recordist": "Eric DeFonso",
+          "location": "Haskell Peak Road, Tahoe National Forest (near  Calpine), Sierra, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/172406",
+          "gain": 1
+        }
+      ]
+    },
+    {
+      "id": "pacific-wren",
+      "commonName": "Pacific Wren",
+      "scientificName": "Troglodytes pacificus",
+      "mnemonic": "Astonishingly long, intricate tinkling cascade",
+      "field": "Year-round in damp redwood understory. A tiny dark bird with an outsized song — among the most complex of any North American songbird, packed with up to 100 notes in 6 seconds.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Pacific_Wren_-_Vancouver_Is._%286842161146%29.jpg/330px-Pacific_Wren_-_Vancouver_Is._%286842161146%29.jpg",
+      "recordings": [
+        {
+          "id": "XC1094467",
+          "url": "https://xeno-canto.org/1094467/download",
+          "duration": 9,
+          "type": "song",
+          "recordist": "Greg Irving",
+          "location": "Manzanita Trail, Miller Peninsuls State Park, Sequim, Clallam Co, Washington, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/1094467",
+          "gain": 0.19032682375763502
+        },
+        {
+          "id": "XC961628",
+          "url": "https://xeno-canto.org/961628/download",
+          "duration": 6,
+          "type": "song",
+          "recordist": "A Richardson",
+          "location": "Burgdorf, Idaho County, Idaho, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/961628",
+          "gain": 0.09005337627506481
+        },
+        {
+          "id": "XC35300",
+          "url": "https://xeno-canto.org/35300/download",
+          "duration": 12,
+          "type": "alarm call, song",
+          "recordist": "Tayler Brooks",
+          "location": "Cougar Mountain, King Co., WA , United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
+          "sourceUrl": "https://xeno-canto.org/35300",
+          "gain": 0.25292979964461443
+        }
+      ]
+    },
+    {
+      "id": "hermit-thrush",
+      "commonName": "Hermit Thrush",
+      "scientificName": "Catharus guttatus",
+      "mnemonic": "Pure ringing flute phrase, then silence, then another at a different pitch",
+      "field": "October through April on the forest floor. Reddish tail contrasts with browner back. The 'national songbird of the Pacific Northwest' for its ethereal evening song.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Hermit_thrush_%2810787%29.jpg/330px-Hermit_thrush_%2810787%29.jpg",
+      "recordings": [
+        {
+          "id": "XC933560",
+          "url": "https://xeno-canto.org/933560/download",
+          "duration": 10,
+          "type": "song",
+          "recordist": "Thomas Magarian",
+          "location": "Tobyhanna State Park, Monroe County, Pennsylvania, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/933560",
+          "gain": 1
+        },
+        {
+          "id": "XC320493",
+          "url": "https://xeno-canto.org/320493/download",
+          "duration": 10,
+          "type": "song",
+          "recordist": "JFOLGERT",
+          "location": "Gallatin Gateway, Gallatin County, Montana, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/320493",
+          "gain": 0.6668067692136221
+        },
+        {
+          "id": "XC750452",
+          "url": "https://xeno-canto.org/750452/download",
+          "duration": 4,
+          "type": "song",
+          "recordist": "AUDEVARD Aurélien",
+          "location": "Homer, Kenai Peninsula Borough, Alaska, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/750452",
+          "gain": 0.11130123928017914
+        }
+      ]
+    },
+    {
+      "id": "hermit-warbler",
+      "commonName": "Hermit Warbler",
+      "scientificName": "Setophaga occidentalis",
+      "mnemonic": "Buzzy 'see-see-see-see-zee'",
+      "field": "April through August in tall conifer canopy. Yellow head, gray back, white belly. Easier to hear than to see — stays high in the redwood crowns.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Hermit_Warbler_%28Dendroica_occidentalis%29.jpg/330px-Hermit_Warbler_%28Dendroica_occidentalis%29.jpg",
+      "recordings": [
+        {
+          "id": "XC143152",
+          "url": "https://xeno-canto.org/143152/download",
+          "duration": 7,
+          "type": "flight call",
+          "recordist": "Andrew Spencer",
+          "location": "Mary's Peak, Benton Co., Oregon, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/143152",
+          "gain": 0.49773708497893604
+        }
+      ]
+    },
+    {
+      "id": "macgillivrays-warbler",
+      "commonName": "MacGillivray's Warbler",
+      "scientificName": "Geothlypis tolmiei",
+      "mnemonic": "Rolling 'churry-churry-churry, sweet-sweet'",
+      "field": "April through September in dense brushy undergrowth at forest edges. Gray hood with broken white eye-arcs and a dark eye-line. Skulks; voice is the giveaway.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Geothlypis_tolmiei_Hungry_Horse_MT_1%2C_crop.jpg/330px-Geothlypis_tolmiei_Hungry_Horse_MT_1%2C_crop.jpg",
+      "recordings": [
+        {
+          "id": "XC538965",
+          "url": "https://xeno-canto.org/538965/download",
+          "duration": 8,
+          "type": "song",
+          "recordist": "Sue Riffe",
+          "location": "Island Lake, Elko County, Nevada, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/538965",
+          "gain": 1
+        },
+        {
+          "id": "XC34868",
+          "url": "https://xeno-canto.org/34868/download",
+          "duration": 10,
+          "type": "song",
+          "recordist": "Tayler Brooks",
+          "location": "Bassett Park, Washtucna, Adams Co., WA, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
+          "sourceUrl": "https://xeno-canto.org/34868",
+          "gain": 0.591561634175474
+        },
+        {
+          "id": "XC574174",
+          "url": "https://xeno-canto.org/574174/download",
+          "duration": 5,
+          "type": "song",
+          "recordist": "Sue Riffe",
+          "location": "Endovalley in RMNP, Larimer Cty, Colorado, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "sourceUrl": "https://xeno-canto.org/574174",
+          "gain": 0.5695082241279306
+        }
+      ]
+    },
+    {
+      "id": "black-throated-gray-warbler",
+      "commonName": "Black-throated Gray Warbler",
+      "scientificName": "Setophaga nigrescens",
+      "mnemonic": "Buzzy 'weezy-weezy-weezy-weezy-WEET'",
+      "field": "April through September in mixed oak-conifer canopy. Boldly patterned in black, white, and gray with a tiny yellow lore spot. Often forages mid-story.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Black-throated_Gray_Warbler%2C_Anza-Borrego_Desert_State_Park%2C_California.jpg/330px-Black-throated_Gray_Warbler%2C_Anza-Borrego_Desert_State_Park%2C_California.jpg",
+      "recordings": [
+        {
+          "id": "XC13667",
+          "url": "https://xeno-canto.org/13667/download",
+          "duration": 13,
+          "type": "song",
+          "recordist": "Andrew Spencer",
+          "location": "Broad Canyon, San Miguel Co., Colorado, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
+          "sourceUrl": "https://xeno-canto.org/13667",
+          "gain": 0.24945947269429547
+        },
+        {
+          "id": "XC153478",
+          "url": "https://xeno-canto.org/153478/download",
+          "duration": 5,
+          "type": "call",
+          "recordist": "Paul Marvin",
+          "location": "Palm Canyon, Borrego Springs, San Diego County, California, United States",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "sourceUrl": "https://xeno-canto.org/153478",
+          "gain": 1
+        }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "rf-1",
+      "title": "Big Forest Birds",
+      "speciesIds": [
+        "pileated-woodpecker",
+        "vauxs-swift",
+        "band-tailed-pigeon"
+      ],
+      "length": 8
+    },
+    {
+      "id": "rf-2",
+      "title": "Forest Floor & Bark",
+      "speciesIds": [
+        "red-breasted-sapsucker",
+        "pacific-wren",
+        "hermit-thrush"
+      ],
+      "length": 8
+    },
+    {
+      "id": "rf-3",
+      "title": "Forest Warblers",
+      "speciesIds": [
+        "hermit-warbler",
+        "macgillivrays-warbler",
+        "black-throated-gray-warbler"
+      ],
+      "length": 8
+    },
+    {
+      "id": "rf-review",
+      "title": "Review: All 9",
+      "speciesIds": [
+        "pileated-woodpecker",
+        "vauxs-swift",
+        "band-tailed-pigeon",
+        "red-breasted-sapsucker",
+        "pacific-wren",
+        "hermit-thrush",
+        "hermit-warbler",
+        "macgillivrays-warbler",
+        "black-throated-gray-warbler"
+      ],
+      "length": 12
+    }
+  ]
+}

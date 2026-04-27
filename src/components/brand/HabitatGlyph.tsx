@@ -94,6 +94,60 @@ const GLYPHS: Record<UnitAccent, ReactElement> = {
       <circle cx="6" cy="14" r="0.7" fill="currentColor" />
     </>
   ),
+  // Soaring Country — raptor silhouette mid-soar
+  slate: (
+    <>
+      {/* Sun-arc ridge */}
+      <path d="M3 24h26" strokeWidth="0.8" />
+      {/* Distant peak silhouette */}
+      <path d="M3 24l8-8 5 5 6-6 7 9" strokeWidth="0.9" />
+      {/* Soaring raptor — wide W-shape with body dot */}
+      <path d="M9 11c2-2 4-2 7 1 3-3 5-3 7-1" strokeWidth="1.5" />
+      <circle cx="16" cy="12" r="0.8" fill="currentColor" stroke="none" />
+    </>
+  ),
+  // Open Coast & Headlands — wave + pelican silhouette over sea cliff
+  teal: (
+    <>
+      {/* Sea cliff (right edge) */}
+      <path d="M22 13v15M22 13l4 3" strokeWidth="1" />
+      {/* Two layered waves */}
+      <path d="M3 22c3-2 5-2 8 0s5 2 8 0" />
+      <path d="M3 27c3-2 5-2 8 0s5 2 8 0 5-2 8 0" strokeWidth="1.2" />
+      {/* Pelican silhouette overhead */}
+      <path d="M5 9c2-1 3-1 5 0 1-2 3-2 5 0M9 9v2" strokeWidth="1.2" />
+    </>
+  ),
+  // Redwood & Mixed Forest — tall trunk + small bird silhouette mid-trunk
+  orange: (
+    <>
+      {/* Tall straight trunk */}
+      <path d="M16 4v24" strokeWidth="2" />
+      {/* Branching boughs */}
+      <path d="M16 9l-4-2M16 9l4-2M16 14l-5-2M16 14l5-2M16 19l-4-1.5M16 19l4-1.5" strokeWidth="0.8" />
+      {/* Tiny bird mid-trunk (left side) */}
+      <circle cx="13" cy="16" r="1" fill="currentColor" stroke="none" />
+      <path d="M12 16h-1" strokeWidth="0.8" />
+      {/* Forest floor */}
+      <path d="M5 28h22" strokeWidth="1" />
+    </>
+  ),
+  // Town & Garden — small flower (daisy-like) for garden feel
+  fuchsia: (
+    <>
+      {/* 5-petal flower */}
+      <circle cx="16" cy="14" r="2" />
+      <circle cx="16" cy="9" r="2.5" />
+      <circle cx="20.5" cy="12" r="2.5" />
+      <circle cx="19" cy="17.5" r="2.5" />
+      <circle cx="13" cy="17.5" r="2.5" />
+      <circle cx="11.5" cy="12" r="2.5" />
+      <circle cx="16" cy="14" r="1" fill="currentColor" stroke="none" />
+      {/* Stem & leaf */}
+      <path d="M16 20v8" strokeWidth="1" />
+      <path d="M16 24c2-1 3-2 4-3" strokeWidth="0.9" />
+    </>
+  ),
   // Tomales Bay / Estuary & Tideflats — shorebird at the tideline
   indigo: (
     <>

@@ -4,14 +4,23 @@ import type { LessonRef, Manifest, Species, SpeciesStat, Unit } from "./types";
 const modules = import.meta.glob<Manifest>("@/data/*.json", { eager: true, import: "default" });
 
 const sortOrder: Record<string, number> = {
+  // Land-side habitats first, working out from the trail
   "coastal-scrub": 1,
   "oak-woodland": 2,
-  "riparian": 3,
-  "marsh-freshwater": 4,
-  "coastal-conifer": 5,
-  "tomales-bay": 6,
-  "pasture": 7,
-  "night-voices": 8, // last — "after dark" feels like the capstone unit
+  "redwood-forest": 3,
+  "riparian": 4,
+  "marsh-freshwater": 5,
+  "coastal-conifer": 6,
+  // Coast & water
+  "tomales-bay": 7,
+  "open-coast": 8,
+  // Open country & sky
+  "pasture": 9,
+  "soaring-country": 10,
+  // Human edge
+  "town-garden": 11,
+  // After dark — capstone
+  "night-voices": 12,
 };
 
 export const units: Unit[] = [];
