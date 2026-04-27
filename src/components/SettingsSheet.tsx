@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useGame } from "@/game/store";
 import { allMediaUrls } from "@/lib/manifest";
-import { clearMediaCache, countCachedMedia, estimateCacheBytes, precacheUrls } from "@/lib/sw";
+import { clearMediaCache, countCachedMedia, precacheUrls } from "@/lib/sw";
+import { Wordmark } from "@/components/brand/Wordmark";
 import { cn } from "@/lib/cn";
 
 interface Props {
@@ -29,11 +30,12 @@ export function SettingsSheet({ open, onClose }: Props) {
 
   const [confirming, setConfirming] = useState(false);
   const [offline, setOffline] = useState<OfflineState>({ kind: "idle" });
-  const [storageBytes, setStorageBytes] = useState<number | null>(null);
   const [cachedCount, setCachedCount] = useState<number | null>(null);
 
+  // We deliberately don't show a byte-size estimate. Browsers pad cross-origin
+  // (no-cors) cache entries to ~7 MB each as a side-channel-attack defense, so
+  // navigator.storage.estimate() can be off by 30x. The clip count is honest.
   const refreshStorage = () => {
-    estimateCacheBytes().then(setStorageBytes);
     countCachedMedia().then(setCachedCount);
   };
 
@@ -183,18 +185,9 @@ export function SettingsSheet({ open, onClose }: Props) {
                     Tap below to pre-download every clip and image so the app
                     works without an internet connection.
                   </p>
-                  {(cachedCount !== null || storageBytes !== null) && (
+                  {cachedCount !== null && (
                     <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.18em] text-(--color-ink-soft)">
-                      {cachedCount !== null && <>{cachedCount} clips/images cached</>}
-                      {cachedCount !== null && storageBytes !== null && " · "}
-                      {storageBytes !== null && (
-                        <>
-                          ~{formatBytes(storageBytes)}{" "}
-                          <span title="Browsers pad cross-origin (no-cors) cache entries to ~7 MB each as a side-channel defense, so this number can be much larger than actual disk use.">
-                            (padded)
-                          </span>
-                        </>
-                      )}
+                      {cachedCount} clips / images cached
                     </p>
                   )}
                   {offline.kind === "idle" && (
@@ -237,6 +230,35 @@ export function SettingsSheet({ open, onClose }: Props) {
                   )}
                 </>
               )}
+            </Section>
+
+            <Section label="About">
+              <div className="rounded-2xl border-2 border-(--color-line) bg-(--color-bg) px-4 py-4 text-center">
+                <div className="flex items-center justify-center gap-2">
+                  <Wordmark size="sm" />
+                  <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-(--color-ink-soft)">
+                    v{__APP_VERSION__}
+                  </span>
+                </div>
+                <p className="mx-auto mt-3 max-w-xs text-xs leading-relaxed text-(--color-ink-soft)">
+                  Recordings from <a href="https://xeno-canto.org" target="_blank" rel="noopener noreferrer" className="text-(--color-moss-700) underline">xeno-canto</a>.
+                  Photographs from <a href="https://commons.wikimedia.org" target="_blank" rel="noopener noreferrer" className="text-(--color-moss-700) underline">Wikimedia Commons</a>.
+                  Observation data from <a href="https://inaturalist.org" target="_blank" rel="noopener noreferrer" className="text-(--color-moss-700) underline">iNaturalist</a>.
+                  All under Creative Commons; recordist credit on each clip.
+                </p>
+                <div className="mt-3 flex items-center justify-center gap-3 font-mono text-[10px] uppercase tracking-[0.18em]">
+                  <a
+                    href="https://github.com/mogglemoss/goodbird"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-(--color-ink-soft) underline hover:text-(--color-ink)"
+                  >
+                    GitHub
+                  </a>
+                  <span aria-hidden className="text-(--color-line)">·</span>
+                  <span className="text-(--color-ink-soft)">MIT licensed</span>
+                </div>
+              </div>
             </Section>
 
             <Section label="Danger" tone="warn">
@@ -301,9 +323,3 @@ function Stat({ label, value }: { label: string; value: number }) {
   );
 }
 
-function formatBytes(b: number): string {
-  if (b < 1024) return `${b} B`;
-  if (b < 1024 ** 2) return `${(b / 1024).toFixed(0)} KB`;
-  if (b < 1024 ** 3) return `${(b / 1024 ** 2).toFixed(1)} MB`;
-  return `${(b / 1024 ** 3).toFixed(2)} GB`;
-}

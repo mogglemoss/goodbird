@@ -4,10 +4,12 @@ import { UnitRoute } from "./routes/Unit";
 import { LessonRoute } from "./routes/Lesson";
 import { ResultsRoute } from "./routes/Results";
 import { SpeciesRoute } from "./routes/Species";
+import { ScrollToTop } from "./components/ScrollToTop";
 
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomeRoute />} />
         <Route path="/unit/:slug" element={<UnitRoute />} />
