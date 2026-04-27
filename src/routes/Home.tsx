@@ -10,6 +10,7 @@ import { SettingsSheet } from "@/components/SettingsSheet";
 import { OnboardingCard } from "@/components/OnboardingCard";
 import { Hero } from "@/components/Hero";
 import { HabitatGlyph } from "@/components/brand/HabitatGlyph";
+import { BirdOfTheDay } from "@/components/BirdOfTheDay";
 
 export function HomeRoute() {
   const xp = useGame((s) => s.xp);
@@ -62,6 +63,8 @@ export function HomeRoute() {
       <SettingsSheet open={settingsOpen} onClose={() => setSettingsOpen(false)} />
 
       <OnboardingCard />
+
+      <BirdOfTheDay />
 
       {continueTarget && (
         <ContinueChip target={continueTarget} />
@@ -125,7 +128,7 @@ function HeaderControls({
     <div className="flex items-center gap-2">
       <DailyGoalRing xpToday={xpToday} dailyGoal={dailyGoal} />
       <Pill icon="🔥" value={streakDays} label="day streak" muted={streakDays === 0 && !goalReached} />
-      <Pill icon="✦" value={xp} label="xp" />
+      <Pill icon="✦" value={xp} label="xp" muted={xp === 0} />
       <button
         onClick={onSettings}
         aria-label="Settings"
