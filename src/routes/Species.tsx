@@ -83,7 +83,12 @@ export function SpeciesRoute() {
         )}
       >
         {species.imageUrl ? (
-          <img src={species.imageUrl} alt={species.commonName} className="aspect-[4/3] w-full object-cover" />
+          <img
+            src={species.imageUrl}
+            alt={species.commonName}
+            className="aspect-[4/3] w-full object-cover"
+            style={{ objectPosition: species.imagePosition ?? "top" }}
+          />
         ) : (
           <div className="grid aspect-[4/3] w-full place-items-center text-6xl">🪶</div>
         )}
@@ -148,7 +153,7 @@ export function SpeciesRoute() {
               key={rec.id}
               className="flex items-center gap-4 rounded-(--radius-card) border-2 border-(--color-line) bg-(--color-surface) p-3 shadow-(--shadow-soft)"
             >
-              <AudioPlayer url={rec.url} size="md" label={`Play ${rec.id}`} />
+              <AudioPlayer url={rec.url} size="md" label={`Play ${rec.id}`} gain={rec.gain ?? 1} />
               <div className="min-w-0 flex-1 text-sm">
                 <div className="truncate font-medium">{rec.recordist || "Unknown recordist"}</div>
                 <div className="truncate text-xs text-(--color-ink-soft)">{rec.location || "—"}</div>

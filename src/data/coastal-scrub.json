@@ -24,7 +24,8 @@
           "recordist": "Guy Kirwan",
           "location": "Montana de Oro State Park, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/390103"
+          "sourceUrl": "https://xeno-canto.org/390103",
+          "gain": 0.21013577690467478
         },
         {
           "id": "XC448815",
@@ -34,7 +35,8 @@
           "recordist": "Paul Marvin",
           "location": "Rice Canyon, Chula Vista, San Diego County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/448815"
+          "sourceUrl": "https://xeno-canto.org/448815",
+          "gain": 0.22568359954972259
         },
         {
           "id": "XC149647",
@@ -44,7 +46,8 @@
           "recordist": "Paul Marvin",
           "location": "Sheephead Mt Rd by I-8 rest area, N of Buckman Springs Rd, Cleveland National Forest, San Diego Co, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
-          "sourceUrl": "https://xeno-canto.org/149647"
+          "sourceUrl": "https://xeno-canto.org/149647",
+          "gain": 1
         }
       ]
     },
@@ -64,7 +67,8 @@
           "recordist": "Frank Lambert",
           "location": "Big Santa Anita Canyon, San Gabriel Mountains, Los Angeles County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
-          "sourceUrl": "https://xeno-canto.org/408474"
+          "sourceUrl": "https://xeno-canto.org/408474",
+          "gain": 0.17906058540352943
         },
         {
           "id": "XC195846",
@@ -74,7 +78,8 @@
           "recordist": "Elias Aristides Elias",
           "location": "Shaver Lake, Fresno County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/195846"
+          "sourceUrl": "https://xeno-canto.org/195846",
+          "gain": 1
         },
         {
           "id": "XC728366",
@@ -84,7 +89,8 @@
           "recordist": "Thomas G. Graves",
           "location": "Coon Creek Trail, Montana de Oro State Park, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/728366"
+          "sourceUrl": "https://xeno-canto.org/728366",
+          "gain": 0.2155261643566158
         }
       ]
     },
@@ -103,7 +109,8 @@
           "recordist": "Bobby Wilcox",
           "location": "Ronald W. Casper Regional Park, Orange County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/806210"
+          "sourceUrl": "https://xeno-canto.org/806210",
+          "gain": 0.30234305705113357
         },
         {
           "id": "XC716024",
@@ -113,7 +120,8 @@
           "recordist": "Ed Pandolfino",
           "location": "East Portal Park Sacramento, Sacramento County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/716024"
+          "sourceUrl": "https://xeno-canto.org/716024",
+          "gain": 0.3180533688329521
         },
         {
           "id": "XC629158",
@@ -123,7 +131,8 @@
           "recordist": "Thomas G. Graves",
           "location": "Los Osos, Montana de Oro Campground, San Luis Obispo County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/629158"
+          "sourceUrl": "https://xeno-canto.org/629158",
+          "gain": 0.2421029046736178
         }
       ],
       "field": "Year-round in coastal scrub and chaparral edges. Mated pairs perform a stereotyped 'squeal duet' on reunion."
@@ -143,7 +152,8 @@
           "recordist": "AUDEVARD Aurélien",
           "location": "Nome Airport (near  Nome), Nome Census Area, Alaska, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/1045664"
+          "sourceUrl": "https://xeno-canto.org/1045664",
+          "gain": 0.0964939311805582
         },
         {
           "id": "XC1045665",
@@ -153,7 +163,8 @@
           "recordist": "AUDEVARD Aurélien",
           "location": "Nome Airport (near  Nome), Nome Census Area, Alaska, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/1045665"
+          "sourceUrl": "https://xeno-canto.org/1045665",
+          "gain": 0.16330519478943342
         },
         {
           "id": "XC940255",
@@ -163,7 +174,8 @@
           "recordist": "Seth Beaudreault (Toolik Field Station)",
           "location": "Upper Atigun River, North Slope, Alaska, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/940255"
+          "sourceUrl": "https://xeno-canto.org/940255",
+          "gain": 1
         }
       ],
       "field": "Year-round on the immediate coast; migrants from Alaska winter further inland. Local song dialects persist for decades along the Bay Area coast."
@@ -183,7 +195,8 @@
           "recordist": "Mike Schanbacher",
           "location": "Falmouth, Barnstable, Massachusetts, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
-          "sourceUrl": "https://xeno-canto.org/153555"
+          "sourceUrl": "https://xeno-canto.org/153555",
+          "gain": 0.17119851767028596
         },
         {
           "id": "XC559479",
@@ -193,7 +206,8 @@
           "recordist": "Jim Berry",
           "location": "Busti (near  Jamestown), Chautauqua County, New York, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/559479"
+          "sourceUrl": "https://xeno-canto.org/559479",
+          "gain": 0.5370317963702529
         },
         {
           "id": "XC803814",
@@ -203,7 +217,8 @@
           "recordist": "Bobby Wilcox",
           "location": "DeWitt (near  East Syracuse), Onondaga County, New York, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/803814"
+          "sourceUrl": "https://xeno-canto.org/803814",
+          "gain": 0.1838653953864026
         }
       ],
       "field": "Year-round in any low brush near water. Each male sings 8 to 10 distinct songs, learned from neighbors as a juvenile."
@@ -223,7 +238,8 @@
           "recordist": "David Tattersley",
           "location": "Sierra Vista Southeast, Cochise County, Arizona, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/999598"
+          "sourceUrl": "https://xeno-canto.org/999598",
+          "gain": 0.5122712702645389
         },
         {
           "id": "XC296660",
@@ -233,7 +249,8 @@
           "recordist": "Laura Gooch",
           "location": "Big Bend National Park, Chisos Mountains, Boot Springs, Brewster County, Texas, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/296660"
+          "sourceUrl": "https://xeno-canto.org/296660",
+          "gain": 0.2360478233180577
         },
         {
           "id": "XC123370",
@@ -243,7 +260,8 @@
           "recordist": "Chris Harrison",
           "location": "South Llano River State Park, Junction, Kimble, Texas, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
-          "sourceUrl": "https://xeno-canto.org/123370"
+          "sourceUrl": "https://xeno-canto.org/123370",
+          "gain": 0.13520725631942768
         }
       ],
       "field": "Year-round in coastal scrub and woodland edges. The song structure varies by individual but always opens with two or three sharp notes."
@@ -264,7 +282,8 @@
           "recordist": "Sue Riffe",
           "location": "Upper Beaver Meadows-RMNP, Larimer Cty, Colorado, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/736443"
+          "sourceUrl": "https://xeno-canto.org/736443",
+          "gain": 0.44616962458096426
         },
         {
           "id": "XC802832",
@@ -274,7 +293,8 @@
           "recordist": "Ed Pandolfino",
           "location": "Mix Canyon, Solano County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/802832"
+          "sourceUrl": "https://xeno-canto.org/802832",
+          "gain": 1
         },
         {
           "id": "XC105827",
@@ -284,7 +304,8 @@
           "recordist": "Paul J Hurtado",
           "location": "Pueblo Mountain Park--up the road from the old Mountain Park Environmental Center office, United States",
           "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
-          "sourceUrl": "https://xeno-canto.org/105827"
+          "sourceUrl": "https://xeno-canto.org/105827",
+          "gain": 0.18365383433483465
         }
       ],
       "field": "April through September in brushy yards and suburban edges. Males build multiple stick nests in available cavities; the female selects one and discards the rest."
@@ -305,7 +326,8 @@
           "recordist": "Paul Marvin",
           "location": "Hollenbeck Canyon Trail, Jamul, San Diego County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
-          "sourceUrl": "https://xeno-canto.org/153453"
+          "sourceUrl": "https://xeno-canto.org/153453",
+          "gain": 1
         },
         {
           "id": "XC153452",
@@ -315,7 +337,8 @@
           "recordist": "Paul Marvin",
           "location": "Hollenbeck Canyon Trail, Jamul, San Diego County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
-          "sourceUrl": "https://xeno-canto.org/153452"
+          "sourceUrl": "https://xeno-canto.org/153452",
+          "gain": 1
         },
         {
           "id": "XC481129",
@@ -325,7 +348,8 @@
           "recordist": "Meena Haribal",
           "location": "Pinnacles National Park, San Benito County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/481129"
+          "sourceUrl": "https://xeno-canto.org/481129",
+          "gain": 0.860003066888856
         }
       ]
     },
@@ -344,7 +368,8 @@
           "recordist": "Paul Marvin",
           "location": "Pine Creek Rd off Sunrise Hwy, Cleveland National Forest. San Diego Co, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
-          "sourceUrl": "https://xeno-canto.org/163707"
+          "sourceUrl": "https://xeno-canto.org/163707",
+          "gain": 1
         },
         {
           "id": "XC360974",
@@ -354,7 +379,8 @@
           "recordist": "Paul Marvin",
           "location": "Panoche Rd, (near  Paicines), San Benito County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/360974"
+          "sourceUrl": "https://xeno-canto.org/360974",
+          "gain": 0.28379190284415556
         },
         {
           "id": "XC163700",
@@ -364,7 +390,8 @@
           "recordist": "Paul Marvin",
           "location": "Hollenbeck Canyon Trail, Jamul, San Diego County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
-          "sourceUrl": "https://xeno-canto.org/163700"
+          "sourceUrl": "https://xeno-canto.org/163700",
+          "gain": 1
         }
       ],
       "field": "Year-round in oak scrub and suburban gardens. Caches thousands of acorns each fall and remembers the locations for months."
@@ -384,7 +411,8 @@
           "recordist": "Ayala N. Berger",
           "location": "Golden Gate Park, SF, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/1041020"
+          "sourceUrl": "https://xeno-canto.org/1041020",
+          "gain": 0.9649393118055822
         },
         {
           "id": "XC1041014",
@@ -394,7 +422,8 @@
           "recordist": "Ayala N. Berger",
           "location": "Golden Gate Park, SF, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/1041014"
+          "sourceUrl": "https://xeno-canto.org/1041014",
+          "gain": 0.6886522963442762
         },
         {
           "id": "XC367257",
@@ -404,7 +433,8 @@
           "recordist": "Jim Holmes",
           "location": "Sacramento NWR, Glenn County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/367257"
+          "sourceUrl": "https://xeno-canto.org/367257",
+          "gain": 1
         }
       ],
       "field": "Year-round on the coast; California's only resident hummingbird. The male's J-shaped courtship dive ends with a high mechanical squeak from the tail feathers."
@@ -424,7 +454,8 @@
           "recordist": "John A. Trent",
           "location": "Wehle Land Conservation Center (near Midway), Bullock County, Alabama, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/202601"
+          "sourceUrl": "https://xeno-canto.org/202601",
+          "gain": 0.8443062419090124
         },
         {
           "id": "XC582708",
@@ -434,7 +465,8 @@
           "recordist": "Steve Hampton",
           "location": "Yolo Bypass Wildlife Area, Yolo County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/582708"
+          "sourceUrl": "https://xeno-canto.org/582708",
+          "gain": 1
         },
         {
           "id": "XC545024",
@@ -444,7 +476,8 @@
           "recordist": "Jarrod Swackhamer",
           "location": "Yuma, Yuma County, Arizona, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/545024"
+          "sourceUrl": "https://xeno-canto.org/545024",
+          "gain": 0.2754228703338167
         }
       ],
       "field": "Year-round in suburban scrub. Male repertoires include 100 or more song types; unmated males may sing through the night under streetlamps."
@@ -464,7 +497,8 @@
           "recordist": "Jonas Katona",
           "location": "Whitney Canyon Park, Santa Clarita, Los Angeles County, California, United States",
           "license": "https://creativecommons.org/licenses/by-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/625528"
+          "sourceUrl": "https://xeno-canto.org/625528",
+          "gain": 1
         },
         {
           "id": "XC198733",
@@ -474,7 +508,8 @@
           "recordist": "Thomas G. Graves",
           "location": "Baywood-Los Osos, San Luis Obispo County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/198733"
+          "sourceUrl": "https://xeno-canto.org/198733",
+          "gain": 0.8336811846196345
         }
       ],
       "field": "Year-round in dense coastal scrub; endemic to California and northern Baja. The long decurved bill flips leaf litter for invertebrates."
@@ -494,7 +529,8 @@
           "recordist": "Ted Floyd",
           "location": "Lafayette, Boulder, Colorado, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/215758"
+          "sourceUrl": "https://xeno-canto.org/215758",
+          "gain": 0.3609940135864166
         },
         {
           "id": "XC215757",
@@ -504,7 +540,8 @@
           "recordist": "Ted Floyd",
           "location": "Lafayette, Boulder, Colorado, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/215757"
+          "sourceUrl": "https://xeno-canto.org/215757",
+          "gain": 0.5376504331222542
         },
         {
           "id": "XC215759",
@@ -514,7 +551,8 @@
           "recordist": "Ted Floyd",
           "location": "Lafayette, Boulder, Colorado, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/215759"
+          "sourceUrl": "https://xeno-canto.org/215759",
+          "gain": 0.3239664224348447
         }
       ],
       "field": "Year-round in mixed flocks of 10 to 40. Builds a hanging woven nest up to 30 cm long; both parents and helpers tend the brood."
@@ -534,7 +572,8 @@
           "recordist": "Sue Riffe",
           "location": "Biddeford Beach (East Point Sanctuary), York County, Maine, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/381578"
+          "sourceUrl": "https://xeno-canto.org/381578",
+          "gain": 0.44668359215096315
         },
         {
           "id": "XC375507",
@@ -544,7 +583,8 @@
           "recordist": "Greg Irving",
           "location": "Nelson Lake Marsh Reserve, Kane County, Illinois, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/375507"
+          "sourceUrl": "https://xeno-canto.org/375507",
+          "gain": 0.1753880501841761
         },
         {
           "id": "XC78732",
@@ -554,7 +594,8 @@
           "recordist": "Andrew Spencer",
           "location": "Pondicherry Wildlife Refuge, Coos Co., New Hampshire, United States",
           "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
-          "sourceUrl": "https://xeno-canto.org/78732"
+          "sourceUrl": "https://xeno-canto.org/78732",
+          "gain": 0.5591135275705601
         }
       ],
       "field": "Year-round in damp brush, often along marsh edges. Males sing from cattail tops and willow thickets; the black mask is unmistakable."
@@ -574,7 +615,8 @@
           "recordist": "Bobby Wilcox",
           "location": "Cibola Valley Conservation Area, La Paz County, Arizona, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/645472"
+          "sourceUrl": "https://xeno-canto.org/645472",
+          "gain": 0.18599445632225764
         },
         {
           "id": "XC13595",
@@ -584,7 +626,8 @@
           "recordist": "Andrew Spencer",
           "location": "Tamarack Ranch SWA, Logan Co., Colorado, United States",
           "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
-          "sourceUrl": "https://xeno-canto.org/13595"
+          "sourceUrl": "https://xeno-canto.org/13595",
+          "gain": 0.40644332916521275
         },
         {
           "id": "XC645479",
@@ -594,7 +637,8 @@
           "recordist": "Bobby Wilcox",
           "location": "Cibola Valley Conservation Area, La Paz County, Arizona, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/645479"
+          "sourceUrl": "https://xeno-canto.org/645479",
+          "gain": 0.2398832919019491
         }
       ],
       "field": "April through August in tall riparian and scrub-oak. Builds a pendulous woven nest, often suspended from the tip of a sycamore branch."

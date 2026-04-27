@@ -173,6 +173,7 @@ function FeedbackBar({
   const correct = locked?.correct;
   const correctName = correctSpeciesName(exercise);
   const replayUrl = correctReplayUrl(exercise);
+  const replayGain = correctReplayGain(exercise);
   // Local state — survives the exit animation since it's tied to this FeedbackBar instance.
   // Without this, a fast double-tap (or a flaky touch) on Continue can advance two exercises.
   const [advancing, setAdvancing] = useState(false);
@@ -222,6 +223,7 @@ function FeedbackBar({
                   url={replayUrl}
                   tone={correct ? "moss" : "wrong"}
                   ariaLabel={correct ? "Replay this call" : "Replay correct call"}
+                  gain={replayGain}
                 />
               )}
               <div className="min-w-0">
@@ -293,5 +295,17 @@ function correctReplayUrl(ex: Exercise): string | null {
       return ex.recordings[ex.correctIndex]?.url ?? null;
     case "discriminate":
       return null; // no single "correct species" to replay
+  }
+}
+
+function correctReplayGain(ex: Exercise): number {
+  switch (ex.kind) {
+    case "identify":
+    case "mnemonic":
+      return getSpecies(ex.correctSpeciesId).recordings[0]?.gain ?? 1;
+    case "find-bird":
+      return ex.recordings[ex.correctIndex]?.gain ?? 1;
+    case "discriminate":
+      return 1;
   }
 }

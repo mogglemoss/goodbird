@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import confetti from "canvas-confetti";
 import { useGame } from "@/game/store";
 import { lessonComplete } from "@/lib/feedback";
-import { getLesson, getSpecies, getUnitForLesson, nextLesson as findNextLesson } from "@/lib/manifest";
+import { getLesson, getLessonsForUnit, getSpecies, getUnitForLesson, nextLesson as findNextLesson } from "@/lib/manifest";
 import { PlaySoundButton } from "@/components/PlaySoundButton";
 import { ShareButton } from "@/components/ShareButton";
 import { ACCENTS } from "@/lib/theme";
@@ -59,6 +59,14 @@ export function ResultsRoute() {
             confetti({ particleCount: 140, spread: 120, startVelocity: 45, origin: { y: 0.5 } });
           }, 350);
         }
+        // Bigger celebration when the entire unit was completed this lesson.
+        if (unit && getLessonsForUnit(unit.id).every((l) => completed[l.id] || l.id === id)) {
+          setTimeout(() => {
+            confetti({ particleCount: 220, spread: 160, startVelocity: 55, origin: { y: 0.4 } });
+            confetti({ particleCount: 80, angle: 60, spread: 70, origin: { x: 0, y: 0.5 } });
+            confetti({ particleCount: 80, angle: 120, spread: 70, origin: { x: 1, y: 0.5 } });
+          }, 600);
+        }
       }
     }
   }, [active, snap, finalize, nav]);
@@ -69,6 +77,14 @@ export function ResultsRoute() {
   const nextLesson = useMemo(() => findNextLesson(id), [id]);
   const unit = useMemo(() => getUnitForLesson(id), [id]);
   const accent = unit ? ACCENTS[unit.accent] : null;
+
+  // True when this lesson result completes the entire unit for the first
+  // time — i.e. every lesson in the unit is now done in completedLessons.
+  const justCompletedUnit = useMemo(() => {
+    if (!unit || !snap?.passed) return false;
+    const lessons = getLessonsForUnit(unit.id);
+    return lessons.every((l) => completed[l.id]);
+  }, [unit, snap?.passed, completed]);
 
   if (!snap) return null;
   const accuracy = Math.round((snap.correct / snap.total) * 100);
@@ -81,13 +97,21 @@ export function ResultsRoute() {
         transition={{ type: "spring", stiffness: 220, damping: 18 }}
         className={cn("grid h-24 w-24 place-items-center rounded-full text-5xl", accent?.badgeBg ?? "bg-(--color-moss-100)")}
       >
-        {snap.passed ? "🪶" : "🌱"}
+        {justCompletedUnit ? "🏆" : snap.passed ? "🪶" : "🌱"}
       </motion.div>
       <div>
         <h1 className="font-display text-3xl" role="status" aria-live="polite">
-          {snap.passed ? "Lesson complete" : "Out of hearts"}
+          {justCompletedUnit
+            ? `${unit?.title} complete`
+            : snap.passed
+              ? "Lesson complete"
+              : "Out of hearts"}
         </h1>
-        <p className="mt-1 text-(--color-ink-soft)">{lessonTitle}</p>
+        <p className="mt-1 text-(--color-ink-soft)">
+          {justCompletedUnit
+            ? "Every lesson done. Habitat unlocked in your field guide."
+            : lessonTitle}
+        </p>
       </div>
       <div className="grid w-full grid-cols-3 gap-3">
         <Stat
@@ -169,7 +193,8 @@ export function ResultsRoute() {
 function MissedSpeciesRow({ speciesId }: { speciesId: string }) {
   const sp = (() => { try { return getSpecies(speciesId); } catch { return null; } })();
   if (!sp) return null;
-  const url = sp.recordings[0]?.url;
+  const rec = sp.recordings[0];
+  const url = rec?.url;
   return (
     <li>
       <Link
@@ -193,7 +218,7 @@ function MissedSpeciesRow({ speciesId }: { speciesId: string }) {
           <div className="truncate font-medium">{sp.commonName}</div>
           <div className="truncate text-xs text-(--color-ink-soft)">"{sp.mnemonic}"</div>
         </div>
-        {url && <PlaySoundButton url={url} size="sm" ariaLabel={`Play ${sp.commonName}`} />}
+        {url && <PlaySoundButton url={url} size="sm" ariaLabel={`Play ${sp.commonName}`} gain={rec?.gain ?? 1} />}
       </Link>
     </li>
   );

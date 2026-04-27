@@ -57,7 +57,7 @@ export function FindBirdExerciseView({ exercise, onAnswered, locked }: Props) {
               </div>
               {/* Stop click bubbling so play doesn't commit a selection. */}
               <div onClick={(e) => e.stopPropagation()}>
-                <AudioPlayer url={rec.url} size="md" label={`Play clip ${i + 1}`} />
+                <AudioPlayer url={rec.url} size="md" label={`Play clip ${i + 1}`} gain={rec.gain ?? 1} />
               </div>
               <button
                 type="button"

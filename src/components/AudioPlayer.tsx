@@ -13,6 +13,9 @@ interface Props {
   className?: string;
   /** Show loop + slow-down toggle controls under the player. */
   showControls?: boolean;
+  /** Per-clip volume multiplier (0..1) from scripts/normalize-audio.mjs.
+   *  Defaults to 1 when the recording predates normalization. */
+  gain?: number;
 }
 
 export function AudioPlayer({
@@ -23,6 +26,7 @@ export function AudioPlayer({
   onEnded,
   className,
   showControls = false,
+  gain = 1,
 }: Props) {
   const [playing, setPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -33,7 +37,7 @@ export function AudioPlayer({
   const rafRef = useRef<number | null>(null);
 
   useEffect(() => {
-    const h = getHowl(url);
+    const h = getHowl(url, gain);
     howlRef.current = h;
     const onPlay = () => { setPlaying(true); setNudge(false); };
     const onStop = () => setPlaying(false);
@@ -65,7 +69,13 @@ export function AudioPlayer({
       h.stop();
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
     };
-  }, [url, autoPlay, onEnded]);
+  }, [url, autoPlay, onEnded, gain]);
+
+  // If the gain prop changes for the same URL, push the new value onto Howl.
+  useEffect(() => {
+    const h = howlRef.current;
+    if (h) h.volume(gain);
+  }, [gain]);
 
   // Apply loop + rate state to the Howl instance whenever they change.
   useEffect(() => {

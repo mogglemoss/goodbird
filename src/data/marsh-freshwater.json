@@ -24,7 +24,8 @@
           "recordist": "Paul Marvin",
           "location": "Vendel Road, Salton Sea NWR, Brawley, Imperial County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
-          "sourceUrl": "https://xeno-canto.org/143795"
+          "sourceUrl": "https://xeno-canto.org/143795",
+          "gain": 0.9440608762859234
         },
         {
           "id": "XC57378",
@@ -34,7 +35,8 @@
           "recordist": "Ian Davies",
           "location": "Great Meadows National Wildlife Refuge, Concord, Middlesex Co., Massachusetts, United States",
           "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
-          "sourceUrl": "https://xeno-canto.org/57378"
+          "sourceUrl": "https://xeno-canto.org/57378",
+          "gain": 0.43701867907061337
         },
         {
           "id": "XC417865",
@@ -44,7 +46,8 @@
           "recordist": "Sue Riffe",
           "location": "Battelle Darby Metro Park - Wetlands, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/417865"
+          "sourceUrl": "https://xeno-canto.org/417865",
+          "gain": 0.3793149849736818
         }
       ]
     },
@@ -64,7 +67,8 @@
           "recordist": "Sue Riffe",
           "location": "Crow Valley, Weld County, Colorado, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/368448"
+          "sourceUrl": "https://xeno-canto.org/368448",
+          "gain": 1
         },
         {
           "id": "XC651824",
@@ -74,7 +78,8 @@
           "recordist": "Ed Pandolfino",
           "location": "Pine Flat Rd, Sonoma County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/651824"
+          "sourceUrl": "https://xeno-canto.org/651824",
+          "gain": 0.3173218663836144
         },
         {
           "id": "XC989810",
@@ -84,7 +89,8 @@
           "recordist": "Ed Pandolfino",
           "location": "Deer Creek Hills Preserve, Sacramento County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/989810"
+          "sourceUrl": "https://xeno-canto.org/989810",
+          "gain": 0.1931968317016924
         }
       ]
     },
@@ -103,7 +109,8 @@
           "recordist": "Sue Riffe",
           "location": "Biddeford Beach (East Point Sanctuary), York County, Maine, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/381578"
+          "sourceUrl": "https://xeno-canto.org/381578",
+          "gain": 0.44668359215096315
         },
         {
           "id": "XC375507",
@@ -113,7 +120,8 @@
           "recordist": "Greg Irving",
           "location": "Nelson Lake Marsh Reserve, Kane County, Illinois, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/375507"
+          "sourceUrl": "https://xeno-canto.org/375507",
+          "gain": 0.1753880501841761
         },
         {
           "id": "XC78732",
@@ -123,7 +131,8 @@
           "recordist": "Andrew Spencer",
           "location": "Pondicherry Wildlife Refuge, Coos Co., New Hampshire, United States",
           "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
-          "sourceUrl": "https://xeno-canto.org/78732"
+          "sourceUrl": "https://xeno-canto.org/78732",
+          "gain": 0.5591135275705601
         }
       ],
       "field": "Year-round in damp brush, often along marsh edges. Males sing from cattail tops and willow thickets; the black mask is unmistakable."
@@ -145,7 +154,8 @@
           "recordist": "Peter Boesman",
           "location": "Salton Sea, CA, United States",
           "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
-          "sourceUrl": "https://xeno-canto.org/228580"
+          "sourceUrl": "https://xeno-canto.org/228580",
+          "gain": 0.14371430533563906
         },
         {
           "id": "XC357951",
@@ -155,7 +165,8 @@
           "recordist": "Thomas G. Graves",
           "location": "Sonny Bono Salton Sea National Wildlife Refuge, near Calipatria, Imperial County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/357951"
+          "sourceUrl": "https://xeno-canto.org/357951",
+          "gain": 0.19431216918284247
         },
         {
           "id": "XC452184",
@@ -165,7 +176,8 @@
           "recordist": "Paul Marvin",
           "location": "Peña Blanca Lake, Arizona, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/452184"
+          "sourceUrl": "https://xeno-canto.org/452184",
+          "gain": 0.26121613543992067
         }
       ]
     },
@@ -184,7 +196,8 @@
           "recordist": "Eric DeFonso",
           "location": "Lower Latham Reservoir, Weld Co., Colorado, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/580997"
+          "sourceUrl": "https://xeno-canto.org/580997",
+          "gain": 0.3423733876264525
         },
         {
           "id": "XC621187",
@@ -194,7 +207,8 @@
           "recordist": "Scott Crabtree",
           "location": "Santa Cruz River Park,Tucson, Pima County, Arizona, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/621187"
+          "sourceUrl": "https://xeno-canto.org/621187",
+          "gain": 0.36982817978026616
         },
         {
           "id": "XC636885",
@@ -204,7 +218,8 @@
           "recordist": "Sam Corbo",
           "location": "Wilson & Kenmore (near  Shorewood), Milwaukee County, Wisconsin, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/636885"
+          "sourceUrl": "https://xeno-canto.org/636885",
+          "gain": 0.10046157902783952
         }
       ],
       "field": "Year-round in dense cattail and tule. The body is laterally compressed for moving through reeds."
@@ -224,7 +239,8 @@
           "recordist": "Paul Marvin",
           "location": "IID (Imperial Irrigation District) Marsh, Niland, Imperial County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/459166"
+          "sourceUrl": "https://xeno-canto.org/459166",
+          "gain": 0.3576844005764753
         },
         {
           "id": "XC629177",
@@ -234,7 +250,8 @@
           "recordist": "Paul Marvin",
           "location": "Otay Lakes, San Diego Co., California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/629177"
+          "sourceUrl": "https://xeno-canto.org/629177",
+          "gain": 0.28543025137865813
         },
         {
           "id": "XC563118",
@@ -244,7 +261,8 @@
           "recordist": "Daniel Hinckley",
           "location": "Salt Lake Valley (near  South Jordan), Salt Lake County, Utah, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/563118"
+          "sourceUrl": "https://xeno-canto.org/563118",
+          "gain": 0.17640057644764137
         }
       ],
       "field": "Year-round on freshwater ponds. Submerges by expelling air rather than diving; the head sometimes vanishes alone, leaving the body at the surface."
@@ -264,7 +282,8 @@
           "recordist": "Sue Riffe",
           "location": "Battelle Darby Metro Park - Wetlands, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/417864"
+          "sourceUrl": "https://xeno-canto.org/417864",
+          "gain": 0.7006481828654115
         },
         {
           "id": "XC408481",
@@ -274,7 +293,8 @@
           "recordist": "Frank Lambert",
           "location": "Pinto Lake, Watsonville, Santa Cruz County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
-          "sourceUrl": "https://xeno-canto.org/408481"
+          "sourceUrl": "https://xeno-canto.org/408481",
+          "gain": 0.377572190925416
         },
         {
           "id": "XC408483",
@@ -284,7 +304,8 @@
           "recordist": "Frank Lambert",
           "location": "Pinto Lake, Watsonville, Santa Cruz County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
-          "sourceUrl": "https://xeno-canto.org/408483"
+          "sourceUrl": "https://xeno-canto.org/408483",
+          "gain": 0.6109420249055719
         }
       ],
       "field": "April through October in dense marsh. The 'pump-er-lunk' call, low and resonant, is produced by a specialized esophageal sac."
@@ -304,7 +325,8 @@
           "recordist": "Jarek Matusiak",
           "location": "Stokrotki 02 (near  Nieporęt), Powiat legionowski, mazowieckie, Poland",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/512909"
+          "sourceUrl": "https://xeno-canto.org/512909",
+          "gain": 0.2703958364108844
         },
         {
           "id": "XC303987",
@@ -314,7 +336,8 @@
           "recordist": "Jarek Matusiak",
           "location": "Gmina Piecki (near  Krutyń), mrągowski, warmińsko-mazurskie, Poland",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/303987"
+          "sourceUrl": "https://xeno-canto.org/303987",
+          "gain": 0.38018939632056126
         },
         {
           "id": "XC303989",
@@ -324,7 +347,8 @@
           "recordist": "Jarek Matusiak",
           "location": "Gmina Piecki (near  Krutyń), mrągowski, warmińsko-mazurskie, Poland",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/303989"
+          "sourceUrl": "https://xeno-canto.org/303989",
+          "gain": 0.7507580541199372
         }
       ],
       "field": "Year-round on any open water. The vocal 'quack' is the female's; males give a softer, raspier 'reb-reb'."
@@ -344,7 +368,8 @@
           "recordist": "William Whitehead",
           "location": "South Amboy, Middlesex County, New Jersey, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/490200"
+          "sourceUrl": "https://xeno-canto.org/490200",
+          "gain": 0.8212965528345543
         },
         {
           "id": "XC259259",
@@ -354,7 +379,8 @@
           "recordist": "John V. Moore",
           "location": "California: near Lake Tahoe, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/259259"
+          "sourceUrl": "https://xeno-canto.org/259259",
+          "gain": 0.32583670100200884
         },
         {
           "id": "XC612860",
@@ -364,7 +390,8 @@
           "recordist": "Sue Riffe",
           "location": "Walden Reservoir, Jackson Cty, Colorado, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/612860"
+          "sourceUrl": "https://xeno-canto.org/612860",
+          "gain": 0.35196542252476576
         }
       ],
       "field": "Year-round on the coast; widespread breeder. Cavity nester; lines the nest cup with white feathers, often gathered in mid-air from other birds."
@@ -384,7 +411,8 @@
           "recordist": "Russ Wigh",
           "location": "Savannah, Chatham County, Georgia, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/565135"
+          "sourceUrl": "https://xeno-canto.org/565135",
+          "gain": 1
         },
         {
           "id": "XC395485",
@@ -394,7 +422,8 @@
           "recordist": "Paul Marvin",
           "location": "Salt Lake WMA, Mims, Brevard County, Florida, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/395485"
+          "sourceUrl": "https://xeno-canto.org/395485",
+          "gain": 0.3423733876264525
         },
         {
           "id": "XC196154",
@@ -404,7 +433,8 @@
           "recordist": "Paul Marvin",
           "location": "Flamingo Campground, Everglades National Park, Florida, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/196154"
+          "sourceUrl": "https://xeno-canto.org/196154",
+          "gain": 0.40738027780411273
         }
       ],
       "field": "Year-round at all wetland edges. Wing strokes are slow, about two per second; rookery nests are stick platforms in tall trees, often near water."
@@ -424,7 +454,8 @@
           "recordist": "Paul Marvin",
           "location": "Orlando Wetlands, Christmas, Orange County, Florida, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
-          "sourceUrl": "https://xeno-canto.org/143604"
+          "sourceUrl": "https://xeno-canto.org/143604",
+          "gain": 0.7261059574351546
         },
         {
           "id": "XC574404",
@@ -434,7 +465,8 @@
           "recordist": "Richard E. Webster",
           "location": "Bear River Migratory Bird Refuge, Box Elder County, UT, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/574404"
+          "sourceUrl": "https://xeno-canto.org/574404",
+          "gain": 1
         },
         {
           "id": "XC172927",
@@ -444,7 +476,8 @@
           "recordist": "Paul Marvin",
           "location": "Orlando Wetlands, Christmas, Orange County, Florida, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/172927"
+          "sourceUrl": "https://xeno-canto.org/172927",
+          "gain": 0.502342589522387
         }
       ],
       "field": "Year-round at wetland edges. Forages by night; daytime roosts are communal in dense waterside trees."
@@ -464,7 +497,8 @@
           "recordist": "David Tattersley",
           "location": "Thrurmond Airport (PVT) (near  Animas), Hidalgo County, New Mexico, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/1000428"
+          "sourceUrl": "https://xeno-canto.org/1000428",
+          "gain": 0.5814334323084471
         },
         {
           "id": "XC169196",
@@ -474,7 +508,8 @@
           "recordist": "Paul Marvin",
           "location": "River Lakes Conservation Area near Viera, Brevard Co, Florida, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
-          "sourceUrl": "https://xeno-canto.org/169196"
+          "sourceUrl": "https://xeno-canto.org/169196",
+          "gain": 0.45603691595129614
         },
         {
           "id": "XC1004462",
@@ -484,7 +519,8 @@
           "recordist": "Rory Nefdt",
           "location": "Edith G. Reed Sanctuary, Rye, New York, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/1004462"
+          "sourceUrl": "https://xeno-canto.org/1004462",
+          "gain": 0.8790225168308843
         }
       ],
       "field": "Year-round in open ground near water — pastures, gravel parking lots, golf-course edges. Feigns a broken wing to lure intruders from the nest."
@@ -504,7 +540,8 @@
           "recordist": "Mike Schanbacher",
           "location": "Falmouth, Barnstable, Massachusetts, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
-          "sourceUrl": "https://xeno-canto.org/153555"
+          "sourceUrl": "https://xeno-canto.org/153555",
+          "gain": 0.17119851767028596
         },
         {
           "id": "XC559479",
@@ -514,7 +551,8 @@
           "recordist": "Jim Berry",
           "location": "Busti (near  Jamestown), Chautauqua County, New York, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/559479"
+          "sourceUrl": "https://xeno-canto.org/559479",
+          "gain": 0.5370317963702529
         },
         {
           "id": "XC803814",
@@ -524,7 +562,8 @@
           "recordist": "Bobby Wilcox",
           "location": "DeWitt (near  East Syracuse), Onondaga County, New York, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/803814"
+          "sourceUrl": "https://xeno-canto.org/803814",
+          "gain": 0.1838653953864026
         }
       ],
       "field": "Year-round in any low brush near water. Each male sings 8 to 10 distinct songs, learned from neighbors as a juvenile."

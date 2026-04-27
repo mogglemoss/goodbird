@@ -24,7 +24,8 @@
           "recordist": "Scott Olmstead",
           "location": "Treat Ave near Waverly, Tucson, Pima County, Arizona, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/767284"
+          "sourceUrl": "https://xeno-canto.org/767284",
+          "gain": 0.2857590543374947
         },
         {
           "id": "XC959367",
@@ -34,7 +35,8 @@
           "recordist": "Peter Mundale",
           "location": "Blaine, Anoka County, Minnesota, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/959367"
+          "sourceUrl": "https://xeno-canto.org/959367",
+          "gain": 1
         },
         {
           "id": "XC520429",
@@ -44,7 +46,8 @@
           "recordist": "Jarrod Swackhamer",
           "location": "Hereford, Cochise County, Arizona, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/520429"
+          "sourceUrl": "https://xeno-canto.org/520429",
+          "gain": 0.1661498677766656
         }
       ]
     },
@@ -64,7 +67,8 @@
           "recordist": "David Tattersley",
           "location": "Silver City, Grant County, New Mexico, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/1000440"
+          "sourceUrl": "https://xeno-canto.org/1000440",
+          "gain": 1
         },
         {
           "id": "XC736233",
@@ -74,7 +78,8 @@
           "recordist": "Kayla Brown",
           "location": "Fawn Creek, Marion County, Oregon, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/736233"
+          "sourceUrl": "https://xeno-canto.org/736233",
+          "gain": 1
         },
         {
           "id": "XC962398",
@@ -84,7 +89,8 @@
           "recordist": "A Richardson",
           "location": "Carson City, Douglas County, Nevada, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/962398"
+          "sourceUrl": "https://xeno-canto.org/962398",
+          "gain": 1
         }
       ]
     },
@@ -103,7 +109,8 @@
           "recordist": "Ted Floyd",
           "location": "Medano-Zapata Ranch, Colorado, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/225310"
+          "sourceUrl": "https://xeno-canto.org/225310",
+          "gain": 1
         },
         {
           "id": "XC891591",
@@ -113,7 +120,8 @@
           "recordist": "Don Profota",
           "location": "South Bozeman, Gallatin County, Montana, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/891591"
+          "sourceUrl": "https://xeno-canto.org/891591",
+          "gain": 1
         },
         {
           "id": "XC833003",
@@ -123,7 +131,8 @@
           "recordist": "Dr. Dominique Roche",
           "location": "Paradise, Cache County, Utah, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/833003"
+          "sourceUrl": "https://xeno-canto.org/833003",
+          "gain": 0.6486344335482382
         }
       ],
       "field": "Year-round in dense coastal forest; difficult to detect outside late winter. Calling peaks January through March from inside conifer cover."
@@ -143,7 +152,8 @@
           "recordist": "Alberto Lobato",
           "location": "Camino a Los Humeros, Mexico",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/646754"
+          "sourceUrl": "https://xeno-canto.org/646754",
+          "gain": 0.7507580541199372
         }
       ],
       "field": "Year-round in mixed conifer-oak. Diurnal; hunts small birds at midday and may be located by the angry mob of songbirds harassing it."
@@ -163,7 +173,8 @@
           "recordist": "Richard E. Webster",
           "location": "Vekol Wash, Sonoran Desert N.M., Arizona, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/662031"
+          "sourceUrl": "https://xeno-canto.org/662031",
+          "gain": 0.7655966069112563
         },
         {
           "id": "XC150237",
@@ -173,7 +184,8 @@
           "recordist": "Paul Marvin",
           "location": "Mission Trails Regional Park, Tierrasanta area, San Diego, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
-          "sourceUrl": "https://xeno-canto.org/150237"
+          "sourceUrl": "https://xeno-canto.org/150237",
+          "gain": 1
         },
         {
           "id": "XC109851",
@@ -183,7 +195,8 @@
           "recordist": "Lance A. M. Benner",
           "location": "Santa Susana Field Laboratory, Ventura County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
-          "sourceUrl": "https://xeno-canto.org/109851"
+          "sourceUrl": "https://xeno-canto.org/109851",
+          "gain": 0.21404249267716294
         }
       ],
       "field": "April through September on rocky brushy hillsides. The only North American bird known to enter true torpor, lowering its body temperature for days at a time during cold spells."
@@ -204,7 +217,8 @@
           "recordist": "Maurice Riekert",
           "location": "Nijmegen, Nijmegen, Gelderland, Netherlands",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/1083634"
+          "sourceUrl": "https://xeno-canto.org/1083634",
+          "gain": 1
         },
         {
           "id": "XC1070934",
@@ -214,7 +228,8 @@
           "recordist": "Erik Eckstein",
           "location": "Nordsachsen (near  Jesewitz), Sachsen, Germany",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/1070934"
+          "sourceUrl": "https://xeno-canto.org/1070934",
+          "gain": 0.45551218616573924
         },
         {
           "id": "XC1089444",
@@ -224,7 +239,8 @@
           "recordist": "Damien Sevrin",
           "location": "BARONVILLE Ma campagne (near  Beauraing), Namur, Wallonie, Belgium",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/1089444"
+          "sourceUrl": "https://xeno-canto.org/1089444",
+          "gain": 0.19032682375763502
         }
       ],
       "field": "Year-round in open country with old buildings. Nests in barns, hollow trees, and tower cavities; relies on hearing alone to capture prey in total darkness."
@@ -244,7 +260,8 @@
           "recordist": "Dominique Guillerme",
           "location": "Chassey, Côte-d'Or, Bourgogne-Franche-Comté, France",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/701400"
+          "sourceUrl": "https://xeno-canto.org/701400",
+          "gain": 1
         },
         {
           "id": "XC392079",
@@ -254,7 +271,8 @@
           "recordist": "Vincent van der Spek",
           "location": "Boerderij Meijendel eo, Meijendel, Wassenaar, ZH, Netherlands",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/392079"
+          "sourceUrl": "https://xeno-canto.org/392079",
+          "gain": 0.7169683755804199
         },
         {
           "id": "XC573978",
@@ -264,7 +282,8 @@
           "recordist": "Giuseppe Speranza",
           "location": "Ravenna, Provincia di Ravenna, Emilia-Romagna, Italy",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/573978"
+          "sourceUrl": "https://xeno-canto.org/573978",
+          "gain": 0.2077303725572564
         }
       ],
       "field": "Year-round but uncommon; numbers higher in winter. The 'ear' tufts are skin and feather, not actual ears."
@@ -284,7 +303,8 @@
           "recordist": "Brad Banner",
           "location": "Merkel, Jones County, Texas, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/684354"
+          "sourceUrl": "https://xeno-canto.org/684354",
+          "gain": 1
         },
         {
           "id": "XC660470",
@@ -294,7 +314,8 @@
           "recordist": "Bobby Wilcox",
           "location": "Sierra Nevada (near  Bridgeport), Mono County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/660470"
+          "sourceUrl": "https://xeno-canto.org/660470",
+          "gain": 0.14256075936021878
         },
         {
           "id": "XC1035202",
@@ -304,7 +325,8 @@
           "recordist": "Richard E. Webster",
           "location": "Rucker Canyon grasslands, Cochise County, Arizona, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/1035202"
+          "sourceUrl": "https://xeno-canto.org/1035202",
+          "gain": 0.20511621788255652
         }
       ],
       "field": "May through September; declining in California. Forages on the wing at dusk, with the male's booming display dive audible across pastures."

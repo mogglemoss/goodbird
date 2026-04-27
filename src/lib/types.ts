@@ -7,6 +7,12 @@ export interface Recording {
   location: string;
   license: string;
   sourceUrl: string;
+  /** Per-clip volume multiplier (0..1) computed by scripts/normalize-audio.mjs.
+   *  ffmpeg's loudnorm pass measures integrated LUFS; we store the gain that
+   *  drops loud clips down to a common target (~-30 LUFS) so a faint nuthatch
+   *  and a screaming jay land at comparable loudness. Defaults to 1.0 when
+   *  measurement hasn't been run yet for this recording. */
+  gain?: number;
 }
 
 export interface Species {

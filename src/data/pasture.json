@@ -24,7 +24,8 @@
           "recordist": "Richard E. Webster",
           "location": "Pawnee National Grassland, Colorado, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/185141"
+          "sourceUrl": "https://xeno-canto.org/185141",
+          "gain": 0.23067471887200697
         },
         {
           "id": "XC554563",
@@ -34,7 +35,8 @@
           "recordist": "Thomas G. Graves",
           "location": "Carrizo Plain National Monument, Santa Margarita, San Luis Obispo County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/554563"
+          "sourceUrl": "https://xeno-canto.org/554563",
+          "gain": 0.22413000457823293
         },
         {
           "id": "XC161769",
@@ -44,7 +46,8 @@
           "recordist": "Paul Marvin",
           "location": "Benton Lake NWR, Great Falls, Montana, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
-          "sourceUrl": "https://xeno-canto.org/161769"
+          "sourceUrl": "https://xeno-canto.org/161769",
+          "gain": 1
         }
       ]
     },
@@ -63,7 +66,8 @@
           "recordist": "Tayler Brooks",
           "location": "Montlake Fill, King Co., WA, United States",
           "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
-          "sourceUrl": "https://xeno-canto.org/34294"
+          "sourceUrl": "https://xeno-canto.org/34294",
+          "gain": 0.6546361740672749
         },
         {
           "id": "XC374020",
@@ -73,7 +77,8 @@
           "recordist": "Ted Floyd",
           "location": "Colorado (near  Hayden), Routt County, Colorado, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/374020"
+          "sourceUrl": "https://xeno-canto.org/374020",
+          "gain": 0.27008471083246616
         },
         {
           "id": "XC166114",
@@ -83,7 +88,8 @@
           "recordist": "Paul Marvin",
           "location": "Viera Wetlands, Florida, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
-          "sourceUrl": "https://xeno-canto.org/166114"
+          "sourceUrl": "https://xeno-canto.org/166114",
+          "gain": 1
         }
       ],
       "field": "Year-round in coastal grassland. Many local subspecies; the 'Belding's' Savannah Sparrow is a tidal-marsh specialist of the southern California coast."
@@ -103,7 +109,8 @@
           "recordist": "Paul Marvin",
           "location": "Percha Dam, Caballo Lake State Park, Sierra Co., New Mexico, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/457218"
+          "sourceUrl": "https://xeno-canto.org/457218",
+          "gain": 0.45081670454146006
         },
         {
           "id": "XC961965",
@@ -113,7 +120,8 @@
           "recordist": "A Richardson",
           "location": "Carlsbad, Eddy County, New Mexico, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/961965"
+          "sourceUrl": "https://xeno-canto.org/961965",
+          "gain": 1
         }
       ],
       "field": "Year-round in oak savanna and pasture edges. Cavity nester; competes with starlings, swallows, and other bluebirds for nest holes."
@@ -133,7 +141,8 @@
           "recordist": "José María Loaiza B.",
           "location": "Calacali, 1.5Km desde la \"Y a Moraspungo, Hacienda grande Amarilla, Ecuador",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/987852"
+          "sourceUrl": "https://xeno-canto.org/987852",
+          "gain": 1
         },
         {
           "id": "XC746110",
@@ -143,7 +152,8 @@
           "recordist": "Cristian Pinto Fernandez",
           "location": "Desembocadura del rio Maipo, Chile",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/746110"
+          "sourceUrl": "https://xeno-canto.org/746110",
+          "gain": 0.41399967481973043
         },
         {
           "id": "XC57604",
@@ -153,7 +163,8 @@
           "recordist": "Bernabe Lopez-Lanus",
           "location": "La Rinconada (3 km al SW de Saladillo), Saladillo, provincia Buenos Aires, Argentina",
           "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
-          "sourceUrl": "https://xeno-canto.org/57604"
+          "sourceUrl": "https://xeno-canto.org/57604",
+          "gain": 0.9908319448927677
         }
       ],
       "field": "Year-round in open grassland. Hovers over tall grass to spot voles; nests in isolated trees within ranchland."
@@ -173,7 +184,8 @@
           "recordist": "James Bradley",
           "location": "San Clemente Island, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/297260"
+          "sourceUrl": "https://xeno-canto.org/297260",
+          "gain": 0.18556668094335751
         },
         {
           "id": "XC236573",
@@ -183,7 +195,8 @@
           "recordist": "Elias Aristides Elias",
           "location": "Rosamond, Kern County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/236573"
+          "sourceUrl": "https://xeno-canto.org/236573",
+          "gain": 1
         },
         {
           "id": "XC883583",
@@ -193,7 +206,8 @@
           "recordist": "Valerie Heemstra",
           "location": "Lake Charles, Calcasieu Parish, Louisiana, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/883583"
+          "sourceUrl": "https://xeno-canto.org/883583",
+          "gain": 1
         }
       ],
       "field": "Year-round in open country with scattered shrubs. Impales prey — large insects, lizards, small rodents — on thorns and barbed wire."
@@ -213,7 +227,8 @@
           "recordist": "Paul Marvin",
           "location": "Otay Lakes, San Diego Co., California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
-          "sourceUrl": "https://xeno-canto.org/147272"
+          "sourceUrl": "https://xeno-canto.org/147272",
+          "gain": 0.3685530418524793
         },
         {
           "id": "XC451253",
@@ -223,7 +238,8 @@
           "recordist": "Paul Marvin",
           "location": "Saturn Blvd pond, Tijuana River Valley, San Diego County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/451253"
+          "sourceUrl": "https://xeno-canto.org/451253",
+          "gain": 0.21478304741305343
         },
         {
           "id": "XC420472",
@@ -233,7 +249,8 @@
           "recordist": "Bobby Wilcox",
           "location": "Nevada (near  Sparks), Washoe County, Nevada, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/420472"
+          "sourceUrl": "https://xeno-canto.org/420472",
+          "gain": 0.148081225526751
         }
       ],
       "field": "Year-round in open habitats. Smallest North American falcon; often perches on power lines along ranch roads."
@@ -253,7 +270,8 @@
           "recordist": "Manuel Grosselet",
           "location": "Salinas, Monterey County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/1090861"
+          "sourceUrl": "https://xeno-canto.org/1090861",
+          "gain": 0.6123503917247733
         },
         {
           "id": "XC1035993",
@@ -263,7 +281,8 @@
           "recordist": "Rory Nefdt",
           "location": "Hart’s Brook Park and Preserve (near  Hartsdale), Westchester County, New York, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/1035993"
+          "sourceUrl": "https://xeno-canto.org/1035993",
+          "gain": 0.8433347577642754
         },
         {
           "id": "XC173875",
@@ -273,7 +292,8 @@
           "recordist": "Paul Marvin",
           "location": "Hollenbeck Canyon Trail, Jamul, San Diego County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/173875"
+          "sourceUrl": "https://xeno-canto.org/173875",
+          "gain": 0.38018939632056126
         }
       ],
       "field": "Year-round in open and edge habitats throughout the region. The screaming call is so often used in films that it serves as the default cinematic 'eagle.'"
@@ -293,7 +313,8 @@
           "recordist": "Lukas Thiess",
           "location": "Oukaimeden (village), Marrakech-Tensift-Al Haouz, Morocco",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/460351"
+          "sourceUrl": "https://xeno-canto.org/460351",
+          "gain": 0.760326276940182
         },
         {
           "id": "XC654862",
@@ -303,7 +324,8 @@
           "recordist": "Manuel Grosselet",
           "location": "San Pablo Etla, San Pablo Etla, Oaxaca, Mexico",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/654862"
+          "sourceUrl": "https://xeno-canto.org/654862",
+          "gain": 0.3651741272548377
         },
         {
           "id": "XC43857",
@@ -313,7 +335,8 @@
           "recordist": "Jarek Matusiak",
           "location": "Gasy near Warsaw, Poland, Poland",
           "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
-          "sourceUrl": "https://xeno-canto.org/43857"
+          "sourceUrl": "https://xeno-canto.org/43857",
+          "gain": 1
         }
       ],
       "field": "Year-round in short-grass pasture and bare ground. Males perform a sky-larking display flight up to 250 meters, singing throughout."
@@ -333,7 +356,8 @@
           "recordist": "Ryan P. O&#039;Donnell",
           "location": "Benson, Cache County, Utah, United States",
           "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
-          "sourceUrl": "https://xeno-canto.org/82046"
+          "sourceUrl": "https://xeno-canto.org/82046",
+          "gain": 0.49659232145033616
         },
         {
           "id": "XC352292",
@@ -343,7 +367,8 @@
           "recordist": "Bruce Lagerquist",
           "location": "Ferench Glen, Harney County, Oregon, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/352292"
+          "sourceUrl": "https://xeno-canto.org/352292",
+          "gain": 1
         },
         {
           "id": "XC104521",
@@ -353,7 +378,8 @@
           "recordist": "Jonathon Jongsma",
           "location": "Wildlife Loop Rd, Custer State Park, South Dakota, United States",
           "license": "https://creativecommons.org/licenses/by-sa/3.0/",
-          "sourceUrl": "https://xeno-canto.org/104521"
+          "sourceUrl": "https://xeno-canto.org/104521",
+          "gain": 0.5284452517751804
         }
       ],
       "field": "Year-round in pastures, parking lots, and town edges. Walks rather than hops; iridescent males catch sunlight in striking purples and greens."
@@ -373,7 +399,8 @@
           "recordist": "Paul Marvin",
           "location": "Proctor parking and trailhead, Madera Canyon, Arizona, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
-          "sourceUrl": "https://xeno-canto.org/161766"
+          "sourceUrl": "https://xeno-canto.org/161766",
+          "gain": 1
         },
         {
           "id": "XC316516",
@@ -383,7 +410,8 @@
           "recordist": "Sue Riffe",
           "location": "Hasty CG in John Martin SP, Bent County, Colorado, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/316516"
+          "sourceUrl": "https://xeno-canto.org/316516",
+          "gain": 0.7186211583804577
         },
         {
           "id": "XC570382",
@@ -393,7 +421,8 @@
           "recordist": "Ed Pandolfino",
           "location": "Sacramento NWR, Glenn County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/570382"
+          "sourceUrl": "https://xeno-canto.org/570382",
+          "gain": 0.5623413251903491
         }
       ],
       "field": "April through September in open country with scattered trees. Defends nest sites aggressively against hawks and corvids of much greater size."
@@ -413,7 +442,8 @@
           "recordist": "Richard E. Webster",
           "location": "San Simon Cienega, Cochise County, Arizona, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/583581"
+          "sourceUrl": "https://xeno-canto.org/583581",
+          "gain": 1
         },
         {
           "id": "XC382741",
@@ -423,7 +453,8 @@
           "recordist": "Thomas Beverly",
           "location": "Texas (near  Fort Davis), Jeff Davis County, Texas, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/382741"
+          "sourceUrl": "https://xeno-canto.org/382741",
+          "gain": 1
         },
         {
           "id": "XC35100",
@@ -433,7 +464,8 @@
           "recordist": "Andrew Spencer",
           "location": "near Rocksprings, Edwards Co., Texas, United States",
           "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
-          "sourceUrl": "https://xeno-canto.org/35100"
+          "sourceUrl": "https://xeno-canto.org/35100",
+          "gain": 0.8861352236594998
         }
       ],
       "field": "Year-round across most habitats. The whistled wing-rise on takeoff is mechanical, not vocal."
@@ -453,7 +485,8 @@
           "recordist": "Melani Sleder",
           "location": "Massachusetts (near Concord), Middlesex County, Massachusetts, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/351540"
+          "sourceUrl": "https://xeno-canto.org/351540",
+          "gain": 0.43201616761814254
         },
         {
           "id": "XC279723",
@@ -463,7 +496,8 @@
           "recordist": "Nick Komar",
           "location": "Fort Collins, Larimer County, Colorado, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/279723"
+          "sourceUrl": "https://xeno-canto.org/279723",
+          "gain": 0.9151662592812755
         },
         {
           "id": "XC958966",
@@ -473,7 +507,8 @@
           "recordist": "Valerie Heemstra",
           "location": "Escanaba Township (near  Flat Rock), Delta County, Michigan, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/958966"
+          "sourceUrl": "https://xeno-canto.org/958966",
+          "gain": 0.743875062907567
         }
       ],
       "field": "Year-round in nearly all habitats. Cooperative breeders; helpers from previous broods assist with nesting and territory defense."
@@ -493,7 +528,8 @@
           "recordist": "Brad Banner",
           "location": "Merkel, Taylor County, Texas, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/684352"
+          "sourceUrl": "https://xeno-canto.org/684352",
+          "gain": 0.24831331052955696
         },
         {
           "id": "XC900999",
@@ -503,7 +539,8 @@
           "recordist": "David Tattersley",
           "location": "Brownsville, Cameron County, Texas, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/900999"
+          "sourceUrl": "https://xeno-canto.org/900999",
+          "gain": 0.8570378452303696
         },
         {
           "id": "XC1103030",
@@ -513,7 +550,8 @@
           "recordist": "Ed Pandolfino",
           "location": "Blue Ridge Road, Solano County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/1103030"
+          "sourceUrl": "https://xeno-canto.org/1103030",
+          "gain": 0.10268334316680866
         }
       ],
       "field": "Year-round in open ground with scattered cover. Pairs breed in loose colonies; juveniles wear a quail-like striped face useful for identification."
@@ -533,7 +571,8 @@
           "recordist": "Bobby Wilcox",
           "location": "Cibola Valley Conservation Area, La Paz County, Arizona, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/645472"
+          "sourceUrl": "https://xeno-canto.org/645472",
+          "gain": 0.18599445632225764
         },
         {
           "id": "XC13595",
@@ -543,7 +582,8 @@
           "recordist": "Andrew Spencer",
           "location": "Tamarack Ranch SWA, Logan Co., Colorado, United States",
           "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
-          "sourceUrl": "https://xeno-canto.org/13595"
+          "sourceUrl": "https://xeno-canto.org/13595",
+          "gain": 0.40644332916521275
         },
         {
           "id": "XC645479",
@@ -553,7 +593,8 @@
           "recordist": "Bobby Wilcox",
           "location": "Cibola Valley Conservation Area, La Paz County, Arizona, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/645479"
+          "sourceUrl": "https://xeno-canto.org/645479",
+          "gain": 0.2398832919019491
         }
       ],
       "field": "April through August in tall riparian and scrub-oak. Builds a pendulous woven nest, often suspended from the tip of a sycamore branch."

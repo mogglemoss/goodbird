@@ -29,12 +29,12 @@ export function DiscriminateExerciseView({ exercise, onAnswered, locked }: Props
       </div>
       <div className="flex items-center gap-6">
         <div className="flex flex-col items-center gap-2">
-          <AudioPlayer url={exercise.recordingA.url} size="md" label="Play clip 1" />
+          <AudioPlayer url={exercise.recordingA.url} size="md" label="Play clip 1" gain={exercise.recordingA.gain ?? 1} />
           <span className="text-xs font-medium text-(--color-ink-soft)">Clip 1</span>
         </div>
         <div className="text-2xl text-(--color-ink-soft)">vs</div>
         <div className="flex flex-col items-center gap-2">
-          <AudioPlayer url={exercise.recordingB.url} size="md" label="Play clip 2" />
+          <AudioPlayer url={exercise.recordingB.url} size="md" label="Play clip 2" gain={exercise.recordingB.gain ?? 1} />
           <span className="text-xs font-medium text-(--color-ink-soft)">Clip 2</span>
         </div>
       </div>

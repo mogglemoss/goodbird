@@ -38,7 +38,8 @@ export function BirdOfTheDay() {
   if (!pick) return null;
   const { species, accent } = pick;
   const a = ACCENTS[accent];
-  const url = species.recordings[0]?.url;
+  const rec = species.recordings[0];
+  const url = rec?.url;
 
   return (
     <Link
@@ -77,7 +78,7 @@ export function BirdOfTheDay() {
       </div>
       {url && (
         <div onClick={(e) => { e.preventDefault(); }}>
-          <PlaySoundButton url={url} tone="moss" size="sm" ariaLabel={`Play ${species.commonName}`} />
+          <PlaySoundButton url={url} tone="moss" size="sm" ariaLabel={`Play ${species.commonName}`} gain={rec?.gain ?? 1} />
         </div>
       )}
     </Link>

@@ -17,6 +17,8 @@ interface Props {
   /** Visual size. */
   size?: "sm" | "md";
   ariaLabel?: string;
+  /** Per-clip volume (0..1) from scripts/normalize-audio.mjs. Default 1. */
+  gain?: number;
 }
 
 const TONES = {
@@ -29,12 +31,12 @@ const SIZES = {
   md: { wrap: "h-11 w-11", icon: "h-5 w-5" },
 };
 
-export function PlaySoundButton({ url, tone = "moss", size = "md", ariaLabel }: Props) {
+export function PlaySoundButton({ url, tone = "moss", size = "md", ariaLabel, gain = 1 }: Props) {
   const [playing, setPlaying] = useState(false);
   const howlRef = useRef<Howl | null>(null);
 
   useEffect(() => {
-    const h = getHowl(url);
+    const h = getHowl(url, gain);
     howlRef.current = h;
     const onPlay = () => setPlaying(true);
     const onStop = () => setPlaying(false);
@@ -48,7 +50,7 @@ export function PlaySoundButton({ url, tone = "moss", size = "md", ariaLabel }: 
       h.off("stop", onStop);
       h.off("end", onStop);
     };
-  }, [url]);
+  }, [url, gain]);
 
   const toggle = (e: React.MouseEvent | React.KeyboardEvent) => {
     e.preventDefault();

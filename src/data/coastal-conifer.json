@@ -23,7 +23,8 @@
           "recordist": "Thomas G. Graves",
           "location": "Cambria, San Luis Obispo County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/600983"
+          "sourceUrl": "https://xeno-canto.org/600983",
+          "gain": 0.28444611074479154
         },
         {
           "id": "XC443267",
@@ -33,7 +34,8 @@
           "recordist": "Ed Pandolfino",
           "location": "Arastre Creek, San Bernardino County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/443267"
+          "sourceUrl": "https://xeno-canto.org/443267",
+          "gain": 0.5395106225151277
         },
         {
           "id": "XC306468",
@@ -43,7 +45,8 @@
           "recordist": "Nick Komar",
           "location": "Lake Hemet campground, Riverside County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/306468"
+          "sourceUrl": "https://xeno-canto.org/306468",
+          "gain": 1
         }
       ],
       "field": "Year-round in Bishop pine and Monterey pine. Roosts communally in cavities — up to a hundred birds in one trunk on cold nights."
@@ -63,7 +66,8 @@
           "recordist": "Meena Haribal",
           "location": "Brinnon, Jefferson County, Washington, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/420593"
+          "sourceUrl": "https://xeno-canto.org/420593",
+          "gain": 0.5058246620031139
         },
         {
           "id": "XC1056043",
@@ -73,7 +77,8 @@
           "recordist": "Denis Dujardin",
           "location": "Cape Meares, Tillamook County, Oregon, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/1056043"
+          "sourceUrl": "https://xeno-canto.org/1056043",
+          "gain": 1
         },
         {
           "id": "XC363150",
@@ -83,7 +88,8 @@
           "recordist": "Paul Marvin",
           "location": "Patrick Point State Park, Humboldt County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/363150"
+          "sourceUrl": "https://xeno-canto.org/363150",
+          "gain": 0.3051406029141043
         }
       ],
       "field": "Year-round in mixed evergreen forest. Often the lead species in mixed-flock foraging movements through the winter canopy."
@@ -103,7 +109,8 @@
           "recordist": "Thomas Magarian",
           "location": "Bear Springs, Wasco County, Oregon, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/700964"
+          "sourceUrl": "https://xeno-canto.org/700964",
+          "gain": 0.8109610578538408
         },
         {
           "id": "XC34642",
@@ -113,7 +120,8 @@
           "recordist": "Andrew Spencer",
           "location": "Reef Campground, Carr Canyon, Cochise Co., Arizona, United States",
           "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
-          "sourceUrl": "https://xeno-canto.org/34642"
+          "sourceUrl": "https://xeno-canto.org/34642",
+          "gain": 0.21602300347747427
         },
         {
           "id": "XC76463",
@@ -123,7 +131,8 @@
           "recordist": "Andrew Spencer",
           "location": "English Camp, San Juan Island National Historical Park, San Juan Co., Washington, United States",
           "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
-          "sourceUrl": "https://xeno-canto.org/76463"
+          "sourceUrl": "https://xeno-canto.org/76463",
+          "gain": 0.7219381629371595
         }
       ],
       "field": "Year-round in coniferous forest. Forages by spiraling up a trunk, then dropping to the base of the next tree to start over."
@@ -144,7 +153,8 @@
           "recordist": "AUDEVARD Aurélien",
           "location": "Homer, Kenai Peninsula Borough, Alaska, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/1048891"
+          "sourceUrl": "https://xeno-canto.org/1048891",
+          "gain": 0.7194489780036996
         },
         {
           "id": "XC1048893",
@@ -154,7 +164,8 @@
           "recordist": "AUDEVARD Aurélien",
           "location": "Homer, Kenai Peninsula Borough, Alaska, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/1048893"
+          "sourceUrl": "https://xeno-canto.org/1048893",
+          "gain": 0.3601637503947275
         },
         {
           "id": "XC1048892",
@@ -164,7 +175,8 @@
           "recordist": "AUDEVARD Aurélien",
           "location": "Homer, Kenai Peninsula Borough, Alaska, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/1048892"
+          "sourceUrl": "https://xeno-canto.org/1048892",
+          "gain": 0.601173737483278
         }
       ]
     },
@@ -183,7 +195,8 @@
           "recordist": "Simon Elliott",
           "location": "Pacific Rim National Park Reserve (near  Ucluelet), Alberni-Clayoquot, British Columbia, Canada",
           "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
-          "sourceUrl": "https://xeno-canto.org/597954"
+          "sourceUrl": "https://xeno-canto.org/597954",
+          "gain": 0.4618489918952488
         }
       ],
       "field": "October through April on the coast; breeds further north. Often joins mixed-species flocks with kinglets and chickadees."
@@ -203,7 +216,8 @@
           "recordist": "bowtyler",
           "location": "Olympia, Thurston County, Washington, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/473431"
+          "sourceUrl": "https://xeno-canto.org/473431",
+          "gain": 0.33151256981184307
         },
         {
           "id": "XC602827",
@@ -213,7 +227,8 @@
           "recordist": "Steve Hampton",
           "location": "Raccoon Pt Rd, Orcas Island, San Juan County, Washington, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/602827"
+          "sourceUrl": "https://xeno-canto.org/602827",
+          "gain": 0.30234305705113357
         },
         {
           "id": "XC178530",
@@ -223,7 +238,8 @@
           "recordist": "Thomas G. Graves",
           "location": "Pinnacles National Park (near  PAICINES), San Benito, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/178530"
+          "sourceUrl": "https://xeno-canto.org/178530",
+          "gain": 0.25556419010641385
         }
       ],
       "field": "April through September in shaded oak and conifer canyons. Nests on rock ledges and within house eaves throughout coastal California."
@@ -252,7 +268,8 @@
           "recordist": "Eric Hough",
           "location": "Bushnell Tanks, Sunflower, Maricopa County, Arizona, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/282857"
+          "sourceUrl": "https://xeno-canto.org/282857",
+          "gain": 0.09204495717531712
         },
         {
           "id": "XC595861",
@@ -262,7 +279,8 @@
           "recordist": "Steve Hampton",
           "location": "Babel Slough, Yolo County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/595861"
+          "sourceUrl": "https://xeno-canto.org/595861",
+          "gain": 0.5017645790367088
         },
         {
           "id": "XC639924",
@@ -272,7 +290,8 @@
           "recordist": "Conor McMahon",
           "location": "Goleta, Santa Barbara County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/639924"
+          "sourceUrl": "https://xeno-canto.org/639924",
+          "gain": 1
         }
       ],
       "field": "Year-round in evergreen oak. Often confused with Ruby-crowned Kinglet by sight; the repetitive 'zu-wee' song is diagnostic."
@@ -292,7 +311,8 @@
           "recordist": "Ted Floyd",
           "location": "Colorado (near  Boulder), Boulder County, Colorado, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/357810"
+          "sourceUrl": "https://xeno-canto.org/357810",
+          "gain": 0.285101826750391
         },
         {
           "id": "XC110380",
@@ -302,7 +322,8 @@
           "recordist": "Andrew Spencer",
           "location": "Sweat Creek, Okanogan Co., Washington, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
-          "sourceUrl": "https://xeno-canto.org/110380"
+          "sourceUrl": "https://xeno-canto.org/110380",
+          "gain": 0.48417236758409926
         },
         {
           "id": "XC1056022",
@@ -312,7 +333,8 @@
           "recordist": "Denis Dujardin",
           "location": "Sequim, Clallam County, Washington, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/1056022"
+          "sourceUrl": "https://xeno-canto.org/1056022",
+          "gain": 1
         }
       ],
       "field": "Year-round in conifers; numbers irrupt south in winters of poor cone crops. Smears pitch around nest cavity entrances, perhaps to deter predators."
@@ -332,7 +354,8 @@
           "recordist": "Sue Riffe",
           "location": "Peaceful Valley - Camp Dick, Colorado, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/419366"
+          "sourceUrl": "https://xeno-canto.org/419366",
+          "gain": 0.39948456130828547
         },
         {
           "id": "XC550956",
@@ -342,7 +365,8 @@
           "recordist": "Bruce Lagerquist",
           "location": "Thornton Creek Ravine, Seattle, King County, Washington, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/550956"
+          "sourceUrl": "https://xeno-canto.org/550956",
+          "gain": 0.1606941253012877
         },
         {
           "id": "XC135599",
@@ -352,7 +376,8 @@
           "recordist": "Mike Nelson",
           "location": "Carver's Gap Parking area, Roan Mountain State Park, North Carolina, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
-          "sourceUrl": "https://xeno-canto.org/135599"
+          "sourceUrl": "https://xeno-canto.org/135599",
+          "gain": 0.23469292626864652
         }
       ],
       "field": "October through April on the coast. Frequencies of the song approach the upper limit of human hearing; many adults can no longer hear them."
@@ -372,7 +397,8 @@
           "recordist": "Paul Marvin",
           "location": "Mount Laguna, Wooded Hills Rd, San Diego County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/636598"
+          "sourceUrl": "https://xeno-canto.org/636598",
+          "gain": 0.28151400151332995
         },
         {
           "id": "XC634792",
@@ -382,7 +408,8 @@
           "recordist": "Steve Hampton",
           "location": "Port Townsend, Jefferson County, Washington, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/634792"
+          "sourceUrl": "https://xeno-canto.org/634792",
+          "gain": 1
         },
         {
           "id": "XC605631",
@@ -392,7 +419,8 @@
           "recordist": "Richard E. Webster",
           "location": "Hannagan Meadow region, Greenlee County, Arizona, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/605631"
+          "sourceUrl": "https://xeno-canto.org/605631",
+          "gain": 1
         }
       ],
       "field": "Year-round in coniferous and oak forest. Mimics Red-tailed Hawk calls — possibly to clear feeders of competitors."
@@ -412,7 +440,8 @@
           "recordist": "Ed Pandolfino",
           "location": "Sand Creek Rd, Colusa County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/898686"
+          "sourceUrl": "https://xeno-canto.org/898686",
+          "gain": 0.3243396173493492
         },
         {
           "id": "XC172407",
@@ -422,7 +451,8 @@
           "recordist": "Eric DeFonso",
           "location": "Haskell Peak Road, Tahoe National Forest (near  Calpine), Sierra, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/172407"
+          "sourceUrl": "https://xeno-canto.org/172407",
+          "gain": 0.8118952489356749
         },
         {
           "id": "XC480058",
@@ -432,7 +462,8 @@
           "recordist": "Thomas G. Graves",
           "location": "Montana de Oro State Park, Los Osos, San Luis Obispo County, California, United States",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/480058"
+          "sourceUrl": "https://xeno-canto.org/480058",
+          "gain": 0.3859224115947292
         }
       ],
       "field": "April through September in willow and alder thickets. The black cap is the male's only striking field mark; females and immatures lack it."
@@ -452,7 +483,8 @@
           "recordist": "Sunny",
           "location": "Cypress Mountain, Canada",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/489324"
+          "sourceUrl": "https://xeno-canto.org/489324",
+          "gain": 0.17378008287493754
         },
         {
           "id": "XC71862",
@@ -462,7 +494,8 @@
           "recordist": "Richard E Webster",
           "location": "La Corona Arriba, Sierra San Pedro Martir, Baja California, Mexico",
           "license": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
-          "sourceUrl": "https://xeno-canto.org/71862"
+          "sourceUrl": "https://xeno-canto.org/71862",
+          "gain": 0.8128305161640992
         },
         {
           "id": "XC489326",
@@ -472,7 +505,8 @@
           "recordist": "Sunny",
           "location": "Cypress Mountain, Canada",
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "sourceUrl": "https://xeno-canto.org/489326"
+          "sourceUrl": "https://xeno-canto.org/489326",
+          "gain": 0.16826740610704674
         }
       ],
       "field": "May through September in conifer forest. Sings 'quick-three-beers' from a high snag; long-distance migrant to the Andes."

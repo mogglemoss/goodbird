@@ -2,10 +2,22 @@ import { Howl } from "howler";
 
 const cache = new Map<string, Howl>();
 
-export function getHowl(url: string): Howl {
+/**
+ * Get (or create) a cached Howl for a recording URL.
+ * `gain` (0..1) sets the playback volume so xeno-canto clips that vary wildly
+ * in level land at a comparable loudness. The value is computed once at build
+ * time by scripts/normalize-audio.mjs and stored on each Recording.
+ */
+export function getHowl(url: string, gain = 1): Howl {
   let h = cache.get(url);
-  if (h) return h;
-  h = new Howl({ src: [url], html5: true, preload: true });
+  if (h) {
+    // Keep the cached instance, but make sure the volume reflects whatever
+    // gain the caller is passing this time around (in case the user navigates
+    // to a different recording with the same URL — unlikely but cheap).
+    if (h.volume() !== gain) h.volume(gain);
+    return h;
+  }
+  h = new Howl({ src: [url], html5: true, preload: true, volume: gain });
   // Tell the underlying <audio> element to preserve pitch when playbackRate
   // changes. Without this, our ½× slow-down toggle drops the pitch a full
   // octave — the opposite of what an ear-training app wants. Howler uses one
