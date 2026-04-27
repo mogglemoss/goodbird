@@ -11,6 +11,7 @@ import { OnboardingCard } from "@/components/OnboardingCard";
 import { Hero } from "@/components/Hero";
 import { HabitatGlyph } from "@/components/brand/HabitatGlyph";
 import { BirdOfTheDay } from "@/components/BirdOfTheDay";
+import { InstallHint } from "@/components/InstallHint";
 
 export function HomeRoute() {
   const xp = useGame((s) => s.xp);
@@ -63,6 +64,8 @@ export function HomeRoute() {
       <SettingsSheet open={settingsOpen} onClose={() => setSettingsOpen(false)} />
 
       <OnboardingCard />
+
+      <InstallHint />
 
       <BirdOfTheDay />
 

@@ -30,6 +30,8 @@ interface GameState {
   dailyGoal: number; // XP target per day
   xpToday: number;
   xpTodayDay: string | null; // the day xpToday is for
+  theme: "auto" | "light" | "dark";
+  dismissedInstallHint: boolean;
   // Transient
   active: ActiveLesson | null;
 
@@ -43,6 +45,8 @@ interface GameState {
   setFreeplay: (on: boolean) => void;
   setOnboarded: () => void;
   setDailyGoal: (n: number) => void;
+  setTheme: (t: "auto" | "light" | "dark") => void;
+  dismissInstallHint: () => void;
 }
 
 const today = () => {
@@ -67,6 +71,8 @@ export const useGame = create<GameState>()(
       dailyGoal: 30,
       xpToday: 0,
       xpTodayDay: null,
+      theme: "auto",
+      dismissedInstallHint: false,
       active: null,
 
       startLesson: (lessonId) => {
@@ -163,6 +169,8 @@ export const useGame = create<GameState>()(
       setFreeplay: (on) => set({ freeplay: on }),
       setOnboarded: () => set({ hasOnboarded: true }),
       setDailyGoal: (n) => set({ dailyGoal: Math.max(5, Math.floor(n)) }),
+      setTheme: (t) => set({ theme: t }),
+      dismissInstallHint: () => set({ dismissedInstallHint: true }),
 
       finalizeLesson: () => {
         const a = get().active;
@@ -226,6 +234,8 @@ export const useGame = create<GameState>()(
         dailyGoal: s.dailyGoal,
         xpToday: s.xpToday,
         xpTodayDay: s.xpTodayDay,
+        theme: s.theme,
+        dismissedInstallHint: s.dismissedInstallHint,
       }),
     },
   ),

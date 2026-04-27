@@ -61,6 +61,171 @@
   button { font-family: inherit; }
 }
 
+/*
+ * Dark mode — applied when [data-theme="dark"] OR when [data-theme="auto"]
+ * (or the attribute is missing) and the OS prefers dark. We override the
+ * Tailwind / project CSS color tokens; all our utilities reference these
+ * vars, so the whole UI re-tints without touching component code.
+ */
+:root[data-theme="dark"],
+:root[data-theme="auto"] {
+  /* App shell */
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="auto"]:where(*),
+  :root:not([data-theme]) {
+    color-scheme: dark;
+  }
+}
+
+@layer base {
+  /* Shared dark token block, applied to two selector groups below */
+  :root[data-theme="dark"] {
+    --color-bg: oklch(18% 0.01 180);
+    --color-surface: oklch(22% 0.012 180);
+    --color-ink: oklch(94% 0.01 180);
+    --color-ink-soft: oklch(72% 0.015 180);
+    --color-line: oklch(30% 0.012 180);
+
+    --color-moss-50: oklch(28% 0.04 160);
+    --color-moss-100: oklch(34% 0.06 160);
+    --color-moss-300: oklch(54% 0.10 160);
+    --color-moss-500: oklch(68% 0.12 160);
+    --color-moss-600: oklch(74% 0.12 160);
+    --color-moss-700: oklch(84% 0.10 160);
+
+    --color-sky-50: oklch(28% 0.04 230);
+    --color-sky-300: oklch(54% 0.10 230);
+    --color-sky-500: oklch(68% 0.12 230);
+
+    --color-sand-50: oklch(26% 0.025 80);
+    --color-sand-200: oklch(36% 0.04 80);
+    --color-sand-400: oklch(58% 0.08 65);
+
+    --color-correct: oklch(78% 0.16 150);
+    --color-correct-bg: oklch(28% 0.06 150);
+    --color-wrong: oklch(74% 0.18 25);
+    --color-wrong-bg: oklch(28% 0.07 25);
+
+    /* Per-unit accent tints — Tailwind defaults are too bright on dark bg.
+       Override the 50/100 (washes), 300 (light borders), 500/600/700 (fills),
+       800/900 (deep text → light text). 400/500/600 saturated stays similar. */
+    --color-amber-50: oklch(28% 0.05 80);
+    --color-amber-100: oklch(34% 0.07 80);
+    --color-amber-300: oklch(60% 0.13 80);
+    --color-amber-500: oklch(76% 0.15 80);
+    --color-amber-700: oklch(82% 0.13 80);
+    --color-amber-800: oklch(86% 0.12 80);
+
+    --color-emerald-50: oklch(26% 0.05 160);
+    --color-emerald-100: oklch(32% 0.07 160);
+    --color-emerald-300: oklch(56% 0.12 160);
+    --color-emerald-500: oklch(70% 0.13 160);
+    --color-emerald-700: oklch(82% 0.12 160);
+    --color-emerald-800: oklch(86% 0.11 160);
+
+    --color-rose-50: oklch(28% 0.05 15);
+    --color-rose-100: oklch(34% 0.07 15);
+    --color-rose-300: oklch(60% 0.13 15);
+    --color-rose-500: oklch(72% 0.16 15);
+    --color-rose-700: oklch(82% 0.13 15);
+    --color-rose-800: oklch(86% 0.12 15);
+
+    --color-violet-50: oklch(28% 0.06 290);
+    --color-violet-100: oklch(34% 0.08 290);
+    --color-violet-300: oklch(60% 0.13 290);
+    --color-violet-500: oklch(72% 0.16 290);
+    --color-violet-700: oklch(82% 0.14 290);
+    --color-violet-800: oklch(86% 0.13 290);
+
+    --color-indigo-50: oklch(28% 0.06 270);
+    --color-indigo-100: oklch(34% 0.08 270);
+    --color-indigo-300: oklch(60% 0.13 270);
+    --color-indigo-500: oklch(72% 0.16 270);
+    --color-indigo-800: oklch(86% 0.13 270);
+
+    --color-stone-100: oklch(28% 0.005 80);
+    --color-stone-200: oklch(34% 0.008 80);
+    --color-stone-300: oklch(50% 0.01 80);
+    --color-stone-500: oklch(72% 0.015 80);
+    --color-stone-700: oklch(86% 0.012 80);
+  }
+
+  /* Auto mode — apply the same overrides when OS prefers dark, *unless* the
+     user has explicitly chosen light. */
+  @media (prefers-color-scheme: dark) {
+    :root[data-theme="auto"],
+    :root:not([data-theme]) {
+      --color-bg: oklch(18% 0.01 180);
+      --color-surface: oklch(22% 0.012 180);
+      --color-ink: oklch(94% 0.01 180);
+      --color-ink-soft: oklch(72% 0.015 180);
+      --color-line: oklch(30% 0.012 180);
+
+      --color-moss-50: oklch(28% 0.04 160);
+      --color-moss-100: oklch(34% 0.06 160);
+      --color-moss-300: oklch(54% 0.10 160);
+      --color-moss-500: oklch(68% 0.12 160);
+      --color-moss-600: oklch(74% 0.12 160);
+      --color-moss-700: oklch(84% 0.10 160);
+
+      --color-sky-50: oklch(28% 0.04 230);
+      --color-sky-300: oklch(54% 0.10 230);
+      --color-sky-500: oklch(68% 0.12 230);
+
+      --color-sand-50: oklch(26% 0.025 80);
+      --color-sand-200: oklch(36% 0.04 80);
+      --color-sand-400: oklch(58% 0.08 65);
+
+      --color-correct: oklch(78% 0.16 150);
+      --color-correct-bg: oklch(28% 0.06 150);
+      --color-wrong: oklch(74% 0.18 25);
+      --color-wrong-bg: oklch(28% 0.07 25);
+
+      --color-amber-50: oklch(28% 0.05 80);
+      --color-amber-100: oklch(34% 0.07 80);
+      --color-amber-300: oklch(60% 0.13 80);
+      --color-amber-500: oklch(76% 0.15 80);
+      --color-amber-700: oklch(82% 0.13 80);
+      --color-amber-800: oklch(86% 0.12 80);
+
+      --color-emerald-50: oklch(26% 0.05 160);
+      --color-emerald-100: oklch(32% 0.07 160);
+      --color-emerald-300: oklch(56% 0.12 160);
+      --color-emerald-500: oklch(70% 0.13 160);
+      --color-emerald-700: oklch(82% 0.12 160);
+      --color-emerald-800: oklch(86% 0.11 160);
+
+      --color-rose-50: oklch(28% 0.05 15);
+      --color-rose-100: oklch(34% 0.07 15);
+      --color-rose-300: oklch(60% 0.13 15);
+      --color-rose-500: oklch(72% 0.16 15);
+      --color-rose-700: oklch(82% 0.13 15);
+      --color-rose-800: oklch(86% 0.12 15);
+
+      --color-violet-50: oklch(28% 0.06 290);
+      --color-violet-100: oklch(34% 0.08 290);
+      --color-violet-300: oklch(60% 0.13 290);
+      --color-violet-500: oklch(72% 0.16 290);
+      --color-violet-700: oklch(82% 0.14 290);
+      --color-violet-800: oklch(86% 0.13 290);
+
+      --color-indigo-50: oklch(28% 0.06 270);
+      --color-indigo-100: oklch(34% 0.08 270);
+      --color-indigo-300: oklch(60% 0.13 270);
+      --color-indigo-500: oklch(72% 0.16 270);
+      --color-indigo-800: oklch(86% 0.13 270);
+
+      --color-stone-100: oklch(28% 0.005 80);
+      --color-stone-200: oklch(34% 0.008 80);
+      --color-stone-300: oklch(50% 0.01 80);
+      --color-stone-500: oklch(72% 0.015 80);
+      --color-stone-700: oklch(86% 0.012 80);
+    }
+  }
+}
+
 @layer utilities {
   .tap-target { min-height: 56px; }
   .glass {

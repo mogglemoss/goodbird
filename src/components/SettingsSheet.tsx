@@ -28,6 +28,8 @@ export function SettingsSheet({ open, onClose }: Props) {
   const setFreeplay = useGame((s) => s.setFreeplay);
   const dailyGoal = useGame((s) => s.dailyGoal);
   const setDailyGoal = useGame((s) => s.setDailyGoal);
+  const theme = useGame((s) => s.theme);
+  const setTheme = useGame((s) => s.setTheme);
 
   const [confirming, setConfirming] = useState(false);
   const [offline, setOffline] = useState<OfflineState>({ kind: "idle" });
@@ -104,10 +106,7 @@ export function SettingsSheet({ open, onClose }: Props) {
             {/* Header */}
             <div className="flex items-start justify-between gap-3">
               <div>
-                <p className="font-mono text-[10px] font-medium uppercase tracking-[0.22em] text-(--color-ink-soft)">
-                  Field protocol
-                </p>
-                <h2 className="mt-1 font-display text-3xl">Settings</h2>
+                <h2 className="font-display text-3xl">Settings</h2>
               </div>
               <button
                 onClick={onClose}
@@ -145,6 +144,28 @@ export function SettingsSheet({ open, onClose }: Props) {
                   className="h-5 w-5 accent-(--color-moss-500)"
                 />
               </label>
+
+              <div className="mt-3 rounded-2xl border-2 border-(--color-line) bg-(--color-bg) px-4 py-3">
+                <div className="font-medium">Theme</div>
+                <div className="mt-2 grid grid-cols-3 gap-1 rounded-full border-2 border-(--color-line) p-0.5">
+                  {(["auto", "light", "dark"] as const).map((opt) => (
+                    <button
+                      key={opt}
+                      type="button"
+                      onClick={() => setTheme(opt)}
+                      aria-pressed={theme === opt}
+                      className={cn(
+                        "rounded-full px-3 py-1.5 text-xs font-semibold capitalize transition-colors cursor-pointer",
+                        theme === opt
+                          ? "bg-(--color-moss-500) text-white"
+                          : "text-(--color-ink-soft) hover:text-(--color-ink)",
+                      )}
+                    >
+                      {opt}
+                    </button>
+                  ))}
+                </div>
+              </div>
 
               <div className="mt-3 rounded-2xl border-2 border-(--color-line) bg-(--color-bg) px-4 py-3">
                 <div className="flex items-baseline justify-between">
