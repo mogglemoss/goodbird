@@ -27,25 +27,24 @@
     WEST MARIN · EAR TRAINING
   </text>
 
-  <!-- Wordmark: bird silhouette + "goodbird" -->
-  <g transform="translate(370 290)">
-    <!-- Bird (mirrored from BirdSilhouette) -->
-    <g fill="#2f5a3f">
-      <!-- Cocked tail -->
-      <path d="M 16 92 C 12 76, 8 58, 6 30 C 8 30, 10 36, 12 46 C 14 64, 16 76, 18 86 Z"/>
-      <!-- Body -->
-      <path d="M 14 80 C 14 100, 22 110, 30 110 C 38 110, 44 104, 46 88 C 48 72, 46 60, 42 54 C 36 42, 26 42, 20 54 C 14 64, 14 76, 14 80 Z"/>
-      <!-- Head -->
-      <circle cx="41" cy="58" r="20"/>
-      <!-- Beak -->
-      <path d="M 58 58 L 75 56 L 58 65 Z"/>
-    </g>
+  <!-- Wordmark: bird silhouette + "goodbird"
+       Using the original BirdSilhouette paths (viewBox 28×24) under a
+       uniform scale so the bird isn't distorted. -->
+  <g transform="translate(370 250) scale(5)" fill="#2f5a3f">
+    <!-- Cocked tail -->
+    <path d="M 8 16 C 6 13, 4 10, 3 5 C 4 5, 5 6, 6 8 C 7 11, 8 13, 9 15 Z"/>
+    <!-- Body -->
+    <path d="M 7 14 C 7 18, 11 19, 15 19 C 19 19, 22 18, 23 15 C 24 12, 23 10, 21 9 C 18 7, 13 7, 10 9 C 7 11, 7 13, 7 14 Z"/>
+    <!-- Head -->
+    <circle cx="20.5" cy="10" r="3.6"/>
+    <!-- Beak -->
+    <path d="M 23.6 10 L 27.4 9.6 L 23.6 11.2 Z"/>
     <!-- Eye -->
-    <circle cx="48" cy="56" r="3.5" fill="#f7faf6"/>
+    <circle cx="21.6" cy="9.6" r="0.65" fill="#f7faf6"/>
   </g>
 
-  <!-- Wordmark text -->
-  <text x="470" y="350"
+  <!-- Wordmark text — positioned to sit baseline-aligned with the bird body -->
+  <text x="540" y="365"
         font-family="Fraunces, Georgia, serif"
         font-weight="500"
         font-size="124"
