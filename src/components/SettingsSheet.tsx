@@ -43,7 +43,14 @@ export function SettingsSheet({ open, onClose }: Props) {
     refreshStorage();
     const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
     window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
+    // Body scroll lock — without this, scrolling inside the sheet bleeds
+    // through to the page behind once the sheet content fits in its container.
+    const prevBodyOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prevBodyOverflow;
+    };
   }, [open, onClose]);
 
   const startDownload = async () => {
@@ -86,15 +93,43 @@ export function SettingsSheet({ open, onClose }: Props) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 24 }}
             transition={{ duration: 0.22, ease: "easeOut" }}
-            className="fixed inset-x-0 bottom-0 z-50 mx-auto max-h-[88dvh] max-w-md overflow-y-auto rounded-t-3xl bg-(--color-surface) p-6 shadow-(--shadow-pop)"
+            className="fixed inset-x-0 bottom-0 z-50 mx-auto max-h-[88dvh] max-w-md overflow-y-auto overscroll-contain rounded-t-3xl bg-(--color-surface) px-6 pb-8 pt-6 shadow-(--shadow-pop)"
           >
-            <div className="mx-auto h-1 w-12 rounded-full bg-(--color-line)" aria-hidden />
-            <h2 className="mt-4 font-display text-2xl">Settings</h2>
+            {/* Header */}
+            <div className="flex items-start justify-between gap-3">
+              <div>
+                <p className="font-mono text-[10px] font-medium uppercase tracking-[0.22em] text-(--color-ink-soft)">
+                  Field protocol
+                </p>
+                <h2 className="mt-1 font-display text-3xl">Settings</h2>
+              </div>
+              <button
+                onClick={onClose}
+                aria-label="Close settings"
+                className="grid h-9 w-9 shrink-0 place-items-center rounded-full text-(--color-ink-soft) hover:bg-(--color-line) cursor-pointer"
+              >
+                <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round">
+                  <path d="M6 6l12 12M18 6L6 18" />
+                </svg>
+              </button>
+            </div>
 
-            <Section title="Mode">
+            {/* Field ethics — promoted from Onboarding footer to a permanent reference */}
+            <Section label="Field ethics">
+              <p className="rounded-2xl border-2 border-(--color-moss-300)/60 bg-(--color-moss-50) px-4 py-3 text-sm leading-snug text-(--color-ink)">
+                <strong>Listen at home; watch in the field.</strong>{" "}
+                <span className="text-(--color-ink-soft)">
+                  Playing recordings outside to attract birds stresses them and
+                  disturbs territories, especially while nesting. The recordings
+                  are for ear training, not as bait.
+                </span>
+              </p>
+            </Section>
+
+            <Section label="Mode">
               <label className="flex cursor-pointer items-center justify-between gap-3 rounded-2xl border-2 border-(--color-line) bg-(--color-bg) px-4 py-3">
                 <div className="min-w-0">
-                  <div className="font-medium">Freeplay mode</div>
+                  <div className="font-medium">Freeplay</div>
                   <div className="text-xs text-(--color-ink-soft)">Hearts don't deplete; lessons can't fail.</div>
                 </div>
                 <input
@@ -108,7 +143,7 @@ export function SettingsSheet({ open, onClose }: Props) {
               <div className="mt-3 rounded-2xl border-2 border-(--color-line) bg-(--color-bg) px-4 py-3">
                 <div className="flex items-baseline justify-between">
                   <div className="font-medium">Daily goal</div>
-                  <div className="font-display text-lg text-(--color-moss-700)">{dailyGoal} XP</div>
+                  <div className="font-display text-lg text-(--color-moss-700)">{dailyGoal} <span className="font-mono text-xs">XP</span></div>
                 </div>
                 <input
                   type="range"
@@ -120,36 +155,36 @@ export function SettingsSheet({ open, onClose }: Props) {
                   className="mt-2 w-full accent-(--color-moss-500)"
                   aria-label="Daily XP goal"
                 />
-                <div className="mt-1 flex justify-between text-[10px] uppercase tracking-wider text-(--color-ink-soft)">
-                  <span>casual · 10</span>
-                  <span>committed · 100</span>
+                <div className="mt-1 flex justify-between font-mono text-[10px] uppercase tracking-[0.18em] text-(--color-ink-soft)">
+                  <span>casual</span>
+                  <span>committed</span>
                 </div>
               </div>
             </Section>
 
-            <Section title="Stats">
+            <Section label="Field log">
               <dl className="grid grid-cols-2 gap-3">
                 <Stat label="XP" value={xp} />
                 <Stat label="Day streak" value={streakDays} />
-                <Stat label="Lessons done" value={completedCount} />
+                <Stat label="Lessons" value={completedCount} />
                 <Stat label="Species heard" value={speciesSeen} />
               </dl>
             </Section>
 
-            <Section title="Offline">
+            <Section label="Offline">
               {!("serviceWorker" in navigator) || import.meta.env.DEV ? (
                 <p className="text-sm text-(--color-ink-soft)">
                   Offline mode is only available on the deployed site, not in dev.
                 </p>
               ) : (
                 <>
-                  <p className="text-sm text-(--color-ink-soft)">
-                    Lessons you've already played are cached automatically. Tap below
-                    to pre-download every clip and image so the app works without
-                    an internet connection.
+                  <p className="text-sm leading-snug text-(--color-ink-soft)">
+                    Lessons you've already played are cached automatically.
+                    Tap below to pre-download every clip and image so the app
+                    works without an internet connection.
                   </p>
                   {(cachedCount !== null || storageBytes !== null) && (
-                    <p className="mt-2 text-xs text-(--color-ink-soft)">
+                    <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.18em] text-(--color-ink-soft)">
                       {cachedCount !== null && <>{cachedCount} clips/images cached</>}
                       {cachedCount !== null && storageBytes !== null && " · "}
                       {storageBytes !== null && (
@@ -168,20 +203,20 @@ export function SettingsSheet({ open, onClose }: Props) {
                         onClick={startDownload}
                         className="tap-target rounded-full bg-(--color-moss-500) px-4 py-3 text-sm font-semibold text-white shadow-(--shadow-pop) hover:bg-(--color-moss-600) cursor-pointer"
                       >
-                        Download for offline
+                        Download all
                       </button>
                       <button
                         onClick={wipeMedia}
                         className="tap-target rounded-full border-2 border-(--color-line) px-4 py-3 text-sm font-semibold text-(--color-ink-soft) hover:border-(--color-ink-soft) cursor-pointer"
                       >
-                        Clear media cache
+                        Clear cache
                       </button>
                     </div>
                   )}
                   {offline.kind === "downloading" && (
                     <div className="mt-3">
-                      <div className="flex justify-between text-xs text-(--color-ink-soft)">
-                        <span>Downloading…</span>
+                      <div className="flex justify-between font-mono text-[10px] uppercase tracking-[0.18em] text-(--color-ink-soft)">
+                        <span>downloading…</span>
                         <span>{offline.done}/{offline.total}</span>
                       </div>
                       <div className="mt-1 h-2 overflow-hidden rounded-full bg-(--color-line)">
@@ -204,7 +239,7 @@ export function SettingsSheet({ open, onClose }: Props) {
               )}
             </Section>
 
-            <Section title="Reset">
+            <Section label="Danger" tone="warn">
               {!confirming ? (
                 <button
                   onClick={() => setConfirming(true)}
@@ -215,7 +250,7 @@ export function SettingsSheet({ open, onClose }: Props) {
               ) : (
                 <div className="space-y-3">
                   <p className="text-sm text-(--color-ink-soft)">
-                    Wipes XP, streak, lesson completions, and per-species stats. Cannot be undone.
+                    Wipes XP, streak, lesson completions, favorites, and per-species stats. Cannot be undone.
                   </p>
                   <div className="grid grid-cols-2 gap-3">
                     <button
@@ -234,13 +269,6 @@ export function SettingsSheet({ open, onClose }: Props) {
                 </div>
               )}
             </Section>
-
-            <button
-              onClick={onClose}
-              className="mt-6 w-full text-center text-sm text-(--color-ink-soft) hover:text-(--color-ink) cursor-pointer"
-            >
-              Close
-            </button>
           </motion.div>
         </>
       )}
@@ -248,20 +276,27 @@ export function SettingsSheet({ open, onClose }: Props) {
   );
 }
 
-function Section({ title, children }: { title: string; children: React.ReactNode }) {
+function Section({ label, tone, children }: { label: string; tone?: "warn"; children: React.ReactNode }) {
   return (
     <section className="mt-6">
-      <h3 className="text-xs font-semibold uppercase tracking-wider text-(--color-ink-soft)">{title}</h3>
-      <div className="mt-3">{children}</div>
+      <h3
+        className={cn(
+          "font-mono text-[10px] font-medium uppercase tracking-[0.22em]",
+          tone === "warn" ? "text-(--color-wrong)" : "text-(--color-moss-700)",
+        )}
+      >
+        {label}
+      </h3>
+      <div className="mt-2.5">{children}</div>
     </section>
   );
 }
 
 function Stat({ label, value }: { label: string; value: number }) {
   return (
-    <div className={cn("rounded-2xl border-2 border-(--color-line) bg-(--color-bg) px-3 py-3")}>
-      <div className="font-display text-2xl">{value}</div>
-      <div className="text-xs uppercase tracking-wider text-(--color-ink-soft)">{label}</div>
+    <div className="rounded-2xl border-2 border-(--color-line) bg-(--color-moss-50) px-3 py-3">
+      <div className="font-display text-2xl tabular-nums">{value}</div>
+      <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-(--color-ink-soft)">{label}</div>
     </div>
   );
 }
