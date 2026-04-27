@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f7faf6"/>
+      <stop offset="0.55" stop-color="#f1ede2"/>
+      <stop offset="1" stop-color="#dfeada"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background gradient -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Tiny decorative birds, upper-left -->
+  <g stroke="#2f5a3f" stroke-opacity="0.30" stroke-width="2" fill="none" stroke-linecap="round">
+    <path d="M120 130 q 14 -16, 28 0 q 14 -16, 28 0"/>
+    <path d="M210 92 q 10 -12, 20 0 q 10 -12, 20 0"/>
+    <path d="M310 154 q 8 -10, 16 0 q 8 -10, 16 0"/>
+  </g>
+
+  <!-- Top mono caps label -->
+  <text x="600" y="200"
+        text-anchor="middle"
+        font-family="Geist Mono, ui-monospace, Menlo, monospace"
+        font-size="24"
+        letter-spacing="6"
+        fill="#5b6c63">
+    WEST MARIN · EAR TRAINING
+  </text>
+
+  <!-- Wordmark: bird silhouette + "goodbird" -->
+  <g transform="translate(370 290)">
+    <!-- Bird (mirrored from BirdSilhouette) -->
+    <g fill="#2f5a3f">
+      <!-- Cocked tail -->
+      <path d="M 16 92 C 12 76, 8 58, 6 30 C 8 30, 10 36, 12 46 C 14 64, 16 76, 18 86 Z"/>
+      <!-- Body -->
+      <path d="M 14 80 C 14 100, 22 110, 30 110 C 38 110, 44 104, 46 88 C 48 72, 46 60, 42 54 C 36 42, 26 42, 20 54 C 14 64, 14 76, 14 80 Z"/>
+      <!-- Head -->
+      <circle cx="41" cy="58" r="20"/>
+      <!-- Beak -->
+      <path d="M 58 58 L 75 56 L 58 65 Z"/>
+    </g>
+    <!-- Eye -->
+    <circle cx="48" cy="56" r="3.5" fill="#f7faf6"/>
+  </g>
+
+  <!-- Wordmark text -->
+  <text x="470" y="350"
+        font-family="Fraunces, Georgia, serif"
+        font-weight="500"
+        font-size="124"
+        letter-spacing="-2"
+        fill="#2f5a3f">
+    goodbird
+  </text>
+
+  <!-- Subhead -->
+  <text x="600" y="430"
+        text-anchor="middle"
+        font-family="Fraunces, Georgia, serif"
+        font-weight="500"
+        font-size="44"
+        letter-spacing="-0.5"
+        fill="#0d1f15">
+    A field guide you can hear.
+  </text>
+
+  <!-- Coordinates -->
+  <text x="600" y="478"
+        text-anchor="middle"
+        font-family="Geist Mono, ui-monospace, Menlo, monospace"
+        font-size="20"
+        letter-spacing="6"
+        fill="#5b6c63">
+    38°02′N · 122°42′W
+  </text>
+
+  <!-- Layered rolling hills along the bottom -->
+  <g>
+    <!-- Far hills, palest -->
+    <path
+      d="M0 530 C 180 490, 360 540, 540 510 C 720 480, 900 530, 1080 510 L 1200 515 L 1200 630 L 0 630 Z"
+      fill="#cfdac7" fill-opacity="0.55"/>
+    <!-- Mid hills -->
+    <path
+      d="M0 560 C 150 530, 330 580, 510 555 C 690 528, 870 575, 1050 552 L 1200 555 L 1200 630 L 0 630 Z"
+      fill="#a9bd9c" fill-opacity="0.65"/>
+    <!-- Near hills -->
+    <path
+      d="M0 595 C 120 580, 300 605, 480 590 C 660 575, 840 600, 1020 588 L 1200 590 L 1200 630 L 0 630 Z"
+      fill="#7a9466" fill-opacity="0.55"/>
+  </g>
+</svg>
