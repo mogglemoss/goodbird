@@ -27,10 +27,14 @@
     WEST MARIN · EAR TRAINING
   </text>
 
-  <!-- Wordmark: bird silhouette + "goodbird"
-       Using the original BirdSilhouette paths (viewBox 28×24) under a
-       uniform scale so the bird isn't distorted. -->
-  <g transform="translate(370 250) scale(5)" fill="#2f5a3f">
+  <!-- Wordmark: matches the runtime header (Wordmark.tsx) — gap-0, slight
+       overlap between bird beak and the 'g', baseline-aligned, tracking-tight.
+       Bird is positioned so its body bottom sits ~3px below the text baseline
+       (the runtime's translate-y-[3px]).
+       Bird viewBox is 28×24; at scale(5) the bird is 140×120 OG-units.
+       Body bottom is at viewBox y=19 → scaled y=95. Text baseline at y=358,
+       so bird translateY = 358 + 15 (≈3px scaled by 5) - 95 = 278. -->
+  <g transform="translate(232 278) scale(5)" fill="#2f5a3f">
     <!-- Cocked tail -->
     <path d="M 8 16 C 6 13, 4 10, 3 5 C 4 5, 5 6, 6 8 C 7 11, 8 13, 9 15 Z"/>
     <!-- Body -->
@@ -43,12 +47,14 @@
     <circle cx="21.6" cy="9.6" r="0.65" fill="#f7faf6"/>
   </g>
 
-  <!-- Wordmark text — positioned to sit baseline-aligned with the bird body -->
-  <text x="540" y="365"
+  <!-- Wordmark text — beak tip is at x = 330 + 27.4*5 = 467; text starts
+       slightly inside that for the runtime's overlap (mirrors -ms-1 = -4px,
+       scaled by 5 = -20px). -->
+  <text x="357" y="358"
         font-family="Fraunces, Georgia, serif"
         font-weight="500"
         font-size="124"
-        letter-spacing="-2"
+        letter-spacing="-3"
         fill="#2f5a3f">
     goodbird
   </text>
