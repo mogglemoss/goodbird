@@ -52,26 +52,11 @@ const CROP = {
   full: { left: 0, top: 0, width: 1425, height: 330 },
 };
 
-// Brand colors used for app-icon backgrounds.
-const MOSS = { r: 0, g: 82, b: 47 };       // oklch(38% .10 160) — moss-700
+// App-icon background. Cream so the mark sits on the same surface as the
+// rest of the brand, not in a "reverse" dark-green app-icon treatment.
 const CREAM = { r: 233, g: 226, b: 214 };  // #E9E2D6
 
 const TRANSPARENT = { r: 0, g: 0, b: 0, alpha: 0 };
-
-/**
- * Recolor every non-transparent pixel of a buffer to the target color.
- * Used to render the dark mark in cream against a dark-green app-icon bg.
- */
-async function recolor(srcBuf, color) {
-  const { data, info } = await sharp(srcBuf).raw().toBuffer({ resolveWithObject: true });
-  const out = Buffer.from(data);
-  for (let i = 0; i < out.length; i += 4) {
-    if (out[i + 3] > 0) {
-      out[i] = color.r; out[i + 1] = color.g; out[i + 2] = color.b;
-    }
-  }
-  return sharp(out, { raw: { width: info.width, height: info.height, channels: 4 } }).png().toBuffer();
-}
 
 /** Solid-color rounded-square canvas. */
 function solidBg(size, color) {
@@ -127,28 +112,28 @@ async function main() {
     .toFile(resolve(PUBLIC, "favicon.png"));
   console.log("✓ favicon.png (96 × 96)");
 
-  // 5) Apple touch icon — 180×180 dark-green, cream mark inside
-  const cream180Mark = await recolor(
-    await sharp(markBuf).resize({ width: 130, height: 130, fit: "contain", background: TRANSPARENT }).toBuffer(),
-    CREAM,
-  );
-  await sharp(await solidBg(180, MOSS))
-    .composite([{ input: cream180Mark, gravity: "center" }])
+  // 5) Apple touch icon — 180×180 cream background + the original dark-green
+  //    mark on top. Same direction as the lockup; no inverted "reverse"
+  //    treatment that read as too app-icon-y.
+  const mark180 = await sharp(markBuf)
+    .resize({ width: 130, height: 130, fit: "contain", background: TRANSPARENT })
+    .toBuffer();
+  await sharp(await solidBg(180, CREAM))
+    .composite([{ input: mark180, gravity: "center" }])
     .toFile(resolve(PUBLIC, "apple-touch-icon.png"));
-  console.log("✓ apple-touch-icon.png (180 × 180, dark green + cream mark)");
+  console.log("✓ apple-touch-icon.png (180 × 180, cream + dark-green mark)");
 
-  // 6) PWA maskable icons — 4:1 safe area = mark covers central 70%
+  // 6) PWA maskable icons — 4:1 safe area = mark in central 70% on cream
   for (const size of [192, 512]) {
     const inner = Math.floor(size * 0.7);
-    const creamInner = await recolor(
-      await sharp(markBuf).resize({ width: inner, height: inner, fit: "contain", background: TRANSPARENT }).toBuffer(),
-      CREAM,
-    );
-    await sharp(await solidBg(size, MOSS))
-      .composite([{ input: creamInner, gravity: "center" }])
+    const innerMark = await sharp(markBuf)
+      .resize({ width: inner, height: inner, fit: "contain", background: TRANSPARENT })
+      .toBuffer();
+    await sharp(await solidBg(size, CREAM))
+      .composite([{ input: innerMark, gravity: "center" }])
       .toFile(resolve(PUBLIC, `icon-${size}.png`));
   }
-  console.log("✓ icon-192.png + icon-512.png (PWA maskable)");
+  console.log("✓ icon-192.png + icon-512.png (cream + dark-green mark)");
 
   // 7) OG image — 1200 × 630, cream canvas, lockup visually centered
   //    above a wavy fog/hill band that mirrors the Hero section. The

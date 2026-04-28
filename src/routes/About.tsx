@@ -63,6 +63,28 @@ export function AboutRoute() {
         </p>
       </section>
 
+      {/* Personal note from the maker. Quirky/sincere in tone, slight
+          left-border treatment to signal "aside" rather than spec copy. */}
+      <section className="mt-6 border-l-4 border-(--color-moss-300) pl-4">
+        <p className="text-sm leading-relaxed italic text-(--color-ink-soft)">
+          A note: we made this app because we love these birds.{" "}
+          <strong className="not-italic text-(--color-ink)">Tracy Corbin</strong>
+          {" "}(my wife) and{" "}
+          <strong className="not-italic text-(--color-ink)">Beth Lucas</strong>
+          {" "}(fellow bird-nerd) had the idea, wanted a way to learn the
+          calls of West Marin, and convinced me to build it. Then they
+          kept feeding me <span className="not-italic">"wait, what was that?"</span>
+          {" "}until the species list was right.
+        </p>
+        <p className="mt-3 text-sm leading-relaxed italic text-(--color-ink-soft)">
+          They're the real birders. I'm the real nerd. goodbird is a
+          product of the three of us.
+        </p>
+        <p className="mt-3 font-display text-base text-(--color-moss-700)">
+          — Scott Corbin
+        </p>
+      </section>
+
       <section className="mt-8">
         <h2 className="font-mono text-[10px] font-medium uppercase tracking-[0.22em] text-(--color-moss-700)">
           A note for the trail
