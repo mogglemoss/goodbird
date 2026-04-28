@@ -1,3 +1,4 @@
+/// <reference types="vitest/config" />
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
@@ -15,10 +16,15 @@ export default defineConfig({
     __APP_VERSION__: JSON.stringify(pkg.version),
   },
   build: {
-    // The 7 unit JSONs are inlined via import.meta.glob({eager:true}) so the
-    // entire app shell + all content lives in one chunk. ~580 KB raw / ~170 KB
-    // gzip — fine for prototype scale. Real code-splitting would require async
+    // The 12 unit JSONs are inlined via import.meta.glob({eager:true}) so the
+    // entire app shell + all content lives in one chunk. ~790 KB raw / ~220 KB
+    // gzip — fine for this scale. Real code-splitting would require async
     // manifest loading and loading states across every route.
     chunkSizeWarningLimit: 800,
+  },
+  test: {
+    environment: 'node',
+    include: ['src/**/*.test.ts'],
+    globals: false,
   },
 })
