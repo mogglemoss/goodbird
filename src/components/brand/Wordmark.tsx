@@ -1,16 +1,15 @@
 import { cn } from "@/lib/cn";
 
 /**
- * The "goodbird" brand lockup. Renders the rasterized lockup PNG (mark
- * + wordmark, no tagline) at three header-friendly sizes via height-only
- * sizing — width follows the source aspect ratio (~5.4:1).
+ * The "goodbird" brand lockup — compact version (mark + wordmark, no
+ * tagline). Used for the sticky top bar and Settings sheet, where the
+ * tagline would be too small to read. The About page renders the full
+ * lockup directly via its own larger <img>; this component intentionally
+ * does not surface a "size=lg + tagline" mode.
  *
- * The lockup is a hand-tuned graphic so we ship the raster directly
- * rather than rebuilding it inline. srcSet picks @2x on retina screens.
- *
- * Colors are baked into the PNG (dark moss green). If dark-mode
- * legibility ever becomes an issue, swap to a mask-image approach so
- * the color tracks `currentColor`.
+ * srcSet picks @2x on retina screens. Color is baked into the PNG; if
+ * dark-mode legibility ever becomes an issue, swap to mask-image so the
+ * fill tracks `currentColor`.
  */
 
 interface Props {
@@ -19,21 +18,20 @@ interface Props {
 }
 
 const SIZES = {
-  sm: "h-5",   // 20 px tall — Settings sheet, sticky bar
-  md: "h-7",   // 28 px tall — sticky bar at desktop sizes
-  lg: "h-10",  // 40 px tall — About page hero
+  sm: "h-6",   // 24 px tall — Settings sheet
+  md: "h-9",   // 36 px tall — sticky top bar
+  lg: "h-12",  // 48 px tall — generic large
 };
 
 export function Wordmark({ size = "sm", className }: Props) {
   return (
     <img
-      src="/lockup.png"
-      srcSet="/lockup.png 1x, /lockup-2x.png 2x"
+      src="/lockup-compact.png"
+      srcSet="/lockup-compact.png 1x, /lockup-compact-2x.png 2x"
       alt="goodbird"
       width={720}
-      height={133}
+      height={167}
       className={cn("w-auto", SIZES[size], className)}
-      // Decorative role kept implicit via meaningful alt; no extra aria.
     />
   );
 }
