@@ -126,6 +126,20 @@ export function AboutRoute() {
           </li>
           <li className="rounded-2xl border-2 border-(--color-line) bg-(--color-surface) px-4 py-3">
             <a
+              href="https://www.pointblue.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-(--color-moss-700) underline"
+            >
+              Point Blue Conservation Science
+            </a>
+            <p className="mt-0.5 text-xs leading-snug text-(--color-ink-soft)">
+              Climate-smart bird research; runs the Palomarin Field Station
+              near Bolinas — continuous songbird monitoring since 1966.
+            </p>
+          </li>
+          <li className="rounded-2xl border-2 border-(--color-line) bg-(--color-surface) px-4 py-3">
+            <a
               href="https://marinaudubon.org"
               target="_blank"
               rel="noopener noreferrer"
