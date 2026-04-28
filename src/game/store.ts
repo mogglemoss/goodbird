@@ -4,6 +4,7 @@ import type { Exercise, SpeciesStat } from "@/lib/types";
 import { generateLesson } from "./lesson-generator";
 import { getLesson } from "@/lib/manifest";
 import { STARTING_HEARTS } from "./scoring";
+import { sanitizePersistedState } from "./persist-schema";
 
 type LessonOutcome = "passed" | "failed" | "in-progress";
 
@@ -241,6 +242,13 @@ export const useGame = create<GameState>()(
         xpTodayDay: s.xpTodayDay,
         theme: s.theme,
         dismissedInstallHint: s.dismissedInstallHint,
+      }),
+      // Validate and coerce on rehydration. If localStorage is corrupt
+      // (truncated JSON, missing fields, wrong types from an old build),
+      // fall back to safe defaults rather than booting into broken state.
+      merge: (persisted, current) => ({
+        ...current,
+        ...sanitizePersistedState(persisted),
       }),
     },
   ),
