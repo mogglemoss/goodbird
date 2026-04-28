@@ -276,16 +276,27 @@ function correctMnemonic(ex: Exercise): string {
   }
 }
 
-/** Hint text shown by the in-exercise hint button. */
+/**
+ * Hint text shown by the in-exercise hint button. Each kind needs a hint
+ * that's a real cue without being the literal answer:
+ *   - identify  → mnemonic (different form than species-card choices)
+ *   - mnemonic  → species common name (different form than mnemonic
+ *                 choices on screen). Earlier this returned the mnemonic
+ *                 itself, which IS the answer.
+ *   - find-bird → mnemonic (helps interpret which clip is which)
+ *   - discriminate → generic listening cue. Earlier branch returned
+ *                    "Same species" / "Different" — literally the answer.
+ */
 function hintFor(ex: Exercise): string | null {
   switch (ex.kind) {
     case "identify":
-    case "mnemonic":
       return getSpecies(ex.correctSpeciesId).mnemonic;
+    case "mnemonic":
+      return `It's the ${getSpecies(ex.correctSpeciesId).commonName}.`;
     case "find-bird":
       return getSpecies(ex.targetSpeciesId).mnemonic;
     case "discriminate":
-      return ex.same ? "Same species — listen for matching pacing and pitch." : "Different species.";
+      return "Listen for matching pacing, pitch, and timbre.";
   }
 }
 
