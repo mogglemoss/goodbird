@@ -4,13 +4,13 @@ Bite-sized ear training for the birds of West Marin, California.
 
 **Live at [goodbird.app](https://goodbird.app/).**
 
-A small, polished web prototype for learning to identify the bird sounds
-you'd actually hear along the Point Reyes, Bolinas, and Tomales coastline —
-twelve habitats from Coastal Scrub to Open Coast to Night Voices, each one a
-short course built around the calls and songs of that place.
+A small, polished web app for learning to identify the bird sounds you'd
+actually hear along the Point Reyes, Bolinas, and Tomales coastline —
+twelve habitats from Coastal Scrub to Open Coast to Night Voices, each one
+a short course built around the calls and songs of that place.
 
-Built as a no-account, no-backend single-page app: pure static, deploys to
-Netlify in one command.
+No accounts, no backend. Pure static SPA, deploys to Netlify in one
+command.
 
 ## Stack
 

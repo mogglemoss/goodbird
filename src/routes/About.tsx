@@ -47,8 +47,8 @@ export function AboutRoute() {
           songs you'd actually hear in that place.
         </p>
         <p>
-          Built as a no-account, no-backend prototype. Your progress lives in
-          this browser; nothing leaves your device unless you tap{" "}
+          No accounts, no backend. Your progress lives in this browser;
+          nothing leaves your device unless you tap{" "}
           <em className="text-(--color-ink)">Send feedback</em>.
         </p>
       </section>
