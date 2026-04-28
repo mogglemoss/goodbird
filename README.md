@@ -9,8 +9,8 @@ actually hear along the Point Reyes, Bolinas, and Tomales coastline —
 twelve habitats from Coastal Scrub to Open Coast to Night Voices, each one
 a short course built around the calls and songs of that place.
 
-No accounts, no backend. Pure static SPA, deploys to Netlify in one
-command.
+No accounts, no client-side tracking. Pure static SPA, deploys to Netlify
+in one command.
 
 ## Stack
 
