@@ -25,9 +25,8 @@ export function AboutRoute() {
       </div>
 
       {/* Hero lockup — full version with tagline, horizontally centered.
-          Width-driven sizing (w-full inside a max-width container) so the
-          ~4.3:1 aspect doesn't overflow on small viewports. h-auto lets
-          height follow naturally from intrinsic dimensions. */}
+          Both light and dark variants render; CSS in index.css hides the
+          inactive one via .wordmark-light / .wordmark-dark. */}
       <div className="mt-8 flex flex-col items-center text-center">
         <img
           src="/lockup.png"
@@ -35,7 +34,16 @@ export function AboutRoute() {
           alt="goodbird"
           width={720}
           height={167}
-          className="block h-auto w-full"
+          className="wordmark-light block h-auto w-full"
+        />
+        <img
+          src="/lockup-dark.png"
+          srcSet="/lockup-dark.png 1x, /lockup-dark-2x.png 2x"
+          alt=""
+          aria-hidden
+          width={720}
+          height={167}
+          className="wordmark-dark h-auto w-full"
         />
         <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.22em] text-(--color-ink-soft)">
           v{__APP_VERSION__}

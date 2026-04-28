@@ -56,6 +56,10 @@ const CROP = {
 // rest of the brand, not in a "reverse" dark-green app-icon treatment.
 const CREAM = { r: 233, g: 226, b: 214 };  // #E9E2D6
 
+// Dark-mode ink color — near-white cream for the lockup so it reads cleanly
+// on the dark-mode background (oklch(18% .01 180), roughly RGB(36, 37, 38)).
+const DARK_MODE_INK = { r: 233, g: 230, b: 220 };
+
 const TRANSPARENT = { r: 0, g: 0, b: 0, alpha: 0 };
 
 /** Solid-color rounded-square canvas. */
@@ -63,6 +67,26 @@ function solidBg(size, color) {
   return sharp({
     create: { width: size, height: size, channels: 4, background: color },
   }).png().toBuffer();
+}
+
+/**
+ * Recolor every non-transparent pixel of a PNG buffer to a single target
+ * RGB, preserving alpha exactly. Used to produce dark-mode lockup variants
+ * where the source's green-on-cream needs to flip to cream-on-dark.
+ *
+ * Anti-aliased edges keep their alpha (no halos) and the sage stroke
+ * stays slightly more transparent than the dark-green stroke because
+ * we touch RGB only, not the alpha channel.
+ */
+async function recolorAllInk(srcBuf, color) {
+  const { data, info } = await sharp(srcBuf).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+  const out = Buffer.from(data);
+  for (let i = 0; i < out.length; i += 4) {
+    if (out[i + 3] > 0) {
+      out[i] = color.r; out[i + 1] = color.g; out[i + 2] = color.b;
+    }
+  }
+  return sharp(out, { raw: { width: info.width, height: info.height, channels: 4 } }).png().toBuffer();
 }
 
 async function main() {
@@ -81,6 +105,13 @@ async function main() {
   await sharp(fullBuf).resize({ width: 720 }).toFile(resolve(PUBLIC, "lockup.png"));
   await sharp(fullBuf).resize({ width: 1440 }).toFile(resolve(PUBLIC, "lockup-2x.png"));
   console.log("✓ lockup.png + lockup-2x.png (full lockup with tagline)");
+
+  // 2b) Dark-mode full lockup — same shape, recolored to cream. Used in
+  //     the About hero when the user is in dark mode.
+  const fullDarkBuf = await recolorAllInk(fullBuf, DARK_MODE_INK);
+  await sharp(fullDarkBuf).resize({ width: 720 }).toFile(resolve(PUBLIC, "lockup-dark.png"));
+  await sharp(fullDarkBuf).resize({ width: 1440 }).toFile(resolve(PUBLIC, "lockup-dark-2x.png"));
+  console.log("✓ lockup-dark.png + lockup-dark-2x.png (dark-mode variant)");
 
   // 3) Compact lockup — both hill strokes but NO tagline. Built by
   //    compositing: full-height mark column on the left + wordmark-text
@@ -104,6 +135,12 @@ async function main() {
   await sharp(compactBuf).resize({ width: 720 }).toFile(resolve(PUBLIC, "lockup-compact.png"));
   await sharp(compactBuf).resize({ width: 1440 }).toFile(resolve(PUBLIC, "lockup-compact-2x.png"));
   console.log("✓ lockup-compact.png + lockup-compact-2x.png (no tagline, both hills)");
+
+  // 3b) Dark-mode compact lockup — used in header/Settings under dark mode.
+  const compactDarkBuf = await recolorAllInk(compactBuf, DARK_MODE_INK);
+  await sharp(compactDarkBuf).resize({ width: 720 }).toFile(resolve(PUBLIC, "lockup-compact-dark.png"));
+  await sharp(compactDarkBuf).resize({ width: 1440 }).toFile(resolve(PUBLIC, "lockup-compact-dark-2x.png"));
+  console.log("✓ lockup-compact-dark.png + lockup-compact-dark-2x.png (dark-mode compact)");
 
   // 4) Favicon — pad mark to square
   await sharp(markBuf)

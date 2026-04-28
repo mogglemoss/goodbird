@@ -1,5 +1,24 @@
 @import "tailwindcss";
 
+/*
+ * Brand lockup light/dark swap. Both <img> variants render in the DOM
+ * (one is hidden via display: none) so the swap is instant — no flash
+ * of unstyled content on theme change. Selector logic mirrors the
+ * dark-mode token block: explicit dark theme always shows the dark
+ * variant; auto/unset shows dark only when the OS prefers dark.
+ */
+.wordmark-dark { display: none; }
+
+:root[data-theme="dark"] .wordmark-light { display: none; }
+:root[data-theme="dark"] .wordmark-dark  { display: inline-block; }
+
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="auto"] .wordmark-light,
+  :root:not([data-theme]) .wordmark-light { display: none; }
+  :root[data-theme="auto"] .wordmark-dark,
+  :root:not([data-theme]) .wordmark-dark  { display: inline-block; }
+}
+
 @theme {
   /* Naturalist palette: misty coastal greens + warm sand + sky */
   --color-bg: oklch(98.5% 0.005 180);
@@ -66,14 +85,19 @@
  * (or the attribute is missing) and the OS prefers dark. We override the
  * Tailwind / project CSS color tokens; all our utilities reference these
  * vars, so the whole UI re-tints without touching component code.
+ *
+ * `color-scheme: dark` is what tells the browser to render UA form
+ * controls (checkboxes, radios, scrollbars) in their dark variant. It
+ * MUST only fire on actual dark renders — applying it under
+ * [data-theme="auto"] regardless of OS preference flips the form
+ * controls dark even on a light OS, which is the bug the user hit
+ * with the Freeplay checkbox.
  */
-:root[data-theme="dark"],
-:root[data-theme="auto"] {
-  /* App shell */
+:root[data-theme="dark"] {
   color-scheme: dark;
 }
 @media (prefers-color-scheme: dark) {
-  :root[data-theme="auto"]:where(*),
+  :root[data-theme="auto"],
   :root:not([data-theme]) {
     color-scheme: dark;
   }
@@ -150,6 +174,37 @@
     --color-stone-300: oklch(50% 0.01 80);
     --color-stone-500: oklch(72% 0.015 80);
     --color-stone-700: oklch(86% 0.012 80);
+
+    /* slate / teal / orange / fuchsia — added when 4 new units shipped
+       (Soaring Country / Open Coast / Redwood Forest / Town & Garden).
+       Light mode used Tailwind defaults (text-X-700/800) which become
+       dark-on-dark in dark mode. Pre-dawn-cormorant invisible bug. */
+    --color-slate-50: oklch(28% 0.005 240);
+    --color-slate-100: oklch(34% 0.008 240);
+    --color-slate-300: oklch(54% 0.012 240);
+    --color-slate-500: oklch(70% 0.015 240);
+    --color-slate-700: oklch(84% 0.012 240);
+
+    --color-teal-50: oklch(28% 0.04 190);
+    --color-teal-100: oklch(34% 0.06 190);
+    --color-teal-300: oklch(60% 0.10 190);
+    --color-teal-500: oklch(72% 0.12 190);
+    --color-teal-700: oklch(82% 0.10 190);
+    --color-teal-800: oklch(86% 0.09 190);
+
+    --color-orange-50: oklch(28% 0.05 50);
+    --color-orange-100: oklch(34% 0.07 50);
+    --color-orange-300: oklch(60% 0.13 50);
+    --color-orange-500: oklch(72% 0.15 50);
+    --color-orange-700: oklch(82% 0.12 50);
+    --color-orange-800: oklch(86% 0.11 50);
+
+    --color-fuchsia-50: oklch(28% 0.06 330);
+    --color-fuchsia-100: oklch(34% 0.08 330);
+    --color-fuchsia-300: oklch(60% 0.14 330);
+    --color-fuchsia-500: oklch(72% 0.18 330);
+    --color-fuchsia-700: oklch(82% 0.14 330);
+    --color-fuchsia-800: oklch(86% 0.13 330);
   }
 
   /* Auto mode — apply the same overrides when OS prefers dark, *unless* the
@@ -222,6 +277,35 @@
       --color-stone-300: oklch(50% 0.01 80);
       --color-stone-500: oklch(72% 0.015 80);
       --color-stone-700: oklch(86% 0.012 80);
+
+      /* slate / teal / orange / fuchsia — keep in sync with the explicit
+         dark block above. */
+      --color-slate-50: oklch(28% 0.005 240);
+      --color-slate-100: oklch(34% 0.008 240);
+      --color-slate-300: oklch(54% 0.012 240);
+      --color-slate-500: oklch(70% 0.015 240);
+      --color-slate-700: oklch(84% 0.012 240);
+
+      --color-teal-50: oklch(28% 0.04 190);
+      --color-teal-100: oklch(34% 0.06 190);
+      --color-teal-300: oklch(60% 0.10 190);
+      --color-teal-500: oklch(72% 0.12 190);
+      --color-teal-700: oklch(82% 0.10 190);
+      --color-teal-800: oklch(86% 0.09 190);
+
+      --color-orange-50: oklch(28% 0.05 50);
+      --color-orange-100: oklch(34% 0.07 50);
+      --color-orange-300: oklch(60% 0.13 50);
+      --color-orange-500: oklch(72% 0.15 50);
+      --color-orange-700: oklch(82% 0.12 50);
+      --color-orange-800: oklch(86% 0.11 50);
+
+      --color-fuchsia-50: oklch(28% 0.06 330);
+      --color-fuchsia-100: oklch(34% 0.08 330);
+      --color-fuchsia-300: oklch(60% 0.14 330);
+      --color-fuchsia-500: oklch(72% 0.18 330);
+      --color-fuchsia-700: oklch(82% 0.14 330);
+      --color-fuchsia-800: oklch(86% 0.13 330);
     }
   }
 }
