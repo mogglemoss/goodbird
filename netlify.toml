@@ -10,3 +10,23 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+# Security headers — applied to every response. Tightened CSP for a
+# no-backend static SPA. Inventoried external origins:
+#   - fonts.googleapis.com / fonts.gstatic.com / rsms.me  → fonts
+#   - upload.wikimedia.org                                → bird photos
+#   - xeno-canto.org                                      → audio
+#   - formspree.io                                        → feedback POST (fetch)
+#
+# 'unsafe-inline' is included for style-src because Tailwind v4 + framer-motion
+# emit inline style attributes; without it, the UI breaks. script-src has NO
+# 'unsafe-inline' — Vite ships ES modules, the built dist has zero inline
+# scripts, so we keep that strict.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://rsms.me; font-src 'self' https://fonts.gstatic.com https://rsms.me; img-src 'self' data: https://upload.wikimedia.org; media-src 'self' https://xeno-canto.org; connect-src 'self' https://formspree.io; worker-src 'self'; manifest-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=(), payment=(), usb=(), interest-cohort=()"
