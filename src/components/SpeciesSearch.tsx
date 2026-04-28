@@ -8,6 +8,9 @@ import { cn } from "@/lib/cn";
  * Type-anywhere species finder. Opens with Cmd/Ctrl-K or by tapping the
  * search button in the sticky bar. Filters across common name, scientific
  * name, mnemonic, and field note. Tap a result → /species/:id.
+ *
+ * The inner panel is split into its own component so its `q` state remounts
+ * fresh on every open — no setState-in-effect needed to clear the input.
  */
 
 interface Props {
@@ -16,19 +19,19 @@ interface Props {
 }
 
 export function SpeciesSearch({ open, onClose }: Props) {
+  return (
+    <AnimatePresence>{open && <SearchPanel onClose={onClose} />}</AnimatePresence>
+  );
+}
+
+function SearchPanel({ onClose }: { onClose: () => void }) {
   const [q, setQ] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    if (open) {
-      setQ("");
-      // Tiny delay so the sheet has mounted before focusing.
-      requestAnimationFrame(() => inputRef.current?.focus());
-    }
-  }, [open]);
-
-  useEffect(() => {
-    if (!open) return;
+    // Mount: focus on next frame so the sheet animation has started, lock
+    // body scroll, and listen for Escape. Cleanup on unmount.
+    requestAnimationFrame(() => inputRef.current?.focus());
     const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
     window.addEventListener("keydown", onKey);
     const prev = document.body.style.overflow;
@@ -37,7 +40,7 @@ export function SpeciesSearch({ open, onClose }: Props) {
       window.removeEventListener("keydown", onKey);
       document.body.style.overflow = prev;
     };
-  }, [open, onClose]);
+  }, [onClose]);
 
   const results = useMemo(() => {
     const all = allSpeciesWithRecordings();
@@ -63,27 +66,25 @@ export function SpeciesSearch({ open, onClose }: Props) {
   }, [q]);
 
   return (
-    <AnimatePresence>
-      {open && (
-        <>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.18 }}
-            onClick={onClose}
-            className="fixed inset-0 z-[55] bg-(--color-ink)/45 backdrop-blur-[2px]"
-            aria-hidden
-          />
-          <motion.div
-            role="dialog"
-            aria-label="Find a species"
-            initial={{ opacity: 0, y: -16 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -16 }}
-            transition={{ duration: 0.18 }}
-            className="fixed inset-x-0 top-4 z-[56] mx-auto max-w-md overflow-hidden rounded-3xl border-2 border-(--color-line) bg-(--color-surface) shadow-(--shadow-pop) sm:max-w-lg"
-          >
+    <>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.18 }}
+        onClick={onClose}
+        className="fixed inset-0 z-[55] bg-(--color-ink)/45 backdrop-blur-[2px]"
+        aria-hidden
+      />
+      <motion.div
+        role="dialog"
+        aria-label="Find a species"
+        initial={{ opacity: 0, y: -16 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -16 }}
+        transition={{ duration: 0.18 }}
+        className="fixed inset-x-0 top-4 z-[56] mx-auto max-w-md overflow-hidden rounded-3xl border-2 border-(--color-line) bg-(--color-surface) shadow-(--shadow-pop) sm:max-w-lg"
+      >
             <div className="flex items-center gap-2 border-b border-(--color-line) px-4 py-3">
               <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0 text-(--color-ink-soft)" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
                 <circle cx="11" cy="11" r="7" />
@@ -145,24 +146,8 @@ export function SpeciesSearch({ open, onClose }: Props) {
                   </li>
                 ))
               )}
-            </ul>
-          </motion.div>
-        </>
-      )}
-    </AnimatePresence>
+        </ul>
+      </motion.div>
+    </>
   );
-}
-
-/** Hook: open the search modal on ⌘K / Ctrl-K. */
-export function useSearchHotkey(setOpen: (v: boolean) => void) {
-  useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
-        e.preventDefault();
-        setOpen(true);
-      }
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [setOpen]);
 }

@@ -30,6 +30,16 @@ export function ResultsRoute() {
   const completed = useGame((s) => s.completedLessons);
   const [snap, setSnap] = useState<Snapshot | null>(null);
 
+  // Memoized lookups must be declared before the finalization effect so the
+  // effect's closure can read `unit` without a TDZ violation. (React Compiler
+  // is strict about this even though the effect runs after first render.)
+  const lessonTitle = useMemo(() => {
+    try { return getLesson(id).title; } catch { return "Lesson"; }
+  }, [id]);
+  const nextLesson = useMemo(() => findNextLesson(id), [id]);
+  const unit = useMemo(() => getUnitForLesson(id), [id]);
+  const accent = unit ? ACCENTS[unit.accent] : null;
+
   useEffect(() => {
     if (!active && !snap) {
       nav("/", { replace: true });
@@ -82,14 +92,10 @@ export function ResultsRoute() {
         }
       }
     }
-  }, [active, snap, finalize, nav]);
-
-  const lessonTitle = useMemo(() => {
-    try { return getLesson(id).title; } catch { return "Lesson"; }
-  }, [id]);
-  const nextLesson = useMemo(() => findNextLesson(id), [id]);
-  const unit = useMemo(() => getUnitForLesson(id), [id]);
-  const accent = unit ? ACCENTS[unit.accent] : null;
+    // The early `&& !snap` guard prevents re-running once the snapshot is set,
+    // so adding `completed/id/unit` to deps is safe — it just keeps lint happy
+    // about closure freshness without changing runtime behavior.
+  }, [active, snap, finalize, nav, completed, id, unit]);
 
   // True when this lesson result completes the entire unit for the first
   // time — i.e. every lesson in the unit is now done in completedLessons.

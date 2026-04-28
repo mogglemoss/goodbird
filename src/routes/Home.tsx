@@ -15,7 +15,8 @@ import { CompletionSeal } from "@/components/brand/CompletionSeal";
 import { BirdOfTheDay } from "@/components/BirdOfTheDay";
 import { InstallHint } from "@/components/InstallHint";
 import { DailyReviewCard } from "@/components/DailyReviewCard";
-import { SpeciesSearch, useSearchHotkey } from "@/components/SpeciesSearch";
+import { SpeciesSearch } from "@/components/SpeciesSearch";
+import { useSearchHotkey } from "@/lib/use-search-hotkey";
 import { FieldMasterBanner } from "@/components/FieldMasterBanner";
 
 export function HomeRoute() {
