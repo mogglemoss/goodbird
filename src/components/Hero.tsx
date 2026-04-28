@@ -24,8 +24,8 @@ export function Hero() {
         <h1 className="mt-2 font-display text-4xl leading-[1.05] tracking-tight sm:text-5xl">
           Pick a habitat.
         </h1>
-        <p className="mt-2 font-mono text-[10px] tracking-[0.2em] text-(--color-ink-soft)">
-          38°02′N · 122°42′W
+        <p className="mt-2 font-mono text-[10px] tracking-[0.2em] text-(--color-ink-soft)" title="Paper Mill Creek Saloon, Forest Knolls">
+          38°00′52″N · 122°41′44″W
         </p>
       </div>
 
