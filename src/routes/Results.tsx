@@ -174,7 +174,7 @@ export function ResultsRoute() {
           <h2 className="text-left font-mono text-[11px] font-medium uppercase tracking-[0.2em] text-(--color-ink-soft)">
             Listen again
           </h2>
-          <ul className="mt-2 flex flex-col gap-2">
+          <ul className="mt-2 grid grid-cols-1 gap-2 sm:grid-cols-2">
             {snap.missedSpeciesIds.map((sid) => (
               <MissedSpeciesRow key={sid} speciesId={sid} />
             ))}

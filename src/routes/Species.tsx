@@ -39,7 +39,7 @@ export function SpeciesRoute() {
     : null;
 
   return (
-    <div className="mx-auto w-full max-w-md px-5 pb-24 pt-4 sm:max-w-lg">
+    <div className="mx-auto w-full max-w-md px-5 pb-24 pt-4 sm:max-w-lg lg:max-w-2xl">
       <div className="flex items-center justify-between">
         <button
           onClick={() => nav(-1)}
@@ -147,7 +147,7 @@ export function SpeciesRoute() {
           <strong className="text-(--color-ink)">Listen at home, not on the trail.</strong>{" "}
           Playing recordings to attract birds can stress them, especially while nesting.
         </p>
-        <ul className="mt-3 flex flex-col gap-3">
+        <ul className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2">
           {species.recordings.map((rec) => (
             <li
               key={rec.id}

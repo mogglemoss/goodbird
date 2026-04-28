@@ -56,7 +56,7 @@ export function Hero() {
         <p className="font-mono text-[10px] font-medium uppercase tracking-[0.2em] text-(--color-ink-soft)">
           West Marin · Ear Training
         </p>
-        <h1 className="mt-2 font-display text-4xl leading-[1.05] tracking-tight sm:text-5xl">
+        <h1 className="mt-2 font-display text-4xl leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
           {phrase}
         </h1>
         <p className="mt-2 font-mono text-[10px] tracking-[0.2em] text-(--color-ink-soft)" title="Paper Mill Creek Saloon, Forest Knolls">
