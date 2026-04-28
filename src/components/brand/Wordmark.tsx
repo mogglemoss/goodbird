@@ -1,5 +1,17 @@
-import { BirdSilhouette } from "./BirdSilhouette";
 import { cn } from "@/lib/cn";
+
+/**
+ * The "goodbird" brand lockup. Renders the rasterized lockup PNG (mark
+ * + wordmark, no tagline) at three header-friendly sizes via height-only
+ * sizing — width follows the source aspect ratio (~5.4:1).
+ *
+ * The lockup is a hand-tuned graphic so we ship the raster directly
+ * rather than rebuilding it inline. srcSet picks @2x on retina screens.
+ *
+ * Colors are baked into the PNG (dark moss green). If dark-mode
+ * legibility ever becomes an issue, swap to a mask-image approach so
+ * the color tracks `currentColor`.
+ */
 
 interface Props {
   size?: "sm" | "md" | "lg";
@@ -7,26 +19,21 @@ interface Props {
 }
 
 const SIZES = {
-  sm: { wrap: "gap-0", bird: "h-5 w-auto", text: "text-xl -ms-0.5" },
-  md: { wrap: "gap-0", bird: "h-7 w-auto", text: "text-2xl -ms-0.5" },
-  lg: { wrap: "gap-0", bird: "h-10 w-auto", text: "text-4xl -ms-1" },
+  sm: "h-5",   // 20 px tall — Settings sheet, sticky bar
+  md: "h-7",   // 28 px tall — sticky bar at desktop sizes
+  lg: "h-10",  // 40 px tall — About page hero
 };
 
 export function Wordmark({ size = "sm", className }: Props) {
-  const s = SIZES[size];
   return (
-    <div
-      className={cn(
-        "inline-flex items-baseline text-(--color-moss-700)",
-        s.wrap,
-        className,
-      )}
-      aria-label="goodbird"
-    >
-      <BirdSilhouette className={cn("translate-y-[3px]", s.bird)} title="" />
-      <span className={cn("font-display font-medium leading-none tracking-tight", s.text)}>
-        goodbird
-      </span>
-    </div>
+    <img
+      src="/lockup.png"
+      srcSet="/lockup.png 1x, /lockup-2x.png 2x"
+      alt="goodbird"
+      width={720}
+      height={133}
+      className={cn("w-auto", SIZES[size], className)}
+      // Decorative role kept implicit via meaningful alt; no extra aria.
+    />
   );
 }

@@ -26,3 +26,7 @@ dist-ssr
 *.sw?
 .claude/
 .preview/
+
+# Pixelmator source files for brand artwork — the .png exports are
+# committed in ref/ so the brand-asset script remains reproducible.
+ref/*.pxd
