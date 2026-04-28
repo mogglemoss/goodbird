@@ -4,7 +4,7 @@
 // Bump APP_VERSION when shipping changes that should invalidate cached app shell.
 // MEDIA_CACHE is intentionally unversioned so already-downloaded clips persist.
 
-const APP_VERSION = "v2";
+const APP_VERSION = "v3";
 const APP_CACHE = `goodbird-app-${APP_VERSION}`;
 const MEDIA_CACHE = "goodbird-media";
 
@@ -12,8 +12,12 @@ const APP_SHELL = [
   "/",
   "/index.html",
   "/manifest.webmanifest",
-  "/favicon.svg",
-  "/apple-touch-icon.svg",
+  "/favicon.png",
+  "/apple-touch-icon.png",
+  "/lockup.png",
+  "/lockup-2x.png",
+  "/lockup-compact.png",
+  "/lockup-compact-2x.png",
 ];
 
 const MEDIA_HOSTS = new Set([
