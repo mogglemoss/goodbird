@@ -7,18 +7,21 @@ import type { DiscriminateExercise as DExercise } from "@/lib/types";
 
 interface Props {
   exercise: DExercise;
-  onAnswered: (correct: boolean) => void;
-  locked: boolean | null; // user's pick: same(true) or different(false)
+  /** See IdentifyExercise — same locked semantics. The value is the user's
+   *  same/different pick when known. */
+  locked: { value: boolean | null; correct: boolean } | null;
+  onAnswered: (correct: boolean, picked: boolean) => void;
 }
 
 export function DiscriminateExerciseView({ exercise, onAnswered, locked }: Props) {
   const [picked, setPicked] = useState<boolean | null>(null);
-  const decided = locked ?? picked;
+  const isLocked = locked !== null;
+  const decided = locked?.value ?? picked;
 
   const choose = (same: boolean) => {
-    if (decided !== null) return;
+    if (isLocked || picked !== null) return;
     setPicked(same);
-    onAnswered(same === exercise.same);
+    onAnswered(same === exercise.same, same);
   };
 
   return (
@@ -47,12 +50,12 @@ export function DiscriminateExerciseView({ exercise, onAnswered, locked }: Props
           const correct = val === exercise.same;
           let state: "idle" | "correct" | "wrong" | "reveal" = "idle";
           if (isPicked) state = correct ? "correct" : "wrong";
-          else if (decided !== null && correct) state = "reveal";
+          else if (isLocked && correct) state = "reveal";
           return (
             <motion.button
               key={String(val)}
-              whileTap={decided !== null ? undefined : { scale: 0.97 }}
-              disabled={decided !== null}
+              whileTap={isLocked ? undefined : { scale: 0.97 }}
+              disabled={isLocked}
               onClick={() => choose(val)}
               className={cn(
                 "tap-target rounded-(--radius-card) border-2 border-(--color-line) bg-(--color-surface) px-5 py-5 text-center font-medium shadow-(--shadow-soft) transition-colors",
@@ -67,7 +70,7 @@ export function DiscriminateExerciseView({ exercise, onAnswered, locked }: Props
           );
         })}
       </div>
-      {decided !== null && (
+      {isLocked && (
         <div className="text-center text-sm text-(--color-ink-soft)">
           Clip 1: <strong>{getSpecies(exercise.speciesIdA).commonName}</strong>{" "}
           · Clip 2: <strong>{getSpecies(exercise.speciesIdB).commonName}</strong>

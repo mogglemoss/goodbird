@@ -125,37 +125,41 @@ function renderExercise(
   locked: { value: unknown; correct: boolean } | null,
   onAnswered: (correct: boolean, locker: unknown, speciesId: string | null) => void,
 ) {
+  // Each view receives the full locked object (or null) so it can distinguish
+  // "not locked" from "locked but value unknown" — the latter happens when
+  // the user navigated to species detail and back. Without this, the view
+  // would read locked.value === null as "not locked" and let them re-answer.
   switch (exercise.kind) {
     case "identify":
       return (
         <IdentifyExerciseView
           exercise={exercise}
-          locked={(locked?.value as string | null) ?? null}
-          onAnswered={(correct) => onAnswered(correct, exercise.choices.find(id => id === exercise.correctSpeciesId)!, exercise.correctSpeciesId)}
+          locked={locked as { value: string | null; correct: boolean } | null}
+          onAnswered={(correct, picked) => onAnswered(correct, picked, exercise.correctSpeciesId)}
         />
       );
     case "mnemonic":
       return (
         <MnemonicExerciseView
           exercise={exercise}
-          locked={(locked?.value as string | null) ?? null}
-          onAnswered={(correct) => onAnswered(correct, exercise.correctSpeciesId, exercise.correctSpeciesId)}
+          locked={locked as { value: string | null; correct: boolean } | null}
+          onAnswered={(correct, picked) => onAnswered(correct, picked, exercise.correctSpeciesId)}
         />
       );
     case "discriminate":
       return (
         <DiscriminateExerciseView
           exercise={exercise}
-          locked={(locked?.value as boolean | null) ?? null}
-          onAnswered={(correct) => onAnswered(correct, exercise.same, exercise.speciesIdA)}
+          locked={locked as { value: boolean | null; correct: boolean } | null}
+          onAnswered={(correct, picked) => onAnswered(correct, picked, exercise.speciesIdA)}
         />
       );
     case "find-bird":
       return (
         <FindBirdExerciseView
           exercise={exercise}
-          locked={(locked?.value as number | null) ?? null}
-          onAnswered={(correct) => onAnswered(correct, exercise.correctIndex, exercise.targetSpeciesId)}
+          locked={locked as { value: number | null; correct: boolean } | null}
+          onAnswered={(correct, picked) => onAnswered(correct, picked, exercise.targetSpeciesId)}
         />
       );
   }

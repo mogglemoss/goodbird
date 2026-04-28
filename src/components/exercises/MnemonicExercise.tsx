@@ -7,19 +7,21 @@ import type { MnemonicExercise as MExercise } from "@/lib/types";
 
 interface Props {
   exercise: MExercise;
-  onAnswered: (correct: boolean) => void;
-  locked: string | null;
+  /** See IdentifyExercise — same locked semantics. */
+  locked: { value: string | null; correct: boolean } | null;
+  onAnswered: (correct: boolean, picked: string) => void;
 }
 
 export function MnemonicExerciseView({ exercise, onAnswered, locked }: Props) {
   const [picked, setPicked] = useState<string | null>(null);
+  const isLocked = locked !== null;
 
   const choose = (id: string) => {
-    if (locked || picked) return;
+    if (isLocked || picked) return;
     setPicked(id);
-    onAnswered(id === exercise.correctSpeciesId);
+    onAnswered(id === exercise.correctSpeciesId, id);
   };
-  const decided = locked ?? picked;
+  const decided = locked?.value ?? picked;
 
   return (
     <div className="flex flex-col items-center gap-8">
@@ -34,13 +36,13 @@ export function MnemonicExerciseView({ exercise, onAnswered, locked }: Props) {
           const state =
             decided === id
               ? id === exercise.correctSpeciesId ? "correct" : "wrong"
-              : decided && id === exercise.correctSpeciesId ? "reveal" : "idle";
+              : isLocked && id === exercise.correctSpeciesId ? "reveal" : "idle";
           return (
             <motion.button
               key={id}
               type="button"
-              whileTap={decided ? undefined : { scale: 0.98 }}
-              disabled={!!decided}
+              whileTap={isLocked ? undefined : { scale: 0.98 }}
+              disabled={isLocked}
               onClick={() => choose(id)}
               className={cn(
                 "tap-target rounded-(--radius-card) border-2 border-(--color-line) bg-(--color-surface) px-5 py-4 text-left shadow-(--shadow-soft) transition-colors",
@@ -51,7 +53,7 @@ export function MnemonicExerciseView({ exercise, onAnswered, locked }: Props) {
               )}
             >
               <div className="font-display text-lg leading-snug">"{sp.mnemonic}"</div>
-              {decided && (
+              {isLocked && (
                 <div className="mt-1 text-sm text-(--color-ink-soft)">{sp.commonName}</div>
               )}
             </motion.button>

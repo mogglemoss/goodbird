@@ -7,21 +7,29 @@ import type { IdentifyExercise as IExercise } from "@/lib/types";
 
 interface Props {
   exercise: IExercise;
-  onAnswered: (correct: boolean) => void;
-  locked: string | null; // selected species id once answered
+  /** Locked state from the runner. `null` = not answered, free to pick.
+   *  `{ value: <id>, ... }` = answered, that id was the user's pick.
+   *  `{ value: null, ... }` = answered earlier (user navigated away and
+   *  came back) — we don't know which id was picked, but they're locked
+   *  out of re-answering. */
+  locked: { value: string | null; correct: boolean } | null;
+  onAnswered: (correct: boolean, picked: string) => void;
 }
 
 export function IdentifyExerciseView({ exercise, onAnswered, locked }: Props) {
   const [picked, setPicked] = useState<string | null>(null);
   const nav = useNavigate();
 
+  const isLocked = locked !== null;
+
   const choose = (id: string) => {
-    if (locked || picked) return;
+    if (isLocked || picked) return;
     setPicked(id);
-    onAnswered(id === exercise.correctSpeciesId);
+    onAnswered(id === exercise.correctSpeciesId, id);
   };
 
-  const decided = locked ?? picked;
+  // The specific id we know was picked, if any. May be null even when locked.
+  const decided = locked?.value ?? picked;
 
   return (
     <div className="flex flex-col items-center gap-8">
@@ -36,12 +44,15 @@ export function IdentifyExerciseView({ exercise, onAnswered, locked }: Props) {
           let state: "idle" | "selected" | "correct" | "wrong" | "reveal" = "idle";
           if (decided === id) {
             state = id === exercise.correctSpeciesId ? "correct" : "wrong";
-          } else if (decided && id === exercise.correctSpeciesId) {
+          } else if (isLocked && id === exercise.correctSpeciesId) {
+            // Reveal the correct answer when locked — even if we don't know
+            // which (wrong) card the user picked.
             state = "reveal";
           }
-          // After answering, tapping any card opens its species detail page.
-          // Before answering, taps go to choose().
-          const handleClick = decided ? () => nav(`/species/${id}`) : () => choose(id);
+          // After answering (or after returning from species detail), tapping
+          // any card opens that species' detail page. Before answering, taps
+          // commit a selection via choose().
+          const handleClick = isLocked ? () => nav(`/species/${id}`) : () => choose(id);
           return (
             <SpeciesCard
               key={id}

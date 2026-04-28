@@ -9,19 +9,22 @@ import type { FindBirdExercise as FExercise } from "@/lib/types";
 
 interface Props {
   exercise: FExercise;
-  onAnswered: (correct: boolean) => void;
-  locked: number | null;
+  /** See IdentifyExercise — same locked semantics. The value is the index
+   *  the user picked when known. */
+  locked: { value: number | null; correct: boolean } | null;
+  onAnswered: (correct: boolean, pickedIdx: number) => void;
 }
 
 export function FindBirdExerciseView({ exercise, onAnswered, locked }: Props) {
   const [picked, setPicked] = useState<number | null>(null);
-  const decided = locked ?? picked;
+  const isLocked = locked !== null;
+  const decided = locked?.value ?? picked;
   const target = getSpecies(exercise.targetSpeciesId);
 
   const choose = (idx: number) => {
-    if (decided !== null) return;
+    if (isLocked || picked !== null) return;
     setPicked(idx);
-    onAnswered(idx === exercise.correctIndex);
+    onAnswered(idx === exercise.correctIndex, idx);
   };
 
   return (
@@ -29,7 +32,7 @@ export function FindBirdExerciseView({ exercise, onAnswered, locked }: Props) {
       <div className="text-center">
         <p className="text-sm font-medium uppercase tracking-wider text-(--color-ink-soft)">Find the bird</p>
         <h2 className="mt-1 text-xl font-medium">Which clip is the {target.commonName}?</h2>
-        {decided === null && (
+        {!isLocked && (
           <p className="mt-2 text-xs text-(--color-ink-soft)">Tap ▶ to listen, then tap <strong className="text-(--color-ink)">Pick</strong>.</p>
         )}
       </div>
@@ -41,7 +44,7 @@ export function FindBirdExerciseView({ exercise, onAnswered, locked }: Props) {
           const isCorrect = i === exercise.correctIndex;
           let state: "idle" | "correct" | "wrong" | "reveal" = "idle";
           if (decided === i) state = isCorrect ? "correct" : "wrong";
-          else if (decided !== null && isCorrect) state = "reveal";
+          else if (isLocked && isCorrect) state = "reveal";
           return (
             <motion.div
               key={rec.id + i}
@@ -62,11 +65,11 @@ export function FindBirdExerciseView({ exercise, onAnswered, locked }: Props) {
               <button
                 type="button"
                 onClick={() => choose(i)}
-                disabled={decided !== null}
+                disabled={isLocked}
                 aria-pressed={decided === i}
                 className={cn(
                   "tap-target w-full rounded-full px-3 py-2 text-sm font-semibold transition-colors cursor-pointer",
-                  decided === null
+                  !isLocked
                     ? "bg-(--color-moss-500) text-white hover:bg-(--color-moss-600)"
                     : decided === i
                       ? isCorrect
@@ -77,7 +80,7 @@ export function FindBirdExerciseView({ exercise, onAnswered, locked }: Props) {
                         : "bg-(--color-line) text-(--color-ink-soft)",
                 )}
               >
-                {decided === null
+                {!isLocked
                   ? "Pick"
                   : decided === i
                     ? isCorrect ? "Correct" : "Wrong"
