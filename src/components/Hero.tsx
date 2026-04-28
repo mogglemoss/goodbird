@@ -6,7 +6,7 @@
  */
 export function Hero() {
   return (
-    <section className="relative -mx-5 mb-2 overflow-hidden border-b border-(--color-line) bg-gradient-to-b from-(--color-bg) via-(--color-sand-50)/40 to-(--color-moss-50)/60 px-5 pb-20 pt-2 sm:pb-24 dark:via-(--color-sand-50)/30 dark:to-(--color-moss-50)/40">
+    <section className="relative -mx-5 mb-2 overflow-hidden border-b border-(--color-line) bg-gradient-to-b from-(--color-bg) via-(--color-sand-50)/40 to-(--color-moss-50)/60 px-5 pb-24 pt-2 sm:pb-28 dark:via-(--color-sand-50)/30 dark:to-(--color-moss-50)/40">
       {/* Tiny decorative birds, upper-left */}
       <div aria-hidden className="pointer-events-none absolute left-6 top-6 text-(--color-moss-700)/40">
         <svg viewBox="0 0 60 24" className="h-4 w-16" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round">
@@ -29,24 +29,37 @@ export function Hero() {
         </p>
       </div>
 
-      {/* Layered rolling hills along the bottom */}
+      {/* Layered fog-and-hill silhouettes along the bottom. Four wavy layers,
+          each a smooth Q→T-chain so peaks and valleys flow organically.
+          Palette: pale sage in back, deepening toward the foreground.
+          Phase offsets between layers so peaks don't stack vertically.
+          preserveAspectRatio="none" lets the shapes stretch across any
+          viewport while keeping the 800×100 design grid. */}
       <svg
         aria-hidden
-        className="absolute inset-x-0 bottom-0 h-16 w-full sm:h-20"
+        className="absolute inset-x-0 bottom-0 h-24 w-full sm:h-28"
         viewBox="0 0 800 100"
         preserveAspectRatio="none"
       >
+        {/* Back fog — palest, broad waves with the most amplitude */}
         <path
-          d="M0,70 C120,50 240,80 360,60 C480,40 600,70 720,55 L800,60 L800,100 L0,100 Z"
-          fill="oklch(91% 0.04 160 / 0.55)"
+          d="M0,48 Q 100,22 200,48 T 400,48 T 600,48 T 800,48 L 800,100 L 0,100 Z"
+          fill="oklch(93% 0.03 160 / 0.55)"
         />
+        {/* Mid-back — phase-shifted so its peaks fall in back's valleys */}
         <path
-          d="M0,80 C100,65 220,90 340,72 C460,55 580,85 700,70 L800,72 L800,100 L0,100 Z"
-          fill="oklch(82% 0.06 160 / 0.6)"
+          d="M0,64 Q 80,42 180,62 T 380,62 T 580,62 T 800,64 L 800,100 L 0,100 Z"
+          fill="oklch(85% 0.04 160 / 0.7)"
         />
+        {/* Mid-front — denser sage, different rhythm */}
         <path
-          d="M0,90 C80,80 200,98 320,86 C440,74 560,96 680,84 L800,86 L800,100 L0,100 Z"
-          fill="oklch(70% 0.08 160 / 0.55)"
+          d="M0,78 Q 130,58 260,76 T 520,76 T 800,78 L 800,100 L 0,100 Z"
+          fill="oklch(76% 0.055 160 / 0.8)"
+        />
+        {/* Foreground — deepest, finer texture (more peaks per width) */}
+        <path
+          d="M0,90 Q 60,80 120,89 T 240,89 T 360,89 T 480,89 T 600,89 T 720,89 T 800,90 L 800,100 L 0,100 Z"
+          fill="oklch(66% 0.07 160 / 0.88)"
         />
       </svg>
     </section>
