@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Howl } from "howler";
-import { getHowl } from "@/lib/audio";
+import { evictHowl, getHowl } from "@/lib/audio";
 import { cn } from "@/lib/cn";
+
+const MAX_RETRIES = 1;
 
 interface Props {
   url: string;
@@ -33,6 +35,20 @@ export function AudioPlayer({
   const [nudge, setNudge] = useState(false);
   const [loop, setLoop] = useState(false);
   const [slow, setSlow] = useState(false);
+  // Retry counter increments on load/play failure; the effect re-runs and
+  // calls getHowl(url) again — by then the cache has self-evicted, so we
+  // get a fresh instance and a fresh network attempt.
+  const [tries, setTries] = useState(0);
+  const [failed, setFailed] = useState(false);
+  // Reset retry/failed state when the URL prop changes. React's official
+  // pattern from "You Might Not Need an Effect" — adjust state during
+  // render via a tracked-previous-prop state value.
+  const [prevUrl, setPrevUrl] = useState(url);
+  if (prevUrl !== url) {
+    setPrevUrl(url);
+    setTries(0);
+    setFailed(false);
+  }
   const howlRef = useRef<Howl | null>(null);
   const rafRef = useRef<number | null>(null);
 
@@ -50,26 +66,45 @@ export function AudioPlayer({
         onEnded?.();
       }
     };
-    const onPlayError = () => {
+    const onError = () => {
       setPlaying(false);
       setNudge(true);
+      // The Howl just self-evicted from the cache (see audio.ts). If we
+      // haven't exhausted retries, bump `tries` so the effect runs again
+      // with a fresh instance. Otherwise mark the player as permanently
+      // failed for this URL so we stop trying.
+      if (tries < MAX_RETRIES) {
+        setTries((t) => t + 1);
+      } else {
+        setFailed(true);
+      }
     };
     h.on("play", onPlay);
     h.on("pause", onStop);
     h.on("stop", onStop);
     h.on("end", onEnd);
-    h.on("playerror", onPlayError);
+    h.on("playerror", onError);
+    h.on("loaderror", onError);
     if (autoPlay && !h.playing()) h.play();
     return () => {
       h.off("play", onPlay);
       h.off("pause", onStop);
       h.off("stop", onStop);
       h.off("end", onEnd);
-      h.off("playerror", onPlayError);
+      h.off("playerror", onError);
+      h.off("loaderror", onError);
       h.stop();
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
     };
-  }, [url, autoPlay, onEnded, gain]);
+  }, [url, autoPlay, onEnded, gain, tries]);
+
+  // User-initiated retry from the failed state: evict + bump tries to force
+  // a brand-new Howl + network fetch.
+  const retry = () => {
+    evictHowl(url);
+    setFailed(false);
+    setTries((t) => t + 1);
+  };
 
   // If the gain prop changes for the same URL, push the new value onto Howl.
   useEffect(() => {
@@ -118,18 +153,21 @@ export function AudioPlayer({
     <div className={cn("flex flex-col items-center gap-3", className)}>
       <button
         type="button"
-        onClick={toggle}
-        aria-label={label}
+        onClick={failed ? retry : toggle}
+        aria-label={failed ? "Playback failed — tap to retry" : label}
         className={cn(
-          "relative rounded-full bg-(--color-moss-500) text-white shadow-(--shadow-pop) transition-transform active:scale-95 cursor-pointer",
-          "hover:bg-(--color-moss-600) focus:outline-none focus-visible:ring-4 focus-visible:ring-(--color-moss-300)",
+          "relative rounded-full text-white shadow-(--shadow-pop) transition-transform active:scale-95 cursor-pointer",
+          "focus:outline-none focus-visible:ring-4 focus-visible:ring-(--color-moss-300)",
+          failed
+            ? "bg-(--color-ink-soft) hover:bg-(--color-ink)"
+            : "bg-(--color-moss-500) hover:bg-(--color-moss-600)",
           dim,
         )}
       >
-        {(playing || nudge) && (
+        {(playing || nudge) && !failed && (
           <span className={cn("absolute inset-0 rounded-full bg-(--color-moss-500) pointer-events-none", nudge ? "opacity-60 pulse-ring" : "opacity-40 pulse-ring")} />
         )}
-        <PlayPauseIcon playing={playing} />
+        {failed ? <RetryIcon /> : <PlayPauseIcon playing={playing} />}
         <svg className="absolute inset-0 h-full w-full -rotate-90 pointer-events-none" viewBox="0 0 100 100">
           <circle cx="50" cy="50" r="46" fill="none" stroke="rgba(255,255,255,0.25)" strokeWidth="3" />
           <circle
@@ -142,6 +180,9 @@ export function AudioPlayer({
           />
         </svg>
       </button>
+      {failed && (
+        <p className="text-xs text-(--color-ink-soft)">Playback failed — tap to retry</p>
+      )}
       <Bars active={playing} />
       {showControls && (
         <div className="flex gap-2">
@@ -213,6 +254,15 @@ function PlayPauseIcon({ playing }: { playing: boolean }) {
       ) : (
         <path d="M8 5.5v13a.5.5 0 0 0 .76.43l11-6.5a.5.5 0 0 0 0-.86l-11-6.5A.5.5 0 0 0 8 5.5z" />
       )}
+    </svg>
+  );
+}
+
+function RetryIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="absolute inset-0 m-auto h-9 w-9" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M3 12a9 9 0 1 0 3-6.7" />
+      <polyline points="3 4 3 10 9 10" />
     </svg>
   );
 }
