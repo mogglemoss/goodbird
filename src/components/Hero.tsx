@@ -1,10 +1,18 @@
+import { useMemo } from "react";
 import { motion, useReducedMotion } from "framer-motion";
+import { dailyPick } from "@/lib/daily-pick";
+import { HERO_PHRASES, resolvePhrase } from "@/lib/hero-phrases";
+import { pickThemedDay } from "@/lib/themed-days";
 
 /**
  * Restrained atmospheric band that sits below the sticky StickyTopBar.
  * Decorative-only: small caps label + display headline + coordinates +
  * four layers of rolling hills + tiny bird silhouettes. No interactive
  * controls — those live in StickyTopBar so they pin to the top on scroll.
+ *
+ * The headline rotates daily through HERO_PHRASES; calendar-themed days
+ * (solstices, Earth Day, the Pt. Reyes Birding Festival window) override
+ * the rotation when they match. Pick is deterministic per calendar day.
  *
  * The back two fog layers drift slowly horizontally (parallax depth);
  * the front two stay static so the foreground doesn't pull the eye away
@@ -23,6 +31,15 @@ export function Hero() {
           transition: { duration: durationSec, ease: "linear" as const, repeat: Infinity, repeatType: "loop" as const },
         };
 
+  // Daily phrase: themed override beats rotation. Memoized once per mount —
+  // page won't shift the headline mid-session, only on a future day's load.
+  const phrase = useMemo(() => {
+    const themed = pickThemedDay();
+    if (themed) return themed.phrase;
+    const pick = dailyPick(HERO_PHRASES, "hero");
+    return pick ? resolvePhrase(pick) : "Pick a habitat.";
+  }, []);
+
   return (
     <section className="relative -mx-5 mb-2 overflow-hidden border-b border-(--color-line) bg-gradient-to-b from-(--color-bg) via-(--color-sand-50)/40 to-(--color-moss-50)/60 px-5 pb-24 pt-2 sm:pb-28 dark:via-(--color-sand-50)/30 dark:to-(--color-moss-50)/40">
       {/* Tiny decorative birds, upper-left */}
@@ -40,7 +57,7 @@ export function Hero() {
           West Marin · Ear Training
         </p>
         <h1 className="mt-2 font-display text-4xl leading-[1.05] tracking-tight sm:text-5xl">
-          Pick a habitat.
+          {phrase}
         </h1>
         <p className="mt-2 font-mono text-[10px] tracking-[0.2em] text-(--color-ink-soft)" title="Paper Mill Creek Saloon, Forest Knolls">
           38°00′52″N · 122°41′44″W
@@ -59,9 +76,9 @@ export function Hero() {
         viewBox="0 0 800 100"
         preserveAspectRatio="none"
       >
-        {/* Back fog — palest, broad waves, slowest drift (60s/cycle).
+        {/* Back fog — palest, broad waves, slowest drift (120s/cycle).
             Path duplicated at +800 so the loop seam is invisible. */}
-        <motion.g {...drift(60)}>
+        <motion.g {...drift(120)}>
           <path
             d="M0,48 Q 100,22 200,48 T 400,48 T 600,48 T 800,48 L 800,100 L 0,100 Z"
             fill="oklch(93% 0.03 160 / 0.55)"
@@ -73,8 +90,8 @@ export function Hero() {
           />
         </motion.g>
         {/* Mid-back — phase-shifted so its peaks fall in back's valleys.
-            Faster drift (45s) than back layer for parallax depth. */}
-        <motion.g {...drift(45)}>
+            Faster drift (90s) than back layer for parallax depth. */}
+        <motion.g {...drift(90)}>
           <path
             d="M0,64 Q 80,42 180,62 T 380,62 T 580,62 T 800,64 L 800,100 L 0,100 Z"
             fill="oklch(85% 0.04 160 / 0.7)"
