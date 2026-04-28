@@ -100,6 +100,61 @@ export function AboutRoute() {
         </ul>
       </section>
 
+      <section className="mt-8">
+        <h2 className="font-mono text-[10px] font-medium uppercase tracking-[0.22em] text-(--color-moss-700)">
+          Support local birds
+        </h2>
+        <p className="mt-2 text-sm leading-relaxed text-(--color-ink-soft)">
+          This app teaches the songs. These are the people protecting the
+          birds making them. If goodbird's been useful, consider giving them
+          a small cut of what you might've otherwise paid for it.
+        </p>
+        <ul className="mt-3 space-y-2 text-sm">
+          <li className="rounded-2xl border-2 border-(--color-line) bg-(--color-surface) px-4 py-3">
+            <a
+              href="https://eacmarin.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-(--color-moss-700) underline"
+            >
+              Environmental Action Committee of West Marin
+            </a>
+            <p className="mt-0.5 text-xs leading-snug text-(--color-ink-soft)">
+              Pt. Reyes Station-based; advocates for local biodiversity and
+              hosts the annual Pt. Reyes Birding &amp; Nature Festival.
+            </p>
+          </li>
+          <li className="rounded-2xl border-2 border-(--color-line) bg-(--color-surface) px-4 py-3">
+            <a
+              href="https://marinaudubon.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-(--color-moss-700) underline"
+            >
+              Marin Audubon Society
+            </a>
+            <p className="mt-0.5 text-xs leading-snug text-(--color-ink-soft)">
+              Acquires and restores habitat across Marin — tidal marshes,
+              uplands, the places these birds actually live.
+            </p>
+          </li>
+          <li className="rounded-2xl border-2 border-(--color-line) bg-(--color-surface) px-4 py-3">
+            <a
+              href="https://discoverwildcare.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-(--color-moss-700) underline"
+            >
+              WildCare
+            </a>
+            <p className="mt-0.5 text-xs leading-snug text-(--color-ink-soft)">
+              San Rafael wildlife hospital — rescues, rehabilitates, and
+              releases injured birds throughout the county.
+            </p>
+          </li>
+        </ul>
+      </section>
+
       <section className="mt-8 flex flex-col items-center gap-3">
         <a
           href="https://github.com/mogglemoss/goodbird"
