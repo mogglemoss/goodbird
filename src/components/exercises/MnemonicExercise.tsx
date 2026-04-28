@@ -30,7 +30,7 @@ export function MnemonicExerciseView({ exercise, onAnswered, locked }: Props) {
         <h2 className="mt-1 text-xl font-medium">Which mnemonic fits this call?</h2>
       </div>
       <AudioPlayer url={exercise.recording.url} autoPlay showControls gain={exercise.recording.gain ?? 1} />
-      <div className="flex w-full flex-col gap-3">
+      <div className="grid w-full grid-cols-1 gap-3 sm:grid-cols-2">
         {exercise.choices.map((id) => {
           const sp = getSpecies(id);
           const state =

@@ -22,7 +22,7 @@ export function UnitRoute() {
   const accent = ACCENTS[unit.accent];
 
   return (
-    <div className="mx-auto w-full max-w-md px-5 pb-24 pt-4 sm:max-w-lg">
+    <div className="mx-auto w-full max-w-md px-5 pb-24 pt-4 sm:max-w-lg lg:max-w-2xl">
       <div className="flex items-center justify-between">
         <Link
           to="/"
