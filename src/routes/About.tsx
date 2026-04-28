@@ -106,8 +106,8 @@ export function AboutRoute() {
         </h2>
         <p className="mt-2 text-sm leading-relaxed text-(--color-ink-soft)">
           This app teaches the songs. These are the people protecting the
-          birds making them. If goodbird's been useful, consider giving them
-          a small cut of what you might've otherwise paid for it.
+          birds making them. If you love the birds of West Marin as we do,
+          consider supporting their work — any of the four, any amount.
         </p>
         <ul className="mt-3 space-y-2 text-sm">
           <li className="rounded-2xl border-2 border-(--color-line) bg-(--color-surface) px-4 py-3">

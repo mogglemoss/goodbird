@@ -284,40 +284,8 @@ export function SettingsSheet({ open, onClose }: Props) {
               )}
             </Section>
 
-            <Section label="About">
-              <div className="rounded-2xl border-2 border-(--color-line) bg-(--color-bg) px-4 py-4 text-center">
-                <div className="flex items-center justify-center gap-2">
-                  <Wordmark size="sm" />
-                  <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-(--color-ink-soft)">
-                    v{__APP_VERSION__}
-                  </span>
-                </div>
-                <p className="mx-auto mt-3 max-w-xs text-xs leading-relaxed text-(--color-ink-soft)">
-                  Recordings from <a href="https://xeno-canto.org" target="_blank" rel="noopener noreferrer" className="text-(--color-moss-700) underline">xeno-canto</a>.
-                  Photographs from <a href="https://commons.wikimedia.org" target="_blank" rel="noopener noreferrer" className="text-(--color-moss-700) underline">Wikimedia Commons</a>.
-                  Observation data from <a href="https://inaturalist.org" target="_blank" rel="noopener noreferrer" className="text-(--color-moss-700) underline">iNaturalist</a>.
-                  All under Creative Commons; recordist credit on each clip.
-                </p>
-                <div className="mt-3 flex items-center justify-center gap-3 font-mono text-[10px] uppercase tracking-[0.18em]">
-                  <Link
-                    to="/about"
-                    onClick={onClose}
-                    className="text-(--color-ink-soft) underline hover:text-(--color-ink)"
-                  >
-                    More
-                  </Link>
-                  <span aria-hidden className="text-(--color-line)">·</span>
-                  <a
-                    href="https://github.com/mogglemoss/goodbird"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-(--color-ink-soft) underline hover:text-(--color-ink)"
-                  >
-                    GitHub
-                  </a>
-                </div>
-              </div>
-              <div className="mt-3 grid grid-cols-2 gap-2">
+            <Section label="Help">
+              <div className="grid grid-cols-2 gap-2">
                 <button
                   onClick={() => { restartTour(); onClose(); }}
                   className="tap-target rounded-full border-2 border-(--color-line) bg-(--color-surface) px-4 py-3 text-sm font-semibold text-(--color-ink) transition-colors hover:border-(--color-moss-300) cursor-pointer"
@@ -333,6 +301,39 @@ export function SettingsSheet({ open, onClose }: Props) {
               </div>
             </Section>
             <FeedbackDialog open={feedbackOpen} onClose={() => setFeedbackOpen(false)} />
+
+            <Section label="About">
+              {/* Slim card: identity + version + outbound links. The full
+                  About page (linked below) is the canonical source for
+                  sources, ethics, and donation orgs — duplicating any of
+                  that here was redundant and bloated the sheet. */}
+              <div className="rounded-2xl border-2 border-(--color-line) bg-(--color-bg) px-4 py-4 text-center">
+                <div className="flex items-center justify-center gap-2">
+                  <Wordmark size="sm" />
+                  <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-(--color-ink-soft)">
+                    v{__APP_VERSION__}
+                  </span>
+                </div>
+                <div className="mt-3 flex items-center justify-center gap-3 font-mono text-[10px] uppercase tracking-[0.18em]">
+                  <Link
+                    to="/about"
+                    onClick={onClose}
+                    className="text-(--color-ink-soft) underline hover:text-(--color-ink)"
+                  >
+                    More about goodbird
+                  </Link>
+                  <span aria-hidden className="text-(--color-line)">·</span>
+                  <a
+                    href="https://github.com/mogglemoss/goodbird"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-(--color-ink-soft) underline hover:text-(--color-ink)"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            </Section>
 
             <Section label="Danger" tone="warn">
               {!confirming ? (
