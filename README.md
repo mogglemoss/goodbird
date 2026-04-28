@@ -2,10 +2,12 @@
 
 Bite-sized ear training for the birds of West Marin, California.
 
-A small, polished web prototype for learning to identify common bird sounds
-of the **Coastal Scrub** habitat — Wrentit, Spotted Towhee, California Quail,
-California Thrasher, and a dozen others heard along the Point Reyes,
-Bolinas, and Tomales coastline.
+**Live at [goodbird.app](https://goodbird.app/).**
+
+A small, polished web prototype for learning to identify the bird sounds
+you'd actually hear along the Point Reyes, Bolinas, and Tomales coastline —
+twelve habitats from Coastal Scrub to Open Coast to Night Voices, each one a
+short course built around the calls and songs of that place.
 
 Built as a no-account, no-backend single-page app: pure static, deploys to
 Netlify in one command.

@@ -1,7 +1,7 @@
 {
   "name": "goodbird",
   "short_name": "goodbird",
-  "description": "Duolingo-style ear training for West Marin bird sounds.",
+  "description": "Bite-sized ear training for West Marin bird sounds.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
