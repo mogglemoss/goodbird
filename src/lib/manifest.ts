@@ -1,7 +1,14 @@
 import type { LessonRef, Manifest, Species, SpeciesStat, Unit } from "./types";
 
-// Eager-load every unit JSON in src/data/. Adding a new unit = drop in a JSON.
-const modules = import.meta.glob<Manifest>("@/data/*.json", { eager: true, import: "default" });
+// Lazy-load every unit JSON. Each match becomes a dynamic import that Vite
+// code-splits into its own chunk — the JSON ships as a separate parallel
+// download instead of being inlined into the main JS bundle.
+//
+// Top-level await below resolves all loaders at module init, so consumers
+// can keep using `units`, `allLessons`, etc. synchronously after the
+// module is imported. main.tsx imports manifest before mounting React, so
+// every component sees fully-populated state at render time.
+const modules = import.meta.glob<Manifest>("@/data/*.json", { import: "default" });
 
 const sortOrder: Record<string, number> = {
   // Land-side habitats first, working out from the trail
@@ -27,7 +34,11 @@ export const units: Unit[] = [];
 const allSpecies: Species[] = [];
 export const allLessons: Array<LessonRef & { unitId: string }> = [];
 
-for (const m of Object.values(modules)) {
+// Resolve every unit JSON in parallel and process them into the manifest.
+const loadedManifests = await Promise.all(
+  Object.values(modules).map((load) => load()),
+);
+for (const m of loadedManifests) {
   units.push(m.unit);
   for (const s of m.species) allSpecies.push(s);
   for (const l of m.lessons) allLessons.push({ ...l, unitId: m.unit.id });
