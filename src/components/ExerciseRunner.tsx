@@ -68,7 +68,7 @@ export function ExerciseRunner({ exercise, exerciseIndex, previouslyAnswered, ac
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -24 }}
             transition={{ duration: 0.22, ease: "easeOut" }}
-            className="mx-auto w-full max-w-md"
+            className="mx-auto w-full max-w-md lg:max-w-4xl"
           >
             {renderExercise(exercise, locked, handleAnswered)}
           </motion.div>

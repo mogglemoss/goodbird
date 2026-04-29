@@ -38,7 +38,7 @@ export function IdentifyExerciseView({ exercise, onAnswered, locked }: Props) {
         <h2 className="mt-1 text-xl font-medium">Whose voice is this?</h2>
       </div>
       <AudioPlayer url={exercise.recording.url} autoPlay showControls gain={exercise.recording.gain ?? 1} />
-      <div className="grid w-full grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
+      <div className="grid w-full grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
         {exercise.choices.map((id) => {
           const sp = getSpecies(id);
           let state: "idle" | "selected" | "correct" | "wrong" | "reveal" = "idle";
