@@ -4,7 +4,7 @@
 // Bump APP_VERSION when shipping changes that should invalidate cached app shell.
 // MEDIA_CACHE is intentionally unversioned so already-downloaded clips persist.
 
-const APP_VERSION = "v3";
+const APP_VERSION = "v4";
 const APP_CACHE = `goodbird-app-${APP_VERSION}`;
 const MEDIA_CACHE = "goodbird-media";
 
@@ -83,12 +83,26 @@ async function cacheFirst(cacheName, req) {
   const cached = await cache.match(req);
   if (cached) return cached;
   try {
-    const res = await fetch(req);
-    if (res && (res.ok || res.type === "opaque")) {
+    // Try CORS first so we get a real readable status. Cross-origin servers
+    // that don't allow CORS will reject — fall back to a default (no-cors)
+    // request, which gets us an opaque response we can serve but NOT cache
+    // (opaque can be a 0-byte 404 in disguise; we used to cache those and
+    // serve them forever, which was the "playback failed forever" bug).
+    let res;
+    try {
+      const corsReq = new Request(req.url, { mode: "cors", credentials: "omit" });
+      res = await fetch(corsReq);
+    } catch {
+      res = await fetch(req);
+    }
+    // Only cache "real" successes. Opaque responses are returned to the
+    // page but skipped here so a transient cross-origin glitch doesn't
+    // poison the cache permanently.
+    if (res && res.ok) {
       cache.put(req, res.clone()).catch(() => {});
     }
     return res;
-  } catch (err) {
+  } catch {
     if (cached) return cached;
     return new Response("offline", { status: 503 });
   }
@@ -140,5 +154,14 @@ self.addEventListener("message", async (event) => {
     const cache = await caches.open(MEDIA_CACHE);
     const keys = await cache.keys();
     reply({ type: "CACHED_COUNT", count: keys.length });
+  }
+
+  // Targeted cache-busting: drop a single URL from the media cache. Used
+  // by audio.ts when a Howl emits loaderror/playerror — we evict the URL
+  // here too so the next attempt fetches fresh from network.
+  if (event.data?.type === "INVALIDATE_URL" && typeof event.data.url === "string") {
+    const cache = await caches.open(MEDIA_CACHE);
+    await cache.delete(event.data.url);
+    reply({ type: "URL_INVALIDATED", url: event.data.url });
   }
 });

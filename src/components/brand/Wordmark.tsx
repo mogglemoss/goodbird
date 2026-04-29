@@ -16,9 +16,11 @@ interface Props {
 }
 
 const SIZES = {
-  sm: "h-6",   // 24 px tall — Settings sheet
-  md: "h-9",   // 36 px tall — sticky top bar
-  lg: "h-12",  // 48 px tall — generic large
+  sm: "h-6",                // 24 px tall — Settings sheet
+  md: "h-7 sm:h-9",         // 28 → 36 px — sticky top bar (mobile shrinks
+                            // 1 notch so narrow phones like Pixel 10 Pro
+                            // don't squeeze the wordmark against the pills)
+  lg: "h-12",               // 48 px tall — generic large
 };
 
 export function Wordmark({ size = "sm", className }: Props) {
@@ -31,7 +33,7 @@ export function Wordmark({ size = "sm", className }: Props) {
         alt="goodbird"
         width={720}
         height={167}
-        className={cn("wordmark-light w-auto", sizeClass, className)}
+        className={cn("wordmark-light w-auto shrink-0", sizeClass, className)}
       />
       <img
         src="/lockup-compact-dark.png"
@@ -40,7 +42,7 @@ export function Wordmark({ size = "sm", className }: Props) {
         aria-hidden
         width={720}
         height={167}
-        className={cn("wordmark-dark w-auto", sizeClass, className)}
+        className={cn("wordmark-dark w-auto shrink-0", sizeClass, className)}
       />
     </>
   );

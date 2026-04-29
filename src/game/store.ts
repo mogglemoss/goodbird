@@ -229,6 +229,24 @@ export const useGame = create<GameState>()(
     }),
     {
       name: "goodbird-v1",
+      // Version of the persisted-state SHAPE. Increment whenever:
+      //   - a field is renamed
+      //   - a field's type changes in a non-coercible way
+      //   - species/lesson IDs are renamed in the manifest and we need
+      //     to re-key user progress
+      // Then add a case to migrate() below to handle the upgrade.
+      // Adding NEW fields or removing fields is safe without a version
+      // bump — sanitizePersistedState fills defaults / drops unknowns.
+      version: 1,
+      migrate: (persisted, fromVersion) => {
+        // No migrations needed yet (we're at v1). Leaving the seam in
+        // place so future shape changes don't have to retrofit it.
+        // Pattern when we need it:
+        //   if (fromVersion < 2) { /* mutate `persisted` to v2 shape */ }
+        //   if (fromVersion < 3) { /* mutate to v3 shape */ }
+        void fromVersion; // silence unused
+        return persisted;
+      },
       partialize: (s) => ({
         xp: s.xp,
         streak: s.streak,

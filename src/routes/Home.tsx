@@ -162,7 +162,7 @@ function HeaderControls({
 }) {
   const goalReached = xpToday >= dailyGoal;
   return (
-    <div className="flex items-center gap-1.5">
+    <div className="flex items-center gap-1 sm:gap-1.5">
       <DailyGoalRing xpToday={xpToday} dailyGoal={dailyGoal} />
       <Pill icon="🔥" value={streakDays} label="day streak" muted={streakDays === 0 && !goalReached} />
       <Pill icon="✦" value={xp} label="xp" muted={xp === 0} />

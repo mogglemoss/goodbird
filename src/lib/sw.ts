@@ -72,6 +72,22 @@ export async function countCachedMedia(): Promise<number | null> {
   });
 }
 
+/**
+ * Drop a single URL from the media cache. Best-effort and synchronous-feeling
+ * — fire-and-forget; we don't await it from audio.ts. If the SW isn't ready
+ * (very early in the session, or in dev where SW is skipped), this is a noop.
+ */
+export function invalidateCachedUrl(url: string): void {
+  if (!("serviceWorker" in navigator)) return;
+  const sw = navigator.serviceWorker.controller;
+  if (!sw) return;
+  try {
+    sw.postMessage({ type: "INVALIDATE_URL", url });
+  } catch {
+    /* ignore — best effort */
+  }
+}
+
 export async function estimateCacheBytes(): Promise<number | null> {
   if (typeof navigator === "undefined" || !navigator.storage?.estimate) return null;
   const est = await navigator.storage.estimate();

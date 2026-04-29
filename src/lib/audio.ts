@@ -1,4 +1,5 @@
 import { Howl } from "howler";
+import { invalidateCachedUrl } from "./sw";
 
 const cache = new Map<string, Howl>();
 
@@ -46,14 +47,26 @@ export function getHowl(url: string, gain = 1): Howl {
   return h;
 }
 
-/** Force-evict a URL from the cache. Safe to call on already-missing URLs. */
+/**
+ * Force-evict a URL from the cache. Safe to call on already-missing URLs.
+ *
+ * Also asks the service worker to drop the URL from its media cache, so a
+ * subsequent retry fetches fresh from network instead of replaying a
+ * potentially-broken cached response. This is the fix for the "playback
+ * failed forever, only PWA reinstall fixes it" symptom: a transient bad
+ * response (cross-origin glitch, brief CSP block, packet loss) used to
+ * get cached as opaque and served back permanently.
+ */
 export function evictHowl(url: string) {
   const h = cache.get(url);
-  if (!h) return;
-  cache.delete(url);
-  // Howler's unload tears down the underlying <audio> element + listeners.
-  // Wrapped in try/catch because a broken Howl can throw during teardown.
-  try { h.unload(); } catch { /* ignore */ }
+  if (h) {
+    cache.delete(url);
+    // Howler's unload tears down the underlying <audio> element + listeners.
+    // Wrapped in try/catch because a broken Howl can throw during teardown.
+    try { h.unload(); } catch { /* ignore */ }
+  }
+  // Tell the SW too — fire-and-forget, no-op if SW isn't active.
+  invalidateCachedUrl(url);
 }
 
 export function preload(urls: string[]) {
