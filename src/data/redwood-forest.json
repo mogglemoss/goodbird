@@ -400,7 +400,8 @@
       "commonName": "Marbled Murrelet",
       "scientificName": "Brachyramphus marmoratus",
       "mnemonic": "Ringing 'keer' calls in pre-dawn flights through the canopy",
-      "field": "Year-round; forages at sea but nests on mossy old-growth limbs in Muir Woods, Mt. Tam, and Bolinas Ridge — sometimes 25+ km inland. Federally Threatened. **Listen here for ID — never play recordings in the field. Disturbance from playback is documented to disrupt nesting.**",
+      "sensitive": true,
+      "field": "Year-round; forages at sea but nests on mossy old-growth limbs in Muir Woods, Mt. Tam, and Bolinas Ridge — sometimes 25+ km inland. Federally Threatened. **Recordings aren't distributed for this species — playback is documented to disrupt nesting. To hear one, sit quietly under old-growth conifer at dawn.**",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Marbled_murrelet.jpg/330px-Marbled_murrelet.jpg",
       "recordings": [
         {

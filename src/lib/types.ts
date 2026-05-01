@@ -28,6 +28,12 @@ export interface Species {
    *  Defaults to "top" for small circular crops; "center" for the detail page.
    *  Use this for photos where the bird is unusually placed and gets cropped poorly. */
   imagePosition?: "top" | "center" | "bottom" | "left" | "right";
+  /** Federally listed sensitive species. When true, recordings (often null
+   *  URLs from xeno-canto, which withholds audio for sensitive taxa) get
+   *  filtered out at manifest load time, which excludes the species from
+   *  quizzes via the existing `recordings.length > 0` filter. The detail
+   *  page shows a conservation callout in place of the recordings list. */
+  sensitive?: boolean;
 }
 
 export interface LessonRef {

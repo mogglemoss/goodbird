@@ -40,7 +40,14 @@ const loadedManifests = await Promise.all(
 );
 for (const m of loadedManifests) {
   units.push(m.unit);
-  for (const s of m.species) allSpecies.push(s);
+  for (const s of m.species) {
+    // Defensive: drop recordings without a usable URL. xeno-canto withholds
+    // audio for sensitive species (e.g., Spotted Owl) — those entries arrive
+    // with `url: null` and would otherwise leak into quizzes via the
+    // `recordings.length > 0` filter while crashing on playback.
+    const recordings = s.recordings.filter((r) => !!r.url);
+    allSpecies.push({ ...s, recordings });
+  }
   for (const l of m.lessons) allLessons.push({ ...l, unitId: m.unit.id });
 }
 units.sort((a, b) => (sortOrder[a.id] ?? 99) - (sortOrder[b.id] ?? 99));
@@ -89,14 +96,19 @@ export const getUnit = (id: string): Unit => {
   return u;
 };
 
+/** Species eligible for quizzes: has audio AND isn't a sensitive (Threatened/
+ *  Endangered) species we've explicitly opted out of playback for. The
+ *  sensitive flag wins even if recordings are present — see Marbled Murrelet,
+ *  which has working xeno-canto audio that we choose not to expose because
+ *  field playback disrupts nesting. */
 export const allSpeciesWithRecordings = (): Species[] =>
-  Array.from(speciesById.values()).filter((s) => s.recordings.length > 0);
+  Array.from(speciesById.values()).filter((s) => !s.sensitive && s.recordings.length > 0);
 
 const speciesByUnit = new Map<string, Species[]>();
 for (const u of units) {
   const ids = new Set<string>();
   for (const l of allLessons) if (l.unitId === u.id) for (const id of l.speciesIds) ids.add(id);
-  speciesByUnit.set(u.id, [...ids].map((id) => speciesById.get(id)).filter((s): s is Species => !!s && s.recordings.length > 0));
+  speciesByUnit.set(u.id, [...ids].map((id) => speciesById.get(id)).filter((s): s is Species => !!s && !s.sensitive && s.recordings.length > 0));
 }
 export const getSpeciesForUnit = (unitId: string): Species[] => speciesByUnit.get(unitId) ?? [];
 

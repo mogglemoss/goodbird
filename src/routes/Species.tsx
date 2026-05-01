@@ -140,9 +140,24 @@ export function SpeciesRoute() {
       <section className="mt-8">
         <div className="flex items-baseline justify-between">
           <h2 className="font-mono text-[11px] font-medium uppercase tracking-[0.2em] text-(--color-ink-soft)">
-            Recordings ({species.recordings.length})
+            Recordings{species.sensitive ? "" : ` (${species.recordings.length})`}
           </h2>
         </div>
+        {species.sensitive ? (
+          <div className="mt-3 rounded-(--radius-card) border-2 border-(--color-moss-300) bg-(--color-moss-50) p-4">
+            <p className="font-mono text-[10px] font-medium uppercase tracking-[0.22em] text-(--color-moss-700)">
+              Sensitive — recordings withheld
+            </p>
+            <p className="mt-2 text-sm leading-snug">
+              Audio for this species isn't distributed because playback is documented to displace nesting birds. You won't be quizzed on it — it's here so you know it exists in West Marin.
+            </p>
+          </div>
+        ) : species.recordings.length === 0 ? (
+          <p className="mt-3 text-sm italic text-(--color-ink-soft)">
+            No recordings yet — check back soon.
+          </p>
+        ) : (
+          <>
         <p className="mt-2 text-xs leading-snug text-(--color-ink-soft)">
           <strong className="text-(--color-ink)">Listen at home, not on the trail.</strong>{" "}
           Playing recordings to attract birds can stress them, especially while nesting.
@@ -186,6 +201,8 @@ export function SpeciesRoute() {
             </li>
           ))}
         </ul>
+          </>
+        )}
       </section>
     </div>
   );

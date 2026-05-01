@@ -358,7 +358,8 @@
       "commonName": "Spotted Owl",
       "scientificName": "Strix occidentalis",
       "mnemonic": "Four-note hoot 'who, who-who, whoo' — paced and resonant",
-      "field": "Year-round in old-growth conifer (Mt. Tam, the deeper Bolinas Ridge canyons). The local subspecies is Northern Spotted Owl (S. o. caurina), federally Threatened. **Listen to recordings here for ID — never play them in the field. Disturbance from playback is documented to displace nesting birds.**",
+      "sensitive": true,
+      "field": "Year-round in old-growth conifer (Mt. Tam, the deeper Bolinas Ridge canyons). The local subspecies is Northern Spotted Owl (S. o. caurina), federally Threatened. **Recordings aren't distributed for this species — playback is documented to displace nesting birds. To hear one, sit still on a foggy ridge after dusk.**",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Spotted_Owl_Shasta%E2%80%93Trinity_National_Forest.jpg/330px-Spotted_Owl_Shasta%E2%80%93Trinity_National_Forest.jpg",
       "recordings": [
         {
