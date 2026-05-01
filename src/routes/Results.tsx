@@ -212,7 +212,7 @@ export function ResultsRoute() {
           <ShareButton
             data={{
               title: "goodbird",
-              text: `I just got ${accuracy}% on ${lessonTitle} in goodbird — a field guide you can hear.`,
+              text: `I just got ${accuracy}% on ${lessonTitle} in goodbird — listen at home, watch in the field.`,
               url: typeof window !== "undefined" ? window.location.origin : "",
             }}
           />

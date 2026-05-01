@@ -51,7 +51,7 @@ export function AboutRoute() {
       </div>
 
       <p className="mx-auto mt-6 max-w-sm text-center font-display text-xl leading-snug">
-        A field guide you can hear.
+        Listen at home, watch in the field.
       </p>
 
       <section className="mt-8 space-y-4 text-sm leading-relaxed text-(--color-ink-soft)">

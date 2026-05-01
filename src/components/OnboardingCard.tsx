@@ -19,7 +19,7 @@ export function OnboardingCard() {
           <p className="font-mono text-[10px] font-medium uppercase tracking-[0.22em] text-(--color-moss-700)">
             Quick orientation
           </p>
-          <h2 className="mt-1 font-display text-xl leading-snug">A field guide you can hear.</h2>
+          <h2 className="mt-1 font-display text-xl leading-snug">Listen at home, watch in the field.</h2>
         </div>
         <button
           onClick={setOnboarded}
