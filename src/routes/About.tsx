@@ -147,7 +147,7 @@ export function AboutRoute() {
         <p className="mt-2 text-sm leading-relaxed text-(--color-ink-soft)">
           This app teaches the songs. These are the people protecting the
           birds making them. If you love the birds of West Marin as we do,
-          consider supporting their work — any of the four, any amount.
+          consider supporting their work — any of the five, any amount.
         </p>
         <ul className="mt-3 space-y-2 text-sm">
           <li className="rounded-2xl border-2 border-(--color-line) bg-(--color-surface) px-4 py-3">
@@ -162,6 +162,20 @@ export function AboutRoute() {
             <p className="mt-0.5 text-xs leading-snug text-(--color-ink-soft)">
               Pt. Reyes Station-based; advocates for local biodiversity and
               hosts the annual Pt. Reyes Birding &amp; Nature Festival.
+            </p>
+          </li>
+          <li className="rounded-2xl border-2 border-(--color-line) bg-(--color-surface) px-4 py-3">
+            <a
+              href="https://ptreyes.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-(--color-moss-700) underline"
+            >
+              Point Reyes National Seashore Association
+            </a>
+            <p className="mt-0.5 text-xs leading-snug text-(--color-ink-soft)">
+              The park's nonprofit partner — runs the Field Institute's natural
+              history classes and the seashore's education programs.
             </p>
           </li>
           <li className="rounded-2xl border-2 border-(--color-line) bg-(--color-surface) px-4 py-3">
